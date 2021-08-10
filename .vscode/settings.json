@@ -22,6 +22,9 @@
     },
     "**/node_modules": true
   },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "cSpell.words": [
     "vuepress"
   ]

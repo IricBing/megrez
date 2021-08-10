@@ -1,5 +1,6 @@
 const nodejs = require('../NodeJS')
 const container = require('../容器');
+const windows = require('../Windows')
 
 module.exports = {
   markdown: {
@@ -29,6 +30,6 @@ module.exports = {
       { text: '开始', link: '/guide/' },
       { text: 'GitHub', link: 'https://github.com/IricBing/megrez' },
     ],
-    sidebar: [nodejs, container]
+    sidebar: [nodejs, container, windows]
   }
 }
