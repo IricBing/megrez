@@ -1,0 +1,23 @@
+{
+  "name": "megrez",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Iric<iricbing@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IricBing/megrez.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IricBing/megrez/issues"
+  },
+  "homepage": "https://github.com/IricBing/megrez#readme",
+  "devDependencies": {
+    "dayjs": "^1.10.6",
+    "vuepress": "^1.8.2"
+  }
+}
