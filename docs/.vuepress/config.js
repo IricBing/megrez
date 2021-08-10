@@ -1,3 +1,4 @@
+const nodejs = require('../NodeJS')
 const container = require('../容器');
 
 module.exports = {
@@ -28,6 +29,6 @@ module.exports = {
       { text: '开始', link: '/guide/' },
       { text: 'GitHub', link: 'https://github.com/IricBing/megrez' },
     ],
-    sidebar:[container]
+    sidebar: [nodejs, container]
   }
 }
