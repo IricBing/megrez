@@ -19,5 +19,8 @@
   "devDependencies": {
     "dayjs": "^1.10.6",
     "vuepress": "^1.8.2"
+  },
+  "dependencies": {
+    "markdown-it-disable-url-encode": "^1.0.1"
   }
 }
