@@ -1,16 +1,16 @@
 module.exports = {
-  // plugins:[
-  //   [
-  //     '@vuepress/last-updated',
-  //     {
-  //       transformer: (timestamp, lang) => {
-  //         const dayjs = require('dayjs')
-  //         dayjs.locale(lang)
-  //         return dayjs(timestamp).format('YYYY-MM-DD HH:mm:ss')
-  //       }
-  //     }
-  //   ]
-  // ],
+  plugins:[
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp, lang) => {
+          const dayjs = require('dayjs')
+          dayjs.locale('zh-CN')
+          return dayjs(timestamp).format('YYYY-MM-DD HH:mm:ss')
+        }
+      }
+    ]
+  ],
   title: 'Iric',
   description: '个人文档',
   themeConfig: {
