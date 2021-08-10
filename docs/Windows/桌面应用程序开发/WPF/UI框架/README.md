@@ -30,3 +30,20 @@
 
 * 不好看
 * **商业使用需要付费**
+
+## HZControls
+
+[官网](http://www.hzhcontrols.com/)
+
+[Gitee地址](https://gitee.com/kwwwvagaa/net_winform_custom_control)
+
+[Github地址](https://github.com/kwwwvagaa/NetWinformControl)
+
+### 优点
+
+* 文档全
+* 这是一个工控领域的控件，UI仅仅是其一部分，对于我们做工控行业非常有帮助
+
+### 缺点
+
+* 非专业的UI框架，有些功能不全
