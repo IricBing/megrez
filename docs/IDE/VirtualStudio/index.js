@@ -3,7 +3,7 @@ module.exports = {
   children:[
     {
       title:'快捷键',
-      path:'/IDEA/VirtualStudio/快捷键'
+      path:'/IDE/VirtualStudio/快捷键'
     }
   ]
 };
