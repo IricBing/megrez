@@ -1,11 +1,12 @@
-const nodejs = require('../NodeJS')
+const nodejs = require('../NodeJS');
 const container = require('../容器');
-const windows = require('../Windows')
+const windows = require('../Windows');
+const ide = require('../IDE');
 
 module.exports = {
   markdown: {
     extendMarkdown: md => {
-      md.use(require("markdown-it-disable-url-encode"));
+      md.use(require('markdown-it-disable-url-encode'));
     }
   },
   plugins: [
@@ -13,9 +14,9 @@ module.exports = {
       '@vuepress/last-updated',
       {
         transformer: (timestamp, lang) => {
-          const dayjs = require('dayjs')
-          dayjs.locale('zh-CN')
-          return dayjs(timestamp).format('YYYY-MM-DD HH:mm:ss')
+          const dayjs = require('dayjs');
+          dayjs.locale('zh-CN');
+          return dayjs(timestamp).format('YYYY-MM-DD HH:mm:ss');
         }
       }
     ]
@@ -28,8 +29,8 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       { text: '开始', link: '/guide/' },
-      { text: 'GitHub', link: 'https://github.com/IricBing/megrez' },
+      { text: 'GitHub', link: 'https://github.com/IricBing/megrez' }
     ],
-    sidebar: [nodejs, container, windows]
+    sidebar: [nodejs, container, windows, ide]
   }
-}
+};
