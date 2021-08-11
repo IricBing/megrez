@@ -1,6 +1,7 @@
 const winForm = require('./WinForm');
 const wpf = require('./WPF');
 const uwp = require('./UWP');
+const experience = require('./实践积累')
 
 module.exports = {
   title: '桌面应用程序开发',
@@ -11,6 +12,7 @@ module.exports = {
     },
     winForm,
     wpf,
-    uwp
+    uwp,
+    experience
   ]
 };
