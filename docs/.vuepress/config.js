@@ -2,6 +2,7 @@ const nodejs = require('../NodeJS');
 const container = require('../容器');
 const windows = require('../Windows');
 const ide = require('../IDE');
+const web = require('../Web');
 
 module.exports = {
   markdown: {
@@ -31,6 +32,6 @@ module.exports = {
       { text: '开始', link: '/guide/' },
       { text: 'GitHub', link: 'https://github.com/IricBing/megrez' }
     ],
-    sidebar: [nodejs, container, windows, ide]
+    sidebar: [nodejs, web, container, windows, ide]
   }
 };
