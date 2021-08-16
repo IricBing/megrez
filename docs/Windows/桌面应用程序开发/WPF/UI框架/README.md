@@ -11,6 +11,7 @@
 ### 缺点
 
 * 没有文档。。。
+* 控件不够多（应该是）
 
 ## SunnyUI
 
@@ -47,3 +48,20 @@
 ### 缺点
 
 * 非专业的UI框架，有些功能不全
+
+## HandyControl（推荐）
+
+* [GitHub地址](https://github.com/HandyOrg/HandyControl)
+* [文档地址](https://handyorg.github.io/)
+
+### 优点
+
+* 文档非常全
+* 样式非常多
+* 支持国际化等小亮点
+* 项目更新足够迅速，开发人员足够多
+* 有官方支持的QQ群
+
+### 缺点
+
+暂时还没有找到
