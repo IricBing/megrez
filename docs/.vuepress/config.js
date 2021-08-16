@@ -4,6 +4,7 @@ const windows = require('../Windows');
 const ide = require('../IDE');
 const web = require('../Web');
 const go = require('../Go');
+const ops = require('../运维');
 
 module.exports = {
   markdown: {
@@ -33,6 +34,6 @@ module.exports = {
       { text: '开始', link: '/guide/' },
       { text: 'GitHub', link: 'https://github.com/IricBing/megrez' }
     ],
-    sidebar: [nodejs, web, go, container, windows, ide]
+    sidebar: [nodejs, web, go, ops, container, windows, ide]
   }
 };
