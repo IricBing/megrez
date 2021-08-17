@@ -1,0 +1,106 @@
+# Docker Compose 数据库服务
+
+## 配置文件
+
+`docker-compose.yaml` 文件内容如下：
+
+```yaml
+version: "3.8"
+services:
+  postgres:
+    image: postgres:13-alpine
+    container_name: postgresql
+    hostname: postgresql
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: smartdtu
+      TZ: Asia/Shanghai
+      PGTZ: Asia/Shanghai
+    ports:
+      - 5432:5432
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    hostname: pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: iricbing@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: 123456
+    ports:
+      - 5433:80
+
+  mongodb:
+    image: mongo:4.4.2-bionic
+    container_name: mongodb
+    hostname: mongodb
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo-data:/data
+      - /etc/localtime:/etc/localtime:ro
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    hostname: redis
+    restart: always
+    ports:
+      - 6379:6379
+    volumes:
+      - redis-data:/data
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      # - REDIS_PASS=mypassword
+      - REDIS_REPLICATION_MODE=master
+      - REDIS_APPENDONLY=yes
+      - REDIS_APPENDFSYNC=always
+
+  elasticsearch:
+    image: elasticsearch:7.13.2
+    container_name: elasticsearch
+    hostname: elasticsearch
+    restart: always
+    ports:
+      - 9200:9200
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+      - /etc/localtime:/etc/localtime:ro
+
+volumes:
+  pg-data:
+  mongo-data:
+  redis-data:
+  elasticsearch-data:
+```
+
+## 包含的服务
+
+* `Postgresql13`
+
+  登录账号： `postgres`
+
+  密码： `123456`
+
+* `pgadmin4`
+
+  登录账号： `iricbing@gmail.com`
+
+  密码： `123456`
+
+* `MongoDB 4.4.2`
+
+  无需验证
+
+* `Redis` 最新版
+
+  无需验证
+
+* `ElasticSearch 7.13.2`
+
+  无需验证

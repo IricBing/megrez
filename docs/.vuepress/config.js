@@ -5,6 +5,7 @@ const ide = require('../IDE');
 const web = require('../Web');
 const go = require('../Go');
 const ops = require('../运维');
+const database = require('../数据库');
 
 module.exports = {
   markdown: {
@@ -34,6 +35,6 @@ module.exports = {
       { text: '开始', link: '/guide/' },
       { text: 'GitHub', link: 'https://github.com/IricBing/megrez' }
     ],
-    sidebar: [nodejs, web, go, ops, container, windows, ide]
+    sidebar: [nodejs, web, go, ops, container, database, windows, ide]
   }
 };
