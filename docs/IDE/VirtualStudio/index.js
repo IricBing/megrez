@@ -8,6 +8,10 @@ module.exports = {
     {
       title:'集成Git',
       path:'/IDE/VirtualStudio/集成Git'
+    },
+    {
+      title:'优秀扩展',
+      path:'/IDE/VirtualStudio/优秀扩展'
     }
   ]
 };
