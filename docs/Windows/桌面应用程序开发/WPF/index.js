@@ -1,7 +1,7 @@
 const ui = require('./UI框架');
 const faq = require('./填坑手册');
 const experience = require('./实践积累');
-const mvvm = require('./MVVM框架');
+const mvvm = require('./MVVM模式');
 
 module.exports = {
   title: 'WPF',
