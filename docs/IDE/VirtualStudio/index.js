@@ -12,6 +12,10 @@ module.exports = {
     {
       title:'优秀扩展',
       path:'/IDE/VirtualStudio/优秀扩展'
+    },
+    {
+      title:'个性化配置',
+      path:'/IDE/VirtualStudio/个性化配置'
     }
   ]
 };
