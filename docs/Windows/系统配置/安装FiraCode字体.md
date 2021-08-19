@@ -9,5 +9,5 @@ $ choco install firacode
 ```
 
 ::: tip 提示
-`Chocolatey` 安装笔记请[参考](Chocolatey/README.md)
+`Chocolatey` 安装笔记请[参考](Chocolatey/README.md)，安装`Fira Code`字体时，会从`GitHub`上下载，注意网络。
 :::
