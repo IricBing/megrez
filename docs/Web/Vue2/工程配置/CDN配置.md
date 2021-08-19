@@ -1,4 +1,4 @@
-# Vue 2.x 项目cdn配置
+# CDN配置
 
 ## 需求
 
@@ -14,24 +14,24 @@
 
 ```html
 <!-- 通过cdn的方式引入vue -->
-<script src="https://cdn.lantsang.cn/vue/2.6.11/vue.min.js"></script>
+<script src="https://cdn.9xing.cn/vue/2.6.11/vue.min.js"></script>
 
 <!-- 通过cdn的方式引入vuex -->
-<script src="https://cdn.lantsang.cn/vuex/3.3.0/vuex.min.js"></script>
+<script src="https://cdn.9xing.cn/vuex/3.3.0/vuex.min.js"></script>
 
 <!-- 通过cdn的方式引入vue-router -->
-<script src="https://cdn.lantsang.cn/vue-router/3.1.6/vue-router.min.js"></script>
+<script src="https://cdn.9xing.cn/vue-router/3.1.6/vue-router.min.js"></script>
 
 <!-- 通过cdn的方式引入axios -->
-<script src="https://cdn.lantsang.cn/axios/0.19.2/axios.min.js"></script>
+<script src="https://cdn.9xing.cn/axios/0.19.2/axios.min.js"></script>
 
 <!-- 通过cdn的方式引入uuid -->
-<script src="https://cdn.lantsang.cn/uuid/8.3.0/uuid.min.js"></script>
+<script src="https://cdn.9xing.cn/uuid/8.3.0/uuid.min.js"></script>
 
 <!-- 通过cdn的方式引入Element ui样式 -->
-<link href="https://cdn.lantsang.cn/element-ui/2.13.1/theme-chalk/index.css" rel="stylesheet" />
+<link href="https://cdn.9xing.cn/element-ui/2.13.1/theme-chalk/index.css" rel="stylesheet" />
 <!-- 通过cdn的方式引入Element ui组件库 -->
-<script src="https://cdn.lantsang.cn/element-ui/2.13.1/index.js"></script>
+<script src="https://cdn.9xing.cn/element-ui/2.13.1/index.js"></script>
 ```
 
 ## vue.config.js 文件配置

@@ -40,10 +40,15 @@ module.exports = {
   themeConfig: {
     logo: '/logo.jpg',
     lastUpdated: '上次更新',
-    algolia: {
-      apiKey: '5935f4465d8e990e92eee1919256e5b0',
-      indexName: 'megrez'
-    },
+    // algolia: {
+    //   appId: 'YHAMW4458Y',
+    //   apiKey: '5935f4465d8e990e92eee1919256e5b0',
+    //   indexName: 'megrez',
+    //   algoliaOptions: {
+    //     hitsPerPage: 10,
+    //     facetFilters: "",
+    //   }
+    // },
     nav: [
       { text: '首页', link: '/' },
       { text: '开始', link: '/guide/' },
