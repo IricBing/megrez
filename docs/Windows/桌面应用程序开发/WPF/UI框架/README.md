@@ -65,3 +65,19 @@
 ### 缺点
 
 暂时还没有找到
+
+## MaterialDesignInXamlToolkit
+
+* [Github地址](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)
+
+### 优点
+
+* Star超级多
+* 完全的MaterialDesign风格
+* 项目开始时间很早，更新还非常频繁
+
+### 缺点
+
+* 文档全是英文
+* 文档似乎不全，文档网站不符合中国人风格
+* 不像HandyControl有demo

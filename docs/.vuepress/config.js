@@ -23,6 +23,15 @@ module.exports = {
           return dayjs(timestamp).format('YYYY-MM-DD HH:mm:ss');
         }
       }
+    ],
+    [
+      'vuepress-plugin-nuggets-style-copy',
+      {
+        copyText: '复制代码',
+        tip: {
+          content: '复制成功'
+        }
+      }
     ]
   ],
   title: 'Iric',

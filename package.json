@@ -20,6 +20,7 @@
     "dayjs": "^1.10.6",
     "markdown-it-disable-url-encode": "^1.0.1",
     "prettier": "^2.3.2",
-    "vuepress": "^1.8.2"
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-nuggets-style-copy": "^1.0.3"
   }
 }
