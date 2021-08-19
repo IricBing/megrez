@@ -14,6 +14,7 @@ module.exports = {
     }
   },
   plugins: [
+    'vuepress-plugin-cat',
     [
       '@vuepress/last-updated',
       {
