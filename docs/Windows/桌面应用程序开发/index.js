@@ -2,6 +2,7 @@ const winForm = require('./WinForm');
 const wpf = require('./WPF');
 const uwp = require('./UWP');
 const experience = require('./实践积累')
+const hpSocket = require('./HPSocket')
 
 module.exports = {
   title: '桌面应用程序开发',
@@ -13,6 +14,7 @@ module.exports = {
     winForm,
     wpf,
     uwp,
+    hpSocket,
     experience
   ]
 };
