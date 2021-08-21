@@ -1,4 +1,4 @@
 module.exports = {
   title: 'HPSocket',
-  path:'/HPSocket'
+  path:'/HPSocket/'
 };
