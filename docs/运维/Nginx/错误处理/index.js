@@ -4,6 +4,10 @@ module.exports = {
     {
       title: '403错误处理',
       path: '/运维/Nginx/配置篇/403错误处理'
+    },
+    {
+      title: '413错误处理',
+      path: '/运维/Nginx/配置篇/413错误处理'
     }
   ]
 };
