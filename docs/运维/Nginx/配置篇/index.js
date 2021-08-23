@@ -24,6 +24,10 @@ module.exports = {
     {
       title: '泛域名配置',
       path: '/运维/Nginx/配置篇/泛域名配置'
+    },
+    {
+      title: 'frp内网穿透配置',
+      path: '/运维/Nginx/配置篇/frp内网穿透配置'
     }
   ]
 };
