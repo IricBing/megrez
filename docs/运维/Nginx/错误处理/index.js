@@ -16,6 +16,10 @@ module.exports = {
     {
       title: '字体跨域问题',
       path: '/运维/Nginx/配置篇/字体跨域'
+    },
+    {
+      title: 'SSL接收到一个超出最大准许长度的记录',
+      path: '/运维/Nginx/配置篇/SSL接收到一个超出最大准许长度的记录'
     }
   ]
 };
