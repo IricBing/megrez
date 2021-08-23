@@ -12,6 +12,10 @@ module.exports = {
     {
       title: '中文乱码问题',
       path: '/运维/Nginx/配置篇/中文乱码'
+    },
+    {
+      title: '字体跨域问题',
+      path: '/运维/Nginx/配置篇/字体跨域'
     }
   ]
 };
