@@ -20,6 +20,10 @@ module.exports = {
     {
       title: '开启gzip压缩和缓存',
       path: '/运维/Nginx/配置篇/开启gzip压缩和缓存'
+    },
+    {
+      title: '泛域名配置',
+      path: '/运维/Nginx/配置篇/泛域名配置'
     }
   ]
 };
