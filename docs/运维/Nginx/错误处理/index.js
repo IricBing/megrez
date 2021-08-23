@@ -8,6 +8,10 @@ module.exports = {
     {
       title: '413错误处理',
       path: '/运维/Nginx/配置篇/413错误处理'
+    },
+    {
+      title: '中文乱码问题',
+      path: '/运维/Nginx/配置篇/中文乱码'
     }
   ]
 };
