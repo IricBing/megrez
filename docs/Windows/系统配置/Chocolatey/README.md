@@ -1,5 +1,6 @@
 # Chocolatey
 * [官方网站](https://chocolatey.org/)
+* [包搜索](https://community.chocolatey.org/packages)
 
 ## 介绍
 
