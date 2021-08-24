@@ -8,6 +8,7 @@ const ops = require('../运维');
 const database = require('../数据库');
 const hpSocket = require('../HPSocket');
 const programDesign = require('../程序设计');
+const git = require('../Git');
 
 module.exports = {
   markdown: {
@@ -63,6 +64,6 @@ module.exports = {
       { text: '开始', link: '/guide/' },
       { text: 'GitHub', link: 'https://github.com/IricBing/megrez' }
     ],
-    sidebar: [programDesign, nodejs, web, go, ops, container, database, hpSocket, windows, ide]
+    sidebar: [programDesign, nodejs, web, git, go, ops, container, database, hpSocket, windows, ide]
   }
 };
