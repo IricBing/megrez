@@ -16,6 +16,10 @@ module.exports = {
     {
       title:'个性化配置',
       path:'/IDE/VirtualStudio/个性化配置'
+    },
+    {
+      title:'反编译winForm无法展示设计视图',
+      path:'/IDE/VirtualStudio/反编译winForm无法展示设计视图'
     }
   ]
 };
