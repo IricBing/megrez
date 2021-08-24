@@ -8,6 +8,10 @@ module.exports = {
     {
       title: '集成宠物猫',
       path: '/Web/vuepress/扩展插件/宠物猫'
+    },
+    {
+      title: '二维码',
+      path: '/Web/vuepress/扩展插件/二维码'
     }
   ]
 };

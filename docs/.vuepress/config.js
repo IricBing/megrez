@@ -35,6 +35,12 @@ module.exports = {
           content: '复制成功'
         }
       }
+    ],
+    [
+      'qrcode',
+      {
+        labelText: '二维码'
+      }
     ]
   ],
   title: 'Iric',
