@@ -1,8 +1,10 @@
 const desktopApplication = require('./桌面应用程序开发');
 const systemConfig = require('./系统配置');
 const entityFramework = require('./EntityFramework');
+const base = require('./基础篇');
+const util = require('./奇技淫巧');
 
 module.exports = {
   title: 'Windows',
-  children: [entityFramework, desktopApplication, systemConfig]
+  children: [base, entityFramework, desktopApplication, systemConfig, util]
 };
