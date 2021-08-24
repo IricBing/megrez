@@ -14,14 +14,9 @@ module.exports = {
       md.use(require('markdown-it-disable-url-encode'));
     }
   },
-  // head: [
-  //   // add jquert and fancybox
-  //   ['script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js' }],
-  //   ['script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js' }],
-  //   ['link', { rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css' }]
-  // ],
   plugins: [
     'vuepress-plugin-cat',
+    'vuepress-plugin-zooming',
     [
       '@vuepress/last-updated',
       {
