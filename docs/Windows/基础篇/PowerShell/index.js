@@ -1,6 +1,6 @@
 module.exports = {
   title: 'PowerShell',
-  path:'/Windows/基础篇/PowerShell',
+  path:'/Windows/基础篇/PowerShell/',
   children:[
     {
       title: '策略',
