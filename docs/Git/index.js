@@ -1,7 +1,8 @@
-const baseUse = require('./基本使用');
+const baseUsage = require('./基本使用');
+const advanceUsage = require('./进阶用法');
 const gitlab = require('./Gitlab');
 
 module.exports = {
   title: 'Git',
-  children: [baseUse, gitlab]
+  children: [baseUsage, advanceUsage, gitlab]
 };
