@@ -22,6 +22,7 @@
     "prettier": "^2.3.2",
     "vuepress": "^1.8.2",
     "vuepress-plugin-cat": "^1.0.3",
+    "vuepress-plugin-mermaidjs": "^1.8.1",
     "vuepress-plugin-nuggets-style-copy": "^1.0.3",
     "vuepress-plugin-qrcode": "^1.0.7",
     "vuepress-plugin-zooming": "^1.1.8"

@@ -19,6 +19,7 @@ module.exports = {
   plugins: [
     'vuepress-plugin-cat',
     'vuepress-plugin-zooming',
+    'vuepress-plugin-mermaidjs',
     [
       '@vuepress/last-updated',
       {

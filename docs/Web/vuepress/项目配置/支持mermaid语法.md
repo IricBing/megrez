@@ -1,0 +1,23 @@
+# 支持mermaid语法
+
+## 文档地址
+
+* [Github地址](https://github.com/eFrane/vuepress-plugin-mermaidjs)
+
+## 安装
+
+```shell
+$ yarn add -D vuepress-plugin-mermaidjs
+```
+
+## 配置
+
+修改 `docs/.vuepress/config.js` 文件，增加如下内容
+
+```javascript
+module.exports = {
+    plugins: [
+        'vuepress-plugin-mermaidjs'
+    ]
+}
+```

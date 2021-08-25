@@ -12,6 +12,10 @@ module.exports = {
     {
       title: '上次更新时间配置',
       path: '/Web/vuepress/项目配置/上次更新时间配置'
+    },
+    {
+      title: '支持mermaid语法',
+      path: '/Web/vuepress/项目配置/支持mermaid语法'
     }
   ]
 };
