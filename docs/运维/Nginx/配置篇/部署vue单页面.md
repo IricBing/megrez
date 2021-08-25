@@ -6,25 +6,28 @@
 
 ``` Nginx
 server {
-	listen 80;
-	server_name vue.example.com;
+  listen 80;
+  server_name vue.example.com;
 
-	return 301 https://vue.example.com$request_uri;
+  return 301 https://vue.example.com$request_uri;
 }
 
 server {
-	listen 443 ssl;
-	server_name vue.example.com;
+  listen 443 ssl;
+  server_name vue.example.com;
 
-	ssl_certificate /home/ubuntu/certs/T.example.com/public.crt;
-	ssl_certificate_key /home/ubuntu/certs/T.example.com/private.key;
-	
-	root /home/ubuntu/code/iotmanagement/admin/dist;
-	index index.html;
+  ssl_certificate /home/ubuntu/certs/T.example.com/public.crt;
+  ssl_certificate_key /home/ubuntu/certs/T.example.com/private.key;
 
-	location / {
-		try_files $uri $uri/ /index.html;    #核心思想                   
-	}
+  root /home/ubuntu/code/iotmanagement/admin/dist;
+  index index.html;
+
+  location / {
+    try_files $uri $uri/ /index.html;    # 核心思想
+    if ($request_filename ~* ^.*?.(html|htm)$){ # html和htm文件不缓存
+      add_header Cache-Control no-cache,no-store,must-revalidate;
+    }
+  }
 }
 ```
 
