@@ -14,6 +14,8 @@
 
 此种应用的底层是基于 `. NetFramework` 的，后续操作需要选择 `. Net Framework` 版本，如下所示：
 
+![winForm带framework后续选择](assets/images/winForm带framework后续选择.png)
+
 ## 如何选择
 
 微软确实正在逐步切换到 `. Net Core` ，但据说 `. Net Core` 对 `WinForm` 有所阉割，性能方面 `. Net Core` 占有优势，但是我们的 `winForm` 对性能需求不高，所以，还是选择 `. NetFramework` 吧，生态好，开发快。
