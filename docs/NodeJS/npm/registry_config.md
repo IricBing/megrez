@@ -52,9 +52,3 @@ grpc_node_binary_host_mirror "https://npm.taobao.org/mirrors/"
 node_sqlite3_binary_host_mirror "http://npm.taobao.org/mirrors/"
 nodejieba_binary_host_mirror "https://npm.taobao.org/mirrors/nodejieba"
 ```
-
-## 附件
-
-[.npmrc 文件](assets/files/.npmrc)
-
-[.yarnrc 文件](assets/files/.yarnrc)
