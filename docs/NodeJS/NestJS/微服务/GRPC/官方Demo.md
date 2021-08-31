@@ -123,7 +123,7 @@ bootstrap();
 
 ```
 
-先忽略注释，该代码的作用是启动混合服务，http+grpc服务，流程如下：
+先忽略注释，该代码的作用是启动混合服务， `http+grpc` 服务，流程如下：
 
 ```mermaid
 graph TD;
@@ -168,7 +168,9 @@ await app.listenAsync();
 
 其中 `options.url` 就是用来配置程序占用端口的，通常为： `127.0.0.1:3300` or `0.0.0.0:3300` 。 `127.0.0.1` 表示这个服务 `只能本地调用` ，其他ip来源的请求直接过滤， `0.0.0.0` 表示 `任意来源` 的ip都可以调用。题外话：mysql，Postgresql，mongodb等数据库默认都是只能本机连接，其思想和这里的设计思想是一样的，注意多思考。
 
-> `思考题？` 如果想要做仅能内网连接的，请求来源ip为127、192、10、172开头的允许访问，该如何设置？
+::: tip 思考题？
+如果想要做仅能内网连接的，请求来源ip为127、192、10、172开头的允许访问，该如何设置？
+:::
 
 ### grpc-client.options.ts
 
@@ -324,7 +326,7 @@ export class HeroController implements OnModuleInit {
 |http服务方法|GRPC服务方法|
 |-----|-----|
 |@Get() getMany()|@GrpcMethod('HeroService') findOne(data: HeroById)|
-|@Get(':id') getById(@Param('id') id: string)|@GrpcStreamMethod('HeroService') findMany(data$: Observable<HeroById>)|
+|@Get(':id') getById(@Param('id') id: string)|@GrpcStreamMethod('HeroService') findMany(data$: Observable\<HeroById\>)|
 
 这里讲解 `单向RPC(一元RPC)` 调用，findMany为 `双向流式 RPC` 请自行按照下面的思路研究。
 
