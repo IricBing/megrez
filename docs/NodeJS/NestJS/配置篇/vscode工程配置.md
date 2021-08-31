@@ -395,6 +395,7 @@ $ yarn husky add .husky/pre-commit "npx lint-staged"
 
 ::: tip 提示
 `husky` 版本进化很快，还破坏性升级，这就有点难受了，如果发现不好使，可能就是升级了，目前版本： `6.0.0`
+
 :::
 
 ### 生产环境打包优化
@@ -440,7 +441,7 @@ $ yarn build:prod
 
 #### 新建 `.dockerignore` 文件
 
-内容如下：
+* 单阶段`dist`文件夹构建
 
 ```gitignore
 **/*
@@ -449,6 +450,20 @@ $ yarn build:prod
 !yarn.lock
 
 !./dist/
+```
+
+* 多阶段构建
+
+```gitignore
+**/*
+!package.json
+!yarn.lock
+!nest-cli.json
+!tsconfig.json
+!tsconfig.build.json
+!tsconfig.build.prod.json
+
+!./src/
 ```
 
 #### 新建 `Dockerfile` 文件
