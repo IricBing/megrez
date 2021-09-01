@@ -3,8 +3,9 @@ const npm = require('./npm');
 const versionControl = require('./版本控制');
 const nestjs = require('./NestJS');
 const optimizing = require('./优化篇');
+const ops = require('./运维篇');
 
 module.exports = {
   title: 'NodeJS',
-  children: [versionControl, npm, pm2, nestjs, optimizing]
+  children: [versionControl, npm, pm2, nestjs, optimizing, ops]
 };
