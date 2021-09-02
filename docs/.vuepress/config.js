@@ -11,6 +11,7 @@ const programDesign = require('../程序设计');
 const git = require('../Git');
 const adobe = require('../Adobe');
 const protocol = require('../协议');
+const linux = require('../Linux');
 
 module.exports = {
   markdown: {
@@ -67,6 +68,6 @@ module.exports = {
       { text: '开始', link: '/guide/' },
       { text: 'GitHub', link: 'https://github.com/IricBing/megrez' }
     ],
-    sidebar: [programDesign, nodejs, web, git, go, ops, container, database, hpSocket, windows, protocol, ide, adobe]
+    sidebar: [programDesign, nodejs, web, git, go, ops, container, database, linux, hpSocket, windows, protocol, ide, adobe]
   }
 };
