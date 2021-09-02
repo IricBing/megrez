@@ -12,7 +12,7 @@
 
 根据你的终端类型修改 `.zshrc` 或者 `.bashrc` 文件，写入如下配置:
 
-```zsh
+```bash
 # Gitlab 环境变量
 export GITLAB_HOME=/srv/gitlab
 ```

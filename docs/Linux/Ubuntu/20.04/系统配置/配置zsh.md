@@ -82,7 +82,7 @@ $ vim ~/.zshrc
 
 使用 `af-magic` 主题
 
-``` zsh
+``` bash
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -92,7 +92,7 @@ ZSH_THEME="af-magic"
 
 增加插件
 
-``` zsh
+``` bash
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/

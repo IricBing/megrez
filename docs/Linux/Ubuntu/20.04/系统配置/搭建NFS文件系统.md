@@ -30,7 +30,7 @@ $ sudo chown nobody:nogroup /var/nfs/gernel
 为了使 `NFS` 服务器定义的共享文件可被指定的客户端主机访问，需要在服务器端的 `/etc/exports` 文件中添加对应的记录。
 该文件的格式如下：
 
-``` conf
+``` shell
 Directory Host(Options ...) Host(Options) #comment
 ```
 
@@ -38,7 +38,7 @@ Directory Host(Options ...) Host(Options) #comment
 
 示例：
 
-``` conf
+``` shell
 /var/nfs/gernel  192.168.56.0/24(rw,insecure,sync,no_subtree_check)
 /var/nfs/public  *(ro,insecure,sync,no_subtree_check)
 /home/starky 192.168.56.1(rw,insecure,no_root_squash,sync,no_wdelay,no_subtree_check)
@@ -100,7 +100,7 @@ $ sudo mount 192.168.56.102:/home/starky /mnt/nfs/starky
 
 `/etc/fstab` 文件的示例内容如下：
 
-``` conf
+``` shell
 # filesystem                    mountpoint       fstype  flags                        dump    fsck
 192.168.56.102:/var/nfs/gernel  /mnt/nfs/gernel  nfs     rw,bg,intr,hard,nodev,nosuid 0       0
 192.168.56.102:/var/nfs/public  /mnt/nfs/public  nfs4    ro,bg,intr,soft,nodev,nosuid 0       0

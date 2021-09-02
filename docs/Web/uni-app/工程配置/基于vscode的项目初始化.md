@@ -24,7 +24,7 @@ $ yarn add -D @types/uni-app @types/html5plus
 
 删除原来的`.vscode`规则，添加如下规则：
 
-```conf
+```shell
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json

@@ -8,7 +8,7 @@
 
 ## .npmrc 文件完整版配置
 
-``` conf
+``` shell
 home="https://npm.taobao.org"
 registry="https://registry.npm.taobao.org/"
 
@@ -31,7 +31,7 @@ nodejieba_binary_host_mirror="https://npm.taobao.org/mirrors/nodejieba"
 
 ## .yarnrc 文件完整版配置
 
-``` conf
+``` shell
 home "https://npm.taobao.org"
 registry "https://registry.npm.taobao.org/"
 disturl "https://npm.taobao.org/dist"
