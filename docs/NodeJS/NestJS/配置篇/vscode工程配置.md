@@ -338,6 +338,7 @@ module.exports = {
 
 ```gitignore
 /target
+/documentation
 
 # environment file
 .env
@@ -469,3 +470,19 @@ $ yarn build:prod
 #### 新建 `Dockerfile` 文件
 
 配置信息依环境而定，本笔记不做示例。
+
+### Compodoc支持
+
+`Compodoc`是一个文档工具，用来生成`NestJS`应用的程序文档，[官方说明](https://docs.nestjs.com/recipes/documentation)
+
+* 安装
+
+```shell
+$ yarn add -D @compodoc/compodoc
+```
+
+* 生成文档
+
+```shell
+$ npx @compodoc/compodoc -p tsconfig.json -s
+```
