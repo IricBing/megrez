@@ -4,13 +4,13 @@
 
 ## 安装zsh
 
-``` shell
+```shell
 $ sudo apt install zsh
 ```
 
 ### 更改默认shell为zsh
 
-``` shell
+```shell
 $ chsh -s /bin/zsh
 ```
 
@@ -26,19 +26,19 @@ $ chsh -s /bin/zsh
 
 * 通过 `curl` 安装
 
-``` shell
+```shell
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 * 通过 `wget` 安装
 
-``` shell
+```shell
 $ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 * 通过 `fetch` 安装
 
-``` shell
+```shell
 $ sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
@@ -46,43 +46,52 @@ $ sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/t
 
 #### Step1. clone项目到本地
 
-``` shell
+```shell
 $ git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+
+# 使用GitHub复刻版
+$ git clone https://hub.fastgit.org/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 ```
 
 #### Step2. 拷贝 `.zshrc` 配置文件
 
-``` shell
+```shell
 $ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 ```
 
 #### Step3. 重启
 
-``` shell
+```shell
 $ sudo reboot
 ```
 
 #### Step4. 下载 `zsh-syntax-highlighting` 插件
 
-``` shell
+```shell
 $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# 使用GitHub复刻版
+$ git clone https://hub.fastgit.org/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 #### Step5. 下载 `zsh-autosuggestions` 插件
 
-``` shell
-$ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```shell
+$ git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# 使用GitHub复刻版
+$ git clone https://hub.fastgit.org/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
 #### Step6. 更改配置文件
 
-``` shell
+```shell
 $ vim ~/.zshrc
 ```
 
 使用 `af-magic` 主题
 
-``` bash
+```bash
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -92,7 +101,7 @@ ZSH_THEME="af-magic"
 
 增加插件
 
-``` bash
+```bash
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -103,6 +112,6 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 #### Step7. 加载 `.zshrc` 文件
 
-``` shell
+```shell
 $ source ~/.zshrc
 ```
