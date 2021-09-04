@@ -12,6 +12,10 @@ module.exports = {
     {
       title: '二维码',
       path: '/Web/vuepress/扩展插件/二维码'
+    },
+    {
+      title: '右侧边锚点导航栏',
+      path: '/Web/vuepress/扩展插件/右侧边锚点导航栏'
     }
   ]
 };

@@ -48,6 +48,15 @@ module.exports = {
       {
         labelText: '二维码'
       }
+    ],
+    [
+      'vuepress-plugin-right-anchor',
+      {
+        expand: {
+          trigger: 'click',
+          clickModeDefaultOpen: true
+        }
+      }
     ]
   ],
   title: 'Iric',
@@ -69,6 +78,7 @@ module.exports = {
       { text: '开始', link: '/guide/' },
       { text: 'GitHub', link: 'https://github.com/IricBing/megrez' }
     ],
-    sidebar: [programDesign, nodejs, web, git, go, ops, container, database, linux, mq, hpSocket, windows, protocol, ide, adobe]
+    sidebar: [programDesign, nodejs, web, git, go, ops, container, database, linux, mq, hpSocket, windows, protocol, ide, adobe],
+    sidebarDepth: 0
   }
 };
