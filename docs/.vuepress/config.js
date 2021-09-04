@@ -52,6 +52,7 @@ module.exports = {
     [
       'vuepress-plugin-right-anchor',
       {
+        ignore: ['/'],
         expand: {
           trigger: 'click',
           clickModeDefaultOpen: true
