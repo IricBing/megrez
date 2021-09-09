@@ -11,6 +11,10 @@ module.exports = {
       title: '方案对比',
       path: '/Windows/桌面应用程序开发/方案对比'
     },
+    {
+      title: '.Net Standard vs .Net Framework vs .Net Core',
+      path: '/Windows/桌面应用程序开发/底层架构说明'
+    },
     winForm,
     wpf,
     uwp,
