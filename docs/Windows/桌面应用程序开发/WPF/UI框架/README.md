@@ -32,7 +32,7 @@
 * 不好看
 * **商业使用需要付费**
 
-## HZControls
+## HZHControls
 
 [官网](http://www.hzhcontrols.com/)
 
