@@ -1,3 +1,4 @@
+const language = require('../编程语言');
 const nodejs = require('../NodeJS');
 const container = require('../容器');
 const windows = require('../Windows');
@@ -79,7 +80,7 @@ module.exports = {
       { text: '开始', link: '/guide/' },
       { text: 'GitHub', link: 'https://github.com/IricBing/megrez' }
     ],
-    sidebar: [programDesign, nodejs, web, git, go, ops, container, database, linux, mq, hpSocket, windows, protocol, ide, adobe],
+    sidebar: [language, programDesign, nodejs, web, git, go, ops, container, database, linux, mq, hpSocket, windows, protocol, ide, adobe],
     sidebarDepth: 0
   }
 };
