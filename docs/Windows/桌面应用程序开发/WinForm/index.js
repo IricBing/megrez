@@ -1,9 +1,10 @@
 const foundation = require('./基础篇');
 const ui = require('./UI框架');
 const experience = require('./实践积累');
+const serialport = require('./串口');
 
 module.exports = {
   title: 'WinForm',
   path: '/Windows/桌面应用程序开发/WinForm/',
-  children: [foundation, ui, experience]
+  children: [foundation, ui, experience, serialport]
 };

@@ -1,0 +1,5 @@
+const start = require('./入门知识');
+module.exports = {
+  title: '基础篇',
+  children: [start]
+};
