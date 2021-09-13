@@ -1,3 +1,5 @@
+const dependencies = require('./依赖');
+
 module.exports = {
   title: 'npm',
   children: [
@@ -8,6 +10,7 @@ module.exports = {
     {
       title: '换源（命令版）——推荐',
       path: '/NodeJS/npm/换源-命令版'
-    }
+    },
+    dependencies
   ]
-}
+};
