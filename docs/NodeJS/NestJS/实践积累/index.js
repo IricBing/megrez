@@ -1,6 +1,9 @@
+const authentication = require('./认证');
+
 module.exports = {
   title: '实践积累',
   children: [
+    authentication,
     {
       title: '支持XML传参',
       path: '/NodeJS/NestJS/实践积累/支持XML传参'
