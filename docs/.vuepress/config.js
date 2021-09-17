@@ -60,6 +60,13 @@ module.exports = {
           clickModeDefaultOpen: true
         }
       }
+    ],
+    [
+      "md-enhance",
+      {
+        // 启用 TeX 支持
+        tex: true,
+      },
     ]
   ],
   title: 'Iric',

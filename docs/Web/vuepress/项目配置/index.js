@@ -16,6 +16,14 @@ module.exports = {
     {
       title: '支持mermaid语法',
       path: '/Web/vuepress/项目配置/支持mermaid语法'
+    },
+    {
+      title: 'Markdown增强',
+      path: '/Web/vuepress/项目配置/Markdown增强'
+    },
+    {
+      title: '数学公式',
+      path: '/Web/vuepress/项目配置/数学公式'
     }
   ]
 };
