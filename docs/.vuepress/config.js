@@ -64,8 +64,24 @@ module.exports = {
     [
       "md-enhance",
       {
+        // 启用下角标功能
+        sub: true,
+        // 启用上角标
+        sup: true,
+        // 启用自定义对齐
+        align: true,
+        // 开启标记
+        mark: true,
         // 启用 TeX 支持
         tex: true,
+        // 启用任务列表
+        tasklist: true,
+        // 启用流程图
+        flowchart: true,
+        // 启用代码演示
+        demo: true,
+        // 启用脚注
+        footnote: true,
       },
     ]
   ],
