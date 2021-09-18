@@ -7,7 +7,7 @@ const web = require('../Web');
 const go = require('../Go');
 const ops = require('../运维');
 const database = require('../数据库');
-const hpSocket = require('../HPSocket');
+const communicationFramework = require('../通信框架')
 const programDesign = require('../程序设计');
 const git = require('../Git');
 const adobe = require('../Adobe');
@@ -104,7 +104,7 @@ module.exports = {
       { text: '开始', link: '/guide/' },
       { text: 'GitHub', link: 'https://github.com/IricBing/megrez' }
     ],
-    sidebar: [language, programDesign, nodejs, web, git, go, ops, container, database, linux, mq, hpSocket, windows, protocol, ide, adobe, google],
+    sidebar: [language, programDesign, nodejs, web, git, go, ops, container, database, linux, mq, communicationFramework, windows, protocol, ide, adobe, google],
     sidebarDepth: 0
   }
 };
