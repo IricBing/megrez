@@ -9,6 +9,10 @@ module.exports = {
     {
       title: '运算符',
       path: '/编程语言/CSharp/基础篇/基础语法/运算符'
+    },
+    {
+      title: '变量',
+      path: '/编程语言/CSharp/基础篇/基础语法/变量'
     }
   ]
 };
