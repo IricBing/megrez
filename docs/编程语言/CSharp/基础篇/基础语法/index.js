@@ -17,6 +17,10 @@ module.exports = {
     {
       title: '常量',
       path: '/编程语言/CSharp/基础篇/基础语法/常量'
+    },
+    {
+      title: 'if else 语句',
+      path: '/编程语言/CSharp/基础篇/基础语法/if_else'
     }
   ]
 };
