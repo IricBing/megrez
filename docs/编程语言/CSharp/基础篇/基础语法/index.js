@@ -13,6 +13,10 @@ module.exports = {
     {
       title: '变量',
       path: '/编程语言/CSharp/基础篇/基础语法/变量'
+    },
+    {
+      title: '常量',
+      path: '/编程语言/CSharp/基础篇/基础语法/常量'
     }
   ]
 };
