@@ -15,6 +15,10 @@ module.exports = {
       title: 'region用法',
       path: '/IDE/VSCode/region用法'
     },
+    {
+      title: '创建C#控制台项目',
+      path: '/IDE/VSCode/创建CSharp控制台项目'
+    },
     pluginDevelop
   ]
 };
