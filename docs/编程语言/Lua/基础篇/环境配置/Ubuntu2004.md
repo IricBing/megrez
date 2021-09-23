@@ -1,0 +1,64 @@
+# Ubuntu 20.04 配置Lua环境
+
+## 源码编译安装
+
+`Linux` 环境下安装`Lua`环境非常简单，下载源码编译并安装即可，找一个目录，之后进行如下操作即可：
+
+```shell
+$ curl -R -O http://www.lua.org/ftp/lua-5.3.6.tar.gz
+$ tar zxf lua-5.3.6.tar.gz
+$ cd lua-5.3.6
+$ make linux test
+$ sudo make install
+```
+
+安装完成测试：
+
+```shell
+$ lua
+Lua 5.3.6  Copyright (C) 1994-2020 Lua.org, PUC-Rio
+> 
+```
+
+::: tip 提示
+本笔记写于**2021年9月23日**，最新版已经是 `5.4` 了，这里用 `5.3` 的原因是因为主要目的是在**嵌入式**方面来使用 `lua` ，嵌入式方面 `lua` 的版本还没有这么新。
+:::
+
+### 采坑
+
+运行 `$ make linux test` 的时候报错如下：
+
+```text
+cd src && make linux
+make[1]: 进入目录“/home/iric/software/lua-5.3.6/src”
+make all SYSCFLAGS="-DLUA_USE_LINUX" SYSLIBS="-Wl,-E -ldl -lreadline"
+make[2]: 进入目录“/home/iric/software/lua-5.3.6/src”
+gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_2 -DLUA_USE_LINUX    -c -o lua.o lua.c
+lua.c:82:10: fatal error: readline/readline.h: 没有那个文件或目录
+   82 | #include <readline/readline.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [<内置>：lua.o] 错误 1
+make[2]: 离开目录“/home/iric/software/lua-5.3.6/src”
+make[1]: *** [Makefile:110：linux] 错误 2
+make[1]: 离开目录“/home/iric/software/lua-5.3.6/src”
+make: *** [Makefile:55：linux] 错误 2
+```
+
+经过在官网手册上查找，官方说是少一个 `libreadline-dev` 或 `readline-devel` 的包，通过 `$ sudo apt-cache search readline-dev` 得到如下结果：
+
+```text
+lib32readline-dev - GNU readline and history libraries, development files (32-bit)
+libreadline-dev - GNU readline 与 history 库，开发文件
+lib64readline-dev - GNU readline and history libraries, development files (64-bit)
+golang-github-chzyer-readline-dev - Readline is a pure go implementation for a GNU-Readline like library
+libghc-readline-dev - Haskell bindings to GNU readline library
+```
+
+所以安装一下`libreadline-dev`包就行了，安装命令： `$ sudo apt install libreadline-dev` 。
+
+文档地址：https://www.lua.org/manual/5.3/readme.html
+
+## 二进制文件安装
+
+[下载地址](http://luabinaries.sourceforge.net/)
