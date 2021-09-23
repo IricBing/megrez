@@ -1,5 +1,9 @@
 # 创建C#控制台项目
 
+::: warning 大前提
+**只支持**基于 `.Net Core` 的项目，而且还得是能够跨平台的，例如基于 `.Net Core` 的 `WinForm` 程序就**不行**。
+:::
+
 ## 环境配置
 
 首先安装 `.net Core` ，[下载地址](https://dotnet.microsoft.com/download)
