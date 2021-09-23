@@ -25,6 +25,10 @@ module.exports = {
     {
       title: 'switch case语句',
       path: '/编程语言/CSharp/基础篇/基础语法/switch_case'
+    },
+    {
+      title: 'for 循环',
+      path: '/编程语言/CSharp/基础篇/基础语法/for循环'
     }
   ]
 };
