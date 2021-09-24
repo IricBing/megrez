@@ -19,6 +19,10 @@ module.exports = {
       title: '创建C#控制台项目',
       path: '/IDE/VSCode/创建CSharp控制台项目'
     },
+    {
+      title: '配置Lua环境',
+      path: '/IDE/VSCode/配置Lua环境'
+    },
     pluginDevelop
   ]
 };
