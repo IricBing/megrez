@@ -9,6 +9,10 @@ module.exports = {
     {
       title: '鉴权',
       path: '/消息中间件/Emqx/鉴权'
+    },
+    {
+      title: 'WebHook',
+      path: '/消息中间件/Emqx/WebHook'
     }
   ]
 };
