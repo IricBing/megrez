@@ -1,8 +1,6 @@
-# 反编译Windows软件
+# ILSpy
 
-## 实现方式
-
-采用 `ILSpy` 软件进行反编译即可，[Github项目地址](https://github.com/icsharpcode/ILSpy)
+[Github项目地址](https://github.com/icsharpcode/ILSpy)
 
 软件截图：
 
