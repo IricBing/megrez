@@ -16,6 +16,10 @@ module.exports = {
     {
       title: '方法的定义',
       path: '/编程语言/CSharp/基础篇/类和对象/方法的定义'
+    },
+    {
+      title: 'get和set访问器',
+      path: '/编程语言/CSharp/基础篇/类和对象/get和set访问器'
     }
   ]
 };
