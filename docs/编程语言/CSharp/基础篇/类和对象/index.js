@@ -20,6 +20,14 @@ module.exports = {
     {
       title: 'get和set访问器',
       path: '/编程语言/CSharp/基础篇/类和对象/get和set访问器'
+    },
+    {
+      title: '调用类成员',
+      path: '/编程语言/CSharp/基础篇/类和对象/调用类成员'
+    },
+    {
+      title: '构造函数',
+      path: '/编程语言/CSharp/基础篇/类和对象/构造函数'
     }
   ]
 };
