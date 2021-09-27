@@ -7,7 +7,7 @@ const web = require('../Web');
 const go = require('../Go');
 const ops = require('../运维');
 const database = require('../数据库');
-const communicationFramework = require('../通信框架')
+const communicationFramework = require('../通信框架');
 const programDesign = require('../程序设计');
 const git = require('../Git');
 const adobe = require('../Adobe');
@@ -15,6 +15,7 @@ const protocol = require('../协议');
 const linux = require('../Linux');
 const mq = require('../消息中间件');
 const google = require('../Google');
+const webAssembly = require('../WebAssembly');
 
 module.exports = {
   markdown: {
@@ -62,7 +63,7 @@ module.exports = {
       }
     ],
     [
-      "md-enhance",
+      'md-enhance',
       {
         // 启用下角标功能
         sub: true,
@@ -81,8 +82,8 @@ module.exports = {
         // 启用代码演示
         demo: true,
         // 启用脚注
-        footnote: true,
-      },
+        footnote: true
+      }
     ]
   ],
   title: 'Iric',
@@ -104,7 +105,26 @@ module.exports = {
       { text: '开始', link: '/guide/' },
       { text: 'GitHub', link: 'https://github.com/IricBing/megrez' }
     ],
-    sidebar: [language, programDesign, nodejs, web, git, go, ops, container, database, linux, mq, communicationFramework, windows, protocol, ide, adobe, google],
+    sidebar: [
+      language,
+      programDesign,
+      nodejs,
+      web,
+      webAssembly,
+      git,
+      go,
+      ops,
+      container,
+      database,
+      linux,
+      mq,
+      communicationFramework,
+      windows,
+      protocol,
+      ide,
+      adobe,
+      google
+    ],
     sidebarDepth: 0
   }
 };
