@@ -16,6 +16,10 @@ module.exports = {
     {
       title: '定时器',
       path: '/Windows/桌面应用程序开发/WinForm/实践积累/九星自研/定时器'
+    },
+    {
+      title: '国际化',
+      path: '/Windows/桌面应用程序开发/WinForm/实践积累/九星自研/国际化/'
     }
   ]
 };
