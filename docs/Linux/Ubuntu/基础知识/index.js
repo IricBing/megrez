@@ -20,6 +20,10 @@ module.exports = {
     {
       title: '依赖库',
       path: '/Linux/Ubuntu/基础知识/依赖库'
+    },
+    {
+      title: '交换（swap）分区',
+      path: '/Linux/Ubuntu/基础知识/交换分区'
     }
   ]
 };

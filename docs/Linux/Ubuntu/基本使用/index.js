@@ -91,6 +91,10 @@ module.exports = {
     {
       title: '中文支持',
       path: '/Linux/Ubuntu/基本使用/中文支持'
+    },
+    {
+      title: '关闭交换（swap）分区',
+      path: '/Linux/Ubuntu/基本使用/关闭交换分区'
     }
   ]
 };
