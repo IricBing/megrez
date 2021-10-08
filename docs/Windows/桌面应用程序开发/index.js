@@ -1,6 +1,7 @@
 const winForm = require('./WinForm');
 const wpf = require('./WPF');
 const uwp = require('./UWP');
+const mfc = require('./MFC')
 const experience = require('./实践积累');
 const hpSocket = require('./HPSocket');
 const nuget = require('./NuGet')
@@ -19,6 +20,7 @@ module.exports = {
     winForm,
     wpf,
     uwp,
+    mfc,
     hpSocket,
     nuget,
     experience
