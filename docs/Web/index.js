@@ -5,8 +5,9 @@ const experience = require('./实践积累');
 const vue2 = require('./Vue2');
 const uniApp = require('./uni-app');
 const chrome = require('./Chrome');
+const official = require('./微信公众号');
 
 module.exports = {
   title: 'Web',
-  children: [experience, libs, vue2, uniApp, miniProgram, vuepress, chrome]
+  children: [experience, libs, vue2, uniApp, miniProgram, official, vuepress, chrome]
 };
