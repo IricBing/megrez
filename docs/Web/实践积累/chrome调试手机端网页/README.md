@@ -20,7 +20,7 @@ USB线出问题的概率也很大！最好用原装充电器上的线。
 
 ## Step2. Chrome浏览器配置
 
-在**手机浏览器**中打开任意网页，例如 `www.baidu.com` ，接下来在**电脑Chrome浏览器**地址栏中输入： `chrome://inspect/#devices` ，就能看到手机中打开的网页了，如下所示：
+在**手机浏览器**中打开任意网页，例如 `www.baidu.com` ，接下来在**电脑Chrome浏览器**地址栏中输入： [chrome://inspect/#devices](chrome://inspect/#devices) ，就能看到手机中打开的网页了，如下所示：
 
 ![Chrome查看手机网页列表](assets/images/Chrome查看手机网页列表.png)
 
