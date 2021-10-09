@@ -22,7 +22,7 @@ $ chsh -s /bin/zsh
 
 ### 方法一：自动化脚本安装
 
-`注意：` 自动化脚本安装可能无法安装，因为软件的下载地址为（raw.githubusercontent.com），国内部分网络禁了这个域名。
+`注意：` 自动化脚本安装可能无法安装，因为软件的下载地址为（ `raw.githubusercontent.com` ），国内部分网络禁了这个域名。
 
 * 通过 `curl` 安装
 
@@ -115,3 +115,38 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 ```shell
 $ source ~/.zshrc
 ```
+
+## 使用agnoster主题
+
+### Step1. 安装powerline字体
+
+[Github地址](https://github.com/powerline/fonts)
+
+```shell
+$ sudo apt install fonts-powerline
+
+#刷新字体缓存
+$ fc-cache -vf
+```
+
+### Step2. 修改zsh配置
+
+```shell
+# 修改这里切换主题
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
+
+# agnoster 主题设置：隐藏当前用户
+#prompt_context() {
+#  DEFAULT_USER="iric"
+#}
+
+# agnoster 主题设置：只显示当前用户名
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+  fi
+}
+```
+
+未完，有时间再搞。。。
