@@ -32,3 +32,28 @@ USB线出问题的概率也很大！最好用原装充电器上的线。
 
 ### 局域网WiFi调试
 
+首先通过USB数据线连接到电脑，并正常开启USB调试功能，进行如下操作：
+
+```shell
+$ adb devices
+List of devices attached
+1575531506008TA	device
+
+$ adb devices
+List of devices attached
+1575531506008TA	device
+
+$ adb tcpip 5555
+restarting in TCP mode port: 5555
+
+$ adb connect 192.168.3.160:5555
+connected to 192.168.3.160:5555
+
+$ adb devices
+List of devices attached
+192.168.3.160:5555	device
+```
+
+::: tip 提示
+台式机没有无线网卡是不行的哦！
+:::
