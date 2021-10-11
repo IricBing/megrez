@@ -33,3 +33,5 @@
 ![lighthouse分析网站性能](assets/images/lighthouse分析网站性能.png)
 
 相关结果报告可查看：[网站分析结果.html](https://megrez-file.virtualbing.cn/Web/%E5%AE%9E%E8%B7%B5%E7%A7%AF%E7%B4%AF/%E6%89%8B%E6%9C%BA%E7%AB%AF%E6%8E%A5%E5%8F%A3%E5%8F%8D%E5%BA%94%E6%85%A2/%E7%BD%91%E7%AB%99%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C.html)
+
+继续深入分析，使用 `devtool` 中的 `Performance` 功能来分析网站，分析结果：[Performance分析结果.json](https://megrez-file.virtualbing.cn/Web/%E5%AE%9E%E8%B7%B5%E7%A7%AF%E7%B4%AF/%E6%89%8B%E6%9C%BA%E7%AB%AF%E6%8E%A5%E5%8F%A3%E5%8F%8D%E5%BA%94%E6%85%A2/Performance%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C.json)
