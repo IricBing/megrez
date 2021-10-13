@@ -16,7 +16,8 @@ const linux = require('../Linux');
 const mq = require('../消息中间件');
 const google = require('../Google');
 const webAssembly = require('../WebAssembly');
-const experience = require('../实践积累')
+const experience = require('../实践积累');
+const media = require('../音视频');
 
 module.exports = {
   markdown: {
@@ -123,6 +124,7 @@ module.exports = {
       windows,
       protocol,
       experience,
+      media,
       ide,
       adobe,
       google

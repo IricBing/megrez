@@ -10,6 +10,8 @@
 
 `Pipenv` 是 `Pipfile` 主要倡导者、 `requests` 作者 `Kenneth Reitz` 写的一个命令行工具，主要包含了 `Pipfile` 、 `pip` 、 `click` 、 `requests` 和 `virtualenv` ，能够有效管理Python多个环境，各种第三方包及模块。它会自动为您的项目创建和管理一个 `virtualenv` ，并在安装/卸载包时从 `Pipfile` 中添加/删除包。它还生成非常重要的 `Pipfile.lock` 文件，用于生成**确定性构建**。
 
+[Github地址](https://github.com/pypa/pipenv)
+
 ## 特性
 
 * `pipenv`集成了`pip`，`virtualenv`两者的功能，且完善了两者的一些缺陷。
