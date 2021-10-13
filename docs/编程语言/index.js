@@ -3,8 +3,11 @@ const javascript = require('./JavaScript');
 const typescript = require('./TypeScript');
 const csharp = require('./CSharp');
 const lua = require('./Lua');
+const python = require('./Python');
+const rust = require('./Rust');
+const markdown = require('./Markdown');
 
 module.exports = {
   title: '编程语言',
-  children: [c, javascript, typescript, csharp, lua]
+  children: [c, javascript, typescript, csharp, lua, python, rust, markdown]
 };
