@@ -10,6 +10,10 @@ module.exports = {
       path: '/Git/基本使用/ignore规则'
     },
     {
+      title: 'pull',
+      path: '/Git/基本使用/pull'
+    },
+    {
       title: 'tag',
       path: '/Git/基本使用/tag'
     },
