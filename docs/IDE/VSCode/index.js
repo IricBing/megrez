@@ -20,6 +20,10 @@ module.exports = {
       path: '/IDE/VSCode/创建CSharp控制台项目'
     },
     {
+      title: '配置Python环境',
+      path: '/IDE/VSCode/配置Python环境/'
+    },
+    {
       title: '配置Lua环境',
       path: '/IDE/VSCode/配置Lua环境'
     },
