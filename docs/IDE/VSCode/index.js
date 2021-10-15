@@ -23,6 +23,10 @@ module.exports = {
       title: '配置Lua环境',
       path: '/IDE/VSCode/配置Lua环境'
     },
+    {
+      title: 'Windows下使用Cmder终端',
+      path: '/IDE/VSCode/Windows下使用cmder终端'
+    },
     pluginDevelop
   ]
 };
