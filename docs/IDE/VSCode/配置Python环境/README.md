@@ -106,3 +106,7 @@ $ pip install yapf
   "python.analysis.completeFunctionParens": true,
 }
 ```
+
+::: tip 提示
+这样配置后， `vscode` 打开后就能直接用 `conda` 环境了，类似于 `.nvmrc` 文件那种效果，但是有一个小瑕疵，就是**第一个**默认终端不会进入 `conda` 环境中，删除这个终端，重新打开就好了。
+:::
