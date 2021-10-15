@@ -66,3 +66,27 @@ $ pip install yapf
 打开设置页面，输入： `python.formatting.provider` ，将代码风格选择为 `yapf` ，如下所示：
 
 ![YAPF代码风格配置](assets/images/YAPF代码风格配置.png)
+
+## 支持MiniConda
+
+多数情况下我们会使用 `MiniConda` 来管理 `Python` 版本并创建**虚拟环境**，因此需要配置 `Python` 的路径，这样才能实现**代码嗅探**功能。但是网上找了很久也没有找到满意的解决办法，只能找到一个临时能用的办法了。
+
+因为 `conda` 会有多套环境，所以无法写死，又没有 `nvm` 中 `.nvmrc` 文件那种配置，所以很难做到全局自动适配。因此我们将配置写到项目的 `.vscode/settings.json` 文件中。
+
+下一个问题， `Linux` 、 `Windows` 的路径还是不一样的，而且 `VSCode` 又没有这个条件配置功能（这个issue从16年开始存在，至今无解。。。），所以只能割舍同步配置功能了，让 `git` **忽略** `.vscode/settings.json` 文件，每个人根据自己的系统自己写自己的配置。
+
+示例配置：`Windows`
+
+```json
+{
+  "python.defaultInterpreterPath": "E:\\ProgramData\\Miniconda3\\envs\\gas",
+  "python.autoComplete.extraPaths":[
+    "E:\\ProgramData\\Miniconda3\\envs\\gas\\Lib\\site-packages"
+  ],
+  "python.autoComplete.addBrackets": true,
+  "python.analysis.extraPaths": [
+    "E:\\ProgramData\\Miniconda3\\envs\\gas\\Lib\\site-packages"
+  ],
+  "python.analysis.completeFunctionParens": true,
+}
+```
