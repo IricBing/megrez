@@ -75,7 +75,7 @@ $ pip install yapf
 
 下一个问题， `Linux` 、 `Windows` 的路径还是不一样的，而且 `VSCode` 又没有这个条件配置功能（这个issue从16年开始存在，至今无解。。。），所以只能割舍同步配置功能了，让 `git` **忽略** `.vscode/settings.json` 文件，每个人根据自己的系统自己写自己的配置。
 
-示例配置：`Windows`
+示例配置： `Windows`
 
 ```json
 {
@@ -86,6 +86,22 @@ $ pip install yapf
   "python.autoComplete.addBrackets": true,
   "python.analysis.extraPaths": [
     "E:\\ProgramData\\Miniconda3\\envs\\gas\\Lib\\site-packages"
+  ],
+  "python.analysis.completeFunctionParens": true,
+}
+```
+
+示例配置： `Linux`
+
+```json
+{
+  "python.defaultInterpreterPath": "~/miniconda3/envs/gas/bin",
+  "python.autoComplete.extraPaths":[
+    "~/miniconda3/envs/gas/lib/python3.7/site-packages"
+  ],
+  "python.autoComplete.addBrackets": true,
+  "python.analysis.extraPaths": [
+    "~/miniconda3/envs/gas/lib/python3.7/site-packages"
   ],
   "python.analysis.completeFunctionParens": true,
 }
