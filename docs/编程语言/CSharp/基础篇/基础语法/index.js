@@ -33,6 +33,22 @@ module.exports = {
     {
       title: 'while 循环',
       path: '/编程语言/CSharp/基础篇/基础语法/while循环'
+    },
+    {
+      title: 'do while 循环',
+      path: '/编程语言/CSharp/基础篇/基础语法/do_while循环'
+    },
+    {
+      title: 'break 语句',
+      path: '/编程语言/CSharp/基础篇/基础语法/break语句'
+    },
+    {
+      title: 'continue 语句',
+      path: '/编程语言/CSharp/基础篇/基础语法/continue语句'
+    },
+    {
+      title: 'goto 语句',
+      path: '/编程语言/CSharp/基础篇/基础语法/goto语句'
     }
   ]
 };
