@@ -1,6 +1,7 @@
-const experience = require('./实践积累')
+const experience = require('./实践积累');
+const fiber = require('./Fiber');
 
 module.exports = {
   title: 'Go',
-  children: [experience]
+  children: [fiber, experience]
 };
