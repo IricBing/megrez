@@ -24,6 +24,10 @@ module.exports = {
     {
       title: '启动浏览器打开网页',
       path: '/Windows/桌面应用程序开发/WinForm/实践积累/九星自研/启动浏览器打开网页/'
+    },
+    {
+      title: '开机启动',
+      path: '/Windows/桌面应用程序开发/WinForm/实践积累/九星自研/开机启动/'
     }
   ]
 };
