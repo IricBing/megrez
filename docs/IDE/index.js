@@ -1,4 +1,4 @@
-const vs = require('./VirtualStudio');
+const vs = require('./VisualStudio');
 const androidStudio = require('./AndroidStudio');
 const vscode = require('./VSCode');
 
