@@ -30,7 +30,7 @@ $ source /home/iric/.gvm/scripts/gvm
 
 编辑 `~/.zshrc` 或者 `~/.bashrc` 文件，在文件末尾追加 `GO_BINARY_BASE_URL` 环境变量
 
-```conf
+```bash
 # gvm 配置
 export GO_BINARY_BASE_URL="https://mirrors.ustc.edu.cn/golang"
 ```
