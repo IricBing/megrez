@@ -18,6 +18,7 @@ const google = require('../Google');
 const webAssembly = require('../WebAssembly');
 const experience = require('../实践积累');
 const media = require('../音视频');
+const myPC = require('../个人电脑')
 
 module.exports = {
   markdown: {
@@ -127,7 +128,8 @@ module.exports = {
       media,
       ide,
       adobe,
-      google
+      google,
+      myPC
     ],
     sidebarDepth: 0
   }
