@@ -11,7 +11,11 @@
 运行上一步下载的安装脚本
 
 ```shell
-$ sh ./Miniconda3-py39_4.10.3-Linux-x86_64.sh
+# 如果使用zsh终端
+$ zsh ./Miniconda3-py39_4.10.3-Linux-x86_64.sh
+
+# 如果使用bash终端
+$ bash ./Miniconda3-py39_4.10.3-Linux-x86_64.sh
 ```
 
 **回车**和 `yes` 看着输就行了。
