@@ -1,6 +1,6 @@
-const colorSpace = require('./颜色空间');
+const colorModel = require('./颜色模型');
 
 module.exports = {
   title: '图片基础',
-  children: [colorSpace]
+  children: [colorModel]
 };

@@ -1,7 +1,7 @@
 {
-  "name": "megrez",
+  "name": "wiki",
   "version": "1.0.0",
-  "description": "",
+  "description": "个人知识库",
   "author": "Iric<iricbing@gmail.com>",
   "license": "MIT",
   "scripts": {
