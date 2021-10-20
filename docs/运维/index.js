@@ -7,8 +7,9 @@ const ab = require('./ApacheBench');
 const nmap = require('./Nmap');
 const virtualBox = require('./VirtualBox');
 const adb = require('./adb');
+const drone = require('./Drone');
 
 module.exports = {
   title: '运维',
-  children: [letsencrypt, nginx, frp, sentry, vercel, ab, nmap, virtualBox, adb]
+  children: [letsencrypt, nginx, frp, drone, sentry, vercel, ab, nmap, virtualBox, adb]
 };
