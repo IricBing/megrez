@@ -11,6 +11,14 @@ module.exports = {
     },
     environment,
     start,
-    number
+    number,
+    {
+      title: 'nil（空）',
+      path: '/编程语言/Lua/基础篇/nil/'
+    },
+    {
+      title: 'Boolean（布尔）',
+      path: '/编程语言/Lua/基础篇/Boolean/'
+    }
   ]
 };
