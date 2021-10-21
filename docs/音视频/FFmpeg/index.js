@@ -4,7 +4,7 @@ module.exports = {
   children: [
     {
       title: 'Windows10 安装',
-      path: '/音视频/FFmpeg/Windows10安装'
+      path: '/音视频/FFmpeg/Windows10安装/'
     },
     {
       title: '从rtsp视频流中截取图片',
