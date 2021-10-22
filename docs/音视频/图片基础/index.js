@@ -1,8 +1,9 @@
 const colorModel = require('./颜色模型');
 const histogram = require('./直方图');
 const binaryzation = require('./二值化');
+const colorGradation = require('./色阶');
 
 module.exports = {
   title: '图片基础',
-  children: [colorModel, histogram, binaryzation]
+  children: [colorModel, histogram, binaryzation, colorGradation]
 };
