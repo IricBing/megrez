@@ -8,6 +8,10 @@ module.exports = {
     {
       title: '配置conda环境',
       path: '/IDE/PyCharm/配置conda环境/'
+    },
+    {
+      title: '.ignore插件',
+      path: '/IDE/PyCharm/ignore插件/'
     }
   ]
 };
