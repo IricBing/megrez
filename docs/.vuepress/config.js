@@ -19,7 +19,8 @@ const webAssembly = require('../WebAssembly');
 const experience = require('../实践积累');
 const media = require('../音视频');
 const myPC = require('../个人电脑');
-const blockchain = require('../区块链')
+const blockchain = require('../区块链');
+const ai = require('../AI');
 
 module.exports = {
   markdown: {
@@ -125,9 +126,10 @@ module.exports = {
       communicationFramework,
       windows,
       protocol,
-      experience,
       media,
+      ai,
       blockchain,
+      experience,
       ide,
       adobe,
       google,
