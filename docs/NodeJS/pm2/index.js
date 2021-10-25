@@ -5,6 +5,10 @@ module.exports = {
     {
       title: '配置文件启动',
       path: '/NodeJS/pm2/配置文件启动'
+    },
+    {
+      title: '常用命令',
+      path: '/NodeJS/pm2/常用命令'
     }
   ]
 };
