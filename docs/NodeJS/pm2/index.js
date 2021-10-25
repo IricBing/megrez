@@ -9,6 +9,10 @@ module.exports = {
     {
       title: '常用命令',
       path: '/NodeJS/pm2/常用命令'
+    },
+    {
+      title: 'fork vs cluster',
+      path: '/NodeJS/pm2/fork_vs_cluster'
     }
   ]
 };
