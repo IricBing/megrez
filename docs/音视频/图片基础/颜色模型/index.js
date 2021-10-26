@@ -17,6 +17,10 @@ module.exports = {
     {
       title: 'HSL',
       path: '/音视频/图片基础/颜色模型/HSL/'
+    },
+    {
+      title: 'L*a*b*',
+      path: '/音视频/图片基础/颜色模型/Lab/'
     }
   ]
 };

@@ -96,6 +96,8 @@ module.exports = {
   themeConfig: {
     logo: '/logo.jpg',
     lastUpdated: '上次更新',
+    record: '辽ICP备17016380号-2',
+    recordLink: 'https://beian.miit.gov.cn/#/Integrated/index',
     // algolia: {
     //   appId: 'YHAMW4458Y',
     //   apiKey: '5935f4465d8e990e92eee1919256e5b0',

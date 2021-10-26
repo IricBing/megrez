@@ -12,5 +12,9 @@ features:
   details: If I have seen further, it is by standing on the shoulders of giants.
 - title: 星辰大海
   details: 路漫漫其修远兮，吾将上下而求索
-footer: MIT Licensed | Copyright © 2021-present Iric Bing
+# footer: MIT Licensed | Copyright © 2021-present Iric Bing 
 ---
+
+::: center
+MIT Licensed | Copyright © 2021-present Iric Bing [辽ICP备17016380号-2](https://beian.miit.gov.cn/#/Integrated/index)
+:::
