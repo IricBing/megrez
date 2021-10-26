@@ -16,6 +16,10 @@ module.exports = {
     {
       title: '右侧边锚点导航栏',
       path: '/Web/vuepress/扩展插件/右侧边锚点导航栏'
+    },
+    {
+      title: 'Go to top',
+      path: '/Web/vuepress/扩展插件/go_to_top'
     }
   ]
 };

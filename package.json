@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/IricBing/megrez#readme",
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.2",
     "dayjs": "^1.10.6",
     "markdown-it-disable-url-encode": "^1.0.1",
     "prettier": "^2.3.2",

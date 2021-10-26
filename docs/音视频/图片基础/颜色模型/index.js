@@ -21,6 +21,10 @@ module.exports = {
     {
       title: 'L*a*b*',
       path: '/音视频/图片基础/颜色模型/Lab/'
+    },
+    {
+      title: 'Demo 工程',
+      path: '/音视频/图片基础/颜色模型/Demo工程/'
     }
   ]
 };

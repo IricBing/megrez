@@ -32,6 +32,7 @@ module.exports = {
     'vuepress-plugin-cat',
     'vuepress-plugin-zooming',
     'vuepress-plugin-mermaidjs',
+    '@vuepress/back-to-top',
     [
       '@vuepress/last-updated',
       {
