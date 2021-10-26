@@ -8,7 +8,7 @@
 version: "3.8"
 services:
   postgres:
-    image: postgres:13-alpine
+    image: postgres:14-alpine
     container_name: postgresql
     hostname: postgresql
     restart: always
@@ -35,7 +35,7 @@ services:
       - 5433:80
 
   mongodb:
-    image: mongo:4.4.2-bionic
+    image: mongo:5.0.3-bionic
     container_name: mongodb
     hostname: mongodb
     restart: always
