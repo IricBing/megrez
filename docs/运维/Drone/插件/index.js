@@ -6,6 +6,10 @@ module.exports = {
       path: '/运维/Drone/插件/Docker/'
     },
     {
+      title: 'SSH',
+      path: '/运维/Drone/插件/SSH/'
+    },
+    {
       title: '微信',
       path: '/运维/Drone/插件/微信/'
     }
