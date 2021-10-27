@@ -6,12 +6,10 @@ steps:
   - name: docker
     image: plugins/docker
     settings:
-      repo: registry.cn-shanghai.aliyuncs.com/virtualbing/megrez
-      registry: registry.cn-shanghai.aliyuncs.com
+      repo: iricbing/megrez
       username: iricbing
-      password: Git.2016.
+      password: zh.2015.
       tags: latest
-      auto_tag_suffix: linux-amd64
       no_cache: true
     when:
       branch:
@@ -28,4 +26,4 @@ clone:
 steps:
   - name: clean image
     commands:
-      - docker image prune -a
+      - docker image ls
