@@ -1,14 +1,33 @@
 kind: pipeline
+type: docker
 name: default
 
+platform:
+  os: linux
+  arch: amd64
+
+clone:
+  disable: true
+  
 steps:
-- name: docker
-  image: plugins/docker
-  settings:
-    repo: registry.cn-shanghai.aliyuncs.com/virtualbing/megrez
-    registry: registry.cn-shanghai.aliyuncs.com
-    username: iricbing
-    password: Git.2016.
-    tags: latest
-    auto_tag_suffix: linux-amd64
-    no_cache: true
+  - name: clone
+    image: plugins/git-action:1
+    settings:
+      actions:
+        - clone
+      remote: git@github.com:IricBing/megrez.git
+      branch: master
+      path: /drone/src
+      ssh_key:
+        form_secret: secret-with-private-ssh-key
+
+  - name: docker
+    image: plugins/docker
+    settings:
+      repo: registry.cn-shanghai.aliyuncs.com/virtualbing/megrez
+      registry: registry.cn-shanghai.aliyuncs.com
+      username: iricbing
+      password: Git.2016.
+      tags: latest
+      auto_tag_suffix: linux-amd64
+      no_cache: true
