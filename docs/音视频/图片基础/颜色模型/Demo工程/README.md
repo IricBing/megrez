@@ -62,3 +62,104 @@ plt.show()
 ```
 
 :::
+
+## HSV
+
+`HSV` 颜色空间在文件 `hsv.py` 中演示，效果如下：
+
+![HSV通道效果](assets/images/HSV通道效果.png)
+
+::: details hsv.py 内容
+
+```python
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+
+pic_file = 'demo.jpeg'
+
+img_bgr = cv2.imread(pic_file, cv2.IMREAD_COLOR)  # OpenCV读取颜色顺序：BGR
+
+img_hsv = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2HSV)
+img_h = img_hsv[..., 0]
+img_s = img_hsv[..., 1]
+img_v = img_hsv[..., 2]
+
+fig = plt.gcf()                      # 分通道显示图片
+fig.set_size_inches(10, 15)
+
+plt.subplot(221)
+plt.imshow(img_hsv)
+plt.axis('off')
+plt.title('HSV')
+
+plt.subplot(222)
+plt.imshow(img_h, cmap='gray')
+plt.axis('off')
+plt.title('H')
+
+plt.subplot(223)
+plt.imshow(img_s, cmap='gray')
+plt.axis('off')
+plt.title('S')
+
+plt.subplot(224)
+plt.imshow(img_v, cmap='gray')
+plt.axis('off')
+plt.title('V')
+
+plt.show()
+```
+
+:::
+
+## L\*a\*b\*
+
+`L*a*b*` 颜色空间在文件 `Lab.py` 中演示，效果如下：
+
+![Lab通道效果](assets/images/Lab通道效果.png)
+
+::: details Lab.py 内容
+
+```python
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+
+pic_file = 'demo.jpeg'
+
+img_bgr = cv2.imread(pic_file, cv2.IMREAD_COLOR)  # OpenCV读取颜色顺序：BGR
+
+img_lab = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2LAB)
+img_ls = img_lab[..., 0]
+img_as = img_lab[..., 1]
+img_bs = img_lab[..., 2]
+
+# 分通道显示图片
+fig = plt.gcf()
+fig.set_size_inches(10, 15)
+
+plt.subplot(221)
+plt.imshow(img_lab)
+plt.axis('off')
+plt.title('L*a*b*')
+
+plt.subplot(222)
+plt.imshow(img_ls, cmap='gray')
+plt.axis('off')
+plt.title('L*')
+
+plt.subplot(223)
+plt.imshow(img_as, cmap='gray')
+plt.axis('off')
+plt.title('a*')
+
+plt.subplot(224)
+plt.imshow(img_bs, cmap='gray')
+plt.axis('off')
+plt.title('b*')
+
+plt.show()
+```
+
+:::
