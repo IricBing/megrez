@@ -13,3 +13,6 @@ steps:
       tags: latest
       auto_tag_suffix: linux-amd64
       no_cache: true
+    when:
+      branch:
+      - master
