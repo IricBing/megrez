@@ -10,16 +10,16 @@ clone:
   disable: true
   
 steps:
-  - name: clone
-    image: plugins/git-action:1
-    settings:
-      actions:
-        - clone
-      remote: git@github.com:IricBing/megrez.git
-      branch: master
-      path: /drone/src
-      ssh_key:
-        form_secret: secret-with-private-ssh-key
+  # - name: clone
+  #   image: plugins/git-action:1
+  #   settings:
+  #     actions:
+  #       - clone
+  #     remote: git@github.com:IricBing/megrez.git
+  #     branch: master
+  #     path: /drone/src
+  #     ssh_key:
+  #       form_secret: secret-with-private-ssh-key
 
   - name: docker
     image: plugins/docker
