@@ -16,3 +16,17 @@ steps:
     when:
       branch:
         - master
+
+---
+kind: pipeline
+type: exec
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+  - name: clean image
+    commands:
+      - docker image prune -a
