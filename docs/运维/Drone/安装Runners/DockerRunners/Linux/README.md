@@ -13,7 +13,7 @@ $ docker run --detach \
   --volume=/var/run/docker.sock:/var/run/docker.sock \
   --env=DRONE_RPC_PROTO=https \
   --env=DRONE_RPC_HOST=drone.company.com \
-  --env=DRONE_RPC_SECRET=super-duper-secret \
+  --env=DRONE_RPC_SECRET=共享密钥 \
   --env=DRONE_RUNNER_CAPACITY=2 \
   --env=DRONE_RUNNER_NAME=my-first-runner \
   --publish=3000:3000 \
