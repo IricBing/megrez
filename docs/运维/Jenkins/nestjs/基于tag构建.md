@@ -1,8 +1,8 @@
-# Jenkins `NestJS` 项目配置——基于 `tag` 构建
+# 基于tag构建
 
 承接笔记：[Jenkins构建nestjs项目](README.md)
 
-## `Step1.` 配置参数化构建过程
+## Step1. 配置参数化构建过程
 
 ![nestjs工程添加git构建化参数](assets/images/nestjs工程添加git构建化参数.png)
 
@@ -10,7 +10,7 @@
 
 ![git_tag构建化参数配置](assets/images/git_tag构建化参数配置.png)
 
-## `Step2.` 配置 `Gitlab` 仓库访问
+## Step2. 配置Gitlab仓库访问
 
 仓库地址填写 `ssh` 路径，不要写 `http` ， `Credentials` 为系统中配置的 `ssh key` 用户（来源于笔记：[配置SSH key](../配置ssh_key.md)）
 
@@ -20,13 +20,13 @@
 
 ![gitlab_tag构建配置git仓库地址](assets/images/gitlab_tag构建配置git仓库地址.png)
 
-## `Step3.` 添加 `nodejs` 环境
+## Step3. 添加nodejs环境
 
 这个功能在前面的基础笔记中已经讲过了，不再赘述，可参考笔记：[配置nodejs](配置nodejs.md)
 
 ![添加nodejs环境](assets/images/添加nodejs环境.png)
 
-## `Step4.` 构建执行 `shell`
+## Step4. 构建执行shell
 
 在**构建**中，增加**构建步骤**，选择**执行shell**，这里仅仅是做一个笔记教程，所以只执行三个命令： `node -v` 、 `yarn -v` 和 `ls`
 

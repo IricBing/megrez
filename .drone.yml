@@ -15,4 +15,4 @@ steps:
       no_cache: true
     when:
       branch:
-      - master
+        - master
