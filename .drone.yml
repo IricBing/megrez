@@ -20,10 +20,14 @@ kind: pipeline
 type: exec
 name: clear
 
-clone:
-  disable: true
+platform:
+  os: linux
+  arch: amd64
+
+# clone:
+#   disable: true
 
 steps:
-  - name: clean image
-    commands:
-      - docker image ls
+- name: greeting
+  commands:
+  - echo hello world
