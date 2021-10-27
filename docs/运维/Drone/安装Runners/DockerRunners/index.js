@@ -1,5 +1,6 @@
 module.exports = {
-  title: 'Docker Runner',
+  title: 'Docker Runners',
+  path: '/运维/Drone/安装Runners/DockerRunners/',
   children: [
     {
       title: 'Linux',

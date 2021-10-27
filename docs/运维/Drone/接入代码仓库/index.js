@@ -4,7 +4,7 @@ module.exports = {
   children: [
     {
       title: 'GitHub',
-      path: '/运维/Drone/接入代码仓库/GitHub'
+      path: '/运维/Drone/接入代码仓库/GitHub/'
     }
   ]
 };

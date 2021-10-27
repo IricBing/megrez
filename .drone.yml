@@ -1,0 +1,14 @@
+kind: pipeline
+name: default
+
+steps:
+- name: docker
+  image: plugins/docker
+  settings:
+    repo: registry.cn-shanghai.aliyuncs.com/virtualbing/megrez
+    registry: registry.cn-shanghai.aliyuncs.com
+    username: iricbing
+    password: Git.2016.
+    tags: latest
+    auto_tag_suffix: linux-amd64
+    no_cache: true
