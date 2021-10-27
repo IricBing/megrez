@@ -14,7 +14,7 @@ ENV NODE_OPTIONS=--max-old-space-size=6144
 COPY . .
 
 # 安装依赖
-RUN yarn install --frozen--lockfile --ignore-scripts
+RUN yarn install --ignore-scripts
 
 EXPOSE 8080
 

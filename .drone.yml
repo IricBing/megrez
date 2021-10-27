@@ -1,21 +1,21 @@
-kind: pipeline
-type: docker
-name: build
+# kind: pipeline
+# type: docker
+# name: build
 
-steps:
-  - name: docker
-    image: plugins/docker
-    settings:
-      repo: iricbing/megrez
-      username: iricbing
-      password: zh.2015.
-      tags: latest
-      no_cache: true
-    when:
-      branch:
-        - master
+# steps:
+#   - name: docker
+#     image: plugins/docker
+#     settings:
+#       repo: iricbing/megrez
+#       username: iricbing
+#       password: zh.2015.
+#       tags: latest
+#       no_cache: true
+#     when:
+#       branch:
+#         - master
 
----
+# ---
 kind: pipeline
 type: exec
 name: clear
@@ -28,5 +28,5 @@ steps:
   commands:
   - echo hello world
 
-depends_on:
-- build
+# depends_on:
+# - build
