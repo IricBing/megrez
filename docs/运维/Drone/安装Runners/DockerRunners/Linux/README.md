@@ -20,10 +20,20 @@ $ docker run --detach \
   --restart=always \
   --name=runner \
   drone/drone-runner-docker:1
+
 ```
 
 ::: tip 提示
 [更多配置参数](https://docs.drone.io/runner/docker/configuration/reference/)
+
+一般都会加入`git`配置信息用来拉取代码，
+
+```shell
+  --env=DRONE_GIT_ALWAYS_AUTH=true \
+  --env=DRONE_GIT_USERNAME=xxx \
+  --env=DRONE_GIT_PASSWORD=xxx \
+```
+
 :::
 
 ## Step3. 验证
