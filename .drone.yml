@@ -1,6 +1,6 @@
 kind: pipeline
 type: docker
-name: default
+name: build
 
 steps:
   - name: docker
@@ -20,7 +20,7 @@ steps:
 ---
 kind: pipeline
 type: exec
-name: default
+name: clear
 
 platform:
   os: linux
