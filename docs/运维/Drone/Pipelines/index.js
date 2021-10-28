@@ -11,7 +11,7 @@ module.exports = {
     sshPipeline,
     {
       title: '接入GitHub私有仓库',
-      path: '/运维/Drone/Pipelines/GitHub私有仓库'
+      path: '/运维/Drone/Pipelines/GitHub私有仓库/'
     }
   ]
 };

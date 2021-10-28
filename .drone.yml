@@ -14,7 +14,6 @@ steps:
   commands:
     - mkdir -p /root/.ssh/
     - echo "$SSH_KEY" > /root/.ssh/id_rsa
-    - cat /root/.ssh/id_rsa
     - chmod -R 600 /root/.ssh/
     - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
     - git clone -v git@github.com:IricBing/megrez.git .
