@@ -6,29 +6,29 @@ clone:
   disable: true
 
 steps:
-- name: clone
-  image: alpine/git
-  environment:
-    SSH_KEY:
-      from_secret: deploy_key
-  commands:
-    - mkdir -p /root/.ssh/
-    - echo "$SSH_KEY" > /root/.ssh/id_rsa
-    - chmod -R 600 /root/.ssh/
-    - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-    - git clone -v git@github.com:IricBing/megrez.git .
+  - name: clone
+    image: alpine/git
+    environment:
+      SSH_KEY:
+        from_secret: deploy_key
+    commands:
+      - mkdir -p /root/.ssh/
+      - echo "$SSH_KEY" > /root/.ssh/id_rsa
+      - chmod -R 600 /root/.ssh/
+      - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+      - git clone -v git@github.com:IricBing/megrez.git .
 
-- name: build
-  image: plugins/docker
-  settings:
-    repo: iricbing/megrez
-    username: iricbing
-    password: zh.2015.
-    tags: latest
-    no_cache: true
-  when:
-    branch:
-      - master
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: iricbing/megrez
+      username: iricbing
+      password: zh.2015.
+      tags: latest
+      no_cache: true
+    when:
+      branch:
+        - master
 
 ---
 kind: pipeline
@@ -39,15 +39,15 @@ clone:
   disable: true
 
 steps:
-- name: greeting
-  commands:
-  - docker image prune -a
-  when:
-    branch:
-      - master
+  - name: image
+    commands:
+      - docker image prune -a
+    when:
+      branch:
+        - master
 
 depends_on:
-- build
+  - build
 
 ---
 kind: pipeline
@@ -64,26 +64,26 @@ server:
     from_secret: server_password
 
 steps:
-- name: pull
-  commands:
-  - docker pull iricbing/megrez:latest
-  when:
-    branch:
-      - master
+  - name: pull
+    commands:
+      - docker pull iricbing/megrez:latest
+    when:
+      branch:
+        - master
 
-- name: kill
-  commands:
-  - docker stop megrez
-  when:
-    branch:
-      - master
+  - name: kill
+    commands:
+      - docker stop megrez
+    when:
+      branch:
+        - master
 
-- name: start
-  commands:
-  - docker run -d --rm --name megrez -p 8080:8080 iricbing/megrez
-  when:
-    branch:
-      - master
+  - name: start
+    commands:
+      - docker run -d --rm --name megrez -p 8080:8080 iricbing/megrez
+    when:
+      branch:
+        - master
 
 depends_on:
-- clear
+  - clear
