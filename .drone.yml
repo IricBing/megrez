@@ -27,6 +27,45 @@ steps:
 - name: greeting
   commands:
   - docker image prune -a
+  when:
+    branch:
+      - master
 
 depends_on:
 - build
+
+---
+kind: pipeline
+type: ssh
+name: deploy
+
+server:
+  host: 47.93.244.225
+  user: ubuntu
+  password:
+    from_secret: IricBing.95.
+
+steps:
+- name: pull
+  commands:
+  - docker pull iricbing/megrez:latest
+  when:
+    branch:
+      - master
+
+- name: kill
+  commands:
+  - docker stop megrez
+  when:
+    branch:
+      - master
+
+- name: start
+  commands:
+  - docker run -d --rm --name megrez -p 8080:8080 iricbing/megrez
+  when:
+    branch:
+      - master
+
+depends_on:
+- clear
