@@ -17,6 +17,9 @@ steps:
       - chmod -R 600 /root/.ssh/
       - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
       - git clone -v git@github.com:IricBing/megrez.git .
+    when:
+      branch:
+        - master
 
   - name: build
     image: plugins/docker
