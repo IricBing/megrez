@@ -85,5 +85,12 @@ steps:
       branch:
         - master
 
+  - name: clear image
+    commands:
+      - docker image prune -a
+    when:
+      branch:
+        - master
+
 depends_on:
   - clear

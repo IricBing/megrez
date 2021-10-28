@@ -28,7 +28,7 @@
 
 `drone.yml` 配置文件示例：
 
-```yml {13,19}
+```yaml {13, 19}
 kind: pipeline
 type: docker
 name: build
@@ -37,15 +37,15 @@ clone:
   disable: true
 
 steps:
-- name: clone
-  image: alpine/git
-  environment:
-    SSH_KEY:
-      from_secret: deploy_key
-  commands:
-    - mkdir -p /root/.ssh/
-    - echo "$SSH_KEY" > /root/.ssh/id_rsa
-    - chmod -R 600 /root/.ssh/
-    - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-    - git clone -v git@github.com:IricBing/megrez.git .
+  - name: clone
+    image: alpine/git
+    environment:
+      SSH_KEY:
+        from_secret: deploy_key
+    commands:
+      - mkdir -p /root/.ssh/
+      - echo "$SSH_KEY" > /root/.ssh/id_rsa
+      - chmod -R 600 /root/.ssh/
+      - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+      - git clone -v git@github.com:IricBing/megrez.git .
 ```
