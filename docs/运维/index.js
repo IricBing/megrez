@@ -10,8 +10,9 @@ const adb = require('./adb');
 const drone = require('./Drone');
 const jenkins = require('./Jenkins');
 const VMwareESXi = require('./VMwareESXi');
+const freeSSL = require('./FreeSSL');
 
 module.exports = {
   title: '运维',
-  children: [letsencrypt, nginx, frp, drone, jenkins, sentry, vercel, ab, nmap, virtualBox, VMwareESXi, adb]
+  children: [letsencrypt, freeSSL, nginx, frp, drone, jenkins, sentry, vercel, ab, nmap, virtualBox, VMwareESXi, adb]
 };

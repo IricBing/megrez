@@ -26,7 +26,7 @@ clone:
 steps:
 - name: greeting
   commands:
-  - echo hello world
+  - docker image prune -a
 
 depends_on:
 - build
