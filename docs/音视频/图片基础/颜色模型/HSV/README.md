@@ -30,8 +30,22 @@
 
 ![hsv模型彩色描述](assets/images/hsv模型彩色描述.jpeg)
 
+## 颜色库
+
+十色范围定义：
+
+![十色hsv范围定义](assets/images/十色hsv范围定义.png)
+
+`hsv` 颜色库：
+
+![HSV颜色库](assets/images/HSV颜色库.png)
+
 ## 算法
 
 ### RGB转HSV
+
+原理：
+
+![RGB转HSV原理](assets/images/RGB转HSV原理.png)
 
 ### HSV转RGB
