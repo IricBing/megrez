@@ -8,8 +8,9 @@ const vite = require('./Vite');
 const uniApp = require('./uni-app');
 const chrome = require('./Chrome');
 const official = require('./微信公众号');
+const docsify = require('./docsify');
 
 module.exports = {
   title: 'Web',
-  children: [experience, libs, vue2, vue3, vite, uniApp, miniProgram, official, vuepress, chrome]
+  children: [experience, libs, vue2, vue3, vite, uniApp, miniProgram, official, vuepress, docsify, chrome]
 };
