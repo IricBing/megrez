@@ -13,6 +13,10 @@ module.exports = {
     {
       title: '标识符',
       path: '/编程语言/Python/语言基础/语法特点/标识符'
+    },
+    {
+      title: '保留字',
+      path: '/编程语言/Python/语言基础/语法特点/保留字'
     }
   ]
 };
