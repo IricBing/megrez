@@ -33,6 +33,8 @@ plt.title('pyplot折线图') # 图形的标题
 plt.show()
 ```
 
+![单折线图](assets/images/单折线图.png)
+
 ## 多线
 
 下表是我国近 `10` 年的 `GDP` 增长率，以及三大产业在近 `10` 年的增长率。
@@ -79,3 +81,5 @@ plt.xlabel('年份') # 设置横坐标轴标题
 plt.legend() # 显示图例，即每条线对应 label 中的内容
 plt.show() # 显示图形
 ```
+
+![多折线图](assets/images/多折线图.png)
