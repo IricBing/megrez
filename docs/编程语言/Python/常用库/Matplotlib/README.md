@@ -7,4 +7,3 @@
 ```shell
 $ pip install matplotlib
 ```
-
