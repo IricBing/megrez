@@ -80,7 +80,7 @@ export class XlsxUtil {
       writerStream.write('\r\n', 'UTF8');
       data
         .on('data', data => {
-          writerStream.write(a[
+          writerStream.write(
             props
               .map(prop => {
                 if (data[prop] instanceof Date) return dayjs(data[prop]).format('YYYY-MM-DD HH:mm:ss');
@@ -112,7 +112,17 @@ export class XlsxUtil {
 ::: warning 注意
 这里需要注意 `csv` 文件的**数据格式**，请转至笔记[csv文件](../../../实践积累/csv文件/README.md)
 
-上述高亮行中采用了 `String.prototype.replaceAll()` 方法，该方法从 `node 16 LTS` 开始支持，**请注意node版本**！
+上述高亮行中采用了 `String.prototype.replaceAll()` 方法，该方法是 `ES2021` 的语法，对于 `node` 来说，该方法从 `node 16 LTS` 开始支持，**请注意node版本**！
 :::
+
+### 导出代码解读
+
+`headers` 是文件**表头**中的内容， `props` 是 `PostgreSQL` 数据库 `ReadStream` 中 `data` 事件的回调内容中的**字段列表**，如下所示：
+
+```ts
+export const headers = ['标签编号', '生产日期', '备注', '类型', '创建时间'];
+
+export const props = ['cards_sn', 'cards_production_date', 'cards_remark', 'cards_type', 'cards_created_at'];
+```
 
 ## MongoDB cursor导出
