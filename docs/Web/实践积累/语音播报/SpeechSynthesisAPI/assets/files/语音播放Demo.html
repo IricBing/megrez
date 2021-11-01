@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>语音测试</title>
+    <script src="https://cdn.9xing.cn/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //开始播放
+            $("#begin_speak").click(function () {
+                let content = $("#content").text();
+                let msg = new SpeechSynthesisUtterance(content);
+                msg.lang = 'zh-cn'
+                window.speechSynthesis.speak(msg);
+                $("#pause_speak").show();
+                $("#cancel_speak").show();
+            });
+            //停止播放
+            $("#cancel_speak").click(function () {
+                window.speechSynthesis.cancel();
+                $("#pause_speak").hide();
+                $("#resume_speak").hide();
+                $(this).hide();
+            });
+            //暂停播放
+            $("#pause_speak").click(function () {
+                window.speechSynthesis.pause();
+                $("#resume_speak").show();
+            });
+            //继续播放
+            $("#resume_speak").click(function () {
+                window.speechSynthesis.resume();
+                $(this).hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <input type="button" id="begin_speak" value="播放">
+        <input type="button" id="pause_speak" style="display:none" value="暂停">
+        <input type="button" id="cancel_speak" style="display:none" value="停止">
+        <input type="button" id="resume_speak" style="display:none" value="继续播放">
+    </div>
+    <div id="content">
+        <p>Yii2.0是一个高效，安全，快速的PHP开发框架，内置了很多开发时常用的功能。Yii也内置了验证码功能，让我们在开发时可以直接使用，不过框架自带的验证码在生成后，无论是点击验证码还是重新请求生成验证码的URL，生成的验证码内容是没有变化的
+        </p>
+        <p>yii框架生成验证码，只需在控制器里的
+            <span style="font-size: 16px; color:red;font-family: 宋体, SimSun; text-decoration: underline;">actions</span>
+            <span style="font-size: 16px; font-family: 宋体, SimSun; text-decoration: none;">方法里，添加一些配置就行了</span>
+        </P>
+    </div>
+</body>
+
+</html>
