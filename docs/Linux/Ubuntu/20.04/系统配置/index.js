@@ -34,6 +34,10 @@ module.exports = {
       path: '/Linux/Ubuntu/20.04/系统配置/安装FiraCode字体'
     },
     {
+      title: '安装SimHei字体',
+      path: '/Linux/Ubuntu/20.04/系统配置/安装SimHei字体/'
+    },
+    {
       title: '搭建NFS文件系统',
       path: '/Linux/Ubuntu/20.04/系统配置/搭建NFS文件系统'
     }
