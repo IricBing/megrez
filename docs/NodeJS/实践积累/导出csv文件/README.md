@@ -111,6 +111,8 @@ export class XlsxUtil {
 
 ::: warning 注意
 这里需要注意 `csv` 文件的**数据格式**，请转至笔记[csv文件](../../../实践积累/csv文件/README.md)
+
+上述高亮行中采用了 `String.prototype.replaceAll()` 方法，该方法从 `node 16 LTS` 开始支持，**请注意node版本**！
 :::
 
 ## MongoDB cursor导出
