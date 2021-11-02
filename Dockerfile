@@ -1,4 +1,4 @@
-FROM node:14.17.4-alpine
+FROM node:16.13.0-alpine
 
 LABEL maintainer="Iric<iricbing@gmail.com>"
 
