@@ -9,6 +9,10 @@ module.exports = {
     {
       title: '多图显示',
       path: '/编程语言/Python/常用库/Matplotlib/绘图/多图显示/'
+    },
+    {
+      title: '显示图片',
+      path: '/编程语言/Python/常用库/Matplotlib/绘图/显示图片/'
     }
   ]
 };
