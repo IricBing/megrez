@@ -1,4 +1,4 @@
-# `Docker` 安装 `Emqx`
+# Docker安装
 
 ## 普通运行
 
