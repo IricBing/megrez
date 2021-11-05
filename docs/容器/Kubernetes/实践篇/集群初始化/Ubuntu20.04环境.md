@@ -262,7 +262,7 @@ kube-system   kube-scheduler-node1            1/1     Running   0          3h43m
 ```
 
 ::: tip 提示
-`node Status` 从 `NotReady` 到 `Ready` 要等待一段时间，这里的时间长短与**docker镜像**下载速度有关，因此我们才会在上一步的时候修改`RedHat`维护的地址到`Docker`地址。
+`node Status` 从 `NotReady` 到 `Ready` 要等待一段时间，这里的时间长短与**docker镜像**下载速度有关，因此我们才会在上一步的时候修改 `RedHat` 维护的地址到 `Docker` 地址。
 :::
 
 ## 允许控制节点调度Pod（可选）
@@ -345,18 +345,52 @@ kubectl delete node <node name>
 
 ## 测试集群
 
-采用nginx来测试集群，在master节点上依次执行如下命令：
+采用 `nginx` 来测试集群，在 `master` 节点上依次执行如下命令：
 
-```shell
+```shell {11}
 $ kubectl create deployment nginx --image=nginx
 
 $ kubectl expose deployment nginx --port=80 --type=NodePort
 
-$ kubectl get pod,svc
+$ kubectl get pod, svc
 NAME                         READY   STATUS    RESTARTS   AGE
 pod/nginx-6799fc88d8-nq5f2   1/1     Running   0          68s
 
 NAME                 TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)        AGE
 service/kubernetes   ClusterIP   10.96.0.1     <none>        443/TCP        4h51m
 service/nginx        NodePort    10.103.5.66   <none>        80:32155/TCP   60s
+
 ```
+
+注意上述代码中的高亮行，使用`curl`访问`32155`端口，即可得到`nginx`服务的返回，如下所示：
+
+```shell
+$  curl 127.0.0.1:32155
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+```
+
+::: tip 提示
+`32155` 端口是**自动分配**的端口（也可以手动指定）， `NodePort` 端口范围在 [30000, 32767] 。
+:::
