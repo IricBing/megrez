@@ -14,8 +14,9 @@ ENV NODE_OPTIONS=--max-old-space-size=6144
 COPY . .
 
 # 安装依赖
-RUN yarn install --ignore-scripts
+RUN npm i pnpm -g
+RUN pnpm install --ignore-scripts
 
 EXPOSE 8080
 
-CMD ["yarn" ,"start"]
+CMD ["pnpm" ,"start"]
