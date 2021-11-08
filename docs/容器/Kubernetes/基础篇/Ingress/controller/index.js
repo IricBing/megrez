@@ -1,5 +1,5 @@
-const nginx = require('./nginx_ingress');
-const haproxy = require('./haproxy_ingress');
+const nginx = require('./nginx');
+const haproxy = require('./haproxy');
 
 module.exports = {
   title: 'Ingress Controller',
