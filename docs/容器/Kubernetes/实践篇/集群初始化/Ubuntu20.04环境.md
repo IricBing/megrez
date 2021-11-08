@@ -394,3 +394,11 @@ Commercial support is available at
 ::: tip 提示
 `32155` 端口是**自动分配**的端口（也可以手动指定）， `NodePort` 端口范围在 [30000, 32767] 。
 :::
+
+### 删除测试配置
+
+```shell
+$ kubectl delete deployment nginx
+
+$ kubectl delete service nginx
+```
