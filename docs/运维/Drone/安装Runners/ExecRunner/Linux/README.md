@@ -7,11 +7,12 @@
 ```shell
 $ curl -L https://github.com/drone-runners/drone-runner-exec/releases/latest/download/drone_runner_exec_linux_amd64.tar.gz | tar zx
 
-# 采用GitHub复刻版下载
-$ curl -L https://hub.fastgit.org/drone-runners/drone-runner-exec/releases/latest/download/drone_runner_exec_linux_amd64.tar.gz | tar zx
-
 $ sudo install -t /usr/local/bin drone-runner-exec
 ```
+
+::: tip 提示
+不可采用GitHub复刻版下载
+:::
 
 ## Step2. 配置
 

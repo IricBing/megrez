@@ -8,7 +8,7 @@
 
 ![创建OAuth应用](assets/images/创建OAuth应用.png)
 
-**勾选**如上图所示， `Redirect URI` 为 `Drone` 的登录页面地址。点击 `Submit` 之后会显示创建好的 `OAuth` 应用应用信息，如下所示：
+**勾选**全部配置项， `Redirect URI` 为 `Drone` 的登录页面地址。点击 `Submit` 之后会显示创建好的 `OAuth` 应用应用信息，如下所示：
 
 ![创建好的OAuth信息](assets/images/创建好的OAuth信息.png)
 
