@@ -9,46 +9,46 @@
 ## .npmrc 文件完整版配置
 
 ``` shell
-home="https://npm.taobao.org"
-registry="https://registry.npm.taobao.org/"
+home="https://npmmirror.com"
+registry="https://registry.npmmirror.com/"
 
 #前台相关
-sass_binary_site="https://npm.taobao.org/mirrors/node-sass/"
-canvas_binary_host_mirror="https://npm.taobao.org/mirrors/node-canvas-prebuilt/"
-phantomjs_cdnurl="https://npm.taobao.org/dist/phantomjs/"
-electron_mirror="https://npm.taobao.org/mirrors/electron/"
-sqlite3_binary_host_mirror="http://npm.taobao.org/mirrors/"
-profiler_binary_host_mirror="https://npm.taobao.org/mirrors/node-inspector/"
-chromedriver_cdnurl="http://npm.taobao.org/mirrors/chromedriver/"
-operadriver_cdnurl="http://npm.taobao.org/mirrors/operadriver/"
-electron_builder_binaries_mirror="http://npm.taobao.org/mirrors/electron-builder-binaries/"
+sass_binary_site="https://npmmirror.com/mirrors/node-sass/"
+canvas_binary_host_mirror="https://npmmirror.com/mirrors/node-canvas-prebuilt/"
+phantomjs_cdnurl="https://npmmirror.com/dist/phantomjs/"
+electron_mirror="https://npmmirror.com/mirrors/electron/"
+sqlite3_binary_host_mirror="http://npmmirror.com/mirrors/"
+profiler_binary_host_mirror="https://npmmirror.com/mirrors/node-inspector/"
+chromedriver_cdnurl="http://npmmirror.com/mirrors/chromedriver/"
+operadriver_cdnurl="http://npmmirror.com/mirrors/operadriver/"
+electron_builder_binaries_mirror="http://npmmirror.com/mirrors/electron-builder-binaries/"
 
 #后台相关
-grpc_node_binary_host_mirror="https://npm.taobao.org/mirrors/"
-node_sqlite3_binary_host_mirror="http://npm.taobao.org/mirrors/"
-nodejieba_binary_host_mirror="https://npm.taobao.org/mirrors/nodejieba"
+grpc_node_binary_host_mirror="https://npmmirror.com/mirrors/"
+node_sqlite3_binary_host_mirror="http://npmmirror.com/mirrors/"
+nodejieba_binary_host_mirror="https://npmmirror.com/mirrors/nodejieba"
 ```
 
 ## .yarnrc 文件完整版配置
 
 ``` shell
-home "https://npm.taobao.org"
-registry "https://registry.npm.taobao.org/"
-disturl "https://npm.taobao.org/dist"
+home "https://npmmirror.com"
+registry "https://registry.npmmirror.com/"
+disturl "https://npmmirror.com/dist"
 
 #前台相关
-sass_binary_site "https://npm.taobao.org/mirrors/node-sass/"
-canvas_binary_host_mirror "https://npm.taobao.org/mirrors/node-canvas-prebuilt/"
-phantomjs_cdnurl "https://npm.taobao.org/dist/phantomjs/"
-electron_mirror "https://npm.taobao.org/mirrors/electron/"
-sqlite3_binary_host_mirror "http://npm.taobao.org/mirrors/"
-profiler_binary_host_mirror "https://npm.taobao.org/mirrors/node-inspector/"
-chromedriver_cdnurl "http://npm.taobao.org/mirrors/chromedriver/"
-operadriver_cdnurl "http://npm.taobao.org/mirrors/operadriver/"
-electron_builder_binaries_mirror "http://npm.taobao.org/mirrors/electron-builder-binaries/"
+sass_binary_site "https://npmmirror.com/mirrors/node-sass/"
+canvas_binary_host_mirror "https://npmmirror.com/mirrors/node-canvas-prebuilt/"
+phantomjs_cdnurl "https://npmmirror.com/dist/phantomjs/"
+electron_mirror "https://npmmirror.com/mirrors/electron/"
+sqlite3_binary_host_mirror "http://npmmirror.com/mirrors/"
+profiler_binary_host_mirror "https://npmmirror.com/mirrors/node-inspector/"
+chromedriver_cdnurl "http://npmmirror.com/mirrors/chromedriver/"
+operadriver_cdnurl "http://npmmirror.com/mirrors/operadriver/"
+electron_builder_binaries_mirror "http://npmmirror.com/mirrors/electron-builder-binaries/"
 
 #后台相关
-grpc_node_binary_host_mirror "https://npm.taobao.org/mirrors/"
-node_sqlite3_binary_host_mirror "http://npm.taobao.org/mirrors/"
-nodejieba_binary_host_mirror "https://npm.taobao.org/mirrors/nodejieba"
+grpc_node_binary_host_mirror "https://npmmirror.com/mirrors/"
+node_sqlite3_binary_host_mirror "http://npmmirror.com/mirrors/"
+nodejieba_binary_host_mirror "https://npmmirror.com/mirrors/nodejieba"
 ```

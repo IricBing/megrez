@@ -48,7 +48,7 @@ Usage:
 老生常谈，一键复制即可
 
 ```shell
-$ nvm node_mirror https://npm.taobao.org/mirrors/node
+$ nvm node_mirror https://npmmirror.com/mirrors/node
 $ nvm npm_mirror https://hub.fastgit.org/npm/cli/archive/
 ```
 

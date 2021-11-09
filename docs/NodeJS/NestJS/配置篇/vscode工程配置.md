@@ -238,7 +238,9 @@ $ yarn add -D cross-env
     // ],
     // "target": "es2019", //这里需要按照当前使用node的版本来选择打包版本
     //node 14.x
-    "target": "es2020",
+    // "target": "es2020",
+    //node 16.x
+    "target": "es2022",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
