@@ -3,14 +3,17 @@
 **node 版本**
 
 * v12.x
-* v14.x   `推荐`
+* v14.x
+* v16.x   `推荐`
+
+**包管理工具**： `pnpm`
 
 ## 安装必要的开发包
 
 ### `cross-env`
 
 ```shell
-$ yarn add -D cross-env
+$ pnpm add cross-env -D
 ```
 
 修改 `package.json` 文件
@@ -240,7 +243,7 @@ $ yarn add -D cross-env
     //node 14.x
     // "target": "es2020",
     //node 16.x
-    "target": "es2022",
+    "target": "es2021",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
@@ -345,8 +348,9 @@ module.exports = {
 # environment file
 .env
 
-# ignore npm lock file, use yarn.lock
+# ignore npm lock file and yarn.lock, use pnpm
 package-lock.json
+yarn.lock
 ```
 
 ## 可选配置
@@ -358,7 +362,7 @@ package-lock.json
 安装 `husky` 和 `lint-staged` 包（因为需要增加 `ENV` 参数，所以还是把 `cross-env` 包装上吧。）
 
 ```shell
-$ yarn add -D husky lint-staged cross-env 
+$ pnpm add husky lint-staged cross-env -D 
 ```
 
 在项目根目录增加 `.lintstagedrc.json` 文件，写入如下内容：
@@ -381,9 +385,9 @@ $ yarn add -D husky lint-staged cross-env
 接下来配置 `husky` ，输入如下命令：
 
 ```shell
-$ yarn husky install
+$ pnpm husky install
 
-$ yarn husky add .husky/pre-commit "npx lint-staged"
+$ pnpm husky add .husky/pre-commit "npx lint-staged"
 ```
 
 最后配置一下 `package.json` 文件，在 `scripts` 脚本中增加一行命令：
@@ -437,7 +441,7 @@ $ yarn husky add .husky/pre-commit "npx lint-staged"
 以后生产环境构建使用如下命令：
 
 ```shell
-$ yarn build:prod
+$ pnpm build:prod
 ```
 
 ### `Docker` 支持
@@ -449,8 +453,8 @@ $ yarn build:prod
 ```gitignore
 **/*
 !package.json
-!.yarnrc
-!yarn.lock
+!.npmrc
+!pnpm-lock.yaml
 
 !./dist/
 ```
@@ -460,7 +464,7 @@ $ yarn build:prod
 ```gitignore
 **/*
 !package.json
-!yarn.lock
+!pnpm-lock.yaml
 !nest-cli.json
 !tsconfig.json
 !tsconfig.build.json
@@ -475,12 +479,12 @@ $ yarn build:prod
 
 ### Compodoc支持
 
-`Compodoc`是一个文档工具，用来生成`NestJS`应用的程序文档，[官方说明](https://docs.nestjs.com/recipes/documentation)
+`Compodoc` 是一个文档工具，用来生成 `NestJS` 应用的程序文档，[官方说明](https://docs.nestjs.com/recipes/documentation)
 
 * 安装
 
 ```shell
-$ yarn add -D @compodoc/compodoc
+$ pnpm add -D @compodoc/compodoc
 ```
 
 * 生成文档
