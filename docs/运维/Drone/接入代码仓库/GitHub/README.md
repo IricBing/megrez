@@ -43,13 +43,13 @@ bea26a2221fd8090ea38720fc445eca6
 
 ## Step3. 运行Drone Sever
 
-这里采用Docker运行，直接在命令中写入即可，如下所示：
+这里采用`Docker`运行，直接在命令中写入即可，如下所示：
 
 ```shell {3-7}
 $ docker run \
   --volume=/var/lib/drone:/data \
-  --env=DRONE_GITHUB_CLIENT_ID=your-id \
-  --env=DRONE_GITHUB_CLIENT_SECRET=super-duper-secret \
+  --env=DRONE_GITHUB_CLIENT_ID=OAuth ID \
+  --env=DRONE_GITHUB_CLIENT_SECRET=OAuth Secret \
   --env=DRONE_RPC_SECRET=共享密钥 \
   --env=DRONE_SERVER_HOST=drone.company.com \
   --env=DRONE_SERVER_PROTO=https \

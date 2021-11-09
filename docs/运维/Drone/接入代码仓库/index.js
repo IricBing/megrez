@@ -5,6 +5,10 @@ module.exports = {
     {
       title: 'GitHub',
       path: '/运维/Drone/接入代码仓库/GitHub/'
+    },
+    {
+      title: 'GitLab',
+      path: '/运维/Drone/接入代码仓库/GitLab/'
     }
   ]
 };
