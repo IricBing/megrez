@@ -452,8 +452,8 @@ $ pnpm build:prod
 
 ```gitignore
 **/*
-!package.json
 !.npmrc
+!package.json
 !pnpm-lock.yaml
 
 !./dist/
@@ -463,6 +463,7 @@ $ pnpm build:prod
 
 ```gitignore
 **/*
+!.npmrc
 !package.json
 !pnpm-lock.yaml
 !nest-cli.json
