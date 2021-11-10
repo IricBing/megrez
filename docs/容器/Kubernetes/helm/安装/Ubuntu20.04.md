@@ -15,3 +15,30 @@ $ sudo snap install helm --classic
 ```shell
 $ sudo mv linux-amd64/helm /usr/local/bin/helm
 ```
+
+## 终端优化
+
+### zsh
+
+临时生效：
+
+```shell
+$ source <(helm completion zsh)
+```
+
+永久生效：
+
+```shell
+helm completion zsh > "${fpath[1]}/_helm"
+```
+
+::: details 永久有效的实现原理
+一般而言，我们都是通过修改 `~/.zshrc` 文件，在这个里面加入相应的配置来实现，但是这里不是的，是写入了一个文件中，它的做法是在 `fpath` 数组**第一个元素**路径下新建一个 `_helm` 文件，之后往这里面写东西，下一次终端启动时，就会连带着把 `_helm` 文件也加载进来了。我们可以通过 `echo` 来查看具体写到了哪里：
+
+```shell
+$ echo ${fpath[1]}
+/home/ubuntu/.oh-my-zsh/plugins/docker-compose
+```
+
+由此，我们知道了他写到了 `oh my zsh` 的 `docker-compose` 插件目录下面了。
+:::
