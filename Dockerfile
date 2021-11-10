@@ -15,7 +15,8 @@ COPY . .
 
 # 安装依赖
 RUN npm i pnpm -g
-RUN pnpm i --frozen-lockfile --ignore-scripts
+# RUN pnpm i --frozen-lockfile --ignore-scripts
+RUN pnpm i --ignore-scripts
 
 EXPOSE 8080
 
