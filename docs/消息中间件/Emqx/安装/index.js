@@ -4,6 +4,10 @@ module.exports = {
     {
       title: 'Docker',
       path: '/消息中间件/Emqx/安装/Docker'
+    },
+    {
+      title: 'Helm',
+      path: '/消息中间件/Emqx/安装/Helm'
     }
   ]
 };
