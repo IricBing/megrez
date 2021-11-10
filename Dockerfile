@@ -14,10 +14,10 @@ ENV NODE_OPTIONS=--max-old-space-size=6144
 COPY . .
 
 # 安装依赖
-RUN npm i pnpm -g
+# RUN npm i pnpm -g
 # RUN pnpm i --frozen-lockfile --ignore-scripts
-RUN pnpm i --ignore-scripts
+RUN npm i
 
 EXPOSE 8080
 
-CMD ["pnpm" ,"start"]
+CMD ["yarn" ,"start"]
