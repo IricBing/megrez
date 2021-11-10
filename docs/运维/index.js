@@ -1,5 +1,6 @@
 const letsencrypt = require('./letsencrypt');
 const nginx = require('./Nginx');
+const haproxy = require('./HAProxy');
 const sentry = require('./Sentry');
 const vercel = require('./Vercel');
 const frp = require('./frp');
@@ -14,5 +15,5 @@ const freeSSL = require('./FreeSSL');
 
 module.exports = {
   title: '运维',
-  children: [letsencrypt, freeSSL, nginx, frp, drone, jenkins, sentry, vercel, ab, nmap, virtualBox, VMwareESXi, adb]
+  children: [letsencrypt, freeSSL, nginx, frp, drone, haproxy, jenkins, sentry, vercel, ab, nmap, virtualBox, VMwareESXi, adb]
 };
