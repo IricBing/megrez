@@ -61,7 +61,7 @@ clone:
   disable: true
 
 server:
-  host: 47.93.244.225
+  host: 101.42.135.206
   user: ubuntu
   password:
     from_secret: server_password
