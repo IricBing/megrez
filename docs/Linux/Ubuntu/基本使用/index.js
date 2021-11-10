@@ -33,6 +33,10 @@ module.exports = {
       path: '/Linux/Ubuntu/基本使用/软硬链接'
     },
     {
+      title: '终端代理配置',
+      path: '/Linux/Ubuntu/基本使用/终端代理配置'
+    },
+    {
       title: '查看系统版本',
       path: '/Linux/Ubuntu/基本使用/查看系统版本'
     },
