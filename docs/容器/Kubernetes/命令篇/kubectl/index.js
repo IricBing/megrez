@@ -1,5 +1,6 @@
 const appManagement = require('./应用程序管理');
 const workingWithApp = require('./应用程序调试')
+const clusterManagement = require('./集群管理')
 
 module.exports = {
   title: 'kubectl',
@@ -26,6 +27,7 @@ module.exports = {
       path: '/容器/Kubernetes/命令篇/kubectl/delete'
     },
     appManagement,
-    workingWithApp
+    workingWithApp,
+    clusterManagement
   ]
 };
