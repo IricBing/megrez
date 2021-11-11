@@ -1,6 +1,7 @@
 const appManagement = require('./应用程序管理');
-const workingWithApp = require('./应用程序调试')
-const clusterManagement = require('./集群管理')
+const workingWithApp = require('./应用程序调试');
+const clusterManagement = require('./集群管理');
+const settingAndUsage = require('./配置使用');
 
 module.exports = {
   title: 'kubectl',
@@ -28,6 +29,7 @@ module.exports = {
     },
     appManagement,
     workingWithApp,
-    clusterManagement
+    clusterManagement,
+    settingAndUsage
   ]
 };
