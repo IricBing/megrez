@@ -4,6 +4,10 @@ module.exports = {
     {
       title: 'pnpm add <pkg>',
       path: '/NodeJS/pnpm/CLI命令/管理依赖/add'
+    },
+    {
+      title: 'pnpm install',
+      path: '/NodeJS/pnpm/CLI命令/管理依赖/install'
     }
   ]
 };
