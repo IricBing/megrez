@@ -21,6 +21,7 @@ const media = require('../音视频');
 const myPC = require('../个人电脑');
 const blockchain = require('../区块链');
 const ai = require('../AI');
+const threeDimensions = require('../3D建模');
 
 module.exports = {
   markdown: {
@@ -133,6 +134,7 @@ module.exports = {
       ai,
       blockchain,
       experience,
+      threeDimensions,
       ide,
       adobe,
       google,
