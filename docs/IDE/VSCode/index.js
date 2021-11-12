@@ -12,6 +12,10 @@ module.exports = {
       path: '/IDE/VSCode/配置FiraCode字体'
     },
     {
+      title: 'Windows下字体配置',
+      path: '/IDE/VSCode/Windows下字体配置'
+    },
+    {
       title: 'region用法',
       path: '/IDE/VSCode/region用法'
     },
