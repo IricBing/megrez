@@ -1,8 +1,7 @@
 {
   "recommendations": [
     "yzhang.markdown-all-in-one",
-    "docsmsft.docs-markdown",
-    "shd101wyy.markdown-preview-enhanced",
+    "mervin.markdown-formatter",
     "bierner.markdown-mermaid",
     "streetsidesoftware.code-spell-checker",
     "aaron-bond.better-comments",
