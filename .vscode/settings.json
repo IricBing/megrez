@@ -23,7 +23,10 @@
     "**/node_modules": true
   },
   "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "docsmsft.docs-markdown"
   },
   "cSpell.words": ["vuepress"]
 }

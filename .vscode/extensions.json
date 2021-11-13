@@ -1,11 +1,13 @@
 {
   "recommendations": [
     "yzhang.markdown-all-in-one",
+    "docsmsft.docs-markdown",
     "shd101wyy.markdown-preview-enhanced",
     "bierner.markdown-mermaid",
     "streetsidesoftware.code-spell-checker",
     "aaron-bond.better-comments",
     "wayou.vscode-todo-highlight",
-    "gruntfuggly.todo-tree"
+    "gruntfuggly.todo-tree",
+    "esbenp.prettier-vscode"
   ]
 }
