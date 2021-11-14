@@ -11,8 +11,8 @@ module.exports = {
       path: '/编程语言/Lua/基础篇/Table/表构造器'
     },
     {
-      title: '数值、列表和序列',
-      path: '/编程语言/Lua/基础篇/Table/数值_列表和序列'
+      title: '数组、列表和序列',
+      path: '/编程语言/Lua/基础篇/Table/数组_列表和序列'
     },
     {
       title: '遍历表',
