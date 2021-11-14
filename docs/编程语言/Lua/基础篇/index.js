@@ -3,6 +3,7 @@ const start = require('./语言入门');
 const number = require('./Number');
 const string = require('./String');
 const table = require('./Table');
+const func = require('./Function');
 
 module.exports = {
   title: '基础篇',
@@ -23,6 +24,7 @@ module.exports = {
       path: '/编程语言/Lua/基础篇/Boolean/'
     },
     string,
-    table
+    table,
+    func
   ]
 };
