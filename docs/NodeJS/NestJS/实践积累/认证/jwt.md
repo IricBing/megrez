@@ -6,8 +6,8 @@
 ## 安装必要依赖包
 
 ```shell
-$ yarn add @nestjs/jwt passport-jwt
-$ yarn add -D @types/passport-jwt
+$ pnpm add @nestjs/jwt passport-jwt
+$ pnpm add -D @types/passport-jwt
 ```
 
 ## 编写JWT实现策略
