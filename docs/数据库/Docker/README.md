@@ -81,7 +81,7 @@ volumes:
 
 ## 包含的服务
 
-* `PostgreSQL13`
+* `PostgreSQL14`
 
   登录账号： `postgres`
 
