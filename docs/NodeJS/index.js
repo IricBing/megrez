@@ -7,8 +7,9 @@ const nestjs = require('./NestJS');
 const optimizing = require('./优化篇');
 const ops = require('./运维篇');
 const practice = require('./实践积累');
+const senior = require('./高级篇');
 
 module.exports = {
   title: 'NodeJS',
-  children: [versionControl, base, npm, pnpm, pm2, nestjs, optimizing, ops, practice]
+  children: [versionControl, base, senior, npm, pnpm, pm2, nestjs, optimizing, ops, practice]
 };
