@@ -97,3 +97,34 @@ steps:
 
 depends_on:
   - clear
+
+---
+kind: pipeline
+type: docker
+name: notify
+
+clone:
+  disable: true
+
+steps:
+  - name: email
+    image: drillster/drone-email
+    settings:
+      subject: 'Drone build: [{{ build.status }}] {{ repo.name }} ({{ repo.branch }}) #{{ build.number }}'
+      host: smtp.qq.com
+      port: 465
+      from: drone@virtualbing.fun
+      username:
+        from_secret: email_user
+      password:
+        from_secret: email_password
+      recipients: iricbing@gmial.com
+      # recipients_only: true
+    when:
+      status:
+        - success
+        - changed
+        - failure
+
+depends_on:
+  - deploy
