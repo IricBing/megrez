@@ -118,7 +118,7 @@ steps:
         from_secret: email_user
       password:
         from_secret: email_password
-      recipients: iricbing@gmial.com
+      recipients: iricbing@gmail.com
       # recipients_only: true
     when:
       status:
