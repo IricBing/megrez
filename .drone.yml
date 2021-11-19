@@ -119,7 +119,7 @@ steps:
         from_secret: email_user
       password:
         from_secret: email_password
-      recipients: iricbing@gmail.com,3100790937@qq.com
+      recipients: iricbing@gmail.com
       # recipients_only: true
     when:
       branch:
