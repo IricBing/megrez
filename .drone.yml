@@ -35,25 +35,6 @@ steps:
 
 ---
 kind: pipeline
-type: exec
-name: clear
-
-clone:
-  disable: true
-
-steps:
-  - name: image
-    commands:
-      - docker image prune -a
-    when:
-      branch:
-        - master
-
-depends_on:
-  - build
-
----
-kind: pipeline
 type: ssh
 name: deploy
 
@@ -90,13 +71,13 @@ steps:
 
   - name: clear image
     commands:
-      - docker image prune -a
+      - docker image prune -f
     when:
       branch:
         - master
 
 depends_on:
-  - clear
+  - build
 
 ---
 kind: pipeline
