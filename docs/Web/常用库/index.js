@@ -5,8 +5,9 @@ const dayjs = require('./dayjs');
 const threejs = require('./threejs');
 const markdownIt = require('./markdown_it');
 const openLayers = require('./OpenLayers');
+const axios = require('./axios');
 
 module.exports = {
   title: '常用库',
-  children: [lodash, katex, moment, dayjs, threejs, openLayers, markdownIt]
+  children: [lodash, moment, dayjs, axios, threejs, openLayers, markdownIt, katex]
 };
