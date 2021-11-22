@@ -37,8 +37,7 @@ steps:
       port: 22
       script:
         - docker pull iricbing/megrez:latest
-        - docker stop megrez
-        - docker run -d --rm --name megrez -p 8080:8080 iricbing/megrez
+        - docker rm megrez -f && docker run -d --rm --name megrez -p 8080:8080 iricbing/megrez
         - docker image prune -f
 
   - name: email
