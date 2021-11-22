@@ -1,3 +1,5 @@
+const log = require('./日志');
+
 module.exports = {
   title: '基本使用',
   children: [
@@ -8,6 +10,7 @@ module.exports = {
     {
       title: '容器管理',
       path: '/容器/Docker/基本使用/容器管理'
-    }
+    },
+    log
   ]
-}
+};
