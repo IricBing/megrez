@@ -77,6 +77,10 @@ module.exports = {
       path: '/Linux/Ubuntu/基本使用/apt命令走代理'
     },
     {
+      title: '软件源证书校验问题',
+      path: '/Linux/Ubuntu/基本使用/软件源证书校验问题'
+    },
+    {
       title: '时区设置',
       path: '/Linux/Ubuntu/基本使用/时区设置'
     },

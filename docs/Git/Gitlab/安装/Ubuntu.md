@@ -16,6 +16,12 @@ $ sudo apt install curl openssh-server ca-certificates tzdata perl postfix
 
 ## `Step2.` 添加 `gitlab` 仓库源
 
+::: tip 提示
+建议使用清华的镜像站：https://mirror.tuna.tsinghua.edu.cn/help/gitlab-ce/
+
+而不是使用官方的仓库源，因为根本下载不下来。。。
+:::
+
 ```shell
 $ curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
 ```
@@ -46,6 +52,10 @@ $ sudo EXTERNAL_URL="https://git.9xing.cn" apt -o Acquire::https::proxy="http://
 不用做任何操作，多执行几遍 `sudo gitlab-ctl recofigure`
 
 ### 没有初始密码文件
+
+这是一个大坑啊！尽管如下操作可以让 `gitlab` 正常登录运行，但是会造成 `CI/CD` 等很多功能无法修改配置！一旦修改就报 `500` 错误。
+
+关联笔记：[遗失密码文件](../填坑手册/遗失密码文件/README.md)
 
 ```shell
 $ sudo gitlab-rake "gitlab:password:reset"

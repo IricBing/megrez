@@ -8,6 +8,10 @@ module.exports = {
     {
       title: 'WebHook',
       path: '/消息中间件/Emqx/基础篇/WebHook'
+    },
+    {
+      title: 'HTTP API',
+      path: '/消息中间件/Emqx/基础篇/HTTP_API/'
     }
   ]
 };
