@@ -28,6 +28,10 @@ module.exports = {
     {
       title: 'frp内网穿透配置',
       path: '/运维/Nginx/配置篇/frp内网穿透配置'
+    },
+    {
+      title: '密码访问',
+      path: '/运维/Nginx/配置篇/密码访问'
     }
   ]
 };
