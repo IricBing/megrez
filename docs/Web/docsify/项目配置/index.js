@@ -4,6 +4,10 @@ module.exports = {
     {
       title: 'mermaid',
       path: '/Web/docsify/项目配置/mermaid/'
+    },
+    {
+      title: 'PrismJS',
+      path: '/Web/docsify/项目配置/prismjs/'
     }
   ]
 };
