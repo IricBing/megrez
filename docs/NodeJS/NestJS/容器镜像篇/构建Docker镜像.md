@@ -1,8 +1,7 @@
 # 构建Docker镜像
 
-::: tip 提示
-参考笔记：[vscode工程配置](../配置篇/vscode工程配置.md)添加 `Docker` 支持
-:::
+> [!tip|label: 提示]
+> 参考笔记：[vscode工程配置](../配置篇/vscode工程配置.md)添加 `Docker` 支持
 
 ## 思想（yarn方式）
 
@@ -100,7 +99,7 @@ ENV KAFKA_BROKER_LIST=[\"kafka:9092\"]
 CMD ["node" ,"dist/main.js"]
 ```
 
-> [!warning|label:警告]
+> [!warning|label: 警告]
 > 其中的 `MICRO_LOG_HOST` 字段、 `DATABASE_HOST` 字段、 `REDIS_TOKEN_HOST` 字段等写的是**Docker网络中的容器名称**
-> 
+>  
 > `KAFKA_BROKER_LIST` 字段中的 `"` 需要使用 `\` 来标识。

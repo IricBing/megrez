@@ -8,9 +8,8 @@
 
 ![进入配置文件编辑方式](assets/images/进入配置文件编辑方式.png)
 
-::: tip 提示
-不要打开**默认setting.json**，因为那个是**只读**文件，不可修改。
-:::
+> [!tip|label: 提示]
+> 不要打开**默认setting.json**，因为那个是**只读**文件，不可修改。
 
 之后修改 `terminal.integrated.profiles.windows` 字段，增加 `cmder` 配置 ，如下所示：
 

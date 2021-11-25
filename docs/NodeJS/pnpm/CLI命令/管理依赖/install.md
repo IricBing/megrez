@@ -39,10 +39,8 @@
 
 不执行任何项目中 `package.json` 和它的依赖项中定义的任何脚本。
 
-::: tip 提示
-该标记不会阻止执行 `.pnpmfile.cjs`
-
-:::
+> [!tip|label: 提示]
+> 该标记不会阻止执行 `.pnpmfile.cjs`
 
 ### --prod, -P​
 
@@ -112,6 +110,5 @@
 
 创建一个扁平 `node_modules` 目录结构, 类似于 `npm` 或 `yarn`
 
-> [!warning|label:警告]
+> [!warning|label: 警告]
 > 这是非常不推荐的。
-

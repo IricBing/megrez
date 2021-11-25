@@ -16,11 +16,10 @@ $ sudo apt install curl openssh-server ca-certificates tzdata perl postfix
 
 ## `Step2.` 添加 `gitlab` 仓库源
 
-::: tip 提示
-建议使用清华的镜像站：https://mirror.tuna.tsinghua.edu.cn/help/gitlab-ce/
-
-而不是使用官方的仓库源，因为根本下载不下来。。。
-:::
+> [!tip|label: 提示]
+> 建议使用清华的镜像站：https://mirror.tuna.tsinghua.edu.cn/help/gitlab-ce/
+>
+> 而不是使用官方的仓库源，因为根本下载不下来。。。
 
 ```shell
 $ curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
@@ -41,9 +40,8 @@ $ sudo EXTERNAL_URL="https://git.9xing.cn" apt -o Acquire::https::proxy="http://
 
 安装完成后我们需要在 `/etc/gitlab/initial_root_password` 文件中获取到 `root` 用户的密码
 
-::: tip 提示
-如果没有这个文件，请看下面的采坑部分。
-:::
+> [!tip|label: 提示]
+> 如果没有这个文件，请看下面的采坑部分。
 
 ## 采坑
 

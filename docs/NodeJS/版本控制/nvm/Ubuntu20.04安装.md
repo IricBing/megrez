@@ -4,7 +4,7 @@
 
 ## 安装必要基础软件
 
-``` shell
+```shell
 $ sudo apt install build-essential libssl-dev
 ```
 
@@ -12,19 +12,18 @@ $ sudo apt install build-essential libssl-dev
 
 ### 自动化脚本安装
 
-> [!warning|label:注意]
+> [!warning|label: 注意]
 > 自动化安装可能不成功，因为使用了 `raw.githubusercontent.com` 域名。同时 `不要直接复制这个安装命令` ，可能nvm出了更高的版本，去GitHub上看最新的安装命令！
-
 
 * `curl` 方式：
 
-``` shell
+```shell
 $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash   # 注意将v0.36.0替换成最新版本
 ```
 
 * `wget` 方式：
 
-``` shell
+```shell
 $ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash    # 注意将v0.36.0替换成最新版本
 ```
 
@@ -32,42 +31,41 @@ $ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | ba
 
 #### Step1. 切换到用户目录
 
-``` shell
+```shell
 $ cd ~
 ```
 
 #### Step2. Clone 项目到本地
 
-``` shell
+```shell
 $ git clone https://github.com/nvm-sh/nvm.git .nvm
 ```
 
 #### Step3. 切换发布分支
 
-``` shell
+```shell
 $ cd .nvm
 $ git checkout v0.36.0  # 注意将v0.36.0替换成最新版本
 ```
 
 #### Step4. 激活nvm
 
-``` shell
+```shell
 $ . nvm.sh
 ```
 
 ## 配置nvm环境
 
-::: tip 提示
-本笔配置的是 `zsh` 环境， `bash` 环境请参考[官方文档](https://github.com/nvm-sh/nvm#bash)
-:::
+> [!tip|label: 提示]
+> 本笔配置的是 `zsh` 环境， `bash` 环境请参考[官方文档](https://github.com/nvm-sh/nvm#bash)
 
-``` shell
+```shell
 $ vim ~/.zshrc
 ```
 
 在文件的最后增加一下内容：
 
-``` bash
+```bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -99,6 +97,6 @@ load-nvmrc
 
 保存并退出，加载 `.zshrc` 文件改动
 
-``` shell
+```shell
 $ source ~/.zshrc
 ```

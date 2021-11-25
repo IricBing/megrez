@@ -1,8 +1,8 @@
 # `Docker` 安装 `Gitlab` （基于 `Ubuntu 20.04` ）
 
-::: tip 提示
-本笔记安装的是社区版本
-:::
+> [!tip|label:提示]
+> 本笔记安装的是社区版本
+
 
 * [官方安装文档](https://docs.gitlab.com/ee/install/docker.html#install-gitlab-using-docker-engine)
 * [社区版官方仓库地址](https://registry.hub.docker.com/r/gitlab/gitlab-ce/)

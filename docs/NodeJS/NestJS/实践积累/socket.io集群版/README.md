@@ -51,9 +51,9 @@ export class RedisIoAdapter extends IoAdapter {
 }
 ```
 
-::: tip 提示
-主要参考 `socket.io` 的官方文档中[redis适配器](https://socket.io/docs/v4/redis-adapter/)部分。
-:::
+> [!tip|label:提示]
+> 主要参考 `socket.io` 的官方文档中[redis适配器](https://socket.io/docs/v4/redis-adapter/)部分。
+
 
 ## 使用
 

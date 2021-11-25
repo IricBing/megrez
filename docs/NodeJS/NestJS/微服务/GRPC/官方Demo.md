@@ -81,9 +81,8 @@ graph TD;
     C -- json --> A;
 ```
 
-::: tip 简要总结：
-`http` 请求先进 `http` 的 `controller` ，之后调用 `grpc` 方法，进入 `grpc controller` ，在 `grpc controller` 中进行一系列操作，原路返回，最终返回给请求来源。
-:::
+> [!tip|label: 简要总结：]
+> `http` 请求先进 `http` 的 `controller` ，之后调用 `grpc` 方法，进入 `grpc controller` ，在 `grpc controller` 中进行一系列操作，原路返回，最终返回给请求来源。
 
 ## 代码剖析
 
@@ -168,9 +167,8 @@ await app.listenAsync();
 
 其中 `options.url` 就是用来配置程序占用端口的，通常为： `127.0.0.1:3300` or `0.0.0.0:3300` 。 `127.0.0.1` 表示这个服务 `只能本地调用` ，其他ip来源的请求直接过滤， `0.0.0.0` 表示 `任意来源` 的ip都可以调用。题外话：mysql，PostgreSQL，mongodb等数据库默认都是只能本机连接，其思想和这里的设计思想是一样的，注意多思考。
 
-::: tip 思考题？
-如果想要做仅能内网连接的，请求来源ip为127、192、10、172开头的允许访问，该如何设置？
-:::
+> [!tip|label: 思考题？]
+> 如果想要做仅能内网连接的，请求来源ip为127、192、10、172开头的允许访问，该如何设置？
 
 ### grpc-client.options.ts
 

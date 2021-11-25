@@ -1,8 +1,7 @@
 # Basic Auth认证
 
-::: tip 提示
-官方文档中并没有给出 `Basic Auth` 的实现方式，这是结合网上资料自己整理实现的。
-:::
+> [!tip|label: 提示]
+> 官方文档中并没有给出 `Basic Auth` 的实现方式，这是结合网上资料自己整理实现的。
 
 ## 安装必要依赖包
 
@@ -87,16 +86,15 @@ export class DeviceVcomController {
 }
 ```
 
-::: tip 提示
-`VcomUser` 装饰器的实现如下：
+> [!tip|label:提示]
+> `VcomUser` 装饰器的实现如下：
+>
+> ```ts
+> import { createParamDecorator, ExecutionContext } from '@nestjs/common';
+>
+> export const VcomUser = createParamDecorator((data: unknown, ctx: ExecutionContext) => {
+>   const { user } = ctx.switchToHttp().getRequest<Request>() as any;
+>   return user;
+> });
+> ```
 
-```ts
-import { createParamDecorator, ExecutionContext } from '@nestjs/common';
-
-export const VcomUser = createParamDecorator((data: unknown, ctx: ExecutionContext) => {
-  const { user } = ctx.switchToHttp().getRequest<Request>() as any;
-  return user;
-});
-```
-
-:::

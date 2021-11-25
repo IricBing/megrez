@@ -1,8 +1,8 @@
 # 配置conda环境
 
-::: tip 前提
-系统已经安装了 `conda` ，[相关笔记](../../../编程语言/Python/环境配置/conda/README.md)
-:::
+> [!tip|label:提示]
+> 系统已经安装了 `conda` ，[相关笔记](../../../编程语言/Python/环境配置/conda/README.md)
+
 
 ## 配置Python解释器
 

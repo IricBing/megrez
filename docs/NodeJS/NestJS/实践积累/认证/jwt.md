@@ -80,9 +80,8 @@ import { JwtStrategy } from './strategies/jwt.strategy';
 export class AuthModule {}
 ```
 
-::: tip 提示
-我这里将 `jwt` 设置成了**默认验证策略**，官方并没有这么干。
-:::
+> [!tip|label:提示]
+> 我这里将 `jwt` 设置成了**默认验证策略**，官方并没有这么干。
 
 ## 使用
 
@@ -92,8 +91,8 @@ export class AuthModule {}
 export class DeviceAdminController {}
 ```
 
-::: tip 提示
-因为我们将 `jwt` 设置成了**默认策略**，所以不需要指定策略名称，如没有设置默认策略，则需要用如下写法：
+> [!tip|label:提示]
+> 因为我们将 `jwt` 设置成了**默认策略**，所以不需要指定策略名称，如没有设置默认策略，则需要用如下写法：
 
 ```typescript
 @UseGuards(AuthGuard('jwt'))
@@ -118,5 +117,3 @@ export class JwtAuthGuard extends AuthGuard('jwt') {}
 @Controller('admin/devices')
 export class DeviceAdminController {}
 ```
-
-:::

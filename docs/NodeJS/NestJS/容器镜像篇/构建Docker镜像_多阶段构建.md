@@ -1,8 +1,7 @@
 # 构建Docker镜像——多阶段构建
 
-::: tip 提示
-参考笔记：[vscode工程配置](../配置篇/vscode工程配置.md)添加 `Docker` 支持
-:::
+> [!tip|label: 提示]
+> 参考笔记：[vscode工程配置](../配置篇/vscode工程配置.md)添加 `Docker` 支持
 
 ## 思想
 
@@ -60,10 +59,8 @@ EXPOSE 3000
 CMD ["node" ,"dist/main.js"]
 ```
 
-> [!tip|label:扩展]
+> [!tip|label: 扩展]
 > 关于多阶段更深入的介绍可以参考笔记：[Docker 多阶段构建](../../../容器/Docker/镜像构建/多阶段构建.md)
 
-
-> [!attention|label:警告]
+> [!attention|label: 警告]
 > 如果构建基于 `grpc` 的微服务，可能采坑，如遇到 `proto` 文件没有打包的情况，转至笔记：[GRPC打包proto文件缺失](../填坑手册/grpc打包proto文件缺失.md)
-

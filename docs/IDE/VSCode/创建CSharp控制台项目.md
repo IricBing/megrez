@@ -19,9 +19,9 @@
 $ dotnet new console
 ```
 
-::: tip 提示
-可以通过 `dotnet new -l` 命令来查看**可选模板**
-:::
+> [!tip|label:提示]
+> 可以通过 `dotnet new -l` 命令来查看**可选模板**
+
 
 之后通过 `vscode` 打开这个文件夹即可。
 

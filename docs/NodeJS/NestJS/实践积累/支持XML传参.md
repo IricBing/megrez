@@ -41,6 +41,6 @@ async function bootstrap() {
 bootstrap();
 ```
 
-::: tip 提示
-`body-parser-xml` 这个包过于老旧，无法支持新版的 `import` 写法，写起来比较别扭。尝试找过其他替代方案，但是没有找到合适的，目前先将就使用。
-:::
+> [!tip|label:提示]
+> `body-parser-xml` 这个包过于老旧，无法支持新版的 `import` 写法，写起来比较别扭。尝试找过其他替代方案，但是没有找到合适的，目前先将就使用。
+
