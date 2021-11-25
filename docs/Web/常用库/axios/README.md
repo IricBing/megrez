@@ -8,9 +8,9 @@
 
 `Ajax` 能够让页面无刷新的请求数据。
 
-::: warning 注意
-此处的 `Ajax` 是一个**概念**。常说的 `Ajax` 一般指的是 `jQuery` 中的 `Ajax` 实现。
-:::
+> [!warning|label:注意]
+> 此处的 `Ajax` 是一个**概念**。常说的 `Ajax` 一般指的是 `jQuery` 中的 `Ajax` 实现。
+
 
 因为 `Ajax` 是一个概念，所以也就会相应的有其具体实现，如常见的： `jQuery` 封装的 `ajax` 、原生的 `XMLHttpRequest` 、 `axios` 等。各种方式各有利弊。
 

@@ -3,6 +3,9 @@
 /node_modules
 /target
 
+# _sidebar.md文件自动生成
+docs/_sidebar.md
+
 # ignore lock file, use vercel build
 package-lock.json
 yarn.lock

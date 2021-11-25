@@ -12,9 +12,9 @@ $ sudo apt install build-essential libssl-dev
 
 ### 自动化脚本安装
 
-::: warning 注意
-自动化安装可能不成功，因为使用了 `raw.githubusercontent.com` 域名。同时 `不要直接复制这个安装命令` ，可能nvm出了更高的版本，去GitHub上看最新的安装命令！
-:::
+> [!warning|label:注意]
+> 自动化安装可能不成功，因为使用了 `raw.githubusercontent.com` 域名。同时 `不要直接复制这个安装命令` ，可能nvm出了更高的版本，去GitHub上看最新的安装命令！
+
 
 * `curl` 方式：
 

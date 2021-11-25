@@ -112,6 +112,6 @@
 
 创建一个扁平 `node_modules` 目录结构, 类似于 `npm` 或 `yarn`
 
-::: warning 注意
-这是非常不推荐的。
-:::
+> [!warning|label:警告]
+> 这是非常不推荐的。
+

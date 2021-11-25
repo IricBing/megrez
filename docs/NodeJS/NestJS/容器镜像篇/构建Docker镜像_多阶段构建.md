@@ -60,10 +60,10 @@ EXPOSE 3000
 CMD ["node" ,"dist/main.js"]
 ```
 
-::: warning 扩展
-关于多阶段更深入的介绍可以参考笔记：[Docker 多阶段构建](../../../容器/Docker/镜像构建/多阶段构建.md)
-:::
+> [!tip|label:扩展]
+> 关于多阶段更深入的介绍可以参考笔记：[Docker 多阶段构建](../../../容器/Docker/镜像构建/多阶段构建.md)
 
-::: danger 警告
-如果构建基于 `grpc` 的微服务，可能采坑，如遇到 `proto` 文件没有打包的情况，转至笔记：[GRPC打包proto文件缺失](../填坑手册/grpc打包proto文件缺失.md)
-:::
+
+> [!attention|label:警告]
+> 如果构建基于 `grpc` 的微服务，可能采坑，如遇到 `proto` 文件没有打包的情况，转至笔记：[GRPC打包proto文件缺失](../填坑手册/grpc打包proto文件缺失.md)
+

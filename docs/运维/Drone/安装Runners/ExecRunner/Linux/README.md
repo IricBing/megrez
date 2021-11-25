@@ -16,9 +16,8 @@ $ sudo install -t /usr/local/bin drone-runner-exec
 
 ## Step2. 配置
 
-::: warning 注意
-这里有坑，不能按照官方文档来做，因为按照它非 `root` 用户那样配置后启动不来，报权限错误，加上 `sudo` 后又变成了 `root` 用户了，所以只能用 `root` 用户配置。
-:::
+> [!warning|label: 注意]
+> 这里有坑，不能按照官方文档来做，因为按照它非 `root` 用户那样配置后启动不来，报权限错误，加上 `sudo` 后又变成了 `root` 用户了，所以只能用 `root` 用户配置。
 
 首先创建配置文件 `/etc/drone-runner-exec/config`
 

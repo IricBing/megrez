@@ -6,9 +6,9 @@
 
 ![miniconda下载页](assets/images/miniconda下载页.png)
 
-::: warning 注意
-需要选择合适的版本。
-:::
+> [!warning|label:注意]
+> 需要选择合适的版本。
+
 
 ## Step2. 安装
 
@@ -65,9 +65,9 @@ conda commands available from other packages:
 
 ## Step4. 换源
 
-::: warning 采坑提示
-这里千万不要用清华的镜像源，因为它不更新了。。。使用中科大的。
-:::
+> [!warning|label:采坑提示]
+> 这里千万不要用清华的镜像源，因为它不更新了。。。使用中科大的。
+
 
 打开终端，输入如下命令：
 

@@ -100,8 +100,7 @@ ENV KAFKA_BROKER_LIST=[\"kafka:9092\"]
 CMD ["node" ,"dist/main.js"]
 ```
 
-::: warning 注意
-其中的 `MICRO_LOG_HOST` 字段、 `DATABASE_HOST` 字段、 `REDIS_TOKEN_HOST` 字段等写的是**Docker网络中的容器名称**
-
-`KAFKA_BROKER_LIST` 字段中的 `"` 需要使用 `\` 来标识。
-:::
+> [!warning|label:警告]
+> 其中的 `MICRO_LOG_HOST` 字段、 `DATABASE_HOST` 字段、 `REDIS_TOKEN_HOST` 字段等写的是**Docker网络中的容器名称**
+> 
+> `KAFKA_BROKER_LIST` 字段中的 `"` 需要使用 `\` 来标识。

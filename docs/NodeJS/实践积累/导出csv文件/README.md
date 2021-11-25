@@ -115,11 +115,11 @@ export class XlsxUtil {
 }
 ```
 
-::: warning 注意
-这里需要注意 `csv` 文件的**数据格式**，请转至笔记[csv文件](../../../实践积累/csv文件/README.md)
+> [!warning|label:注意]
+> 这里需要注意 `csv` 文件的**数据格式**，请转至笔记[csv文件](../../../实践积累/csv文件/README.md)
+>
+> 上述高亮行中采用了 `String.prototype.replaceAll()` 方法，该方法是 `ES2021` 的语法，对于 `node` 来说，该方法从 `node 16 LTS` 开始支持，**请注意node版本**！
 
-上述高亮行中采用了 `String.prototype.replaceAll()` 方法，该方法是 `ES2021` 的语法，对于 `node` 来说，该方法从 `node 16 LTS` 开始支持，**请注意node版本**！
-:::
 
 ### 导出代码解读
 

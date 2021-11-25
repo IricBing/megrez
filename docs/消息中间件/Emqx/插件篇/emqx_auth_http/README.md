@@ -93,9 +93,9 @@ services:
 
 根据上述配置，自建的 `HTTP` 服务器需要实现**三个接口**，分别为： `/emqx/auth` 、 `/emqx/superuser` 和 `/emqx/acl`
 
-::: warning 注意
-容器启动后默认是没有开启 `emqx_auth_http` 插件的，需要手动去开启。
-:::
+> [!warning|label:注意]
+> 容器启动后默认是没有开启 `emqx_auth_http` 插件的，需要手动去开启。
+
 
 ## 自建HTTP服务实现
 

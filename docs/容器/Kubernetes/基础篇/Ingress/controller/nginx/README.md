@@ -1,16 +1,14 @@
 # ingress-nginx
 
-::: warning 注意
-`ingress-nginx` 和 `nginx-ingress` 是两个不同的东东！
-:::
+> [!warning|label:注意]
+> `ingress-nginx` 和 `nginx-ingress` 是两个不同的东东！
 
 ## 安装
 
 ### 通过Helm安装——推荐
 
-::: warning 前提
-必须配置**Docker代理**，请转至笔记[代理配置](../../../../../Docker/安装/代理配置.md)，否则在下载过程中使用了非 `docker hub` 仓库的镜像就下载不了了，这个时候阿里云容器镜像加速器是用不了的。
-:::
+> [!warning|label:前提]
+> 必须配置**Docker代理**，请转至笔记[代理配置](../../../../../Docker/安装/代理配置.md)，否则在下载过程中使用了非 `docker hub` 仓库的镜像就下载不了了，这个时候阿里云容器镜像加速器是用不了的。
 
 在 `Github` 仓库中已经详细介绍了如何通过 `Helm` 进行安装了，[地址](https://github.com/kubernetes/ingress-nginx/tree/main/charts/ingress-nginx)
 
@@ -97,8 +95,8 @@ my-nginx	default  	1       	2021-11-10 04:26:26.910214873 +0000 UTC	deployed	ing
 $ curl -O https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.0.4/deploy/static/provider/baremetal/deploy.yaml
 ```
 
-::: warning 注意
-不要盲目复制命令，注意去 `GitHub` 上看最新的版本。
-:::
+> [!warning|label:注意]
+> 不要盲目复制命令，注意去 `GitHub` 上看最新的版本。
+
 
 未完待续……

@@ -22,9 +22,8 @@ $ chsh -s /bin/zsh
 
 ### 方法一：自动化脚本安装
 
-::: warning 注意
-自动化脚本安装可能无法安装，因为软件的下载地址为（ `raw.githubusercontent.com` ），国内部分网络禁了这个域名。
-:::
+> [!warning|label: 注意]
+> 自动化脚本安装可能无法安装，因为软件的下载地址为（ `raw.githubusercontent.com` ），国内部分网络禁了这个域名。
 
 * 通过 `curl` 安装
 

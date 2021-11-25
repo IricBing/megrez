@@ -8,8 +8,8 @@
 
 这避免了同样的语句需要在 `then()` 和 `catch()` 中各写一次的情况。
 
-::: warning 注意
-在 `finally` 回调中 `throw` （或**返回被拒绝的promise**）将以 `throw()` 指定的原因拒绝新的 `promise` 。
-:::
+> [!warning|label:注意]
+> 在 `finally` 回调中 `throw` （或**返回被拒绝的promise**）将以 `throw()` 指定的原因拒绝新的 `promise` 。
+
 
 由于这个方法太过常见，应用示例不再赘述。

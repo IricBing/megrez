@@ -4,9 +4,11 @@
   "description": "个人知识库",
   "author": "Iric<iricbing@gmail.com>",
   "license": "MIT",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
-    "start": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "start": "node index.js && docsify serve docs"
   },
   "repository": {
     "type": "git",
@@ -17,17 +19,7 @@
   },
   "homepage": "https://github.com/IricBing/megrez#readme",
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.8.2",
-    "dayjs": "^1.10.6",
-    "markdown-it-disable-url-encode": "^1.0.1",
-    "prettier": "^2.3.2",
-    "vuepress": "^1.8.2",
-    "vuepress-plugin-cat": "^1.0.3",
-    "vuepress-plugin-md-enhance": "^1.20.1",
-    "vuepress-plugin-mermaidjs": "^1.8.1",
-    "vuepress-plugin-nuggets-style-copy": "^1.0.3",
-    "vuepress-plugin-qrcode": "^1.0.7",
-    "vuepress-plugin-right-anchor": "0.5.5",
-    "vuepress-plugin-zooming": "^1.1.8"
+    "docsify-cli": "^4.4.3",
+    "prettier": "^2.4.1"
   }
 }

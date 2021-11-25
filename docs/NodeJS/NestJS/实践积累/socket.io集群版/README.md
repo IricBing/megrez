@@ -4,9 +4,9 @@
 
 [官方文档](https://docs.nestjs.com/websockets/adapter)
 
-::: warning 注意
-截止到目前（2021年11月17日），中文文档和官方文档中都使用了[socket.io-redis](https://www.npmjs.com/package/socket.io-redis)这个包，但是这个包已经在 `6` 个月前就声明 `deprecated` 了，迁移至新的[@socket.io/redis-adapter](https://www.npmjs.com/package/@socket.io/redis-adapter)地址了。
-:::
+> [!warning|label:注意]
+> 截止到目前（2021年11月17日），中文文档和官方文档中都使用了[socket.io-redis](https://www.npmjs.com/package/socket.io-redis)这个包，但是这个包已经在 `6` 个月前就声明 `deprecated` 了，迁移至新的[@socket.io/redis-adapter](https://www.npmjs.com/package/@socket.io/redis-adapter)地址了。
+
 
 ## 实现原理与方式
 

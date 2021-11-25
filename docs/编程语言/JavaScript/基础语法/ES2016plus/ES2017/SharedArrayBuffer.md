@@ -4,9 +4,9 @@
 
 简单解释： `SharedArrayBuffer` 对象用来表示一个**通用的，固定长度的原始二进制数据缓冲区**，类似于 `ArrayBuffer` 对象，它们都可以用来在共享内存（shared memory）上创建视图。**与 ArrayBuffer 不同的是，SharedArrayBuffer 不能被分离。**
 
-::: warning 注意
-作为对[Spectre](https://meltdownattack.com/)的响应，**所有主流浏览器均默认于2018年1月5日禁用SharedArrayBuffer**。 `Chrome` 在启用了网站隔离功能的平台上的[v67中重新启用](https://bugs.chromium.org/p/chromium/issues/detail?id=821270)了该功能，以防止出现 `Spectre` 风格的漏洞。
-:::
+> [!warning|label:注意]
+> 作为对[Spectre](https://meltdownattack.com/)的响应，**所有主流浏览器均默认于2018年1月5日禁用SharedArrayBuffer**。 `Chrome` 在启用了网站隔离功能的平台上的[v67中重新启用](https://bugs.chromium.org/p/chromium/issues/detail?id=821270)了该功能，以防止出现 `Spectre` 风格的漏洞。
+
 
 ## 示例
 

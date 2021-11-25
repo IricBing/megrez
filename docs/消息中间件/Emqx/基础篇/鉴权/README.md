@@ -129,10 +129,9 @@ $ ./bin/emqx_ctl plugins reload emqx_auth_http  # 重载emqx_auth_http插件
 
 返回信息只有两个是有用的，一个是 `返回状态码` , 一个是 `body内容有无` 。
 
-::: warning 注意
-是 `body` 内容有无，而不是 `body` 中的内容， `body` 返回 `json` ，返回字符串， `Boolean` 都是一样的， `emqx` 不会看返回的内容， `只会看你有没有返回body！`
+> [!warning|label:注意]
+> 是 `body` 内容有无，而不是 `body` 中的内容， `body` 返回 `json` ，返回字符串， `Boolean` 都是一样的， `emqx` 不会看返回的内容， `只会看你有没有返回body！`
 
-:::
 
 ### 超级用户不走ACL
 

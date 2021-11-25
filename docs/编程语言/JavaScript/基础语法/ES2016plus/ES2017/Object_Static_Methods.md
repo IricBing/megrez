@@ -57,16 +57,14 @@ console.log(D);
 // Symbol(b): {value: 2, writable: true, enumerable: true, configurable: true}
 ```
 
-::: warning 注意
-该方法不支持未定的描述符，如下所示：
-
-```javascript
-var P = new Proxy({
-    a: 1
-}, {
-    getOwnPropertyDescriptor: function(t, k) {}
-});
-console.log(Object.getOwnPropertyDescriptors(P).hasOwnProperty('a')); //false
-```
-
-:::
+> [!warning|label:注意]
+> 该方法不支持未定的描述符，如下所示：
+> 
+> ```js
+> var P = new Proxy({
+>     a: 1
+> }, {
+>     getOwnPropertyDescriptor: function(t, k) {}
+> });
+> console.log(Object.getOwnPropertyDescriptors(P).hasOwnProperty('a')); //false
+> ```
