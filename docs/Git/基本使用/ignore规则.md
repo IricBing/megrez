@@ -2,7 +2,7 @@
 
 ## Office临时文件
 
-``` gitignore
+```git
 *.tmp
 
 ~$*.doc*
@@ -20,8 +20,7 @@
 
 ## Python 项目
 
-::: details 展开显示配置
-```gitignore
+```git
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -129,4 +128,3 @@ venv.bak/
 # mypy
 .mypy_cache/
 ```
-:::
