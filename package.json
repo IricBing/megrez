@@ -8,7 +8,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "node index.js && docsify serve docs"
+    "start": "node index.js && docsify serve docs",
+    "build": "node index.js"
   },
   "repository": {
     "type": "git",
