@@ -1,3 +1,5 @@
+const branch = require('./分支');
+
 module.exports = {
   title: '基本使用',
   children: [
@@ -24,6 +26,7 @@ module.exports = {
     {
       title: 'reflog',
       path: '/Git/基本使用/reflog'
-    }
+    },
+    branch
   ]
 };
