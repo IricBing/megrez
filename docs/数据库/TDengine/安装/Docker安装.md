@@ -1,8 +1,7 @@
 # Docker 安装 TDengine
 
-::: tip 提示
-目前官方**不推荐**生产环境用 `Docker` 部署，[官方文档](https://www.taosdata.com/cn/documentation/getting-started/docker)，当前时间： `2021-6-23` ，**Docker镜像已经停止更新**。
-:::
+> [!tip|label:提示]
+> 目前官方**不推荐**生产环境用 `Docker` 部署，[官方文档](https://www.taosdata.com/cn/documentation/getting-started/docker)，当前时间： `2021-6-23` ，**Docker镜像已经停止更新**。
 
 一键安装命令：
 

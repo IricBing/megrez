@@ -6,9 +6,8 @@
 
 `WebHook` 的内部实现是基于 [钩子](https://docs.emqx.cn/enterprise/v4.3/advanced/hooks.html)，但它**更靠近顶层**一些。它通过在钩子上的挂载回调函数，获取到 `EMQ X` 中的各种事件，并转发至 `emqx_web_hook` 中配置的 `Web` 服务器。
 
-::: tip 提示
-`WebHook` 对于事件的处理是**单向**的，它仅支持将 `EMQ X` 中的事件推送给 `Web` 服务，并不关心 `Web` 服务的返回。 借助 `Webhook` 可以完成设备在线、上下线记录，订阅与消息存储、消息送达确认等诸多业务。
-:::
+> [!tip|label:提示]
+> `WebHook` 对于事件的处理是**单向**的，它仅支持将 `EMQ X` 中的事件推送给 `Web` 服务，并不关心 `Web` 服务的返回。 借助 `Webhook` 可以完成设备在线、上下线记录，订阅与消息存储、消息送达确认等诸多业务。
 
 ## docker-compose配置
 

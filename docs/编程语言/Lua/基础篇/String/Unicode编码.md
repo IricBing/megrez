@@ -16,9 +16,9 @@
 
 函数 `utf8.char` 和 `utf8.codepoint` 在 `UTF-8` 环境下等价 `于string.char` 和 `string.byte`
 
-::: tip 提示
-`utf8` 库中大多数函数使用字节为索引。例如，调用 `string.codepoint(s, i, j)` 时 `i` 和 `j` 都会被当做字符串 `s` 中的字节位置。如果想使用字符位置作为索引，那么可以通过函数 `utf8.offset` 把字符位置转换为字节位置。
-:::
+> [!tip|label:提示]
+> `utf8` 库中大多数函数使用字节为索引。例如，调用 `string.codepoint(s, i, j)` 时 `i` 和 `j` 都会被当做字符串 `s` 中的字节位置。如果想使用字符位置作为索引，那么可以通过函数 `utf8.offset` 把字符位置转换为字节位置。
+
 
 `utf8` 标准库中的最后一个函数是 `utf8.codes` ，该函数用于遍历 `UTF-8` 字符串中的每一个字符。
 

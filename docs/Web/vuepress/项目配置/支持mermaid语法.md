@@ -22,6 +22,6 @@ module.exports = {
 }
 ```
 
-::: tip 提示
-也可以采用[Markdown增强](./Markdown增强.md)笔记中的方法
-:::
+> [!tip|label:提示]
+> 也可以采用[Markdown增强](./Markdown增强.md)笔记中的方法
+

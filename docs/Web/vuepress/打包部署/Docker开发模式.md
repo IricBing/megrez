@@ -43,9 +43,9 @@ EXPOSE 8080
 CMD ["yarn" ,"start"]
 ```
 
-::: tip 提示
-`Dockerfile` 中的 `node` 版本需要根据项目中的 `node` 版本选择，**尽量保持一致**。
-:::
+> [!tip|label:提示]
+> `Dockerfile` 中的 `node` 版本需要根据项目中的 `node` 版本选择，**尽量保持一致**。
+
 
 ## 打包
 

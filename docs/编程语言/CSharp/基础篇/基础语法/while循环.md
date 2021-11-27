@@ -23,6 +23,5 @@ st->cond(no)->e
 cond(yes)->process->cond
 ```
 
-::: tip 提示
-通常使用 `for` 循环可以操作的语句都可以使用 `while` 循环完成。
-:::
+> [!tip|label:提示]
+> 通常使用 `for` 循环可以操作的语句都可以使用 `while` 循环完成。

@@ -18,9 +18,9 @@
 
 相关操作转至笔记：[Ubuntu20.04关闭交换(swap)分区](../../../../Linux/Ubuntu/基本使用/关闭交换分区.md)
 
-::: tip 提示
-**一般云服务都没有开启交换分区**，可以通过 `$ sudo swapon --show` 命令来查看
-:::
+> [!tip|label:提示]
+> **一般云服务都没有开启交换分区**，可以通过 `$ sudo swapon --show` 命令来查看
+
 
 ### 安装Docker
 
@@ -65,24 +65,22 @@ $ kubelet --version
 
 ```
 
-::: tip 提示
-如果没有此文件，可以使用更简便的方式：
+> [!tip|label:提示]
+> 如果没有此文件，可以使用更简便的方式：
+> ```shell
+> $ mkdir /etc/docker
+> $ cat <<EOF | sudo tee /etc/docker/daemon.json
+> {
+>   "exec-opts": ["native.cgroupdriver=systemd"],
+>   "log-driver": "json-file",
+>   "log-opts": {
+>     "max-size": "100m"
+>   },
+>   "storage-driver": "overlay2"
+> }
+> EOF
+> ```
 
-```shell
-$ mkdir /etc/docker
-$ cat <<EOF | sudo tee /etc/docker/daemon.json
-{
-  "exec-opts": ["native.cgroupdriver=systemd"],
-  "log-driver": "json-file",
-  "log-opts": {
-    "max-size": "100m"
-  },
-  "storage-driver": "overlay2"
-}
-EOF
-```
-
-:::
 
 接下来重启docker服务
 
@@ -98,89 +96,86 @@ $ sudo systemctl restart docker
 $ sudo kubeadm init --apiserver-advertise-address 192.168.0.51 --pod-network-cidr 10.244.0.0/16 --image-repository gotok8s
 ```
 
-::: tip 提示
-`192.168.0.51` 为 `node1` 的 `内网IP`
+> [!tip|label:提示]
+> `192.168.0.51` 为 `node1` 的 `内网IP`
+> 
+> `--pod-network-cidr 10.244.0.0/16` 参数与后续 `CNI` 插件有关，这里以 `flannel` 为例，若后续部署其他类型的网络插件请更改此参数。
 
-`--pod-network-cidr 10.244.0.0/16` 参数与后续 `CNI` 插件有关，这里以 `flannel` 为例，若后续部署其他类型的网络插件请更改此参数。
-:::
 
-::: details 成功输出
-
-```txt
-[init] Using Kubernetes version: v1.22.2
-[preflight] Running pre-flight checks
-[preflight] Pulling images required for setting up a Kubernetes cluster
-[preflight] This might take a minute or two, depending on the speed of your internet connection
-[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
-[certs] Using certificateDir folder "/etc/kubernetes/pki"
-[certs] Generating "ca" certificate and key
-[certs] Generating "apiserver" certificate and key
-[certs] apiserver serving cert is signed for DNS names [kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local node1] and IPs [10.96.0.1 192.168.0.51]
-[certs] Generating "apiserver-kubelet-client" certificate and key
-[certs] Generating "front-proxy-ca" certificate and key
-[certs] Generating "front-proxy-client" certificate and key
-[certs] Generating "etcd/ca" certificate and key
-[certs] Generating "etcd/server" certificate and key
-[certs] etcd/server serving cert is signed for DNS names [localhost node1] and IPs [192.168.0.51 127.0.0.1 ::1]
-[certs] Generating "etcd/peer" certificate and key
-[certs] etcd/peer serving cert is signed for DNS names [localhost node1] and IPs [192.168.0.51 127.0.0.1 ::1]
-[certs] Generating "etcd/healthcheck-client" certificate and key
-[certs] Generating "apiserver-etcd-client" certificate and key
-[certs] Generating "sa" key and public key
-[kubeconfig] Using kubeconfig folder "/etc/kubernetes"
-[kubeconfig] Writing "admin.conf" kubeconfig file
-[kubeconfig] Writing "kubelet.conf" kubeconfig file
-[kubeconfig] Writing "controller-manager.conf" kubeconfig file
-[kubeconfig] Writing "scheduler.conf" kubeconfig file
-[kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
-[kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
-[kubelet-start] Starting the kubelet
-[control-plane] Using manifest folder "/etc/kubernetes/manifests"
-[control-plane] Creating static Pod manifest for "kube-apiserver"
-[control-plane] Creating static Pod manifest for "kube-controller-manager"
-[control-plane] Creating static Pod manifest for "kube-scheduler"
-[etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
-[wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s
-[apiclient] All control plane components are healthy after 9.004106 seconds
-[upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
-[kubelet] Creating a ConfigMap "kubelet-config-1.22" in namespace kube-system with the configuration for the kubelets in the cluster
-[upload-certs] Skipping phase. Please see --upload-certs
-[mark-control-plane] Marking the node node1 as control-plane by adding the labels: [node-role.kubernetes.io/master(deprecated) node-role.kubernetes.io/control-plane node.kubernetes.io/exclude-from-external-load-balancers]
-[mark-control-plane] Marking the node node1 as control-plane by adding the taints [node-role.kubernetes.io/master:NoSchedule]
-[bootstrap-token] Using token: 0d3ks2.7pl8cg6uxpk9qbl6
-[bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
-[bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to get nodes
-[bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
-[bootstrap-token] configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
-[bootstrap-token] configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
-[bootstrap-token] Creating the "cluster-info" ConfigMap in the "kube-public" namespace
-[kubelet-finalize] Updating "/etc/kubernetes/kubelet.conf" to point to a rotatable kubelet client certificate and key
-[addons] Applied essential addon: CoreDNS
-[addons] Applied essential addon: kube-proxy
-
-Your Kubernetes control-plane has initialized successfully!
-
-To start using your cluster, you need to run the following as a regular user:
-
-  mkdir -p $HOME/.kube
-  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-  sudo chown $(id -u):$(id -g) $HOME/.kube/config
-
-Alternatively, if you are the root user, you can run:
-
-  export KUBECONFIG=/etc/kubernetes/admin.conf
-
-You should now deploy a pod network to the cluster.
-Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
-  https://kubernetes.io/docs/concepts/cluster-administration/addons/
-
-Then you can join any number of worker nodes by running the following on each as root:
-
-kubeadm join 192.168.0.51:6443 --token 0d3ks2.7pl8cg6uxpk9qbl6 \
-	--discovery-token-ca-cert-hash sha256:46e0acce2cc6f64e0853bcb0e343a8594ebf2fc34e29eb8440b458654f98560a 
-```
-
-:::
+> [!note|label:成功输出]
+> ```txt
+> [init] Using Kubernetes version: v1.22.2
+> [preflight] Running pre-flight checks
+> [preflight] Pulling images required for setting up a Kubernetes cluster
+> [preflight] This might take a minute or two, depending on the speed of your internet connection
+> [preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+> [certs] Using certificateDir folder "/etc/kubernetes/pki"
+> [certs] Generating "ca" certificate and key
+> [certs] Generating "apiserver" certificate and key
+> [certs] apiserver serving cert is signed for DNS names [kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local node1] and IPs [10.96.0.1 192.168.0.51]
+> [certs] Generating "apiserver-kubelet-client" certificate and key
+> [certs] Generating "front-proxy-ca" certificate and key
+> [certs] Generating "front-proxy-client" certificate and key
+> [certs] Generating "etcd/ca" certificate and key
+> [certs] Generating "etcd/server" certificate and key
+> [certs] etcd/server serving cert is signed for DNS names [localhost node1] and IPs [192.168.0.51 127.0.0.1 ::1]
+> [certs] Generating "etcd/peer" certificate and key
+> [certs] etcd/peer serving cert is signed for DNS names [localhost node1] and IPs [192.168.0.51 127.0.0.1 ::1]
+> [certs] Generating "etcd/healthcheck-client" certificate and key
+> [certs] Generating "apiserver-etcd-client" certificate and key
+> [certs] Generating "sa" key and public key
+> [kubeconfig] Using kubeconfig folder "/etc/kubernetes"
+> [kubeconfig] Writing "admin.conf" kubeconfig file
+> [kubeconfig] Writing "kubelet.conf" kubeconfig file
+> [kubeconfig] Writing "controller-manager.conf" kubeconfig file
+> [kubeconfig] Writing "scheduler.conf" kubeconfig file
+> [kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+> [kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+> [kubelet-start] Starting the kubelet
+> [control-plane] Using manifest folder "/etc/kubernetes/manifests"
+> [control-plane] Creating static Pod manifest for "kube-apiserver"
+> [control-plane] Creating static Pod manifest for "kube-controller-manager"
+> [control-plane] Creating static Pod manifest for "kube-scheduler"
+> [etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
+> [wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s
+> [apiclient] All control plane components are healthy after 9.004106 seconds
+> [upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
+> [kubelet] Creating a ConfigMap "kubelet-config-1.22" in namespace kube-system with the configuration for the kubelets in the cluster
+> [upload-certs] Skipping phase. Please see --upload-certs
+> [mark-control-plane] Marking the node node1 as control-plane by adding the labels: [node-role.kubernetes.io/master(deprecated) node-role.kubernetes.io/control-plane node.kubernetes.io/exclude-from-external-load-balancers]
+> [mark-control-plane] Marking the node node1 as control-plane by adding the taints [node-role.kubernetes.io/master:NoSchedule]
+> [bootstrap-token] Using token: 0d3ks2.7pl8cg6uxpk9qbl6
+> [bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
+> [bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to get nodes
+> [bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
+> [bootstrap-token] configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
+> [bootstrap-token] configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
+> [bootstrap-token] Creating the "cluster-info" ConfigMap in the "kube-public" namespace
+> [kubelet-finalize] Updating "/etc/kubernetes/kubelet.conf" to point to a rotatable kubelet client certificate and key
+> [addons] Applied essential addon: CoreDNS
+> [addons] Applied essential addon: kube-proxy
+> 
+> Your Kubernetes control-plane has initialized successfully!
+> 
+> To start using your cluster, you need to run the following as a regular user:
+> 
+>   mkdir -p $HOME/.kube
+>   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+>   sudo chown $(id -u):$(id -g) $HOME/.kube/config
+> 
+> Alternatively, if you are the root user, you can run:
+> 
+>   export KUBECONFIG=/etc/kubernetes/admin.conf
+> 
+> You should now deploy a pod network to the cluster.
+> Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+>   https://kubernetes.io/docs/concepts/cluster-administration/addons/
+> 
+> Then you can join any number of worker nodes by running the following on each as root:
+> 
+> kubeadm join 192.168.0.51:6443 --token 0d3ks2.7pl8cg6uxpk9qbl6 \
+> 	--discovery-token-ca-cert-hash sha256:46e0acce2cc6f64e0853bcb0e343a8594ebf2fc34e29eb8440b458654f98560a 
+> ```
 
 根据提示，作为**非root**用户，需要执行以下操作来完成环境配置：
 
@@ -261,9 +256,9 @@ kube-system   kube-proxy-4lzzl                1/1     Running   0          3h43m
 kube-system   kube-scheduler-node1            1/1     Running   0          3h43m
 ```
 
-::: tip 提示
-`node Status` 从 `NotReady` 到 `Ready` 要等待一段时间，这里的时间长短与**docker镜像**下载速度有关，因此我们才会在上一步的时候修改 `RedHat` 维护的地址到 `Docker` 地址。
-:::
+> [!tip|label:提示]
+> `node Status` 从 `NotReady` 到 `Ready` 要等待一段时间，这里的时间长短与**docker镜像**下载速度有关，因此我们才会在上一步的时候修改 `RedHat` 维护的地址到 `Docker` 地址。
+
 
 ## 允许控制节点调度Pod（可选）
 
@@ -274,9 +269,9 @@ $ kubectl taint nodes --all node-role.kubernetes.io/master-
 node "test-01" untainted
 ```
 
-::: tip 提示
-这将从任何拥有 `node-role.kubernetes.io/master`  `taint` 标记的节点中移除该标记， 包括控制平面节点，这意味着调度程序将能够在**任何地方**调度 `Pods` 。
-:::
+> [!tip|label:提示]
+> 这将从任何拥有 `node-role.kubernetes.io/master`  `taint` 标记的节点中移除该标记， 包括控制平面节点，这意味着调度程序将能够在**任何地方**调度 `Pods` 。
+
 
 ## 加入节点
 
@@ -289,9 +284,9 @@ kubeadm join 172.22.108.36:6443 --token tokenstring... \
     --discovery-token-ca-cert-hash sha256:... 
 ```
 
-::: tip 提示
-`Token string` 和 `sha256 string` 是对应的 `token` 和 `cert-hash` ，初始化时会自动生成。也可以手动生成。
-:::
+> [!tip|label:提示]
+> `Token string` 和 `sha256 string` 是对应的 `token` 和 `cert-hash` ，初始化时会自动生成。也可以手动生成。
+
 
 在 `node2` 节点上执行加入集群命令：
 
@@ -391,9 +386,9 @@ Commercial support is available at
 </html>
 ```
 
-::: tip 提示
-`32155` 端口是**自动分配**的端口（也可以手动指定）， `NodePort` 端口范围在 [30000, 32767] 。
-:::
+> [!tip|label:提示]
+> `32155` 端口是**自动分配**的端口（也可以手动指定）， `NodePort` 端口范围在 [30000, 32767] 。
+
 
 ### 删除测试配置
 

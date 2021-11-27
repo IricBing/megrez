@@ -18,9 +18,9 @@ $ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docke
 $ sudo curl -L "https://hub.fastgit.org/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
-::: tip 提示
-要注意命令中的**版本号**，复刻版下载也不是那么快，基本上维持在**100K**多一点的网速
-:::
+> [!tip|label:提示]
+> 要注意命令中的**版本号**，复刻版下载也不是那么快，基本上维持在**100K**多一点的网速
+
 
 ## Step2. 赋予可执行权限
 

@@ -38,6 +38,6 @@ $ echo 'source "/home/iric/software/emsdk/emsdk_env.sh"' >> $HOME/.zprofile
 
 接下来**重启**计算机，终端才能识别 `emsdk` 命令。
 
-::: tip 提示
-如果不嫌麻烦，可以每次想要使用 `emsdk` 命令之前，都执行一下 `$ source "/home/iric/software/emsdk/emsdk_env.sh" ` 命令。
-:::
+> [!tip|label:提示]
+> 如果不嫌麻烦，可以每次想要使用 `emsdk` 命令之前，都执行一下 `$ source "/home/iric/software/emsdk/emsdk_env.sh" ` 命令。
+

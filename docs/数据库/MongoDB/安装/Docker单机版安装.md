@@ -16,10 +16,8 @@ $ docker run -d -p 27017:27017 -v $PWD/mongo_docker_data:/data/db -v /etc/localt
 $ docker run -d -p 27017:27017 -v $PWD/mongo_docker_data:/data/db -v /etc/localtime:/etc/localtime:ro --name mongodb mongo --auth
 ```
 
-::: tip 提示
-`--wiredTigerCacheSizeGB 2` 表示 `MongoDB` 所能采用的最大内存是 `2GB`
-
-:::
+> [!tip|label:提示]
+> `--wiredTigerCacheSizeGB 2` 表示 `MongoDB` 所能采用的最大内存是 `2GB`
 
 ## Step3. 进入容器
 

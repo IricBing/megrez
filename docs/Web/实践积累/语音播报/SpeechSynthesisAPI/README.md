@@ -25,9 +25,9 @@ const msg = new window.SpeechSynthesisUtterance('hello,world');
 | `rate` |语速，默认值是 `1` ，范围是[0.1, 10]，表示语速的倍数，例如 `1` 是正常， `2` 是正常语速的两倍|
 | `pitch` |音高|
 
-::: tip 提示
-通常实例化 `SpeechSynthesisUtterance` 后需要设置 `lang` 为 `zh-cn` 。
-:::
+> [!tip|label:提示]
+> 通常实例化 `SpeechSynthesisUtterance` 后需要设置 `lang` 为 `zh-cn` 。
+
 
 ## 回调方法
 

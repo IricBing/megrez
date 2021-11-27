@@ -20,6 +20,5 @@
 
 微软确实正在逐步切换到 `. Net Core` ，但据说 `. Net Core` 对 `WinForm` 有所阉割，性能方面 `. Net Core` 占有优势，但是我们的 `winForm` 对性能需求不高，所以，还是选择 `. NetFramework` 吧，生态好，开发快。
 
-::: tip 题外话
-有人说 `. Net Core` 才是未来，我都用 `winForm` 了，还在意未来？
-:::
+> [!tip|label: 提示]
+> 有人说 `.Net Core` 才是未来，我都用 `winForm` 了，还在意未来？
