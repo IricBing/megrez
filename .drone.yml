@@ -6,6 +6,52 @@ clone:
   disable: true
 
 steps:
+  - name: deploy
+    image: appleboy/drone-ssh
+    settings:
+      host: 101.42.135.206
+      username: ubuntu
+      password:
+        from_secret: server_password
+      port: 22
+      script:
+        - cd /home/ubuntu/code/megrez && git pull && /home/ubuntu/.nvm/versions/node/v16.13.0/bin/node index.js && sudo nginx -s reload
+
+  - name: email
+    image: drillster/drone-email
+    settings:
+      subject: 'Drone deploy: [{{ build.status }}] {{ repo.name }} ({{ repo.branch }}) #{{ build.number }}'
+      host: smtp.qq.com
+      port: 465
+      from: 
+        from_secret: email_user
+      username:
+        from_secret: email_user
+      password:
+        from_secret: email_password
+      recipients: 2633419446@qq.com
+      # recipients_only: true
+    when:
+      status:
+        - success
+        - changed
+        - failure
+
+trigger:
+  event:
+    - push
+  branch:
+    - master
+
+---
+kind: pipeline
+type: docker
+name: build
+
+clone:
+  disable: true
+
+steps:
   - name: clone
     image: alpine/git
     environment:
@@ -26,17 +72,6 @@ steps:
       password: zh.2015.
       tags: latest
       no_cache: true
-
-  - name: deploy
-    image: appleboy/drone-ssh
-    settings:
-      host: 101.42.135.206
-      username: ubuntu
-      password:
-        from_secret: server_password
-      port: 22
-      script:
-        - cd /home/ubuntu/code/megrez && git pull && /home/ubuntu/.nvm/versions/node/v16.13.0/bin/node index.js && sudo nginx -s reload
 
   - name: email
     image: drillster/drone-email
