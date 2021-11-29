@@ -2,7 +2,7 @@
 
 [官方文档](https://docsify.js.org/#/zh-cn/pwa)
 
-在 `index.html` **同级目录**下新建 [sw.js](assets/files/sw.js) 文件，写入如下内容：
+在 `index.html` **同级目录**下新建 <a href="Web/docsify/项目配置/PWA/assets/files/sw.js" download="sw.js">sw.js</a> 文件，写入如下内容：
 
 ```js
 /* ===========================================================
