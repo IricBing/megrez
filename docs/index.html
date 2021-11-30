@@ -76,6 +76,14 @@
         }
       };
     </script>
+    
+    <!-- service work支持 -->
+    <script>
+      if (typeof navigator.serviceWorker !== 'undefined') {
+        navigator.serviceWorker.register('sw.js');
+      }
+    </script>
+
     <!-- Docsify v4 -->
     <script src="https://cdn.9xing.cn/docsify/4.12.1/docsify.min.js"></script>
     <!-- 图片缩放 -->
