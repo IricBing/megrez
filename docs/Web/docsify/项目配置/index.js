@@ -20,6 +20,10 @@ module.exports = {
     {
       title: 'PrismJS',
       path: '/Web/docsify/项目配置/prismjs/'
+    },
+    {
+      title: '数学公式支持',
+      path: '/Web/docsify/项目配置/数学公式支持/'
     }
   ]
 };
