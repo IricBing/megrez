@@ -4,7 +4,7 @@
 
 ## 安装
 
-```shell
+```bash
 $ yarn add -D @vuepress/plugin-back-to-top
 ```
 

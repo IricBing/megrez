@@ -62,6 +62,6 @@
 
 启动客户端
 
-```shell
+```bash
 $ docker run -d -p 1080:1080 -p 1088:1088 --name v2ray --restart=always -v /etc/v2ray:/etc/v2ray teddysun/v2ray
 ```

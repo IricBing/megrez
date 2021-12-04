@@ -4,7 +4,7 @@
 
 ## Step1. 下载二进制文件
 
-```shell
+```bash
 $ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
@@ -14,7 +14,7 @@ $ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docke
 
 如果下载不下来，自己去[GitHub](https://github.com/docker/compose/releases)中自行下载最新版二进制文件，之后复制到 `/usr/local/bin/` 目录下即可。或者使用复刻版下载：
 
-```shell
+```bash
 $ sudo curl -L "https://hub.fastgit.org/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
@@ -24,13 +24,13 @@ $ sudo curl -L "https://hub.fastgit.org/docker/compose/releases/download/1.29.2/
 
 ## Step2. 赋予可执行权限
 
-```shell
+```bash
 $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 ## Step3. 安装zsh自动补全功能
 
-```shell
+```bash
 $ gedit ~/.zshrc
 ```
 
@@ -40,6 +40,6 @@ $ gedit ~/.zshrc
 
 删掉二进制文件即可
 
-```shell
+```bash
 $ sudo rm /usr/local/bin/docker-compose
 ```

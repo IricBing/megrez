@@ -6,7 +6,7 @@
 
 首先看一下命令自身的帮助文档：
 
-``` shell
+```bash
 $ update-rc.d --help
 usage: update-rc.d [-f] <basename> remove
        update-rc.d [-f] <basename> defaults

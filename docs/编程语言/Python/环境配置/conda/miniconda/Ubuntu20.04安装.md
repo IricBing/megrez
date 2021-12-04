@@ -10,7 +10,7 @@
 
 运行上一步下载的安装脚本
 
-```shell
+```bash
 # 如果使用zsh终端
 $ zsh ./Miniconda3-py39_4.10.3-Linux-x86_64.sh
 
@@ -28,7 +28,7 @@ $ bash ./Miniconda3-py39_4.10.3-Linux-x86_64.sh
 
 打开终端，输入如下命令：
 
-``` shell
+```bash
 $ conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
 $ conda config --set show_channel_urls yes
 ```

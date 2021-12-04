@@ -32,7 +32,7 @@
 
 **共享秘钥**用于 `Drone` 服务和 `runners` 服务之间的通信认证。可以利用 `openssl` 来生成这个秘钥，如下所示：
 
-```shell
+```bash
 $ openssl rand -hex 16
 bea26a2221fd8090ea38720fc445eca6
 ```
@@ -45,7 +45,7 @@ bea26a2221fd8090ea38720fc445eca6
 
 这里采用`Docker`运行，直接在命令中写入即可，如下所示：
 
-```shell {3-7}
+```bash {3-7}
 $ docker run \
   --volume=/var/lib/drone:/data \
   --env=DRONE_GITHUB_CLIENT_ID=OAuth ID \

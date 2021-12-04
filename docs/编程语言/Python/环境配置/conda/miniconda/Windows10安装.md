@@ -26,7 +26,7 @@
 
 打开 `cmd终端` ，输入 `conda` ，检验输出，正常的话，应该是有如下输出的：
 
-``` shell
+```bash
 $ conda
 usage: conda-script.py [-h] [-V] command ...
 
@@ -71,7 +71,7 @@ conda commands available from other packages:
 
 打开终端，输入如下命令：
 
-``` shell
+```bash
 $ conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
 $ conda config --set show_channel_urls yes
 ```

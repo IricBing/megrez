@@ -4,13 +4,13 @@
 
 安装命令：
 
-``` shell
+```bash
 $ sudo apt install nfs-common
 ```
 
 命令语法：
 
-``` shell
+```bash
 showmount --help
 Usage: showmount [-adehv]
        [--all] [--directories] [--exports]

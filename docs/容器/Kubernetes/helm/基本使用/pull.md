@@ -14,7 +14,7 @@
 
 ## 语法
 
-```shell
+```bash
 $ helm pull [chart URL | repo/chartname] [...] [flags]
 ```
 
@@ -24,12 +24,12 @@ $ helm pull [chart URL | repo/chartname] [...] [flags]
 
 下载压缩文件
 
-```shell
+```bash
 $ helm pull ingress-nginx/ingress-nginx
 ```
 
 下载并自动解压（不保留压缩文件）
 
-```shell
+```bash
 $ helm pull --untar ingress-nginx/ingress-nginx
 ```

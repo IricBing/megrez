@@ -14,7 +14,7 @@
 
 这里最好还是将 `helm` 包下载下来安装，避免了终端走代理，因为**终端走代理会导致集群之间内网通信不通！**
 
-```shell {1, 5}
+```bash {1, 5}
 $ setproxys   # 开启打理
 $ helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 $ helm repo update
@@ -26,7 +26,7 @@ $ helm install my-nginx .
 ```
 
 ::: details 点击展开安装日志
-```shell
+```bash
 $ helm install my-nginx .
 NAME: my-nginx
 LAST DEPLOYED: Wed Nov 10 06:26:02 2021
@@ -83,7 +83,7 @@ If TLS is enabled for the Ingress, a Secret containing the certificate and key m
 
 安装完成测试
 
-```shell
+```bash
 $ helm list
 NAME    	NAMESPACE	REVISION	UPDATED                                	STATUS  	CHART              	APP VERSION
 my-nginx	default  	1       	2021-11-10 04:26:26.910214873 +0000 UTC	deployed	ingress-nginx-4.0.6	1.0.4 
@@ -91,7 +91,7 @@ my-nginx	default  	1       	2021-11-10 04:26:26.910214873 +0000 UTC	deployed	ing
 
 ### 通过kubectl
 
-```shell
+```bash
 $ curl -O https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.0.4/deploy/static/provider/baremetal/deploy.yaml
 ```
 

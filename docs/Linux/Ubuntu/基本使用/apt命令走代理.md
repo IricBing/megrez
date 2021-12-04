@@ -2,6 +2,6 @@
 
 语法：
 
-``` shell
+```bash
 $ sudo apt -o Acquire::https::proxy="http://127.0.0.1:1088/" -o Acquire::http::proxy="http://127.0.0.1:1088/" update
 ```

@@ -10,7 +10,7 @@
 
 一行命令即可
 
-```shell
+```bash
 $ sudo apt install docker.io
 ```
 
@@ -22,7 +22,7 @@ $ sudo apt install docker.io
 
 编辑 `/etc/docker/daemon.json` 文件，没有新建即可
 
-```shell
+```bash
 $ sudo vim /etc/docker/daemon.json
 ```
 
@@ -48,31 +48,31 @@ $ sudo vim /etc/docker/daemon.json
 
 ### Step1. 创建docker用户组
 
-```shell
+```bash
 $ sudo groupadd docker
 ```
 
 ### Step2. 将当前用户增加到docker用户组中
 
-```shell
+```bash
 $ sudo usermod -aG docker $USER
 ```
 
 ### Step3. 注销并重新登录，以便重新评估组成员关系
 
-```shell
+```bash
 $ newgrp docker 
 ```
 
 ### Step4. 测试
 
-```shell
+```bash
 $ docker run hello-world
 ```
 
 ## 增加zsh自动补全命令功能
 
-```shell
+```bash
 $ gedit ~/.zshrc
 ```
 
@@ -82,7 +82,7 @@ $ gedit ~/.zshrc
 
 换源后需要重启才能生效，重启命令如下：
 
-```shell
+```bash
 $ sudo service docker restart
 ```
 
@@ -90,6 +90,6 @@ $ sudo service docker restart
 
 默认 `Docker` 没有开机自启动功能的，需要我们手动给他添加到开机启动项中，如果不加， `name` 每次开机后都要手动运行 `docker` 才行。
 
-```shell
+```bash
 $ sudo systemctl enable docker.service
 ```

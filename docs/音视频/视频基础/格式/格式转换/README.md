@@ -22,7 +22,7 @@
 
 接下来转换仅需要如下命令即可：
 
-``` shell
+```bash
 $ ffmpeg -i <input_file_path> <output_file_path>
 
 e.g.

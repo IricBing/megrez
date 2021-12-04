@@ -5,7 +5,7 @@
 
 ## 安装必要依赖包
 
-```shell
+```bash
 $ pnpm add @nestjs/jwt passport-jwt
 $ pnpm add -D @types/passport-jwt
 ```

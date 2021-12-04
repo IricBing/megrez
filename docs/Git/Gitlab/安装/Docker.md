@@ -19,7 +19,7 @@ export GITLAB_HOME=/srv/gitlab
 
 接下来从新加载配置文件，并测试环境变量是否配置成功了
 
-```shell
+```bash
 # 重载zsh配置文件
 $ source ~/.zshrc
 
@@ -32,7 +32,7 @@ $ echo $GITLAB_HOME
 
 一键运行命令：
 
-```shell
+```bash
 $ sudo docker run --detach \
     --hostname gitlab.virtualbing.cn \
     --env GITLAB_OMNIBUS_CONFIG="external_url 'http://gitlab.virtualbing.cn/'; gitlab_rails['lfs_enabled'] = true;" \

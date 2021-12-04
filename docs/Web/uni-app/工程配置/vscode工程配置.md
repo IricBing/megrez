@@ -421,7 +421,7 @@ module.exports = {
 
 安装 `husky` 和 `lint-staged` 包（因为需要增加 `ENV` 参数，所以还是把 `cross-env` 包装上吧。）
 
-```shell
+```bash
 $ yarn add -D husky lint-staged cross-env
 ```
 
@@ -438,7 +438,7 @@ $ yarn add -D husky lint-staged cross-env
 
 接下来配置 `husky` ，输入如下命令：
 
-```shell
+```bash
 $ yarn husky install
 
 $ yarn husky add .husky/pre-commit "npx lint-staged"

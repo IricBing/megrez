@@ -6,7 +6,7 @@
 
 查看磁盘空间发现仅有 `196G` 空间
 
-``` shell
+```bash
 $ df -h
 df: /var/nfs/gernel: Stale file handle
 Filesystem                         Size  Used Avail Use% Mounted on
@@ -37,7 +37,7 @@ tmpfs                              394M     0  394M   0% /run/user/1000
 
 首先查看一下 `VG` (**卷组**)列表：
 
-``` shell
+```bash
 $ sudo vgdisplay
   --- Volume group ---
   VG Name               ubuntu-vg
@@ -65,7 +65,7 @@ $ sudo vgdisplay
 
 接下来将剩余可用空间全部分配下去：
 
-``` shell
+```bash
 $ sudo lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
   Size of logical volume ubuntu-vg/ubuntu-lv changed from 200.00 GiB (51200 extents) to <799.00 GiB (204543 extents).
   Logical volume ubuntu-vg/ubuntu-lv successfully resized.
@@ -73,13 +73,13 @@ $ sudo lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 
 然后执行调整：
 
-``` shell
+```bash
 $ sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 ```
 
 再次查看磁盘信息和 `VG` 信息：
 
-``` shell
+```bash
 $ df -h
 df: /var/nfs/gernel: Stale file handle
 Filesystem                         Size  Used Avail Use% Mounted on

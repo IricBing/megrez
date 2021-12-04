@@ -8,7 +8,7 @@
 
 ## .npmrc 文件完整版配置
 
-``` shell
+```bash
 home="https://npmmirror.com"
 registry="https://registry.npmmirror.com/"
 
@@ -31,7 +31,7 @@ nodejieba_binary_host_mirror="https://npmmirror.com/mirrors/nodejieba"
 
 ## .yarnrc 文件完整版配置
 
-``` shell
+```bash
 home "https://npmmirror.com"
 registry "https://registry.npmmirror.com/"
 disturl "https://npmmirror.com/dist"

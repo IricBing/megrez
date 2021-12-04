@@ -8,7 +8,7 @@
 
 ## 环境配置
 
-```shell
+```bash
 $ conda create -n color-model python=3.9
 $ conda activate color-model
 $ pip install -r requirements.txt

@@ -11,7 +11,7 @@
 
 ## 常见命令参数
 
-```shell
+```bash
 $ ss -help
 Usage: ss [ OPTIONS ]
        ss [ OPTIONS ] [ FILTER ]

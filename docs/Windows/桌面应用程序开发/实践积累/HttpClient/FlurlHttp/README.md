@@ -6,7 +6,7 @@
 
 **NuGet控制台**方式：
 
-```shell
+```bash
 $ Install-Package Flurl.Http -Version 3.2.0
 ```
 

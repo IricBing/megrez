@@ -4,7 +4,7 @@
 
 ## 自动化脚本安装
 
-```shell
+```bash
 $ sudo apt-get install curl git mercurial make binutils bison gcc build-essential
 
 $ zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
@@ -21,7 +21,7 @@ Please restart your terminal session or to get started right away run
 
 注意输出，需要将输出中的命令拷贝并执行
 
-```shell
+```bash
 $ source /home/iric/.gvm/scripts/gvm
 ```
 
@@ -39,7 +39,7 @@ export GO_BINARY_BASE_URL="https://mirrors.ustc.edu.cn/golang"
 
 ## 安装 `go` (1.5+)
 
-```shell
+```bash
 $ gvm install go1.4 -B
 $ gvm use go1.4
 $ export GOROOT_BOOTSTRAP=$GOROOT
@@ -55,7 +55,7 @@ go version go1.16 linux/amd64
 
 生在天朝，你懂得
 
-```shell
+```bash
 $ go env -w GO111MODULE=on
 $ go env -w GOPROXY=https://goproxy.cn,direct
 ```

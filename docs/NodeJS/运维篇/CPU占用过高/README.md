@@ -68,7 +68,7 @@ code-creation,Builtin,3,7695,0x555caf0f0be0,926,CallWithArrayLike
 
 首先介绍火焰图方式，这个由于可视化，所以比较好看。
 
-```shell
+```bash
 $ npm install -g flamebearer    # 全局安装flamebearer包
 
 $ node --prof-process --preprocess -j isolate*.log | flamebearer    # 使用flamebearer包生成火焰图
@@ -80,7 +80,7 @@ $ node --prof-process --preprocess -j isolate*.log | flamebearer    # 使用flam
 
 通过node自带的分析诊断功能，得到log日志。
 
-```shell
+```bash
 $ node --prof-process isolate*.log > process.txt
 ```
 

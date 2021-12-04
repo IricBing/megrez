@@ -1,6 +1,6 @@
 # rtsp推流
 
-```shell
+```bash
 # h264推流
 $ ffmpeg -re -i "/path/to/test.mp4" -vcodec h264 -acodec aac -f rtsp -rtsp_transport tcp rtsp://127.0.0.1/live/test
 # h265推流
@@ -10,7 +10,7 @@ $ ffmpeg -re -i "/path/to/test.mp4" -vcodec h265 -acodec aac -f rtsp -rtsp_trans
 ::: tip 提示
 如果需要循环推流，可以加上 `-stream_loop -1` 参数，如下所示：
 
-```shell
+```bash
 $ ffmpeg -re -stream_loop -1 -i "/path/to/test.mp4" -vcodec h264 -acodec aac -f rtsp -rtsp_transport tcp rtsp://127.0.0.1/live/test
 ```
 
@@ -18,7 +18,7 @@ $ ffmpeg -re -stream_loop -1 -i "/path/to/test.mp4" -vcodec h264 -acodec aac -f 
 
 如果推流正常，在 `ZLMediaKit` 控制台能够看到如下输出：
 
-```shell
+```bash
 2021-10-19 15:44:42.457 D MediaServer[115881-event poller 0] RtspSession.cpp:53 RtspSession | 140710175815248(127.0.0.1:57792) 
 2021-10-19 15:44:42.457 I MediaServer[115881-event poller 0] MediaSource.cpp:414 emitEvent | 媒体注册:hls __defaultVhost__ live test
 2021-10-19 15:44:42.457 D MediaServer[115881-event poller 0] MediaSink.cpp:158 emitAllTrackReady | all track ready use 0ms
@@ -31,7 +31,7 @@ $ ffmpeg -re -stream_loop -1 -i "/path/to/test.mp4" -vcodec h264 -acodec aac -f 
 
 按照官方文档规则：
 
-```shell
+```bash
 2020-04-10 12:51:52.331 I | regist rtsp __defaultVhost__ rtp 206442D7
                                     ^           ^         ^      ^
                                   schema      vhost      app stream_id

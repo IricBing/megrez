@@ -10,7 +10,7 @@
 
 ## Step2. 安装
 
-```shell
+```bash
 $ sudo cp SimHei.ttf /usr/share/fonts/SimHei.ttf
 $ sudo mkfontscale      # 生成字体的索引信息
 $ sudo mkfontdir        # 生成字体的索引信息

@@ -4,13 +4,13 @@
 
 ## Step1. pull容器镜像
 
-```shell
+```bash
 $ docker pull drone/drone-runner-ssh
 ```
 
 ## Step2. 运行容器镜像
 
-```shell {2-4}
+```bash {2-4}
 $ docker run --detach \
   --env=DRONE_RPC_PROTO=https \
   --env=DRONE_RPC_HOST=drone.company.com \
@@ -27,7 +27,7 @@ $ docker run --detach \
 
 ## Step3. 验证
 
-```shell
+```bash
 $ docker logs ssh-runner
 time="2021-10-28T01:54:11Z" level=info msg="starting the server" addr=":3000"
 time="2021-10-28T01:54:13Z" level=info msg="successfully pinged the remote server"

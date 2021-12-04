@@ -2,7 +2,7 @@
 
 ## Snap方式——推荐
 
-```shell
+```bash
 $ sudo snap install helm --classic
 ```
 
@@ -12,7 +12,7 @@ $ sudo snap install helm --classic
 
 之后解压文件，在解压目录中找到 `helm` 程序，移动到系统路径中即可，如下所示：
 
-```shell
+```bash
 $ sudo mv linux-amd64/helm /usr/local/bin/helm
 ```
 
@@ -22,20 +22,20 @@ $ sudo mv linux-amd64/helm /usr/local/bin/helm
 
 临时生效：
 
-```shell
+```bash
 $ source <(helm completion zsh)
 ```
 
 永久生效：
 
-```shell
+```bash
 helm completion zsh > "${fpath[1]}/_helm"
 ```
 
 ::: details 永久有效的实现原理
 一般而言，我们都是通过修改 `~/.zshrc` 文件，在这个里面加入相应的配置来实现，但是这里不是的，是写入了一个文件中，它的做法是在 `fpath` 数组**第一个元素**路径下新建一个 `_helm` 文件，之后往这里面写东西，下一次终端启动时，就会连带着把 `_helm` 文件也加载进来了。我们可以通过 `echo` 来查看具体写到了哪里：
 
-```shell
+```bash
 $ echo ${fpath[1]}
 /home/ubuntu/.oh-my-zsh/plugins/docker-compose
 ```

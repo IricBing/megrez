@@ -14,7 +14,7 @@
 
 安装完成后测试，打开 `CMD` 终端，输入 `nvm` 即可。得到如下输出即表示安装成功。
 
-```shell
+```bash
 $ nvm
 
 Running version 1.1.8.
@@ -47,7 +47,7 @@ Usage:
 
 老生常谈，一键复制即可
 
-```shell
+```bash
 $ nvm node_mirror https://npmmirror.com/mirrors/node
 $ nvm npm_mirror https://hub.fastgit.org/npm/cli/archive/
 ```
@@ -58,7 +58,7 @@ $ nvm npm_mirror https://hub.fastgit.org/npm/cli/archive/
 
 通过 `nvm install x.x.x` 之后启用这个版本，例如：
 
-```shell
+```bash
 $ nvm install 14.18.0
 $ nvm use 14.18.0
 exit status 1: Cannot create a file when that file already exists.
@@ -78,7 +78,7 @@ exit status 1: Cannot create a file when that file already exists.
 
 ### Access is denied.
 
-```shell
+```bash
 $ nvm use 14.18.0
 exit status 1: Access is denied.
 ```

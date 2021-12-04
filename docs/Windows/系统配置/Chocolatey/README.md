@@ -12,13 +12,13 @@
 
 以**管理员身份**打开 `PowerShell` ，运行如下命令：
 
-```shell
+```bash
 $ Get-ExecutionPolicy
 ```
 
 如果返回值为： `Restricted` ，输入 `$ Set-ExecutionPolicy AllSigned` 或 `$ Set-ExecutionPolicy Bypass -Scope Process` 命令，如下所示：
 
-```shell
+```bash
 $ Set-ExecutionPolicy AllSigned
 
 Execution Policy Change
@@ -32,7 +32,7 @@ https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the executi
 
 输入如下命令进行安装：
 
-```shell
+```bash
 $ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
@@ -40,7 +40,7 @@ $ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointMana
 
 如果上一步没有输出错误，输入 `$ choco` 命令进行检验，如输出如下，即表示安装完成
 
-```shell
+```bash
 $  choco
 Chocolatey v0.10.15
 Please run 'choco -?' or 'choco <command> -?' for help menu.

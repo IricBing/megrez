@@ -2,7 +2,7 @@
 
 ## Step1. 基于脚手架新建工程
 
-```shell
+```bash
 $ npm install -g @vue/cli   # 安装脚手架
 
 $ vue create -p dcloudio/uni-preset-vue demo    # 生成项目，名称叫demo
@@ -12,7 +12,7 @@ $ vue create -p dcloudio/uni-preset-vue demo    # 生成项目，名称叫demo
 
 安装类型包
 
-```shell
+```bash
 $ yarn add -D @types/uni-app @types/html5plus
 ```
 
@@ -24,7 +24,7 @@ $ yarn add -D @types/uni-app @types/html5plus
 
 删除原来的`.vscode`规则，添加如下规则：
 
-```shell
+```bash
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json

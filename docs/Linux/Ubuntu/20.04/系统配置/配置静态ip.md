@@ -6,13 +6,13 @@ Ubuntu 从 `17.10` 开始，已放弃在 `/etc/network/interfaces` 里固定 IP 
 
 ## 查看网卡设备号
 
-``` shell
+```bash
 $ ip a
 ```
 
 ## 查看现有配置
 
-``` shell
+```bash
 $ cd /etc/netplan
 $ ls
 $ cat demo.yaml
@@ -38,6 +38,6 @@ network:
 
 ## 配置生效
 
-``` shell
+```bash
 $ sudo netplan apply
 ```

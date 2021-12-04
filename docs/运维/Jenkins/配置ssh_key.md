@@ -10,7 +10,7 @@
 
 ### `Step1.` 登录容器
 
-``` shell
+```bash
 $ docker ps
 CONTAINER ID        IMAGE                                                    COMMAND                  CREATED             STATUS              PORTS                                              NAMES
 95a6f3b7fa4a        registry.cn-hangzhou.aliyuncs.com/lantsang/jenkins:lts   "/sbin/tini -- /usr/…"   2 hours ago         Up 2 hours          0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   jenkins
@@ -21,7 +21,7 @@ jenkins@95a6f3b7fa4a:/$
 
 ### `Step2.` 生成 `ssh key`
 
-``` shell
+```bash
 jenkins@95a6f3b7fa4a:/$ cd ~    # 首先切换到用户目录
 
 jenkins@95a6f3b7fa4a:~$ ssh-keygen  # 重新生成ssh key

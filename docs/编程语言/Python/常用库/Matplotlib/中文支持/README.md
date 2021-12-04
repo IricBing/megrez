@@ -16,7 +16,7 @@ plt.rcParams['axes.unicode_minus'] = False
 
 之后删除 `matplotlib` 的缓存
 
-```shell
+```bash
 $ rm -r ~/.cache/matplotlib
 ```
 

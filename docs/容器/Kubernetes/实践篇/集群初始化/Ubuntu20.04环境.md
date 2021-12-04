@@ -28,7 +28,7 @@
 
 ## 安装k8s三大组件
 
-```shell
+```bash
 $ sudo apt install software-properties-common
 
 # 添加并信任APT证书
@@ -67,7 +67,7 @@ $ kubelet --version
 
 > [!tip|label:提示]
 > 如果没有此文件，可以使用更简便的方式：
-> ```shell
+> ```bash
 > $ mkdir /etc/docker
 > $ cat <<EOF | sudo tee /etc/docker/daemon.json
 > {
@@ -84,7 +84,7 @@ $ kubelet --version
 
 接下来重启docker服务
 
-```shell
+```bash
 $ sudo systemctl restart docker
 ```
 
@@ -92,7 +92,7 @@ $ sudo systemctl restart docker
 
 选定master节点，这里选择node1作为master节点，在此节点上运行如下命令：
 
-```shell
+```bash
 $ sudo kubeadm init --apiserver-advertise-address 192.168.0.51 --pod-network-cidr 10.244.0.0/16 --image-repository gotok8s
 ```
 
@@ -179,7 +179,7 @@ $ sudo kubeadm init --apiserver-advertise-address 192.168.0.51 --pod-network-cid
 
 根据提示，作为**非root**用户，需要执行以下操作来完成环境配置：
 
-```shell
+```bash
 $ mkdir -p $HOME/.kube
 $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
@@ -205,7 +205,7 @@ source ~/.bashrc
 
 使用 `kubectl` 部署 `flannel` 。
 
-```shell
+```bash
 $ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
 
@@ -226,7 +226,7 @@ $ diff kube-flannel.yml kube-flannel-changed.yml
 
 安装命令：
 
-```shell
+```bash
 $ kubectl apply -f kube-flannel.yml
 Warning: policy/v1beta1 PodSecurityPolicy is deprecated in v1.21+, unavailable in v1.25+
 podsecuritypolicy.policy/psp.flannel.unprivileged created
@@ -239,7 +239,7 @@ daemonset.apps/kube-flannel-ds created
 
 安装完成后检查一下状态：
 
-```shell
+```bash
 $ kubectl get nodes
 NAME    STATUS   ROLES                  AGE     VERSION
 node1   Ready    control-plane,master   3h43m   v1.22.2
@@ -264,7 +264,7 @@ kube-system   kube-scheduler-node1            1/1     Running   0          3h43m
 
 **默认**情况下，控制节点不会部署 `Pod` 。出于安全原因，集群不会在**控制平面**节点上调度 `Pod` 。 如果你希望能够在控制平面节点上调度 `Pod` ， 例如用于开发的单机 `Kubernetes` 集群，可以用如下命令取消这个限制：
 
-```shell
+```bash
 $ kubectl taint nodes --all node-role.kubernetes.io/master-
 node "test-01" untainted
 ```
@@ -290,7 +290,7 @@ kubeadm join 172.22.108.36:6443 --token tokenstring... \
 
 在 `node2` 节点上执行加入集群命令：
 
-```shell
+```bash
 $ sudo kubeadm join 192.168.0.51:6443 --token 0d3ks2.7pl8cg6uxpk9qbl6 \
         --discovery-token-ca-cert-hash sha256:46e0acce2cc6f64e0853bcb0e343a8594ebf2fc34e29eb8440b458654f98560a
 [sudo] password for ubuntu: 
@@ -311,7 +311,7 @@ Run 'kubectl get nodes' on the control-plane to see this node join the cluster.
 
 按照提示，我们去 `node1` 节点查看状态：
 
-```shell
+```bash
 $ kubectl get nodes
 NAME    STATUS     ROLES                  AGE    VERSION
 node1   Ready      control-plane,master   4h4m   v1.22.2
@@ -320,7 +320,7 @@ node2   NotReady   <none>                 25s    v1.22.2
 
 在 `node3` 、 `node4` 、 `node5` 上也执行相同的加入集群的操作。之后再去node1节点上查看状态就会得到如下所示输出：
 
-```shell
+```bash
 $ kubectl get nodes
 NAME    STATUS     ROLES                  AGE     VERSION
 node1   Ready      control-plane,master   4h9m    v1.22.2
@@ -334,7 +334,7 @@ node5   NotReady   <none>                 65s     v1.22.2
 
 在 `master` 节点执行如下命令：
 
-```shell
+```bash
 kubectl delete node <node name>
 ```
 
@@ -342,7 +342,7 @@ kubectl delete node <node name>
 
 采用 `nginx` 来测试集群，在 `master` 节点上依次执行如下命令：
 
-```shell {11}
+```bash {11}
 $ kubectl create deployment nginx --image=nginx
 
 $ kubectl expose deployment nginx --port=80 --type=NodePort
@@ -359,7 +359,7 @@ service/nginx        NodePort    10.103.5.66   <none>        80:32155/TCP   60s
 
 注意上述代码中的高亮行，使用`curl`访问`32155`端口，即可得到`nginx`服务的返回，如下所示：
 
-```shell
+```bash
 $  curl 127.0.0.1:32155
 <!DOCTYPE html>
 <html>
@@ -392,7 +392,7 @@ Commercial support is available at
 
 ### 删除测试配置
 
-```shell
+```bash
 $ kubectl delete deployment nginx
 
 $ kubectl delete service nginx

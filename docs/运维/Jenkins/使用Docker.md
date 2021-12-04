@@ -12,7 +12,7 @@
 
 在本机执行如下命令：
 
-``` shell
+```bash
 $ sudo chmod -R 777 /var/run/docker.sock
 ```
 
@@ -44,7 +44,7 @@ USER jenkins
 
 本地安装时，最好的方法就是将 `jenkins` 加入到 `docker` 用户组
 
-``` shell
+```bash
 $ sudo usermod -a -G docker jenkins     # 将用户加入用户组
 
 $ sudo service jenkins restart     # 重启

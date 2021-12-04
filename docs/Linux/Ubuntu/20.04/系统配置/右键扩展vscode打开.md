@@ -6,7 +6,7 @@
 
 该软件的安装笔记参见：[Ubuntu 20.04 安装fma-config-tool](../软件安装/安装fma-config-tool.md)
 
-``` shell
+```bash
 $ fma-config-tool
 ```
 
@@ -38,6 +38,6 @@ $ fma-config-tool
 
 ## Step4. 保存，刷新配置
 
-``` shell
+```bash
 $ nautilus -q
 ```

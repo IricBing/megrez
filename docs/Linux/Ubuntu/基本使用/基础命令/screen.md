@@ -4,7 +4,7 @@
 
 ### 新建session
 
-``` shell
+```bash
 $ screen -S session1  
 ```
 
@@ -20,13 +20,13 @@ $ screen -S session1
 
 ### 查看session列表
 
-``` shell
+```bash
 $ screen -ls
 ```
 
 以上命令得到以下内容
 
-``` shell
+```bash
 There are screens on:
 	462669.log	(2020年10月12日 14时50分36秒)	(Detached)
 	462160.master	(2020年10月12日 14时50分31秒)	(Attached)
@@ -41,14 +41,14 @@ There are screens on:
 
 进入session可以通过名称或者pid进入
 
-``` shell
+```bash
 $ screen -r [-d] [session|pid]
 ```
 
 其中 `-d` 参数表示强制的意思，为什么会有 `-d` 参数请往上看。
 **示例**
 
-``` shell
+```bash
 $ screen -r log
 $ screen -r -d 462669
 ```
@@ -57,13 +57,13 @@ $ screen -r -d 462669
 
 * 通过kill pid 的方式来结束session
 
-``` shell
+```bash
 $ kill 462669
 ```
 
 * 删除所有session
 
-``` shell
+```bash
 $ sudo killall screen
 ```
 
@@ -71,13 +71,13 @@ $ sudo killall screen
 
 此为高级用法，不常用，特殊场景需要使用。
 
-``` shell
+```bash
 $ screen -m -d test 	#新建/切换到test session，没有则新建session
 $ screen -m -d -x 123.test -X stuff 'input your command'    #向123.test这个session发送命令，与终端无关。
 ```
 
 ## 附：批量退出命令
 
-``` shell
+```bash
 $ screen -ls | grep -i serverStartedByProxy | cut -d. -f1 | tr -d [:blank:]| xargs kill
 ```

@@ -4,7 +4,7 @@
 
 以**管理员身份**运行 `PowerShell` ，输入如下命令即可:
 
-```shell
+```bash
 $ choco install firacode
 ```
 

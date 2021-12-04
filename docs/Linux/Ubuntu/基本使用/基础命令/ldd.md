@@ -10,7 +10,7 @@
 
 ## 用法示例
 
-``` shell
+```bash
 $ ldd /usr/share/sangfor/EasyConnect/EasyConnect | grep pango                                  
 	libpangocairo-1.0.so.0 => /lib/x86_64-linux-gnu/libpangocairo-1.0.so.0 (0x00007fe835195000)
 	libpango-1.0.so.0 => /lib/x86_64-linux-gnu/libpango-1.0.so.0 (0x00007fe834ffb000)

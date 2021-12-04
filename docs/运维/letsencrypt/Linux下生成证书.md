@@ -6,14 +6,14 @@ Ubuntu 20.04 LTS
 
 ## Step1. 安装
 
-``` shell
+```bash
 $ sudo apt install certbot
 ```
 
 ## Step2. 申请证书（支持泛域名）
 
 
-``` shell
+```bash
 $ sudo certbot certonly  --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory 
 
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
@@ -69,7 +69,7 @@ IMPORTANT NOTES:
 
 ## 附一：验证txt解析命令
 
-``` shell
+```bash
 $ dig  -t txt  _acme-challenge.virtualbing.cn @8.8.8.8
 
 ; <<>> DiG 9.16.1-Ubuntu <<>> -t txt _acme-challenge.virtualbing.cn @8.8.8.8
@@ -94,11 +94,11 @@ _acme-challenge.virtualbing.cn.	299 IN	TXT	"h_qQOC9fW4ltpQYH50UbmNQjcKT9gZng4hWX
 
 ## 附二：取消文件权限
 
-```shell
+```bash
 $ sudo cp /etc/letsencrypt/live/virtualbing.cn/fullchain.pem public.crt
 $ sudo cp /etc/letsencrypt/live/virtualbing.cn/privkey.pem private.key
 ```
 
-```shell
+```bash
 $ sudo chmod -R 777 private.key
 ```

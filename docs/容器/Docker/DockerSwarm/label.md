@@ -12,19 +12,19 @@
 
 命令格式：
 
-``` shell
+```bash
 $ docker node update --label-add [标签名称]=[标签值] [节点名称(HOSTNAME)]
 ```
 
 示例：
 
-``` shell
+```bash
 $ docker node update --label-add role=gateway node1
 ```
 
 查看结果：
 
-``` shell
+```bash
 $ docker node inspect node1
 [
     {
@@ -48,12 +48,12 @@ $ docker node inspect node1
 
 命令格式：
 
-``` shell
+```bash
 $ docker node update --label-rm [标签名称] [节点名称(HOSTNAME)]
 ```
 
 示例：
 
-``` shell
+```bash
 $ docker node update --label-rm role node1
 ```

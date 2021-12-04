@@ -2,6 +2,6 @@
 
 ## `Step1.` 安装工具
 
-``` shell
+```bash
 $ sudo apt install sysstat
 ```

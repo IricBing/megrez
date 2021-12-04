@@ -14,7 +14,7 @@
 
 ## 安装必要包
 
-```shell
+```bash
 $ pnpm add @nestjs/websockets @nestjs/platform-socket.io socket.io @socket.io/redis-adapter redis
 $ pnpm add -D @types/redis
 ```

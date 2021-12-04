@@ -8,7 +8,7 @@
 
 ## `Step1.` 安装所需依赖包
 
-```shell
+```bash
 $ yarn add body-parser body-parser-xml
 ```
 

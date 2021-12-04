@@ -2,7 +2,7 @@
 
 该命令来自于 `nfs-kernel-server` 软件包，需安装后才可使用。安装命令如下：
 
-``` shell
+```bash
 $ sudo apt install nfs-kernel-server    # 安装
 
 $ sudo systemctl start nfs-kernel-server.service    # 启动
@@ -12,7 +12,7 @@ $ sudo systemctl start nfs-kernel-server.service    # 启动
 
 用法：
 
-``` shell
+```bash
 $ exportfs [-adfhioruvs] [host:/path]
 ```
 

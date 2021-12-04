@@ -51,12 +51,12 @@ CMD ["yarn" ,"start"]
 
 镜像打包命令：
 
-```shell
+```bash
 $ docker build --no-cache -t megrez .
 ```
 
 临时运行命令：
 
-```shell
+```bash
 $ docker run -it --rm --name megrez -p 8080:8080 megrez
 ```

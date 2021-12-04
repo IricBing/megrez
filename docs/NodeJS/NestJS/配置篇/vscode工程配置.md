@@ -12,7 +12,7 @@
 
 ### `cross-env`
 
-```shell
+```bash
 $ pnpm add cross-env -D
 ```
 
@@ -361,7 +361,7 @@ yarn.lock
 
 安装 `husky` 和 `lint-staged` 包（因为需要增加 `ENV` 参数，所以还是把 `cross-env` 包装上吧。）
 
-```shell
+```bash
 $ pnpm add husky lint-staged cross-env -D 
 ```
 
@@ -384,7 +384,7 @@ $ pnpm add husky lint-staged cross-env -D
 
 接下来配置 `husky` ，输入如下命令：
 
-```shell
+```bash
 $ pnpm husky install
 
 $ pnpm husky add .husky/pre-commit "npx lint-staged"
@@ -439,7 +439,7 @@ $ pnpm husky add .husky/pre-commit "npx lint-staged"
 
 以后生产环境构建使用如下命令：
 
-```shell
+```bash
 $ pnpm build:prod
 ```
 
@@ -483,12 +483,12 @@ $ pnpm build:prod
 
 * 安装
 
-```shell
+```bash
 $ pnpm add -D @compodoc/compodoc
 ```
 
 * 生成文档
 
-```shell
+```bash
 $ npx @compodoc/compodoc -p tsconfig.json -s
 ```

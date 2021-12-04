@@ -4,7 +4,7 @@
 
 ## 安装NFS服务
 
-``` shell
+```bash
 $ sudo apt install nfs-kernel-server    # 安装
 
 $ sudo systemctl start nfs-kernel-server.service    # 启动
@@ -19,7 +19,7 @@ $ sudo systemctl start nfs-kernel-server.service    # 启动
 
 ### 创建共享目录
 
-``` shell
+```bash
 $ sudo mkdir -p /var/nfs/gernel
 $ sudo mkdir -p /var/nfs/public
 $ sudo chown nobody:nogroup /var/nfs/gernel
@@ -30,7 +30,7 @@ $ sudo chown nobody:nogroup /var/nfs/gernel
 为了使 `NFS` 服务器定义的共享文件可被指定的客户端主机访问，需要在服务器端的 `/etc/exports` 文件中添加对应的记录。
 该文件的格式如下：
 
-``` shell
+```bash
 Directory Host(Options ...) Host(Options) #comment
 ```
 
@@ -38,7 +38,7 @@ Directory Host(Options ...) Host(Options) #comment
 
 示例：
 
-``` shell
+```bash
 /var/nfs/gernel  192.168.56.0/24(rw,insecure,sync,no_subtree_check)
 /var/nfs/public  *(ro,insecure,sync,no_subtree_check)
 /home/starky 192.168.56.1(rw,insecure,no_root_squash,sync,no_wdelay,no_subtree_check)
@@ -62,7 +62,7 @@ Directory Host(Options ...) Host(Options) #comment
 
 ### 更新配置使其生效
 
-``` shell
+```bash
 $ sudo exportfs -a
 ```
 
@@ -70,7 +70,7 @@ $ sudo exportfs -a
 
 ### 查看可用共享目录
 
-``` shell
+```bash
 $ showmount -e 192.168.56.102
 Exports list on 192.168.56.102:
 /home/starky                        192.168.56.1
@@ -80,7 +80,7 @@ Exports list on 192.168.56.102:
 
 ### 创建挂载点
 
-``` shell
+```bash
 $ sudo mkdir -p /mnt/nfs/gernel
 $ sudo mkdir -p /mnt/nfs/public
 $ sudo mkdir -p /mnt/nfs/starky
@@ -88,7 +88,7 @@ $ sudo mkdir -p /mnt/nfs/starky
 
 ### 挂载远程目录
 
-``` shell
+```bash
 $ sudo mount 192.168.56.102:/var/nfs/gernel /mnt/nfs/gernel
 $ sudo mount 192.168.56.102:/var/nfs/public /mnt/nfs/public
 $ sudo mount 192.168.56.102:/home/starky /mnt/nfs/starky
@@ -100,7 +100,7 @@ $ sudo mount 192.168.56.102:/home/starky /mnt/nfs/starky
 
 `/etc/fstab` 文件的示例内容如下：
 
-``` shell
+```bash
 # filesystem                    mountpoint       fstype  flags                        dump    fsck
 192.168.56.102:/var/nfs/gernel  /mnt/nfs/gernel  nfs     rw,bg,intr,hard,nodev,nosuid 0       0
 192.168.56.102:/var/nfs/public  /mnt/nfs/public  nfs4    ro,bg,intr,soft,nodev,nosuid 0       0

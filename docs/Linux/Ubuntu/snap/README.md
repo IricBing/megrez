@@ -4,7 +4,7 @@
 
 ## 卸载软件
 
-```shell
+```bash
 $ sudo snap remove --purge <package>
 
 # e.g.

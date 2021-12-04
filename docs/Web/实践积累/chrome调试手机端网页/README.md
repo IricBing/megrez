@@ -34,7 +34,7 @@
 
 首先通过USB数据线连接到电脑，并正常开启USB调试功能，进行如下操作：
 
-```shell
+```bash
 $ adb devices
 List of devices attached
 1575531506008TA	device

@@ -15,7 +15,7 @@
 
 在想要创建项目的文件夹下（空文件夹哦），输入如下命令进行创建：
 
-```shell
+```bash
 $ dotnet new console
 ```
 

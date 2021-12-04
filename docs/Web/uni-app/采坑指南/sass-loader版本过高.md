@@ -4,7 +4,7 @@
 
 执行`yarn dev:mp-weixin`命令后报如下提示：
 
-```shell
+```bash
  ERROR  Failed to compile with 1 error                                                                                                                                              3:26:41 PM
 
  error  in ./src/App.vue?vue&type=style&index=0&lang=scss&

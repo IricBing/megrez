@@ -25,6 +25,6 @@ gitlab:
 
 启动命令：
 
-```shell
+```bash
 $ docker-compose up -d
 ```

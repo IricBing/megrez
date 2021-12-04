@@ -8,7 +8,7 @@
 
 ### 部署集群
 
-``` shell
+```bash
 $ docker stack up -c [compose-file] --with-registry-auth kunda [stack 名称]
 $ docker stack deploy -c [compose-file] --with-registry-auth kunda [stack 名称]
 ```
@@ -17,13 +17,13 @@ $ docker stack deploy -c [compose-file] --with-registry-auth kunda [stack 名称
 
 示例：
 
-``` shell
+```bash
 $ docker stack deploy -c docker-stack.yml --with-registry-auth kunda
 ```
 
 ### 查看所有服务
 
-``` shell
+```bash
 $ docker stack services <stack_name>
 
 e.g.
@@ -32,7 +32,7 @@ $ docker stack services kunda
 
 ### 查看某个服务的任务
 
-``` shell
+```bash
 $ docker service ps <service_name>
 
 e.g.
@@ -41,7 +41,7 @@ $ docker service ps kunda_kunda-master
 
 ### 服务重启
 
-``` shell
+```bash
 $ docker service update --force <service_name>
 
 e.g.
@@ -50,7 +50,7 @@ $ docker service update --force kunda_kunda-master
 
 ### 停止其中某一项服务
 
-``` shell
+```bash
 $ docker service update --replicas 0 <service_name>
 
 e.g.

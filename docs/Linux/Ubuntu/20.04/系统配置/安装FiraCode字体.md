@@ -4,7 +4,7 @@
 
 习惯了ubuntu 的apt命令，一般安装软件都会通过 `$ sudo apt-cache search xxx` 来搜索是否存在，如果存在，就安装，这个就遇到坑了！
 
-```shell
+```bash
 $ sudo apt-cache search firacode    
 fonts-firacode - Monospaced font with programming ligatures
 texlive-latex-extra - TeX Live: LaTeX additional packages
@@ -12,7 +12,7 @@ texlive-latex-extra - TeX Live: LaTeX additional packages
 
 可以看到，有软件叫 `fonts-firacode` ，因此我通过 `$ sudo apt install fonts-firacode` 来安装了这个软件，结果查看字体的时候显示的并不是 `ttf` 字体，而是 `otf` 字体！
 
-```shell
+```bash
 $ fc-list | grep Fira                          
 /usr/share/fonts/opentype/firacode/FiraCode-Retina.otf: Fira Code,Fira Code Retina:style=Retina,Regular
 /usr/share/fonts/opentype/firacode/FiraCode-Bold.otf: Fira Code:style=Bold
@@ -59,13 +59,13 @@ fc-cache -f
 
 **运行**
 
-```shell
+```bash
 $ sh install.sh
 ```
 
 **查看结果**
 
-```shell
+```bash
 $ fc-list | grep Fira
 /home/iric/.local/share/fonts/FiraCode-Light.ttf: Fira Code,Fira Code Light:style=Light,Regular
 /home/iric/.local/share/fonts/FiraCode-Bold.ttf: Fira Code:style=Bold

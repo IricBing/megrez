@@ -4,7 +4,7 @@
 
 ## 安装
 
-```shell
+```bash
 $ sudo apt install flameshot
 ```
 

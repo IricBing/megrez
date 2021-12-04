@@ -8,7 +8,7 @@
 
 推荐使用[Chocolatey](../系统配置/Chocolatey/README.md)进行安装，安装命令：
 
-```shell
+```bash
 $ choco install lessmsi
 ```
 

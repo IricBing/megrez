@@ -6,7 +6,7 @@
 
 安装命令：
 
-```shell
+```bash
 $ curl -sfL https://get.k3s.io | sh -
 
 # 国内用户
@@ -15,7 +15,7 @@ $ curl -sfL http://rancher-mirror.cnrancher.com/k3s/k3s-install.sh | INSTALL_K3S
 
 ::: details 点击展开安装日志
 
-```shell
+```bash
 $ curl -sfL http://rancher-mirror.cnrancher.com/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn sh -
 [INFO]  Finding release for channel stable
 [INFO]  Using v1.21.5+k3s2 as release
@@ -38,7 +38,7 @@ $ curl -sfL http://rancher-mirror.cnrancher.com/k3s/k3s-install.sh | INSTALL_K3S
 
 安装完成验证：
 
-```shell
+```bash
 $ sudo k3s kubectl get node
 NAME           STATUS   ROLES                  AGE    VERSION
 iric-ms-7b89   Ready    control-plane,master   114s   v1.21.5+k3s2

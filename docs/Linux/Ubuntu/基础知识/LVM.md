@@ -66,13 +66,13 @@
 
 在安装 `ubuntu server` 时，如果选择使用 `LVM` 创建分区，就会安装 `LVM` 相关的工具。当前这个软件包的名称为 `lvm2` ，如果没有安装，可采用下面命令安装：
 
-``` shell
+```bash
 $ sudo apt install lvm2
 ```
 
 ### 基本查看命令
 
-``` shell
+```bash
 $ sudo pvscan
 $ sudo pvs
 $ sudo pvdisplay
@@ -88,7 +88,7 @@ $ sudo lvdisplay
 
 ### 扩缩容命令
 
-``` shell
+```bash
 $ sudo lvextend -L 10G /dev/mapper/ubuntu--vg-ubuntu--lv      //增大或减小至19G
 $ sudo lvextend -L +10G /dev/mapper/ubuntu--vg-ubuntu--lv     //增加10G
 $ sudo lvreduce -L -10G /dev/mapper/ubuntu--vg-ubuntu--lv     //减小10G
@@ -97,6 +97,6 @@ $ sudo lvresize -l  +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv   //按百分比
 
 ### 执行调整（使调整生效）
 
-``` shell
+```bash
 $ sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 ```

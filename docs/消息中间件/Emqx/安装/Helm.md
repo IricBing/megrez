@@ -2,14 +2,14 @@
 
 ## 添加Helm仓库
 
-```shell
+```bash
 $ helm repo add emqx https://repos.emqx.io/charts
 $ helm repo update
 ```
 
 ## 查询EMQ X Broker
 
-```shell
+```bash
 $ helm search repo emqx
 NAME         CHART VERSION APP VERSION DESCRIPTION
 emqx/emqx    v4.0.0        v4.0.0      A Helm chart for EMQ X
@@ -19,13 +19,13 @@ emqx/kuiper  0.1.1         0.1.1       A lightweight IoT edge analytic software
 
 ## 启动集群
 
-```shell
+```bash
 $ helm install my-emqx emqx/emqx
 ```
 
 ## 查看状态
 
-```shell
+```bash
 $ kubectl get pods
 NAME       READY  STATUS             RESTARTS  AGE
 my-emqx-0  1/1     Running   0          56s

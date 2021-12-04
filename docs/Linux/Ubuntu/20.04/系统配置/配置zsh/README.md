@@ -4,13 +4,13 @@
 
 ## 安装zsh
 
-```shell
+```bash
 $ sudo apt install zsh
 ```
 
 ### 更改默认shell为zsh
 
-```shell
+```bash
 $ chsh -s /bin/zsh
 ```
 
@@ -27,19 +27,19 @@ $ chsh -s /bin/zsh
 
 * 通过 `curl` 安装
 
-```shell
+```bash
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 * 通过 `wget` 安装
 
-```shell
+```bash
 $ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 * 通过 `fetch` 安装
 
-```shell
+```bash
 $ sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
@@ -47,7 +47,7 @@ $ sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/t
 
 #### Step1. clone项目到本地
 
-```shell
+```bash
 $ git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 
 # 使用GitHub复刻版
@@ -56,19 +56,19 @@ $ git clone https://hub.fastgit.org/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 
 #### Step2. 拷贝 `.zshrc` 配置文件
 
-```shell
+```bash
 $ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 ```
 
 #### Step3. 重启
 
-```shell
+```bash
 $ sudo reboot
 ```
 
 #### Step4. 下载 `zsh-syntax-highlighting` 插件
 
-```shell
+```bash
 $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # 使用GitHub复刻版
@@ -77,7 +77,7 @@ $ git clone https://hub.fastgit.org/zsh-users/zsh-syntax-highlighting.git ${ZSH_
 
 #### Step5. 下载 `zsh-autosuggestions` 插件
 
-```shell
+```bash
 $ git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # 使用GitHub复刻版
@@ -86,7 +86,7 @@ $ git clone https://hub.fastgit.org/zsh-users/zsh-autosuggestions.git ${ZSH_CUST
 
 #### Step6. 更改配置文件
 
-```shell
+```bash
 $ vim ~/.zshrc
 ```
 
@@ -113,7 +113,7 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 #### Step7. 加载 `.zshrc` 文件
 
-```shell
+```bash
 $ source ~/.zshrc
 ```
 
@@ -121,7 +121,7 @@ $ source ~/.zshrc
 
 ### Step1. 修改zsh配置
 
-```shell
+```bash
 # 修改这里切换主题
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
@@ -141,7 +141,7 @@ prompt_context() {
 
 之后加载配置：
 
-```shell
+```bash
 $ source ~/.zshrc
 ```
 
@@ -156,7 +156,7 @@ $ source ~/.zshrc
 
 测试是否有乱码：
 
-```shell
+```bash
 $ echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
 ```
 
@@ -164,7 +164,7 @@ $ echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
 
 首先从 `GitHub` 中 `clone` 字体仓库，
 
-```shell
+```bash
 $ git clone https://github.com/laishulu/Sarasa-Mono-SC-Nerd.git
 
 # 采用复刻版
@@ -197,7 +197,7 @@ $ sudo fc-cache -fv     # 更新字体缓存
 
 明显需要自己调整才能用。
 
-```shell
+```bash
 $ sudo apt install fonts-powerline
 
 #刷新字体缓存

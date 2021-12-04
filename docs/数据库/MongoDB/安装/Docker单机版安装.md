@@ -2,13 +2,13 @@
 
 ## Step1. 获取官方镜像
 
-```shell
+```bash
 $ docker pull mongo
 ```
 
 ## Step2. 启动容器
 
-```shell
+```bash
 # 无需验证
 $ docker run -d -p 27017:27017 -v $PWD/mongo_docker_data:/data/db -v /etc/localtime:/etc/localtime:ro --name mongodb mongo --wiredTigerCacheSizeGB 2
 	
@@ -21,12 +21,12 @@ $ docker run -d -p 27017:27017 -v $PWD/mongo_docker_data:/data/db -v /etc/localt
 
 ## Step3. 进入容器
 
-```shell
+```bash
 $ docker exec -it mongodb mongo admin
 ```
 
 ## Step4. 以管理员身份登录
 
-```shell
+```bash
 $ docker exec -it monggodb mongo -u root -p m5tgb6tfc%^ --authenticationDatabase admin
 ```

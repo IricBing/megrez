@@ -5,13 +5,13 @@
 
 一键安装命令：
 
-```shell
+```bash
 $ docker run -d --name tdengine --restart=always -v /etc/taos:/etc/taos -p 6030:6030 -p 6035:6035 -p 6041:6041 -p 6030-6040:6030-6040/udp tdengine/tdengine:2.0.18.0
 ```
 
 ## 安装完成连接测试
 
-```shell
+```bash
 $ docker exec -it tdengine taos
 
 Welcome to the TDengine shell from Linux, Client Version:2.0.16.0

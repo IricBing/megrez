@@ -57,7 +57,7 @@
 
 安装：
 
-```shell
+```bash
 $ pip install yapf
 ```
 

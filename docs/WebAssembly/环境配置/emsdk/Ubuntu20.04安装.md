@@ -2,14 +2,14 @@
 
 从[官方GitHub仓库](https://github.com/emscripten-core/emsdk)上 `clone` 下来项目， `cd` 到项目目录，执行如下命令
 
-```shell
+```bash
 $ ./emsdk install latest
 $ ./emsdk activate latest
 ```
 
 之后按照输出进行执行即可，示例输出如下：
 
-```shell
+```bash
 $ ./emsdk activate latest
 Resolving SDK alias 'latest' to '2.0.30'
 Resolving SDK version '2.0.30' to 'sdk-releases-upstream-c69458f1bbf3ef5b8da4e934de210659cc9bca04-64bit'
@@ -31,7 +31,7 @@ Next steps:
 
 按照这个示例输出，我们要执行的就是两个命令：
 
-```shell
+```bash
 $ source "/home/iric/software/emsdk/emsdk_env.sh" 
 $ echo 'source "/home/iric/software/emsdk/emsdk_env.sh"' >> $HOME/.zprofile
 ```

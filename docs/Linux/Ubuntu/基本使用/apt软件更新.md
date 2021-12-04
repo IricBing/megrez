@@ -4,12 +4,12 @@
 
 ## Step1. 刷新存储库索引
 
-``` shell
+```bash
 $ sudo apt update
 ```
 
 ## Step2. 更新软件包
 
-``` shell
+```bash
 $ sudo apt upgrade
 ```

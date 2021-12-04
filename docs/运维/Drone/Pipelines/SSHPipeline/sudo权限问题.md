@@ -8,7 +8,7 @@
 
 示例：
 
-```shell
+```bash
 + nginx -s reload
 nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" failed (13: Permission denied)
 2021/11/17 10:37:12 [warn] 24406#24406: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /etc/nginx/nginx.conf:1
@@ -20,13 +20,13 @@ nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" 
 
 尽管用户拥有 `sudo` 权限，但是在执行带有 `sudo` 标识的命令时需要**输入密码**才行，这个时候就会报如下错误：
 
-```shell
+```bash
 sudo: no tty present and no askpass program specified
 ```
 
 这时候**建议**新建一个 `cicd` 用户，专门用于此处执行 `sudo` 权限内容，并且无需输入密码。编辑 `/etc/sudoers` 文件：
 
-```shell
+```bash
 $ sudo vim /etc/sudoers
 ```
 

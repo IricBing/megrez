@@ -49,7 +49,7 @@ graph TD;
 
 ## 可选项
 
-```shell
+```bash
       --debug                       enable verbose output
   -h, --help                        help for helm
       --kube-apiserver string       the address and the port for the Kubernetes API server

@@ -10,7 +10,7 @@
 
 ## 安装方式
 
-```shell
+```bash
 $ npm i pm2 -g
 # or
 $ yarn global add pm2
@@ -21,6 +21,6 @@ $ yarn global add pm2
 
 ## 简单启动项目
 
-```shell
+```bash
 $ pm2 start dist/main.js
 ```

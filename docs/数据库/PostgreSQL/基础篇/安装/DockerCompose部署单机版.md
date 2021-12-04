@@ -33,6 +33,6 @@ services:
 
 ## Step2. 启动服务
 
-```shell
+```bash
 $ docker-compose up -d 
 ```

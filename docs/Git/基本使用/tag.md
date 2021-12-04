@@ -2,14 +2,14 @@
 
 ## 查询tag
 
-```shell
+```bash
 $ git tag
 $ git tag -l 'v0.1.*'
 ```
 
 ## 创建tag
 
-```shell
+```bash
 $ git tag v0.1.1-light # 轻量标签
 
 $ git tag -a v0.1.1 -m "0.0.1版本"    #附注标签
@@ -22,7 +22,7 @@ $ git tag -a v0.1.1 [sha-1]    # commit 标签
 
 ## 切换tag
 
-```shell
+```bash
 $ git checkout v0.0.1
 ```
 
@@ -32,13 +32,13 @@ $ git checkout v0.0.1
 
 ## 删除tag
 
-```shell
+```bash
 $ git tag -d v0.1.1
 ```
 
 ## tag发布
 
-```shell
+```bash
 $ git push origin v0.1.1    # 发布单独标签
 $ git push origin --tags    # 发布全部标签
 ```

@@ -9,7 +9,7 @@
 <details>
 <summary>展开查看CPU信息</summary>
 
-``` shell
+```bash
 $ cat /proc/cpuinfo
 processor       : 0
 vendor_id       : AuthenticAMD
@@ -434,21 +434,21 @@ power management:
 
 ## 查看 `CPU` 型号
 
-``` shell
+```bash
 $ cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c
      16  AMD Ryzen 7 4800H with Radeon Graphics
 ```
 
 ## 查看物理 `CPU` 颗数
 
-``` shell
+```bash
 $ cat /proc/cpuinfo | grep "physical id" | uniq -c
      16 physical id     : 0
 ```
 
 ## 查看 `CPU` 运行模式
 
-``` shell
+```bash
 $ getconf LONG_BIT
 64
 ```
@@ -459,7 +459,7 @@ $ getconf LONG_BIT
 
 ## 查看 `CPU` 信息摘要
 
-``` shell
+```bash
 $ lscpu
 Architecture:        x86_64
 CPU op-mode(s):      32-bit, 64-bit

@@ -29,7 +29,7 @@ vhost_https_port = 10443
 
 运行docker容器：
 
-```shell
+```bash
 $ docker run  --network host -d -v /etc/frp/frps.ini:/etc/frp/frps.ini --name frps --restart=always snowdreamtech/frps
 ```
 
@@ -52,6 +52,6 @@ custom_domains=server-9star.iricbing.xyz
 
 启动命令：
 
-```shell
+```bash
 $ docker run --restart=always --network host -d -v $PWD/frpc.ini:/etc/frp/frpc.ini --name frpc snowdreamtech/frpc
 ```

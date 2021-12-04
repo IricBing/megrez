@@ -4,6 +4,6 @@
 
 ## 语法
 
-```shell
+```bash
 $ kubeadm init [flags]
 ```

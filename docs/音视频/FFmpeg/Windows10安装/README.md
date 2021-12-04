@@ -4,13 +4,13 @@
 
 通过[Chocolatey](../../Windows/系统配置/Chocolatey/README.md)安装最简单，一行命令就能搞定。
 
-```shell
+```bash
 $ choco install ffmpeg
 ```
 
 安装完成测试：
 
-```shell
+```bash
 $ ffmpeg
 ffmpeg version 2021-03-28-git-8b2bde0494-full_build-www.gyan.dev Copyright (c) 2000-2021 the FFmpeg developers
   built with gcc 10.2.0 (Rev6, Built by MSYS2 project)
@@ -57,7 +57,7 @@ Use -h to get full help or, even better, run 'man ffmpeg'
 
 打开 `cmd` 命令行终端，输入 `ffmpeg` 命令，如输出内容如下即表示安装成功。
 
-```shell
+```bash
 $ ffmpeg
 ffmpeg version 2021-03-28-git-8b2bde0494-full_build-www.gyan.dev Copyright (c) 2000-2021 the FFmpeg developers
   built with gcc 10.2.0 (Rev6, Built by MSYS2 project)

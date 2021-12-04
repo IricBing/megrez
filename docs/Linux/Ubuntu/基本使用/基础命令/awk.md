@@ -8,7 +8,7 @@
 
 ## 语法
 
-``` shell
+```bash
 $ awk [选项参数] 'script' var=value file(s)
 or
 $ awk [选项参数] -f scriptfile var=value file(s)

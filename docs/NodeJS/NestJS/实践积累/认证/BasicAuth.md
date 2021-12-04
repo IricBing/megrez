@@ -5,7 +5,7 @@
 
 ## 安装必要依赖包
 
-```shell
+```bash
 $ pnpm add @nestjs/passport passport-http
 $ pnpm add -D @types/passport-http
 ```

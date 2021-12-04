@@ -2,13 +2,13 @@
 
 ## Step1. pull容器镜像
 
-```shell
+```bash
 $ docker pull drone/drone-runner-docker:1
 ```
 
 ## Step2. 运行容器镜像
 
-```shell {3-7}
+```bash {3-7}
 $ docker run --detach \
   --volume=/var/run/docker.sock:/var/run/docker.sock \
   --env=DRONE_RPC_PROTO=https \
@@ -29,7 +29,7 @@ $ docker run --detach \
 
 ## Step3. 验证
 
-```shell
+```bash
 $ docker logs runner
 time="2021-10-27T06:44:16Z" level=info msg="starting the server" addr=":3000"
 time="2021-10-27T06:44:17Z" level=info msg="successfully pinged the remote server"

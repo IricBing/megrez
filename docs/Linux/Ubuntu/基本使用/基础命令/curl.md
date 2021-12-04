@@ -6,6 +6,6 @@
 
 示例：
 
-```shell
+```bash
 $ curl -H "Content-Type:application/json" -X POST -d '{"nodes":[{"Status":0,"LineName":"Line Cell 02","StationName":"Station005"}]}' 'http://10.87.100.163:8080/AndonApi/ExternalManPowers'
 ```

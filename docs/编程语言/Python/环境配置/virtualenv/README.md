@@ -12,7 +12,7 @@
 
 ## 创建独立Python运行环境
 
-``` shell
+```bash
 $ python3 -m venv /path/to/new/virtual/environment
 
 e.g. $ python3 -m venv demo
@@ -46,13 +46,13 @@ $ tree -L 3 -a
 
 ## 激活虚拟环境
 
-``` shell
+```bash
 $ source demo/bin/activate
 ```
 
 如果成功，则会在终端前显示 `demo` 目录：
 
-``` shell
+```bash
 (demo) 
 ~/桌面/test/python-tensorflow-test » 
 ```

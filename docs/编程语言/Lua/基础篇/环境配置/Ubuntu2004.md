@@ -4,7 +4,7 @@
 
 `Linux` 环境下安装`Lua`环境非常简单，下载源码编译并安装即可，找一个目录，之后进行如下操作即可：
 
-```shell
+```bash
 $ curl -R -O http://www.lua.org/ftp/lua-5.3.6.tar.gz
 $ tar zxf lua-5.3.6.tar.gz
 $ cd lua-5.3.6
@@ -14,7 +14,7 @@ $ sudo make install
 
 安装完成测试：
 
-```shell
+```bash
 $ lua
 Lua 5.3.6  Copyright (C) 1994-2020 Lua.org, PUC-Rio
 > 

@@ -12,6 +12,6 @@
 
 ## 安装
 
-```shell
+```bash
 $ pip install scikit-image
 ```

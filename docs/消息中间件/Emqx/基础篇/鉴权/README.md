@@ -116,7 +116,7 @@ emqx_rule_engine.
 
 [使用方式](https://docs.emqx.net/broker/latest/cn/advanced/cli.html#load_plugin)
 
-```shell
+```bash
 $ ./bin/emqx_ctl plugins list # 查看所有可用插件列表
 $ ./bin/emqx_ctl plugins load emqx_auth_http  # 启用emqx_auth_http插件
 $ ./bin/emqx_ctl plugins unload emqx_auth_http  # 禁用emqx_auth_http插件

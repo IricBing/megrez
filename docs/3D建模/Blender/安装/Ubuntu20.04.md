@@ -2,6 +2,6 @@
 
 ## 通过snap安装——推荐
 
-```shell
+```bash
 $ sudo snap install blender --classic
 ```

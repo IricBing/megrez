@@ -4,7 +4,7 @@
 
 ## 安装必要基础软件
 
-```shell
+```bash
 $ sudo apt install build-essential libssl-dev
 ```
 
@@ -17,13 +17,13 @@ $ sudo apt install build-essential libssl-dev
 
 * `curl` 方式：
 
-```shell
+```bash
 $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash   # 注意将v0.36.0替换成最新版本
 ```
 
 * `wget` 方式：
 
-```shell
+```bash
 $ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash    # 注意将v0.36.0替换成最新版本
 ```
 
@@ -31,26 +31,26 @@ $ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | ba
 
 #### Step1. 切换到用户目录
 
-```shell
+```bash
 $ cd ~
 ```
 
 #### Step2. Clone 项目到本地
 
-```shell
+```bash
 $ git clone https://github.com/nvm-sh/nvm.git .nvm
 ```
 
 #### Step3. 切换发布分支
 
-```shell
+```bash
 $ cd .nvm
 $ git checkout v0.36.0  # 注意将v0.36.0替换成最新版本
 ```
 
 #### Step4. 激活nvm
 
-```shell
+```bash
 $ . nvm.sh
 ```
 
@@ -59,7 +59,7 @@ $ . nvm.sh
 > [!tip|label: 提示]
 > 本笔配置的是 `zsh` 环境， `bash` 环境请参考[官方文档](https://github.com/nvm-sh/nvm#bash)
 
-```shell
+```bash
 $ vim ~/.zshrc
 ```
 
@@ -97,6 +97,6 @@ load-nvmrc
 
 保存并退出，加载 `.zshrc` 文件改动
 
-```shell
+```bash
 $ source ~/.zshrc
 ```

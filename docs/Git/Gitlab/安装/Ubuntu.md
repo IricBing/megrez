@@ -8,7 +8,7 @@
 
 ## `Step1.` 安装必要依赖
 
-```shell
+```bash
 $ sudo apt update
 
 $ sudo apt install curl openssh-server ca-certificates tzdata perl postfix
@@ -21,13 +21,13 @@ $ sudo apt install curl openssh-server ca-certificates tzdata perl postfix
 >
 > 而不是使用官方的仓库源，因为根本下载不下来。。。
 
-```shell
+```bash
 $ curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
 ```
 
 ## `Step3.` 安装
 
-```shell
+```bash
 $ sudo EXTERNAL_URL="https://git.9xing.cn" apt install gitlab-ce
 
 # 由于gitlab服务器处在国外，apt直接安装可能会造成下载过慢，可采用代理方式
@@ -55,6 +55,6 @@ $ sudo EXTERNAL_URL="https://git.9xing.cn" apt -o Acquire::https::proxy="http://
 
 关联笔记：[遗失密码文件](../填坑手册/遗失密码文件/README.md)
 
-```shell
+```bash
 $ sudo gitlab-rake "gitlab:password:reset"
 ```

@@ -3,7 +3,7 @@
 一键生成命令
 
 
-``` shell
+```bash
 $ docker run -it --rm --name certbot \
     -v $PWD:/etc/letsencrypt \
     certbot/certbot \

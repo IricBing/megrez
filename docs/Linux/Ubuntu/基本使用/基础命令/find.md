@@ -2,7 +2,7 @@
 
 ## 基本语法
 
-``` shell
+```bash
 $ find   path   -option   [   -print ]   [ -exec   -ok   command ]   {} \;
 ```
 

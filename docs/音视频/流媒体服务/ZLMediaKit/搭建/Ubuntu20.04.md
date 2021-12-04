@@ -2,7 +2,7 @@
 
 ## 获取源码
 
-```shell
+```bash
 $ git clone --depth 1 https://gitee.com/xia-chu/ZLMediaKit
 $ cd ZLMediaKit
 $ git submodule update --init
@@ -10,13 +10,13 @@ $ git submodule update --init
 
 ## 安装编译环境
 
-```shell
+```bash
 $ sudo apt install build-essential cmake openssl ffmpeg libssl-dev libsdl-dev libavcodec-dev libavutil-dev
 ```
 
 ## 构建和编译
 
-```shell
+```bash
 $ cd ZLMediaKit
 $ mkdir build
 $ cd build
@@ -26,7 +26,7 @@ $ make -j12
 
 ## 启动测试
 
-```shell
+```bash
 $ cd ZLMediaKit/release/linux/Debug
 #通过-h可以了解启动参数
 $ ./MediaServer -h
@@ -57,6 +57,6 @@ $ sudo ./MediaServer
 
 ## 服务方式运行
 
-```shell
+```bash
 $ sudo ./MediaServer -d &
 ```
