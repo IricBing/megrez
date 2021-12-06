@@ -28,10 +28,10 @@ $ curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.
 ## `Step3.` 安装
 
 ```bash
-$ sudo EXTERNAL_URL="https://git.9xing.cn" apt install gitlab-ce
+$ sudo EXTERNAL_URL="https://git.xxx.com" apt install gitlab-ce
 
-# 由于gitlab服务器处在国外，apt直接安装可能会造成下载过慢，可采用代理方式
-$ sudo EXTERNAL_URL="https://git.9xing.cn" apt -o Acquire::https::proxy="http://127.0.0.1:1088/" -o Acquire::http::proxy="http://127.0.0.1:1088/" install gitlab-ce
+# 由于gitlab服务器处在国外，apt直接安装可能会造成下载过慢，可采用代理方式，使用清华源无此问题。
+$ sudo EXTERNAL_URL="https://git.xxx.com" apt -o Acquire::https::proxy="http://127.0.0.1:1088/" -o Acquire::http::proxy="http://127.0.0.1:1088/" install gitlab-ce
 ```
 
 ## ` Step4.` 登录使用

@@ -139,4 +139,4 @@ string language = System.Globalization.CultureInfo.CurrentUICulture.Name; //获�
 
 ## 案例工程
 
-[九星Git](https://git.9xing.cn/pc_client_software/demos/i18n)
+<!-- [九星Git](https://git.9xing.cn/pc_client_software/demos/i18n) -->
