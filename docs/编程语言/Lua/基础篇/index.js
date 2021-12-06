@@ -4,6 +4,7 @@ const number = require('./Number');
 const string = require('./String');
 const table = require('./Table');
 const func = require('./Function');
+const iteratorAndFor = require('./迭代器和泛型for');
 
 module.exports = {
   title: '基础篇',
@@ -25,6 +26,7 @@ module.exports = {
     },
     string,
     table,
-    func
+    func,
+    iteratorAndFor
   ]
 };
