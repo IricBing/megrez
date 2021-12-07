@@ -1,9 +1,10 @@
 const install = require('./安装');
 const troubleshooting = require('./填坑手册');
 const principle = require('./原理篇');
+const optimize = require('./优化篇');
 
 module.exports = {
   title: 'Gitlab',
   path: '/Git/Gitlab/',
-  children: [install, principle, troubleshooting]
+  children: [install, principle, optimize, troubleshooting]
 };
