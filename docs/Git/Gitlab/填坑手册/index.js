@@ -12,6 +12,10 @@ module.exports = {
     {
       title: '修改http监听端口',
       path: '/Git/Gitlab/填坑手册/修改http监听端口/'
+    },
+    {
+      title: '内存占用过高',
+      path: '/Git/Gitlab/填坑手册/内存占用过高/'
     }
   ]
 };
