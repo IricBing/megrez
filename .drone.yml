@@ -30,7 +30,7 @@ steps:
       password:
         from_secret: email_password
       recipients: 2633419446@qq.com
-      # recipients_only: true
+      # recipients_only:true
     when:
       status:
         - success
