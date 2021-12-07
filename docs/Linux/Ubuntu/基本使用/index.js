@@ -1,8 +1,10 @@
 const baseCmd = require('./基础命令');
+const opsCmd = require('./运维命令');
 
 module.exports = {
   title: '基本使用',
   children: [
+    opsCmd,
     baseCmd,
     {
       title: 'apt软件更新',
