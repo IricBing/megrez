@@ -7,8 +7,8 @@ module.exports = {
       path: '/编程语言/Lua/基础篇/迭代器和泛型for/迭代器和闭包'
     },
     {
-      title: '泛型for的用法',
-      path: '/编程语言/Lua/基础篇/迭代器和泛型for/泛型for的用法'
+      title: '泛型for的语法',
+      path: '/编程语言/Lua/基础篇/迭代器和泛型for/泛型for的语法'
     },
     {
       title: '无状态迭代器',
