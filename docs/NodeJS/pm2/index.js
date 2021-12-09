@@ -1,3 +1,5 @@
+const experience = require('./实践积累');
+
 module.exports = {
   title: 'pm2',
   path: '/NodeJS/pm2/',
@@ -13,6 +15,7 @@ module.exports = {
     {
       title: 'fork vs cluster',
       path: '/NodeJS/pm2/fork_vs_cluster'
-    }
+    },
+    experience
   ]
 };
