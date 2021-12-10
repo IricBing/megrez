@@ -6,7 +6,7 @@
 ## 安装必要依赖包
 
 ```bash
-$ pnpm add @nestjs/passport passport-http
+$ pnpm add @nestjs/passport passport-http passport
 $ pnpm add -D @types/passport-http
 ```
 
@@ -60,7 +60,6 @@ export class BasicAuthGuard extends AuthGuard('basic') {}
 
 ```ts
 import { Global, Module } from '@nestjs/common';
-import { ConfigType } from '@nestjs/config';
 import { BasicAuthStrategy } from './strategies/basic-auth.strategy';
 
 @Global()
