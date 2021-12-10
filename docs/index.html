@@ -17,6 +17,7 @@
     <div id="app"></div>
     <!-- mermaid支持 -->
     <script src="https://cdn.9xing.cn/mermaid/8.13.4/mermaid.min.js"></script>
+    <script src="subsup.js"></script>
 
     <script>
       var num = 0;
@@ -58,6 +59,15 @@
           language: 'chinese',
           isExpected: true
         },
+        progress: {
+          position: 'top',
+          color: 'var(--theme-color,#42b983)',
+          height: '3px'
+        },
+        toc: {
+          tocMaxLevel: 5,
+          target: 'h2, h3, h4, h5, h6'
+        },
         markdown: {
           renderer: {
             code: function (code, lang) {
@@ -68,18 +78,10 @@
             }
           }
         },
-        progress: {
-          position: 'top',
-          color: 'var(--theme-color,#42b983)',
-          height: '3px'
-        },
-        toc: {
-          tocMaxLevel: 5,
-          target: 'h2, h3, h4, h5, h6'
-        }
+        plugins:[subsup]
       };
     </script>
-    
+
     <!-- service work支持 -->
     <script>
       if (typeof navigator.serviceWorker !== 'undefined') {
