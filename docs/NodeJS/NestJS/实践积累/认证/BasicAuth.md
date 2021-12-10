@@ -61,7 +61,6 @@ export class BasicAuthGuard extends AuthGuard('basic') {}
 ```ts
 import { Global, Module } from '@nestjs/common';
 import { ConfigType } from '@nestjs/config';
-import { JwtModule } from '@nestjs/jwt';
 import { BasicAuthStrategy } from './strategies/basic-auth.strategy';
 
 @Global()
