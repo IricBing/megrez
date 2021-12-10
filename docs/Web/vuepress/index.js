@@ -6,5 +6,6 @@ const deploy = require('./打包部署');
 
 module.exports = {
   title: 'vuepress',
+  path: '/Web/vuepress/',
   children: [config, extension, ecology, theme, deploy]
 };
