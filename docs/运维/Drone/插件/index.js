@@ -14,6 +14,10 @@ module.exports = {
       path: '/运维/Drone/插件/Email/'
     },
     {
+      title: 'NPM',
+      path: '/运维/Drone/插件/npm/'
+    },
+    {
       title: '微信',
       path: '/运维/Drone/插件/微信/'
     }

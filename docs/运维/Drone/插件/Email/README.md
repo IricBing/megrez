@@ -57,7 +57,7 @@ steps:
       password:
         from_secret: email_password
       recipients: xxxx@qq.com
-      # recipients_only: true
+      recipients_only: true
     when:
       branch:
         - master
