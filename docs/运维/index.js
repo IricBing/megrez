@@ -12,10 +12,9 @@ const jenkins = require('./Jenkins');
 const VMwareESXi = require('./VMwareESXi');
 const freeSSL = require('./FreeSSL');
 const pressTest = require('./压力测试');
-const prometheus = require('./Prometheus');
-const grafana = require('./Grafana');
+const monitor = require('./监控');
 
 module.exports = {
   title: '运维',
-  children: [letsencrypt, freeSSL, nginx, frp, drone, prometheus, grafana, haproxy, jenkins, sentry, vercel, nmap, pressTest, virtualBox, VMwareESXi, adb]
+  children: [letsencrypt, freeSSL, nginx, frp, drone, monitor, haproxy, jenkins, sentry, vercel, nmap, pressTest, virtualBox, VMwareESXi, adb]
 };
