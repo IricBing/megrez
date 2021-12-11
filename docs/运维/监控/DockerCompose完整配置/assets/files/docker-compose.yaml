@@ -1,8 +1,3 @@
-# Docker Compose 完整配置
-
-下载：<a href="运维/监控/DockerCompose完整配置/assets/files/docker-compose.yaml" download="docker-compose.yaml">docker-compose.yaml</a>
-
-```yaml
 version: '3.8'
 
 services:
@@ -29,7 +24,3 @@ services:
       - '--path.rootfs=/host'
     volumes:
       - '/:/host:ro,rslave'
-```
-
-> [!note]
-> 配置时间：**2021年12月11日**，重新部署请**升级镜像版本**。
