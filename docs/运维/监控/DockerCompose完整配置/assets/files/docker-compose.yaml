@@ -1,6 +1,17 @@
 version: '3.8'
 
 services:
+  grafana:
+    image: grafana/grafana:8.3.2
+    container_name: grafana
+    hostname: grafana
+    restart: always
+    ports:
+      - '9000:3000'
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - /etc/localtime:/etc/localtime:ro
+
   prometheus:
     image: prom/prometheus:v2.31.1
     container_name: prometheus
@@ -9,8 +20,8 @@ services:
     ports:
       - '9090:9090'
     volumes:
-      - ./prometheus-config:/etc/prometheus
-      - ./prometheus-rules:/usr/local/prometheus/rules
+      - prometheus-data:/etc/prometheus
+      - /etc/localtime:/etc/localtime:ro
 
   node_exporter:
     # image: quay.io/prometheus/node-exporter:latest
@@ -24,3 +35,20 @@ services:
       - '--path.rootfs=/host'
     volumes:
       - '/:/host:ro,rslave'
+      - /etc/localtime:/etc/localtime:ro
+
+  alertmanager:
+    image: prom/alertmanager:v0.23.0
+    container_name: alertmanager
+    hostname: alertmanager
+    restart: always
+    ports:
+      - '9093:9093'
+    volumes:
+      - alertmanager-data:/etc/alertmanager
+      - /etc/localtime:/etc/localtime:ro
+
+volumes:
+  grafana-data:
+  prometheus-data:
+  alertmanager-data:
