@@ -75,6 +75,7 @@ export class AuthModule {}
 在 `controller` **类**上或者 `controller` **类的方法**上加入 `@UseGuards(BasicAuthGuard)` 装饰器即可。
 
 ```ts
+@ApiBasicAuth()
 @UseGuards(BasicAuthGuard)
 @Controller('vcom/devices')
 export class DeviceVcomController {
