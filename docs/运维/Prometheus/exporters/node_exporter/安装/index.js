@@ -4,6 +4,10 @@ module.exports = {
     {
       title: 'Docker 安装',
       path: '/运维/Prometheus/exporters/node_exporter/安装/Docker安装'
+    },
+    {
+      title: 'Docker Compose 安装',
+      path: '/运维/Prometheus/exporters/node_exporter/安装/DockerCompose安装'
     }
   ]
 };
