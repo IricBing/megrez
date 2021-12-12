@@ -138,12 +138,28 @@ scrape_configs:
 
     static_configs:
       - targets: ["localhost:9090"]
+        labels:
+          instance: "prometheus"
 
   - job_name: "linux"
     static_configs:
       - targets: ["192.168.0.1:9100"]   # 注意这里写的是网关的ip
+        labels:
+          instance: "本机"
       
   - job_name: "grafana"
     static_configs:
       - targets: ["grafana:3000"]
+        labels:
+          instance: "grafana"
+      
+  - job_name: "外部服务器"
+    scheme: https
+    basic_auth:
+      username: prometheus
+      password: basic auth密码
+    static_configs:
+      - targets: ["外部服务域名"]
+        labels:
+          instance: "外部服务器"
 ```
