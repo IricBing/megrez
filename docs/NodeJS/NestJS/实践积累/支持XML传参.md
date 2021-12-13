@@ -9,7 +9,7 @@
 ## `Step1.` 安装所需依赖包
 
 ```bash
-$ yarn add body-parser body-parser-xml
+$ pnpm add body-parser body-parser-xml
 ```
 
 ## `Step2.` 修改 `main.ts` 文件
