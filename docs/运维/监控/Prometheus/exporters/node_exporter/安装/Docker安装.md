@@ -4,7 +4,7 @@
 
 ```bash
 $ docker run -d \
-  --name node-exporter
+  --name node-exporter \
   --net="host" \
   --pid="host" \
   -v "/:/host:ro,rslave" \
@@ -16,7 +16,7 @@ $ docker run -d \
 
 ```bash
 $ docker run -d \
-  --name node-exporter
+  --name node-exporter \
   --net="host" \
   --pid="host" \
   -v "/:/host:ro,rslave" \
