@@ -22,6 +22,7 @@ const myPC = require('./docs/个人电脑');
 const blockchain = require('./docs/区块链');
 const ai = require('./docs/AI');
 const threeDimensions = require('./docs/3D建模');
+const tencent = require('./docs/Tencent')
 
 const sidebar = [
   language,
@@ -39,6 +40,7 @@ const sidebar = [
   communicationFramework,
   windows,
   protocol,
+  tencent,
   media,
   ai,
   blockchain,
