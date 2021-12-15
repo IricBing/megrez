@@ -26,14 +26,14 @@ $ git tag -a v0.1.1 [sha-1]    # commit 标签
 $ git checkout v0.0.1
 ```
 
-::: danger 注意
-此时处于一个空的分支上。
-:::
+> [!warning|label:注意]
+> 此时处于一个**空的分支**上。
 
 ## 删除tag
 
 ```bash
-$ git tag -d v0.1.1
+$ git tag -d v0.1.1   # 删除本地tag
+$ git push origin :v0.1.1   # 删除远程tag
 ```
 
 ## tag发布
