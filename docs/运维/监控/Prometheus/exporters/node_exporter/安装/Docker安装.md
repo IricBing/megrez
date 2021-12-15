@@ -16,6 +16,7 @@ $ docker run -d \
 
 ```bash
 $ docker run -d \
+  --restart always \
   --name node-exporter \
   --net="host" \
   --pid="host" \

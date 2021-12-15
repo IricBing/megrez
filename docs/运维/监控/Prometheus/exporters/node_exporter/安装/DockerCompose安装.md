@@ -8,11 +8,11 @@ services:
     # image: quay.io/prometheus/node-exporter:latest
     image: prom/node-exporter:latest
     container_name: node_exporter
-    command:
-      - '--path.rootfs=/host'
     network_mode: host
     pid: host
-    restart: unless-stopped
+    restart: always
+    command:
+      - '--path.rootfs=/host'
     volumes:
       - '/:/host:ro,rslave'
 ```
