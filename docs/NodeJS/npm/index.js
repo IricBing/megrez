@@ -11,6 +11,10 @@ module.exports = {
       title: '换源（命令版）——推荐',
       path: '/NodeJS/npm/换源-命令版'
     },
+    {
+      title: '账号配置',
+      path: '/NodeJS/npm/账号配置/'
+    },
     dependencies
   ]
 };

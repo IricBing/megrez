@@ -1,5 +1,9 @@
 # NPM
 
+## 特殊注意
+
+`NPM` 从**2021年12月**开始强制推 `2FA` 这种东西，自动发包不再是简简单单的写一个用户名、密码、邮箱就可以的了。需要 `automation token` ，请参考笔记：[NPM 账号配置](../../../../NodeJS/npm/账号配置/README.md)
+
 ## 功能用途
 
 自动推送 `NPM` 包。
@@ -36,6 +40,8 @@ steps:
         from_secret: npm_password
       email:
         from_secret: npm_email
+      token:
+        from_secret: npm_automation_token
 
   - name: email
     image: drillster/drone-email
