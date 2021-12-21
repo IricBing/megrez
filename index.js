@@ -5,6 +5,7 @@ const windows = require('./docs/Windows');
 const ide = require('./docs/IDE');
 const web = require('./docs/Web');
 const go = require('./docs/Go');
+const rust = require('./docs/Rust')
 const ops = require('./docs/运维');
 const database = require('./docs/数据库');
 const communicationFramework = require('./docs/通信框架');
@@ -31,6 +32,7 @@ const sidebar = [
   web,
   webAssembly,
   git,
+  rust,
   go,
   ops,
   container,

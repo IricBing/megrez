@@ -6,8 +6,9 @@ const lua = require('./Lua');
 const python = require('./Python');
 const rust = require('./Rust');
 const markdown = require('./Markdown');
+const go = require('./Go');
 
 module.exports = {
   title: '编程语言',
-  children: [c, javascript, typescript, csharp, lua, python, rust, markdown]
+  children: [c, javascript, typescript, csharp, lua, python, rust, go, markdown]
 };
