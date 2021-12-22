@@ -1,4 +1,5 @@
 const pluginDevelop = require('./插件开发');
+const uninstall = require('./卸载')
 
 module.exports = {
   title: 'VSCode',
@@ -35,6 +36,7 @@ module.exports = {
       title: 'Windows下使用Cmder终端',
       path: '/IDE/VSCode/Windows下使用cmder终端'
     },
-    pluginDevelop
+    pluginDevelop,
+    uninstall
   ]
 };
