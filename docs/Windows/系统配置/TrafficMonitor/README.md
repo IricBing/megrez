@@ -8,3 +8,12 @@
 
 ### GitHub
 
+[仓库地址](https://github.com/zhongyang219/TrafficMonitor)
+
+从[Release](https://github.com/zhongyang219/TrafficMonitor/releases)中下载直接安装即可。
+
+### Chocolatey
+
+```bash
+$ choco install traffic-monitor
+```
