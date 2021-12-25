@@ -20,7 +20,7 @@ steps:
   - name: email
     image: drillster/drone-email
     settings:
-      subject: 'Drone deploy: [{{ build.status }}] {{ repo.name }} ({{ repo.branch }}) #{{ build.number }}'
+      subject: '个人知识库Megrez部署: [{{ build.status }}] ({{ repo.branch }}) #{{ build.number }}'
       host: smtp.qq.com
       port: 465
       from: 
@@ -76,7 +76,7 @@ steps:
   - name: email
     image: drillster/drone-email
     settings:
-      subject: 'Drone build: [{{ build.status }}] {{ repo.name }} ({{ repo.branch }}) #{{ build.number }}'
+      subject: '个人知识库Megrez构建: [{{ build.status }}] ({{ repo.branch }}) #{{ build.number }}'
       host: smtp.qq.com
       port: 465
       from: 
@@ -86,7 +86,7 @@ steps:
       password:
         from_secret: email_password
       recipients: 2633419446@qq.com
-      # recipients_only: true
+      recipients_only: true
     when:
       status:
         - success
