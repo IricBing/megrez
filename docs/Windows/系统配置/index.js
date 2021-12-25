@@ -1,5 +1,6 @@
 const chocolatey = require('./Chocolatey');
 const terminalOptimize = require('./终端美化');
+const trafficMonitor = require('./TrafficMonitor');
 
 module.exports = {
   title: '系统配置',
@@ -9,6 +10,7 @@ module.exports = {
       title: '安装Fira Code字体',
       path: '/Windows/系统配置/安装FiraCode字体'
     },
-    terminalOptimize
+    terminalOptimize,
+    trafficMonitor
   ]
 };
