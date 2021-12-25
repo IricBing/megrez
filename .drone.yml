@@ -7,7 +7,7 @@ clone:
 
 steps:
   - name: deploy
-    image: appleboy/drone-ssh
+    image: appleboy/drone-ssh:1.6.3
     settings:
       host: 101.42.135.206
       username: ubuntu
@@ -53,7 +53,7 @@ clone:
 
 steps:
   - name: clone
-    image: alpine/git
+    image: alpine/git:v2.32.0
     environment:
       SSH_KEY:
         from_secret: deploy_key
@@ -65,7 +65,7 @@ steps:
       - git clone -v git@github.com:IricBing/megrez.git .
 
   - name: build
-    image: plugins/docker
+    image: plugins/docker:20.10.9
     settings:
       repo: iricbing/megrez
       username: iricbing
