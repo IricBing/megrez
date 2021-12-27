@@ -49,3 +49,56 @@ Junction created for C:\Program Files\Docker <<===>> D:\Program Files\Docker
 ![下载Linux内核更新包](assets/images/下载Linux内核更新包.png)
 
 点击下载连接进行下载即可。下载后的文件名叫： `wsl_update_x64.msi` ，双击安装即可。
+
+### 文件迁移
+
+#### 原因
+
+默认 `Docker Desktop` 安装在 `C盘` ，并且后面所有的镜像，容器等等都运行在 `C盘` ，会导致 `C盘` 占用过大。我们当然是想将其安装到其他盘符了。目前大家普遍使用的应该是 `wsl2` ，之前的就不介绍了（之前版本迁移更容易，网上查一下即可。）
+
+`docker desktop` 在安装的时候创建两个 `wsl` 子系统。分别是： `docker-desktop` 和 `docker-desktop-data` 。通过命令 `wsl -l -v --all` 来查看一下当前系统中的 `wsl` 子系统。
+
+```bash
+$ wsl -l -v --all
+  NAME                   STATE           VERSION
+* docker-desktop         Running         2
+  docker-desktop-data    Running         2
+```
+
+`docker-desktop` 是存放程序的， `docker-desktop-data` 是存放镜像的，这两个 `wsl` 子系统都是默认放在**系统盘**的。
+
+[官方issue](https://github.com/docker/for-win/issues/5829#issuecomment-622442186)
+
+> [!note]
+> 官方 `issue` 的意思是只需要迁移 `docker-desktop-data` 这个 `wsl` 系统即可， `docker-desktop` 并不必进行迁移。
+
+### 迁移
+
+首先将**Docker停止**，有正在运行的容器也全部停掉。
+
+#### `Step1.` 导出 `wsl` 子系统镜像
+
+打开 `cmd` 终端，注意下面两条命令会在当前位置生成一个文件： `docker-desktop-data.tar` ，所以还是找一个特定的位置打开 `cmd` 吧。
+
+```bash
+$ wsl --export docker-desktop-data docker-desktop-data.tar
+```
+
+> 如果正常，应该会在此文件夹下看到一个文件：： `docker-desktop-data.tar`
+
+#### `Step2.` 删除现有的 `wsl` 子系统
+
+```bash
+$ wsl --unregister docker-desktop-data
+正在注销...
+```
+
+#### `Step3.` 重新创建 `wsl` 子系统
+
+先在想要放置数据的位置创建个文件夹，我是在 `D盘` 下创建了 `DockerDesktopData` 文件夹，用来存储 `docker-desktop-data` 和 `wsl` 子系统数据的。
+
+```bash
+$ wsl --import docker-desktop-data D:\DockerDesktopData D:\docker-desktop-data.tar --version 2
+```
+
+#### `Step4.` 重启电脑

@@ -35,7 +35,7 @@ services:
       - 5433:80
 
   mongodb:
-    image: mongo:5.0.3-bionic
+    image: mongo:5.0.5-focal
     container_name: mongodb
     hostname: mongodb
     restart: always
