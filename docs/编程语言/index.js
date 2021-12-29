@@ -1,3 +1,4 @@
+const base = require('./程序基础');
 const c = require('./C');
 const javascript = require('./JavaScript');
 const typescript = require('./TypeScript');
@@ -10,5 +11,5 @@ const go = require('./Go');
 
 module.exports = {
   title: '编程语言',
-  children: [c, javascript, typescript, csharp, lua, python, rust, go, markdown]
+  children: [base, c, javascript, typescript, csharp, lua, python, rust, go, markdown]
 };
