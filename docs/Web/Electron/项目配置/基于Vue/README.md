@@ -34,7 +34,7 @@
 
 ## `Step2.` 新建 `.yarnrc` 文件
 
-这个文件作用就不讲了，主要是两个配置： `electron_mirror` 和 `electron_builder_binaries_mirror` ，具体内容请[参考笔记](../../../../NodeJS/NPM/registry_config.md)
+这个文件作用就不讲了，主要是两个配置： `electron_mirror` 和 `electron_builder_binaries_mirror` ，具体内容请[参考笔记](../../../../NodeJS/npm/registry_config.md)
 
 ## `Step3.` 集成 `vue-cli-plugin-electron-builder`
 
