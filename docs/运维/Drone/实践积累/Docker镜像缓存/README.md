@@ -58,4 +58,9 @@ steps:
     commands:
       - docker ps -a
       - docker build --no-cache -t ip2region .
+
+volumes:
+- name: dockersock
+  host:
+    path: /var/run/docker.sock
 ```
