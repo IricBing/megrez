@@ -53,6 +53,7 @@ $ docker run \
   --env=DRONE_RPC_SECRET=共享密钥 \
   --env=DRONE_SERVER_HOST=drone.company.com \
   --env=DRONE_SERVER_PROTO=https \
+  --env=DRONE_USER_CREATE=username:iricbing,admin:true \
   --publish=80:80 \
   --publish=443:443 \
   --restart=always \
@@ -61,6 +62,5 @@ $ docker run \
   drone/drone:2
 ```
 
-::: tip 提示
-记得注意端口映射
-:::
+> [!warning]
+> 记得注意端口映射和设置管理员用户。

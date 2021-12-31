@@ -40,4 +40,27 @@ steps:
 
 ## Dockerfile构建缓存
 
-官方文档的思路：https://docs.drone.io/pipeline/docker/examples/services/docker/
+[官方文档](https://docs.drone.io/pipeline/docker/examples/services/docker/)
+
+> [!note]
+> 这里需要使用 `Drone` 的管理员账户，如果 `Drone` 初始化的时候没有管理员账号，要重新装。
+
+首先要在 `Drone` 中开启这个项目的 `Trusted` 配置，因为使用外部 `Docker` 是一件非常有**风险**的事情，因此 `Drone` 设置为只允许**受信任**的应用访问外部 `Docker` 。
+
+![开启Trusted](assets/images/开启Trusted.png)
+
+```yaml
+  - name: build
+    image: docker:dind
+    volumes:
+      - name: dockersock
+        path: /var/run/docker.sock
+    commands:
+      - docker ps -a
+      - docker build --no-cache -t ip2region .
+
+volumes:
+- name: dockersock
+  host:
+    path: /var/run/docker.sock
+```
