@@ -15,6 +15,10 @@ module.exports = {
       path: '/Linux/Ubuntu/基本使用/添加用户'
     },
     {
+      title: '切换软件源',
+      path: '/Linux/Ubuntu/基本使用/切换软件源'
+    },
+    {
       title: '删除用户',
       path: '/Linux/Ubuntu/基本使用/删除用户'
     },
