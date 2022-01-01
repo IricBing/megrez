@@ -1,5 +1,6 @@
 const pluginDevelop = require('./插件开发');
 const uninstall = require('./卸载')
+const rustConfig = require('./配置Rust环境')
 
 module.exports = {
   title: 'VSCode',
@@ -32,6 +33,7 @@ module.exports = {
       title: '配置Lua环境',
       path: '/IDE/VSCode/配置Lua环境'
     },
+    rustConfig,
     {
       title: 'Windows下使用Cmder终端',
       path: '/IDE/VSCode/Windows下使用cmder终端'
