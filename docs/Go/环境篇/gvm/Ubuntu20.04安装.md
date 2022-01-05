@@ -31,11 +31,9 @@ $ source /home/iric/.gvm/scripts/gvm
 
 ```bash
 # gvm 配置
+export GO_SOURCE_URL="https://mirrors.ustc.edu.cn/golang"
 export GO_BINARY_BASE_URL="https://mirrors.ustc.edu.cn/golang"
 ```
-
-> [!warning|label: 采坑提示]
-> 在 `Gitee` 上，有仓库的 `README` 提示要配置 `G_MIRROR` 环境变量，实际并不好使！官方 `issue` 中已经有讲到如何配置镜像地址了：[issue地址](https://github.com/moovweb/gvm/issues/192)
 
 ## 安装 `go` (1.5+)
 
