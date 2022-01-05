@@ -8,16 +8,22 @@
 
 尽管有时候我们并不会使用多开的特性，用 `pm2` 部署也会得到很多好处，例如：**自动重启**，**服务状态监控**等功能可以让我们无需增加代码的复杂度就达到期望的需求。
 
-## 安装方式
+## ubuntu 安装
 
 ```bash
 $ npm i pm2 -g
-# or
-$ yarn global add pm2
 ```
 
 > [!tip|label: 提示]
 > 全局安装完成后即可使用 `pm2` 命令了
+
+## windows 安装
+
+```bash
+$ npm install -g pm2
+$ npm install pm2-windows-startup -g
+$ pm2-startup install
+```
 
 ## 简单启动项目
 
