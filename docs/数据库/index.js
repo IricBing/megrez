@@ -5,8 +5,9 @@ const tdengine = require('./TDengine');
 const redis = require('./Redis');
 const mongodb = require('./MongoDB');
 const sqlite = require('./SQLite');
+const clickHouse = require('./ClickHouse');
 
 module.exports = {
   title: '数据库',
-  children: [docker, sql, postgreSQL, redis, mongodb, tdengine, sqlite]
+  children: [docker, sql, postgreSQL, redis, mongodb, clickHouse, tdengine, sqlite]
 };
