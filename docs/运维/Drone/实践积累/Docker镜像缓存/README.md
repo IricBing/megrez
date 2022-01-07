@@ -64,3 +64,41 @@ volumes:
   host:
     path: /var/run/docker.sock
 ```
+
+### 采坑
+
+如果想在宿主机的 `Docker` 中使用 `Drone` 的变量，需要特殊处理，因为 `docker:dind` 的 `commands` 有格式问题，正常情况下使用如下的配置即可：
+
+```yaml
+  - name: build
+    image: docker:dind
+    volumes:
+      - name: dockersock
+        path: /var/run/docker.sock
+    commands:
+      - docker build --no-cache -t dawen-master:${DRONE_TAG##v} .
+      - docker tag dawen-master:${DRONE_TAG##v} registry.cn-hangzhou.aliyuncs.com/9xing/dawen-master:${DRONE_TAG##v}
+      - docker push registry.cn-hangzhou.aliyuncs.com/9xing/dawen-master:${DRONE_TAG##v}
+      - docker tag registry.cn-hangzhou.aliyuncs.com/9xing/dawen-master:${DRONE_TAG##v} registry.cn-hangzhou.aliyuncs.com/9xing/dawen-master:latest
+      - docker push registry.cn-hangzhou.aliyuncs.com/9xing/dawen-master:latest
+```
+
+但是，这种配置虽然没有语法上的问题，可 `Drone` 却说配置格式不正确！如下所示：
+
+![Drone配置不正确提示](assets/images/Drone配置不正确提示.png)
+
+个人认为这个是 `Drone` 的一个 `Bug` ，但是该用还是得使用，采用 `echo` 的方式来临时解决，相信未来可以不用这么麻烦，笔记记录时间：**2022年1月4日**。
+
+```yaml
+  - name: build
+    image: docker:dind
+    volumes:
+      - name: dockersock
+        path: /var/run/docker.sock
+    commands:
+      - docker build --no-cache -t dawen-master:`echo ${DRONE_TAG##v}` .
+      - docker tag dawen-master:`echo ${DRONE_TAG##v}` registry.cn-hangzhou.aliyuncs.com/9xing/dawen-master:`echo ${DRONE_TAG##v}`
+      - docker push registry.cn-hangzhou.aliyuncs.com/9xing/dawen-master:`echo ${DRONE_TAG##v}`
+      - docker tag registry.cn-hangzhou.aliyuncs.com/9xing/dawen-master:`echo ${DRONE_TAG##v}` registry.cn-hangzhou.aliyuncs.com/9xing/dawen-master:latest
+      - docker push registry.cn-hangzhou.aliyuncs.com/9xing/dawen-master:latest
+```
