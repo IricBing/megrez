@@ -2,13 +2,13 @@
 
 ## 需求场景
 
-想要远程控制Ubuntu Desktop（Ubuntu server就直接ssh即可）
+想要远程控制 `Ubuntu Desktop` （ `Ubuntu server` 就直接 `ssh` 即可）
 
 ## 实现方案
 
 ### Xrdp
 
-`Xrdp` 是一个微软远程桌面协议（RDP）的开源实现，它允许你通过图形界面控制远程系统。通过 `RDP`，你可以登录远程机器，并且创建一个真实的桌面会话，就像你登录本地机器一样。`windows`系统中默认远程登录用的就是`RDP`协议，在`ubuntu`中安装`xrdp`服务意味着在登录`ubuntu`远程桌面时可以使用`windows`的远程桌面软件。安装步骤如下：
+`Xrdp` 是一个微软远程桌面协议（ `RDP` ）的开源实现，它允许你通过图形界面控制远程系统。通过 `RDP` ，你可以登录远程机器，并且创建一个真实的桌面会话，就像你登录本地机器一样。 `windows` 系统中默认远程登录用的就是 `RDP` 协议，在 `ubuntu` 中安装 `xrdp` 服务意味着在登录 `ubuntu` 远程桌面时可以使用 `windows` 的远程桌面软件。安装步骤如下：
 
 ```bash
 $ sudo apt install xrdp
@@ -36,7 +36,7 @@ $ sudo systemctl status xrdp
 1月 07 18:13:41 test-04 xrdp[28184]: (28184)(139898876950336)[INFO ] listening to port 3389 on 0.0.0.0
 ```
 
-接下来通过windows的远程桌面服务就能连接了。
+接下来通过 `windows` 的远程桌面服务就能连接了。
 
 #### 黑屏问题
 
@@ -44,7 +44,7 @@ $ sudo systemctl status xrdp
 $ sudo vim /etc/xrdp/startwm.sh
 ```
 
-加入文件最后面的session前面
+加入文件最后面的 `session` 前面
 
 ```ini
 unset DBUS_SESSION_BUS_ADDRESS
@@ -88,3 +88,23 @@ ResultAny=no
 ResultInactive=no
 ResultActive=yes
 ```
+
+### VNC
+
+从 `Ubuntu18.04` 开始，桌面版已经内置了此功能，在设置中开启即可，如下所示：
+
+![开启VNC](assets/images/开启VNC.png)
+
+接下来打开 `dconf` 编辑器，打开路径： `org > gnome > desktop > remote-access` ，将 `requlre-encryption` 选项关闭即可，如下所示：
+
+![关闭requlre-encryption功能](assets/images/关闭requlre-encryption功能.png)
+
+> [!tip|label: 提示]
+> `dconf` 编辑器默认是没有的，需要安装，安装命令： `$ sudo apt install dconf-editor`
+
+## 方案对比
+
+|方案|优点|缺点|
+|-----|-----|-----|
+| `Xrdp` |1. 可以使用 `Windows` 自带的远程桌面连接<br />2. 连接都不会影响原有显示器的显示。(PS: 理论上是这样，但是实际操作下来会串， `chrome` 浏览器只能在最初桌面上显示！)|1. 如果没有经过调优，会非常非常占用网络资源，尤其是在有窗口控制的时候。<br /> 2. 毕竟是社区方案，很多细节点都需要去采坑摸索。|
+| `VNC` |1. `Ubuntu` 原生支持<br />2. 会省一点资源，相比于 `Xrdp` 方案能省一半带宽。|1. 操作体验非常不好，模式类似于向日葵，但是比向日葵差远了。|

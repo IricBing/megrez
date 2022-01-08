@@ -112,7 +112,7 @@ module.exports = {
     },
     {
       title: '远程桌面控制',
-      path: '/Linux/Ubuntu/基本使用/远程桌面控制'
+      path: '/Linux/Ubuntu/基本使用/远程桌面控制/'
     }
   ]
 };
