@@ -109,6 +109,10 @@ module.exports = {
     {
       title: '关闭交换（swap）分区',
       path: '/Linux/Ubuntu/基本使用/关闭交换分区'
+    },
+    {
+      title: '远程桌面控制',
+      path: '/Linux/Ubuntu/基本使用/远程桌面控制'
     }
   ]
 };
