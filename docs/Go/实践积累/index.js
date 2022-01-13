@@ -1,9 +1,7 @@
+const awesome = require('./awesome');
+const json = require('./json');
+
 module.exports = {
   title: '实践积累',
-  children: [
-    {
-      title: 'json',
-      path: '/Go/实践积累/json'
-    }
-  ]
+  children: [awesome, json]
 };
