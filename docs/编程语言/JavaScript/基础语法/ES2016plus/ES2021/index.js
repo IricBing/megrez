@@ -9,6 +9,10 @@ module.exports = {
     {
       title: '数学分隔符',
       path: '/编程语言/JavaScript/基础语法/ES2016plus/ES2021/数学分隔符'
+    },
+    {
+      title: 'Promise.any',
+      path: '/编程语言/JavaScript/基础语法/ES2016plus/ES2021/Promise.any'
     }
   ]
 };
