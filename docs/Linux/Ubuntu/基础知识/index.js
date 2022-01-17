@@ -1,6 +1,9 @@
+const releaseVersion = require('./发行版本');
+
 module.exports = {
   title: '基础知识',
   children: [
+    releaseVersion,
     {
       title: '启动步骤',
       path: '/Linux/Ubuntu/基础知识/启动步骤'
