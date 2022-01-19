@@ -1,3 +1,4 @@
+const base = require('./基础篇');
 const vuepress = require('./vuepress');
 const miniProgram = require('./微信小程序');
 const libs = require('./常用库');
@@ -14,5 +15,5 @@ const electron = require('./Electron');
 
 module.exports = {
   title: 'Web',
-  children: [experience, libs, vue2, vue3, elementUI, vite, uniApp, miniProgram, official, electron, vuepress, docsify, chrome]
+  children: [base, experience, libs, vue2, vue3, elementUI, vite, uniApp, miniProgram, official, electron, vuepress, docsify, chrome]
 };
