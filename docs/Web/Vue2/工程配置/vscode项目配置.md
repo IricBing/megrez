@@ -1,6 +1,6 @@
 # Vue 项目 vscode 配置
 
-## `.vscode/settings.json` 文件配置
+## .vscode/settings.json 文件配置
 
 ```json
 {
@@ -77,7 +77,7 @@
 }
 ```
 
-## `.vscode/extensions.json` 文件配置
+## .vscode/extensions.json 文件配置
 
 ```json
 {
@@ -95,7 +95,7 @@
 }
 ```
 
-## `.eslintrc.js` 文件配置
+## .eslintrc.js 文件配置
 
 由于文件长度过长，默认不做展开
 
@@ -393,7 +393,7 @@ module.exports = {
 
 </details>
 
-## `.prettierrc.json` 文件配置
+## .prettierrc.json 文件配置
 
 ```json
 {
@@ -415,6 +415,39 @@ module.exports = {
 }
 ```
 
+
+## .gitignore文件配置
+
+```git
+.DS_Store
+node_modules
+/dist
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+```
 # 可选配置
 
 ## 提交代码前自动格式化代码

@@ -343,7 +343,7 @@ module.exports = {
 
 ### `.gitignore` 文件
 
-```gitignore
+```git
 /target
 /documentation
 
