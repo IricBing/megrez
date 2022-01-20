@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node index.js && docsify serve docs",
-    "build": "node index.js"
+    "build": "node index.js && workbox generateSW workbox-config.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/IricBing/megrez#readme",
   "devDependencies": {
     "docsify-cli": "^4.4.3",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "workbox-cli": "^6.4.2"
   }
 }

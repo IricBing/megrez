@@ -15,7 +15,11 @@ steps:
         from_secret: server_password
       port: 22
       script:
-        - cd /home/ubuntu/code/megrez && git pull && /home/ubuntu/.nvm/versions/node/v16.13.0/bin/node index.js && sudo nginx -s reload
+        - cd /home/ubuntu/code/megrez 
+        - git pull 
+        - /home/ubuntu/.nvm/versions/node/v16.13.0/bin/node index.js 
+        - /home/ubuntu/.nvm/versions/node/v16.13.0/bin/workbox generateSW workbox-config.js 
+        - sudo nginx -s reload
 
   - name: email
     image: drillster/drone-email

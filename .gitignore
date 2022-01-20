@@ -6,6 +6,11 @@
 # _sidebar.md文件自动生成
 docs/_sidebar.md
 
+# workbox 自动生成文件
+docs/sw.js
+docs/sw.js.map
+docs/workbox-*
+
 # ignore lock file, use vercel build
 package-lock.json
 yarn.lock
