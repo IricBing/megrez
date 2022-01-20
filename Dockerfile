@@ -6,6 +6,8 @@ WORKDIR /app
 COPY . .
 
 RUN node index.js
+RUN npm i workbox-cli -g
+RUN workbox generateSW workbox-config.js
 
 # Stage 2
 FROM nginx:alpine as prod
