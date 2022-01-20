@@ -1,4 +1,5 @@
 const cli = require('./CLI命令');
+const design = require('./设计思路');
 
 module.exports = {
   title: 'pnpm',
@@ -8,6 +9,7 @@ module.exports = {
       title: '安装',
       path: '/NodeJS/pnpm/安装'
     },
+    design,
     cli
   ]
 };
