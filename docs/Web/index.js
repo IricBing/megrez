@@ -12,8 +12,9 @@ const official = require('./微信公众号');
 const docsify = require('./docsify');
 const elementUI = require('./ElementUI');
 const electron = require('./Electron');
+const vantUI = require('./VantUI');
 
 module.exports = {
   title: 'Web',
-  children: [base, experience, libs, vue2, vue3, elementUI, vite, uniApp, miniProgram, official, electron, vuepress, docsify, chrome]
+  children: [base, experience, libs, vue2, vue3, elementUI, vantUI, vite, uniApp, miniProgram, official, electron, vuepress, docsify, chrome]
 };
