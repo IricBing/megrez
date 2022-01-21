@@ -10,7 +10,7 @@
 
 ![iconfont项目配置](assets/images/iconfont项目配置.png)
 
-> ![warning|label: 注意]
+> [!warning|label: 注意]
 > 我们这里将 `FontClass/Symbol` 前缀设置成了 `van-icon-` ， `Font Family` 设置成了 `van-icon` 是有寓意的。这个是VantUI默认的配置，网上有很多文章这里都是配置的其他名称，然后引用的时候加一个 `class-prefix` ，这样确实也行，但是遇到 `icon` 引用的就不行了，比如：[Grid 宫格](https://vant-contrib.gitee.io/vant/#/zh-CN/grid)中就无法直接使用自定义图标，使用上述配置可以保证这里也能支持，问题就是**可能和原有图标名称冲突**。
 
 ## 项目引入
