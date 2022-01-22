@@ -1,5 +1,6 @@
 const baseCmd = require('./基础命令');
 const opsCmd = require('./运维命令');
+const userManage = require('./用户管理');
 
 module.exports = {
   title: '基本使用',
@@ -11,17 +12,10 @@ module.exports = {
       path: '/Linux/Ubuntu/基本使用/apt软件更新'
     },
     {
-      title: '添加用户',
-      path: '/Linux/Ubuntu/基本使用/添加用户'
-    },
-    {
       title: '切换软件源',
       path: '/Linux/Ubuntu/基本使用/切换软件源'
     },
-    {
-      title: '删除用户',
-      path: '/Linux/Ubuntu/基本使用/删除用户'
-    },
+    userManage,
     {
       title: '修改主机名称',
       path: '/Linux/Ubuntu/基本使用/修改主机名称'
