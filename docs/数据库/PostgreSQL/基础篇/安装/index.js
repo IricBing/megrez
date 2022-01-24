@@ -8,6 +8,10 @@ module.exports = {
     {
       title: 'Docker Compose部署单机版-基于Ubuntu',
       path: '/数据库/PostgreSQL/基础篇/安装/DockerCompose部署单机版'
+    },
+    {
+      title: 'Windows 安装',
+      path: '/数据库/PostgreSQL/基础篇/安装/Windows安装/'
     }
   ]
 };
