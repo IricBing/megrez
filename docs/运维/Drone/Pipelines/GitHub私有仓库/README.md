@@ -28,7 +28,7 @@
 
 `drone.yml` 配置文件示例：
 
-```yaml {13, 19}
+```yaml
 kind: pipeline
 type: docker
 name: build

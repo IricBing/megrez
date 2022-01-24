@@ -6,6 +6,7 @@ const table = require('./Table');
 const func = require('./Function');
 const iteratorAndFor = require('./迭代器和泛型for');
 const objectOriented = require('./面向对象编程');
+const metaTable = require('./元表和元方法')
 
 module.exports = {
   title: '基础篇',
@@ -29,6 +30,7 @@ module.exports = {
     table,
     func,
     iteratorAndFor,
+    metaTable,
     objectOriented
   ]
 };

@@ -1,102 +1,91 @@
 # PWA
 
-[官方文档](https://docsify.js.org/#/zh-cn/pwa)
+> [!warning]
+> [官方文档](https://docsify.js.org/#/zh-cn/pwa)的 `PWA` 功能只支持最基本的离线缓存，同时还会带来内容更新不及时的问题，本笔记并没有基于此，而是基于[workbox](../../../基础篇/PWA/workbox/README.md)自主实现的。
 
-在 `index.html` **同级目录**下新建 <a href="Web/docsify/项目配置/PWA/assets/files/sw.js" download="sw.js">sw.js</a> 文件，写入如下内容：
+## workbox配置
+
+安装 `workbox-cli` 包：
+
+```bash
+$ pnpm add -D workbox-cli
+```
+
+在项目根目录下新建 `workbox-config.js` 文件，写入如下内容：
 
 ```js
-/* ===========================================================
- * docsify sw.js
- * ===========================================================
- * Copyright 2016 @huxpro
- * Licensed under Apache 2.0
- * Register service worker.
- * ========================================================== */
-
-const RUNTIME = 'docsify';
-const HOSTNAME_WHITELIST = [self.location.hostname, 'fonts.gstatic.com', 'fonts.googleapis.com', 'cdn.9xing.cn'];
-
-// The Util Function to hack URLs of intercepted requests
-const getFixedUrl = req => {
-    var now = Date.now();
-    var url = new URL(req.url);
-
-    // 1. fixed http URL
-    // Just keep syncing with location.protocol
-    // fetch(httpURL) belongs to active mixed content.
-    // And fetch(httpRequest) is not supported yet.
-    url.protocol = self.location.protocol;
-
-    // 2. add query for caching-busting.
-    // Github Pages served with Cache-Control: max-age=600
-    // max-age on mutable content is error-prone, with SW life of bugs can even extend.
-    // Until cache mode of Fetch API landed, we have to workaround cache-busting with query string.
-    // Cache-Control-Bug: https://bugs.chromium.org/p/chromium/issues/detail?id=453190
-    if (url.hostname === self.location.hostname) {
-        url.search += (url.search ? '&' : '?') + 'cache-bust=' + now;
-    }
-    return url.href;
+module.exports = {
+    globDirectory: 'docs/',
+    globPatterns: [
+        '**/*.{md,js,ico,html,jpg,css}'
+    ],
+    swDest: 'docs/sw.js',
+    ignoreURLParametersMatching: [
+        /^utm_/,
+        /^fbclid$/
+    ],
+    skipWaiting: true,
+    clientsClaim: true
 };
+```
 
-/**
- *  @Lifecycle Activate
- *  New one activated when old isnt being used.
- *
- *  waitUntil(): activating ====> activated
- */
-self.addEventListener('activate', event => {
-    event.waitUntil(self.clients.claim());
-});
+## ServiceWorker配置
 
-/**
- *  @Functional Fetch
- *  All network requests are being intercepted here.
- *
- *  void respondWith(Promise<Response> r)
- */
-self.addEventListener('fetch', event => {
-    // Skip some of cross-origin requests, like those for Google Analytics.
-    if (HOSTNAME_WHITELIST.indexOf(new URL(event.request.url).hostname) > -1) {
-        // Stale-while-revalidate
-        // similar to HTTP's stale-while-revalidate: https://www.mnot.net/blog/2007/12/12/stale
-        // Upgrade from Jake's to Surma's: https://gist.github.com/surma/eb441223daaedf880801ad80006389f1
-        const cached = caches.match(event.request);
-        const fixedUrl = getFixedUrl(event.request);
-        const fetched = fetch(fixedUrl, {
-            cache: 'no-store'
-        });
-        const fetchedCopy = fetched.then(resp => resp.clone());
+新建 `docs/registerServiceWorker.js` 文件，写入如下内容：
 
-        // Call respondWith() with whatever we get first.
-        // If the fetch fails (e.g disconnected), wait for the cache.
-        // If there’s nothing in cache, wait for the fetch.
-        // If neither yields a response, return offline pages.
-        event.respondWith(
-            Promise.race([fetched.catch(_ => cached), cached])
-            .then(resp => resp || fetched)
-            .catch(_ => {
-                /* eat any errors */
-            })
-        );
-
-        // Update the cache with the version we fetched (only for ok status)
-        event.waitUntil(
-            Promise.all([fetchedCopy, caches.open(RUNTIME)])
-            .then(([response, cache]) => response.ok && cache.put(event.request, response))
-            .catch(_ => {
-                /* eat any errors */
-            })
-        );
+```js
+register(`/sw.js`, {
+    ready() {
+        console.log('App is being served from cache by a service worker.\n' + 'For more details, visit https://goo.gl/AFskqB');
+    },
+    registered() {
+        console.log('Service worker has been registered.');
+    },
+    cached() {
+        console.log('Content has been cached for offline use.');
+    },
+    updatefound() {
+        console.log('New content is downloading.');
+    },
+    updated() {
+        console.log('New content is available; please refresh.');
+        window.location.reload(); // serviceWorker缓存更新时刷新页面
+    },
+    offline() {
+        console.log('No internet connection found. App is running in offline mode.');
+    },
+    error(error) {
+        console.error('Error during service worker registration:', error);
     }
 });
 ```
 
-之后在 `index.html` 文件中添加 `service-worker` 支持，如下所示：
+接下来在 `index.html` 文件中引入：
 
 ```html
-<script>
-    if (typeof navigator.serviceWorker !== 'undefined') {
-        navigator.serviceWorker.register('sw.js')
-    }
-</script>
+<script src="./registerServiceWorker.js"></script>
+```
+
+## package.json配置
+
+修改 `package.json` 的启动配置：
+
+```json
+{
+  "scripts": {
+    "start": "node index.js && workbox generateSW workbox-config.js && docsify serve docs",
+    "build": "node index.js && workbox generateSW workbox-config.js"
+  }
+}
+```
+
+## .gitignore配置
+
+由于 `workbox` 会生成 `ServiceWorker` 的一些文件，所以需要将自动生成的文件写入到 `.gitignore` 配置中
+
+```git
+# workbox 自动生成文件
+docs/sw.js
+docs/sw.js.map
+docs/workbox-*
 ```
