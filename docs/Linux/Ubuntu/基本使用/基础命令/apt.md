@@ -20,6 +20,7 @@
 
 在使用 `apt` 命令时，用户不必再由 `apt-get` 转到 `apt-cache` 或 `apt-config` ，而且 `apt` 更加结构化，并为用户提供了管理软件包所需的必要选项。
 
+> [!tip]
 > 简单来说就是：**apt = apt-get、apt-cache 和 apt-config** 中**最常用**命令选项的集合。
 
 ### apt和apt-get命令之间的区别

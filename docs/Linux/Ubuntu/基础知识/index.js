@@ -1,9 +1,11 @@
 const releaseVersion = require('./发行版本');
+const softwarePackage = require('./软件包');
 
 module.exports = {
   title: '基础知识',
   children: [
     releaseVersion,
+    softwarePackage,
     {
       title: '启动步骤',
       path: '/Linux/Ubuntu/基础知识/启动步骤'
