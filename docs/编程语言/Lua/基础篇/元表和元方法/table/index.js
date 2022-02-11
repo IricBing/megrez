@@ -7,7 +7,7 @@ module.exports = {
       path: '/编程语言/Lua/基础篇/元表和元方法/table/__index元方法'
     },
     {
-      title: '___newindex 元方法',
+      title: '__newindex 元方法',
       path: '/编程语言/Lua/基础篇/元表和元方法/table/__newindex元方法'
     },
     {
