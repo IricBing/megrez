@@ -12,7 +12,7 @@ $ docker cp dbname.sql postgresql:/var/lib/postgresql
 ```
 
 > [!tip]
-> `dbname.sql` 为 `dbname` 数据库的全量备份文件
+> `dbname.sql` 为 `dbname` 数据库的全量备份文件。
 
 ## 恢复数据库
 
