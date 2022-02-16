@@ -2,7 +2,7 @@ module.exports = {
   title: '数据库恢复',
   children: [
     {
-      title: 'PG Admin',
+      title: 'pgAdmin',
       path: '/数据库/PostgreSQL/运维篇/备份与还原/数据库恢复/pgadmin'
     },
     {

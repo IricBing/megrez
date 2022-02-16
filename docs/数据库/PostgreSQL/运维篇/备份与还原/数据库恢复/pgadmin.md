@@ -1,1 +1,1 @@
-# PG Admin
+# pgAdmin
