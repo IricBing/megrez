@@ -46,6 +46,10 @@ module.exports = {
       path: '/Linux/Ubuntu/基本使用/基础命令/df'
     },
     {
+      title: 'du',
+      path: '/Linux/Ubuntu/基本使用/基础命令/du'
+    },
+    {
       title: 'ss',
       path: '/Linux/Ubuntu/基本使用/基础命令/ss'
     },

@@ -1,21 +1,17 @@
 const baseCmd = require('./基础命令');
 const opsCmd = require('./运维命令');
 const userManage = require('./用户管理');
+const fileAndDirectory = require('./文件与文件夹');
+const source = require('./软件源');
 
 module.exports = {
   title: '基本使用',
   children: [
     opsCmd,
     baseCmd,
-    {
-      title: 'apt软件更新',
-      path: '/Linux/Ubuntu/基本使用/apt软件更新'
-    },
-    {
-      title: '切换软件源',
-      path: '/Linux/Ubuntu/基本使用/切换软件源'
-    },
+    fileAndDirectory,
     userManage,
+    source,
     {
       title: '修改主机名称',
       path: '/Linux/Ubuntu/基本使用/修改主机名称'
@@ -45,10 +41,6 @@ module.exports = {
       path: '/Linux/Ubuntu/基本使用/查看CPU信息'
     },
     {
-      title: '查看文件夹大小',
-      path: '/Linux/Ubuntu/基本使用/查看文件夹大小'
-    },
-    {
       title: '查看串口',
       path: '/Linux/Ubuntu/基本使用/查看串口'
     },
@@ -71,10 +63,6 @@ module.exports = {
     {
       title: '开机启动脚本',
       path: '/Linux/Ubuntu/基本使用/开机启动脚本'
-    },
-    {
-      title: 'apt命令走代理',
-      path: '/Linux/Ubuntu/基本使用/apt命令走代理'
     },
     {
       title: '软件源证书校验问题',
