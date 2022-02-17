@@ -1,22 +1,14 @@
 const authentication = require('./认证');
 const email = require('./email');
 const socketIOCluster = require('./socket.io集群版');
-const redis = require('./redis')
+const redis = require('./redis');
+const xmlSupport = require('./支持XML传参');
+const official = require('./微信公众号');
+const wechatPay = require('./微信支付');
+const aliPay = require('./支付宝支付');
+const wechatMP = require('./微信小程序');
 
 module.exports = {
   title: '实践积累',
-  children: [
-    authentication,
-    {
-      title: '支持XML传参',
-      path: '/NodeJS/NestJS/实践积累/支持XML传参'
-    },
-    {
-      title: '公众号服务器配置',
-      path: '/NodeJS/NestJS/实践积累/公众号服务器配置/'
-    },
-    email,
-    redis,
-    socketIOCluster
-  ]
+  children: [authentication, xmlSupport, official, wechatMP, wechatPay, aliPay, email, redis, socketIOCluster]
 };
