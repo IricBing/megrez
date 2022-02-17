@@ -2,7 +2,7 @@
 
 ## 产生场景
 
-当一切步骤按照[笔记：基于Vue的Electron开发](../../项目配置/基于Vue/README.md)配置后，启动的时候报如下错误：
+当一切步骤按照[笔记：基于Vue的Electron开发](../../项目配置/基于Vue/2.x.md)配置后，启动的时候报如下错误：
 
 ``` shell
 The futex facility returned an unexpected error code

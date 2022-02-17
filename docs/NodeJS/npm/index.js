@@ -12,6 +12,10 @@ module.exports = {
       path: '/NodeJS/npm/换源-命令版'
     },
     {
+      title: '换源配置',
+      path: '/NodeJS/npm/registry_config'
+    },
+    {
       title: '账号配置',
       path: '/NodeJS/npm/账号配置/'
     },
