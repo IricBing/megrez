@@ -15,6 +15,10 @@ module.exports = {
       path: '/Linux/Ubuntu/基本使用/软件源/apt命令走代理'
     },
     {
+      title: '查看软件可用版本',
+      path: '/Linux/Ubuntu/基本使用/软件源/查看软件可用版本'
+    },
+    {
       title: '卸载软件',
       path: '/Linux/Ubuntu/基本使用/软件源/卸载软件'
     }

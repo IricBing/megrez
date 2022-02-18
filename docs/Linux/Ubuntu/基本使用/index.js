@@ -3,6 +3,7 @@ const opsCmd = require('./运维命令');
 const userManage = require('./用户管理');
 const fileAndDirectory = require('./文件与文件夹');
 const source = require('./软件源');
+const port = require('./端口');
 
 module.exports = {
   title: '基本使用',
@@ -12,6 +13,7 @@ module.exports = {
     fileAndDirectory,
     userManage,
     source,
+    port,
     {
       title: '修改主机名称',
       path: '/Linux/Ubuntu/基本使用/修改主机名称'
@@ -51,14 +53,6 @@ module.exports = {
     {
       title: '挂载新磁盘',
       path: '/Linux/Ubuntu/基本使用/挂载新磁盘'
-    },
-    {
-      title: '查看端口占用',
-      path: '/Linux/Ubuntu/基本使用/查看端口占用'
-    },
-    {
-      title: '查看端口监听',
-      path: '/Linux/Ubuntu/基本使用/查看端口监听'
     },
     {
       title: '开机启动脚本',

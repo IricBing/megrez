@@ -62,7 +62,6 @@ $ kubelet --version
   }, 
   "storage-driver": "overlay2"
 }
-
 ```
 
 > [!tip|label:提示]
@@ -93,7 +92,7 @@ $ sudo systemctl restart docker
 选定 `master` 节点，这里选择 `node1` 作为 `master` 节点，在此节点上运行如下命令：
 
 ```bash
-$ sudo kubeadm init --apiserver-advertise-address 192.168.31.51 --pod-network-cidr 10.244.0.0/16 --image-repository gotok8s
+$ sudo kubeadm init --apiserver-advertise-address 192.168.31.51 --pod-network-cidr 10.244.0.0/16 --image-repository gotok8s --config kubeadm-config.yaml --v=5
 ```
 
 > [!tip|label:提示]
