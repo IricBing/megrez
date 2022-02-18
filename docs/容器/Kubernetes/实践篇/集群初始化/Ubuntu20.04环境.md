@@ -6,11 +6,11 @@
 
 |服务器名称|内网ip|
 |-----|-----|
-|node1|192.168.0.51|
-|node2|192.168.0.52|
-|node3|192.168.0.53|
-|node4|192.168.0.54|
-|node5|192.168.0.55|
+|node1|192.168.31.51|
+|node2|192.168.31.52|
+|node3|192.168.31.53|
+|node4|192.168.31.54|
+|node5|192.168.31.55|
 
 ## 前置操作
 
@@ -82,7 +82,7 @@ $ kubelet --version
 > ```
 
 
-接下来重启docker服务
+接下来重启 `docker` 服务
 
 ```bash
 $ sudo systemctl restart docker
@@ -90,14 +90,14 @@ $ sudo systemctl restart docker
 
 ## 初始化控制平面节点
 
-选定master节点，这里选择node1作为master节点，在此节点上运行如下命令：
+选定`master`节点，这里选择`node1`作为`master`节点，在此节点上运行如下命令：
 
 ```bash
-$ sudo kubeadm init --apiserver-advertise-address 192.168.0.51 --pod-network-cidr 10.244.0.0/16 --image-repository gotok8s
+$ sudo kubeadm init --apiserver-advertise-address 192.168.31.51 --pod-network-cidr 10.244.0.0/16 --image-repository gotok8s
 ```
 
 > [!tip|label:提示]
-> `192.168.0.51` 为 `node1` 的 `内网IP`
+> `192.168.31.51` 为 `node1` 的 `内网IP`
 > 
 > `--pod-network-cidr 10.244.0.0/16` 参数与后续 `CNI` 插件有关，这里以 `flannel` 为例，若后续部署其他类型的网络插件请更改此参数。
 
@@ -387,7 +387,7 @@ Commercial support is available at
 ```
 
 > [!tip|label:提示]
-> `32155` 端口是**自动分配**的端口（也可以手动指定）， `NodePort` 端口范围在 [30000, 32767] 。
+> `32155` 端口是**自动分配**的端口（也可以手动指定）， `NodePort` 端口范围在 `[30000, 32767]` 。
 
 
 ### 删除测试配置

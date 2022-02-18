@@ -4,7 +4,7 @@
 
 [官方文档](https://docs.docker.com/engine/install/ubuntu/)
 
-不推荐的原因：因为走的docker官网的镜像源，国内嘛，呵呵。
+不推荐的原因：因为走的 `docker` 官网的镜像源，国内嘛，呵呵。
 
 ## apt安装法
 
