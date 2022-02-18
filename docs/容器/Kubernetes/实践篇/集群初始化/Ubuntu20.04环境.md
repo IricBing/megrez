@@ -38,7 +38,7 @@ $ curl https://mirrors.aliyun.com/kubernetes/apt/doc/apt-key.gpg | sudo apt-key 
 $ sudo add-apt-repository "deb https://mirrors.aliyun.com/kubernetes/apt/ kubernetes-xenial main"
 
 # 更新源并安装最新版 kubenetes 三大组件
-$ sudo apt update && sudo apt install kubelet kubeadm kubectl
+$ sudo apt update && sudo apt install kubelet=1.22.7-00 kubeadm=1.22.7-00 kubectl=1.22.7-00
 
 # 验证是否安装成功
 $ kubeadm version
@@ -92,13 +92,15 @@ $ sudo systemctl restart docker
 选定 `master` 节点，这里选择 `node1` 作为 `master` 节点，在此节点上运行如下命令：
 
 ```bash
-$ sudo kubeadm init --apiserver-advertise-address 192.168.31.51 --pod-network-cidr 10.244.0.0/16 --image-repository gotok8s --config kubeadm-config.yaml --v=5
+$ sudo kubeadm init --config kubeadm-config.yaml --v=5
+$ sudo kubeadm init --apiserver-advertise-address 192.168.31.51 --pod-network-cidr 10.244.0.0/16 --v=5
 ```
 
 > [!tip|label:提示]
 > `192.168.31.51` 为 `node1` 的 `内网IP`
 > 
 > `--pod-network-cidr 10.244.0.0/16` 参数与后续 `CNI` 插件有关，这里以 `flannel` 为例，若后续部署其他类型的网络插件请更改此参数。
+> 使用国内镜像可以指定镜像仓库：`--image-repository gotok8s`
 
 
 > [!note|label:成功输出]
@@ -179,9 +181,9 @@ $ sudo kubeadm init --apiserver-advertise-address 192.168.31.51 --pod-network-ci
 根据提示，作为**非root**用户，需要执行以下操作来完成环境配置：
 
 ```bash
-$ mkdir -p $HOME/.kube
-$ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-$ sudo chown $(id -u):$(id -g) $HOME/.kube/config
+$ mkdir -p $HOME/.kube && \
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config && \
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
 对于**root**用户，需要将配置写到终端配置文件中，如下所示：
@@ -341,7 +343,7 @@ kubectl delete node <node name>
 
 采用 `nginx` 来测试集群，在 `master` 节点上依次执行如下命令：
 
-```bash {11}
+```bash
 $ kubectl create deployment nginx --image=nginx
 
 $ kubectl expose deployment nginx --port=80 --type=NodePort

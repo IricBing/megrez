@@ -9,10 +9,10 @@ WARNING: No swap limit support
  Cgroup Version: 1
 ```
 
-## 修改kubectl的Cgroup驱动配置
-
-修改 `/var/lib/kubelet/kubeadm-flags.env` 配置文件，在最后加上 `KUBELET_EXTRA_ARGS="--cgroup-driver=systemd"` 。
+## 修改kubelet的Cgroup驱动配置
 
 ```bash
-$ sudo echo KUBELET_EXTRA_ARGS="--cgroup-driver=systemd" >> /var/lib/kubelet/kubeadm-flags.env
+$ sudo cat /var/lib/kubelet/kubeadm-flags.env
+
+$ sudo cat /var/lib/kubelet/config.yaml
 ```
