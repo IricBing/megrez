@@ -7,6 +7,10 @@ module.exports = {
       path: '/Linux/Ubuntu/基本使用/软件源/切换软件源'
     },
     {
+      title: 'apt 安装软件',
+      path: '/Linux/Ubuntu/基本使用/软件源/apt安装软件'
+    },
+    {
       title: 'apt 软件更新',
       path: '/Linux/Ubuntu/基本使用/软件源/apt软件更新'
     },
