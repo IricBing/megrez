@@ -50,7 +50,7 @@ $ kubelet --version
 
 修改 `/etc/docker/daemon.json` 文件，如果按照前置操作来做了，在安装 `docker` 的时候已经写了这个文件，并且添加了国内镜像源，将文件内容更改为如下即可：
 
-```json {3-10}
+```json
 {
   "registry-mirrors": ["https://7ske187f.mirror.aliyuncs.com"], 
   "exec-opts": ["native.cgroupdriver=systemd"], 

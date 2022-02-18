@@ -111,7 +111,15 @@ ZSH_THEME="af-magic"
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 ```
 
-#### Step7. 加载 `.zshrc` 文件
+#### Step7. 修复一些支持
+
+在末尾加入：
+
+```bash
+setopt  no_nomatch # 修复通配符查找支持
+```
+
+#### Step8. 加载 `.zshrc` 文件
 
 ```bash
 $ source ~/.zshrc
