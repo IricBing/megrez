@@ -5,8 +5,9 @@ const windows = require('./docs/Windows');
 const ide = require('./docs/IDE');
 const web = require('./docs/Web');
 const go = require('./docs/Go');
-const rust = require('./docs/Rust')
+const rust = require('./docs/Rust');
 const ops = require('./docs/运维');
+const spearAndShield = require('./docs/矛与盾');
 const database = require('./docs/数据库');
 const communicationFramework = require('./docs/通信框架');
 const programDesign = require('./docs/程序设计');
@@ -23,8 +24,8 @@ const myPC = require('./docs/个人电脑');
 const blockchain = require('./docs/区块链');
 const ai = require('./docs/AI');
 const threeDimensions = require('./docs/3D建模');
-const tencent = require('./docs/Tencent')
-const openSource = require('./docs/优质开源项目')
+const tencent = require('./docs/Tencent');
+const openSource = require('./docs/优质开源项目');
 
 const sidebar = [
   language,
@@ -36,6 +37,7 @@ const sidebar = [
   rust,
   go,
   ops,
+  spearAndShield,
   container,
   database,
   linux,
@@ -57,24 +59,24 @@ const sidebar = [
 ];
 
 const tail = path => {
-  if(path.endsWith('/')) return `(${path+'README.md'})`
-  if(path.endsWith('.md')) return `(${path})`;
-  return `(${path + '.md'})`
-}
+  if (path.endsWith('/')) return `(${path + 'README.md'})`;
+  if (path.endsWith('.md')) return `(${path})`;
+  return `(${path + '.md'})`;
+};
 
 const recursion = (level, list, result) => {
   for (const item of list) {
-    const content =[...new Array(level).keys()].map(i => '  ').join('') + `- ${item.path ? '[' + item.title + ']' +  tail(item.path) : item.title}`;
+    const content = [...new Array(level).keys()].map(i => '  ').join('') + `- ${item.path ? '[' + item.title + ']' + tail(item.path) : item.title}`;
     result.push(content);
     if (item.children?.length) recursion(level + 1, item.children, result);
   }
 };
 
 const result = [];
-recursion(0,sidebar,result)
+recursion(0, sidebar, result);
 
-const fs = require("fs");
-fs.writeFile("./docs/_sidebar.md", result.join('\n'), error => {
-  if (error) return console.log("菜单栏文件生成失败,原因是" + error.message);
-  console.log("菜单栏文件生成成功！");
+const fs = require('fs');
+fs.writeFile('./docs/_sidebar.md', result.join('\n'), error => {
+  if (error) return console.log('菜单栏文件生成失败,原因是' + error.message);
+  console.log('菜单栏文件生成成功！');
 });
