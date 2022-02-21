@@ -348,7 +348,7 @@ $ kubectl create deployment nginx --image=nginx
 
 $ kubectl expose deployment nginx --port=80 --type=NodePort
 
-$ kubectl get pod, svc
+$ kubectl get pod,svc
 NAME                         READY   STATUS    RESTARTS   AGE
 pod/nginx-6799fc88d8-nq5f2   1/1     Running   0          68s
 
