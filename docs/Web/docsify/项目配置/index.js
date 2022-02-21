@@ -24,6 +24,10 @@ module.exports = {
     {
       title: '数学公式支持',
       path: '/Web/docsify/项目配置/数学公式支持/'
+    },
+    {
+      title: '备案信息',
+      path: '/Web/docsify/项目配置/备案/'
     }
   ]
 };
