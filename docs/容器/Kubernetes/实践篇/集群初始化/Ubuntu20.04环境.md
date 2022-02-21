@@ -38,7 +38,7 @@ $ curl https://mirrors.aliyun.com/kubernetes/apt/doc/apt-key.gpg | sudo apt-key 
 $ sudo add-apt-repository "deb https://mirrors.aliyun.com/kubernetes/apt/ kubernetes-xenial main"
 
 # 更新源并安装最新版 kubenetes 三大组件
-$ sudo apt update && sudo apt install kubelet=1.22.7-00 kubeadm=1.22.7-00 kubectl=1.22.7-00
+$ sudo apt update && sudo apt install kubelet kubeadm kubectl
 
 # 验证是否安装成功
 $ kubeadm version
@@ -67,7 +67,7 @@ $ kubelet --version
 > [!tip|label:提示]
 > 如果没有此文件，可以使用更简便的方式：
 > ```bash
-> $ mkdir /etc/docker
+> $ sudo mkdir /etc/docker
 > $ cat <<EOF | sudo tee /etc/docker/daemon.json
 > {
 >   "exec-opts": ["native.cgroupdriver=systemd"],
@@ -202,32 +202,31 @@ echo "export KUBECONFIG=/etc/kubernetes/admin.conf" >> ~/.bashrc
 source ~/.bashrc
 ```
 
+### 校验
+
+经过上一步之后校验一下安装结果：
+
+```bash
+$ kubectl get pods -A -o wide
+NAMESPACE     NAME                            READY   STATUS    RESTARTS   AGE     IP              NODE     NOMINATED NODE   READINESS GATES
+kube-system   coredns-7fc76f876d-5dm82        0/1     Pending   0          9m5s    <none>          <none>   <none>           <none>
+kube-system   coredns-7fc76f876d-qg64r        0/1     Pending   0          9m5s    <none>          <none>   <none>           <none>
+kube-system   etcd-node1                      1/1     Running   0          9m18s   192.168.31.51   node1    <none>           <none>
+kube-system   kube-apiserver-node1            1/1     Running   0          9m18s   192.168.31.51   node1    <none>           <none>
+kube-system   kube-controller-manager-node1   1/1     Running   0          9m18s   192.168.31.51   node1    <none>           <none>
+kube-system   kube-proxy-8xcvr                1/1     Running   0          9m5s    192.168.31.51   node1    <none>           <none>
+kube-system   kube-scheduler-node1            1/1     Running   0          9m18s   192.168.31.51   node1    <none>           <none>
+```
+
+> [!note]
+> 这里面`coredns`全部是`Pending`是正常的现象，因为**系统就是这么设计的**。 `kubeadm` 的网络供应商是中立的，因此管理员应该选择 安装 `pod` 的网络插件。 你必须完成 `Pod` 的网络配置，然后才能完全部署 `CoreDNS`。 在网络被配置好之前，`DNS` 组件会一直处于 `Pending` 状态。详见[官方文档](https://kubernetes.io/zh/docs/setup/production-environment/tools/kubeadm/troubleshooting-kubeadm/#coredns-%E5%81%9C%E6%BB%9E%E5%9C%A8-pending-%E7%8A%B6%E6%80%81)
+
 ## 部署 CNI
 
 使用 `kubectl` 部署 `flannel` 。
 
 ```bash
-$ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
-```
-
-因为从 `raw.githubusercontent.com` 上下载了文件，可能下载不下来，同时，这个配置文件中的 `quay.io` 镜像是 `RedHat` 在维护，可能下载缓慢，我们采用下载 `kube-flannel.yml` 文件并手动将里面的 `quay.io` 镜像替换成 `docker` 镜像的方式来安装，替换示例：
-
-```git
-$ diff kube-flannel.yml kube-flannel-changed.yml
-
-169c169
-<         image: quay.io/coreos/flannel:v0.14.0
----
->         image: xwjh/flannel:v0.14.0
-183c183
-<         image: quay.io/coreos/flannel:v0.14.0
----
->         image: xwjh/flannel:v0.14.0
-```
-
-安装命令：
-
-```bash
+$ wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 $ kubectl apply -f kube-flannel.yml
 Warning: policy/v1beta1 PodSecurityPolicy is deprecated in v1.21+, unavailable in v1.25+
 podsecuritypolicy.policy/psp.flannel.unprivileged created
@@ -258,7 +257,7 @@ kube-system   kube-scheduler-node1            1/1     Running   0          3h43m
 ```
 
 > [!tip|label:提示]
-> `node Status` 从 `NotReady` 到 `Ready` 要等待一段时间，这里的时间长短与**docker镜像**下载速度有关，因此我们才会在上一步的时候修改 `RedHat` 维护的地址到 `Docker` 地址。
+> `node Status` 从 `NotReady` 到 `Ready` 要等待一段时间，这里的时间长短与**docker镜像**下载速度有关，通过配置阿里云镜像加速工具即可。
 
 
 ## 允许控制节点调度Pod（可选）
