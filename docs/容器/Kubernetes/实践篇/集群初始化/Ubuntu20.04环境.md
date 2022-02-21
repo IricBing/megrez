@@ -70,6 +70,7 @@ $ kubelet --version
 > $ sudo mkdir /etc/docker
 > $ cat <<EOF | sudo tee /etc/docker/daemon.json
 > {
+>   "registry-mirrors": ["https://7ske187f.mirror.aliyuncs.com"], 
 >   "exec-opts": ["native.cgroupdriver=systemd"],
 >   "log-driver": "json-file",
 >   "log-opts": {
