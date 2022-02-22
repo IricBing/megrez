@@ -398,3 +398,7 @@ $ kubectl delete deployment nginx
 
 $ kubectl delete service nginx
 ```
+
+## 后续优化
+
+- [zsh自动补全配置](优化/zsh自动补全.md)
