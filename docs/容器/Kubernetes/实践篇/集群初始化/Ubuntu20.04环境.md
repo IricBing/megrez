@@ -401,4 +401,4 @@ $ kubectl delete service nginx
 
 ## 后续优化
 
-- [zsh自动补全配置](优化/zsh自动补全.md)
+- [zsh自动补全配置](优化/zsh自动补全.md) (只需要在控制平面节点执行即可)

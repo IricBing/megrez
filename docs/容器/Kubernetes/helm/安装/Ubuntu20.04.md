@@ -29,7 +29,7 @@ $ source <(helm completion zsh)
 永久生效：
 
 ```bash
-helm completion zsh > "${fpath[1]}/_helm"
+$ helm completion zsh > "${fpath[1]}/_helm"
 ```
 
 > [!tip|label:永久有效的实现原理]
