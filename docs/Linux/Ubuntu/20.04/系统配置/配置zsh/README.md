@@ -49,9 +49,6 @@ $ sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/t
 
 ```bash
 $ git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
-
-# 使用GitHub复刻版
-$ git clone https://hub.fastgit.org/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 ```
 
 #### Step2. 拷贝 `.zshrc` 配置文件
@@ -70,18 +67,12 @@ $ sudo reboot
 
 ```bash
 $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-# 使用GitHub复刻版
-$ git clone https://hub.fastgit.org/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 #### Step5. 下载 `zsh-autosuggestions` 插件
 
 ```bash
 $ git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-# 使用GitHub复刻版
-$ git clone https://hub.fastgit.org/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
 #### Step6. 更改配置文件
