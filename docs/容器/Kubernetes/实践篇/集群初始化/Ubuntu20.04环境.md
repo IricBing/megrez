@@ -94,7 +94,7 @@ $ sudo systemctl restart docker
 
 ```bash
 $ sudo kubeadm init --config kubeadm-config.yaml --v=5
-$ sudo kubeadm init --apiserver-advertise-address 192.168.31.51 --pod-network-cidr 10.244.0.0/16 --v=5
+$ sudo kubeadm init --apiserver-advertise-address 192.168.31.51 --pod-network-cidr 10.244.0.0/16 --image-repository gotok8s --v=5
 ```
 
 > [!tip|label:提示]
