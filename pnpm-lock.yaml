@@ -2,11 +2,13 @@ lockfileVersion: 5.3
 
 specifiers:
   docsify-cli: ^4.4.3
+  marked: ^4.0.12
   prettier: ^2.4.1
   workbox-cli: ^6.4.2
 
 devDependencies:
   docsify-cli: 4.4.3
+  marked: 4.0.12
   prettier: 2.5.0
   workbox-cli: 6.4.2
 
@@ -2680,8 +2682,14 @@ packages:
     dev: true
 
   /marked/1.2.9:
-    resolution: {integrity: sha1-U3hviwXUwBoqWna30eyZQ9Kdctw=, tarball: marked/download/marked-1.2.9.tgz}
+    resolution: {integrity: sha512-H8lIX2SvyitGX+TRdtS06m1jHMijKN/XjfH6Ooii9fvxMlh8QdqBfBDkGUpMWH2kQNrtixjzYUa3SH8ROTgRRw==}
     engines: {node: '>= 8.16.2'}
+    hasBin: true
+    dev: true
+
+  /marked/4.0.12:
+    resolution: {integrity: sha512-hgibXWrEDNBWgGiK18j/4lkS6ihTe9sxtV4Q1OQppb/0zzyPSzoFANBa5MfsG/zgsWklmNnhm0XACZOH/0HBiQ==}
+    engines: {node: '>= 12'}
     hasBin: true
     dev: true
 

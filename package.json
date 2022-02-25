@@ -21,6 +21,7 @@
   "homepage": "https://github.com/IricBing/megrez#readme",
   "devDependencies": {
     "docsify-cli": "^4.4.3",
+    "marked": "^4.0.12",
     "prettier": "^2.4.1",
     "workbox-cli": "^6.4.2"
   }
