@@ -26,6 +26,8 @@ const ai = require('./docs/AI');
 const threeDimensions = require('./docs/3D建模');
 const tencent = require('./docs/Tencent');
 const openSource = require('./docs/优质开源项目');
+const cloudServer = require('./docs/云服务');
+
 
 const sidebar = [
   language,
@@ -47,6 +49,7 @@ const sidebar = [
   protocol,
   openSource,
   tencent,
+  cloudServer,
   media,
   ai,
   blockchain,
