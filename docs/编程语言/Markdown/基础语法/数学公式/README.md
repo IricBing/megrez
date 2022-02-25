@@ -50,6 +50,9 @@
 
 ### 字体
 
+> [!note]
+> 字体在网页上显示不出来。
+
 #### Typewriter
 
 `$\mathtt{A}$` 显示为：$\mathtt{A}$
