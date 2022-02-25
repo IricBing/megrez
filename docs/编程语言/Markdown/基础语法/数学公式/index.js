@@ -5,6 +5,10 @@ module.exports = {
     {
       title: 'gitlab 兼容',
       path: '/编程语言/Markdown/基础语法/数学公式/gitlab兼容'
+    },
+    {
+      title: 'github 兼容',
+      path: '/编程语言/Markdown/基础语法/数学公式/github兼容'
     }
   ]
 };
