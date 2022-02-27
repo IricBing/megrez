@@ -7,7 +7,8 @@ const func = require('./Function');
 const iteratorAndFor = require('./迭代器和泛型for');
 const objectOriented = require('./面向对象编程');
 const metaTable = require('./元表和元方法');
-const closure = require('./闭包')
+const closure = require('./闭包');
+const modeMatch = require('./模式匹配');
 
 module.exports = {
   title: '基础篇',
@@ -28,6 +29,7 @@ module.exports = {
       path: '/编程语言/Lua/基础篇/Boolean/'
     },
     string,
+    modeMatch,
     table,
     func,
     closure,
