@@ -9,6 +9,7 @@ const objectOriented = require('./面向对象编程');
 const metaTable = require('./元表和元方法');
 const closure = require('./闭包');
 const modeMatch = require('./模式匹配');
+const dataStructure = require('./数据结构')
 
 module.exports = {
   title: '基础篇',
@@ -35,6 +36,7 @@ module.exports = {
     closure,
     iteratorAndFor,
     metaTable,
-    objectOriented
+    objectOriented,
+    dataStructure
   ]
 };
