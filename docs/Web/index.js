@@ -14,8 +14,9 @@ const elementUI = require('./ElementUI');
 const electron = require('./Electron');
 const vantUI = require('./VantUI');
 const tauri = require('./Tauri');
+const microWeb = require('./微前端');
 
 module.exports = {
   title: 'Web',
-  children: [base, experience, libs, vue2, vue3, elementUI, vantUI, vite, uniApp, miniProgram, official, electron, tauri, vuepress, docsify, chrome]
+  children: [base, experience, libs, microWeb, vue2, vue3, elementUI, vantUI, vite, uniApp, miniProgram, official, electron, tauri, vuepress, docsify, chrome]
 };
