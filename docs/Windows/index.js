@@ -5,8 +5,9 @@ const base = require('./基础篇');
 const util = require('./奇技淫巧');
 const wsl = require('./WSL');
 const baseUsage = require('./基本使用');
+const practice = require('./实践积累');
 
 module.exports = {
   title: 'Windows',
-  children: [base, baseUsage, entityFramework, desktopApplication, systemConfig, wsl, util]
+  children: [base, baseUsage, practice, entityFramework, desktopApplication, systemConfig, wsl, util]
 };

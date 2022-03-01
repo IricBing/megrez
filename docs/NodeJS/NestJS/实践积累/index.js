@@ -8,8 +8,9 @@ const wechatPay = require('./微信支付');
 const aliPay = require('./支付宝支付');
 const wechatMP = require('./微信小程序');
 const nccPack = require('./ncc打包');
+const pkg = require('./pkg打包');
 
 module.exports = {
   title: '实践积累',
-  children: [authentication, xmlSupport, official, wechatMP, wechatPay, aliPay, email, redis, socketIOCluster, nccPack]
+  children: [authentication, xmlSupport, official, wechatMP, wechatPay, aliPay, email, redis, socketIOCluster, nccPack, pkg]
 };
