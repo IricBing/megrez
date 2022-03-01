@@ -9,7 +9,7 @@
 将 `exe` 文件拖拽到这里即可。
 
 > [!tip|label:提示]
-> 对于一些 `msi` 、 `setup.exe` 等安装文件是不能直接拖拽的，要先安装。 `msi` 文件解包可参考：[msi文件解包](./msi文件解包.md)
+> 对于一些 `msi` 、 `setup.exe` 等安装文件是不能直接拖拽的，要先安装。 `msi` 文件解包可参考：[msi文件解包](../msi文件解包/README.md)
 
 
 > [!tip|label:软件安装提示]
