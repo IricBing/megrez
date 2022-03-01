@@ -7,6 +7,17 @@
 ```yaml
 version: "3.8"
 services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssql
+    hostname: mssql
+    restart: always
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: m5tgb6tfc%^
+    ports:
+      - 31433:1433
+      
   postgres:
     image: postgres:14-alpine
     container_name: postgresql
