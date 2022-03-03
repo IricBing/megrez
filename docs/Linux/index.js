@@ -2,8 +2,9 @@ const ubuntu = require('./Ubuntu');
 const base = require('./基础篇');
 const sosumi = require('./sosumi');
 const alpine = require('./Alpine');
+const seLinux = require('./SELinux');
 
 module.exports = {
   title: 'Linux',
-  children: [base, ubuntu, alpine, sosumi]
+  children: [base, ubuntu, alpine, seLinux, sosumi]
 };
