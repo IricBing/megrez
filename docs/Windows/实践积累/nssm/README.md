@@ -19,3 +19,51 @@
 * 安装简单，并且可以随时修改服务属性，更新也更加方便。
 * 可以利用控制台输出直接实现一个简单的日志系统。
 * 不用考虑再加一个服务实现服务守护功能。
+
+## 快速上手
+
+服务安装：
+
+```bash
+$ nssm.exe install 
+$ nssm.exe install <service_name>
+
+e.g.
+$ nssm.exe install JS906
+```
+
+启动服务
+
+```bash
+$ nssm.exe start <service_name>
+
+e.g.
+$ nssm.exe start JS906
+```
+
+停止服务
+
+```bash
+$ nssm.exe stop <service_name>
+
+e.g.
+$ nssm.exe stop JS906
+```
+
+重启服务
+
+```bash
+$ nssm.exe restart <service_name>
+
+e.g.
+$ nssm.exe restart JS906
+```
+
+移除服务
+
+```bash
+$ nssm.exe remove <service_name> confirm
+
+e.g.
+$ nssm.exe remove JS906 confirm
+```
