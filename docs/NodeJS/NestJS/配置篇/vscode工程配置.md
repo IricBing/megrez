@@ -405,9 +405,8 @@ $ pnpm husky add .husky/pre-commit "npx lint-staged"
 }
 ```
 
-> [!tip|label:提示]
+> [!tip|label: 提示]
 > `husky` 版本进化很快，还破坏性升级，这就有点难受了，如果发现不好使，可能就是升级了，目前版本： `6.0.0`
-
 
 ### 生产环境打包优化
 
@@ -477,6 +476,9 @@ $ pnpm build:prod
 
 !./src/
 ```
+
+> [!tip|label: 提示]
+> 基于 `Drone` 的**镜像层**处理方案无需 `.dockerignore` 文件。
 
 #### 新建 `Dockerfile` 文件
 
