@@ -1,8 +1,10 @@
 const branch = require('./分支');
+const relationFile = require('./相关文件');
 
 module.exports = {
   title: '基本使用',
   children: [
+    relationFile,
     {
       title: '回滚代码',
       path: '/Git/基本使用/回滚代码'
