@@ -7,6 +7,17 @@
 ```yaml
 version: "3.8"
 services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:22.2.3.5
+    container_name: clickhouse
+    hostname: clickhouse
+    restart: always
+    ports:
+      - 8123:8123
+      - 9000:9000
+    volumes:
+      - clickhouse-data:/var/lib/clickhouse
+
   mssql:
     image: mcr.microsoft.com/mssql/server:2019-latest
     container_name: mssql
@@ -88,6 +99,7 @@ volumes:
   mongo-data:
   redis-data:
   elasticsearch-data:
+  clickhouse-data:
 ```
 
 ## 包含的服务
@@ -115,3 +127,11 @@ volumes:
 * `ElasticSearch 7.13.2`
 
   无需验证
+
+* `Microsoft SQL Server 2019`
+  
+  用户名： `sa`
+
+  密码： `m5tgb6tfc%^`
+
+- `ClickHouse 22.2.3.5`
