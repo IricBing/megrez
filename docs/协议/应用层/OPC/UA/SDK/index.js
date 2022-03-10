@@ -1,6 +1,6 @@
 const nodejs = require('./NodeJS');
 
 module.exports = {
-  title: 'NodeJS',
+  title: 'SDK',
   children: [nodejs]
 };
