@@ -17,7 +17,7 @@
 <tr><td>收敛数列的性质</td><td>了解</td></tr>
 
 <tr><td rowspan="2">1.3 函数的极限</td><td>单例极限以及左、右极限与极限存在的关系</td><td>理解【<span style="color:blue; ">难点</span>】</td></tr>
-<tr><td>函数极限的性质</td><td>掌握</td></tr>
+<tr><td>函数极限的性质</td><td><b>掌握</b></td></tr>
 
 <tr><td rowspan="2">1.4 无穷小与无穷大</td><td>无穷小的概念</td><td>理解</td></tr>
 <tr><td>无穷大的概念</td><td>理解</td></tr>
