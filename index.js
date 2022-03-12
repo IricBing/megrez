@@ -27,7 +27,7 @@ const threeDimensions = require('./docs/3D建模');
 const tencent = require('./docs/Tencent');
 const openSource = require('./docs/优质开源项目');
 const cloudServer = require('./docs/云服务');
-
+const postgraduate = require('./docs/考研');
 
 const sidebar = [
   language,
@@ -58,7 +58,8 @@ const sidebar = [
   ide,
   adobe,
   google,
-  myPC
+  myPC,
+  postgraduate
 ];
 
 const tail = path => {
