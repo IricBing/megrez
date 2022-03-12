@@ -11,6 +11,7 @@ const closure = require('./闭包');
 const modeMatch = require('./模式匹配');
 const dataStructure = require('./数据结构');
 const coroutine = require('./协程');
+const bitAndByte = require('./位和字节');
 
 module.exports = {
   title: '基础篇',
@@ -30,6 +31,7 @@ module.exports = {
       title: 'Boolean（布尔）',
       path: '/编程语言/Lua/基础篇/Boolean/'
     },
+    bitAndByte,
     string,
     modeMatch,
     table,
