@@ -47,6 +47,7 @@ const sidebar = [
   communicationFramework,
   windows,
   protocol,
+  postgraduate,
   openSource,
   tencent,
   cloudServer,
@@ -58,8 +59,7 @@ const sidebar = [
   ide,
   adobe,
   google,
-  myPC,
-  postgraduate
+  myPC
 ];
 
 const tail = path => {
