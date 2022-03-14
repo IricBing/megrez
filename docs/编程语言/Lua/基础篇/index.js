@@ -12,6 +12,7 @@ const modeMatch = require('./模式匹配');
 const dataStructure = require('./数据结构');
 const coroutine = require('./协程');
 const bitAndByte = require('./位和字节');
+const moduleAndPackage = require('./模块和包');
 
 module.exports = {
   title: '基础篇',
@@ -41,6 +42,7 @@ module.exports = {
     metaTable,
     objectOriented,
     dataStructure,
-    coroutine
+    coroutine,
+    moduleAndPackage
   ]
 };
