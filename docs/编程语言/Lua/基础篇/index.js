@@ -13,6 +13,7 @@ const dataStructure = require('./数据结构');
 const coroutine = require('./协程');
 const bitAndByte = require('./位和字节');
 const moduleAndPackage = require('./模块和包');
+const dateAndTime = require('./日期和时间');
 
 module.exports = {
   title: '基础篇',
@@ -43,6 +44,7 @@ module.exports = {
     objectOriented,
     dataStructure,
     coroutine,
-    moduleAndPackage
+    moduleAndPackage,
+    dateAndTime
   ]
 };
