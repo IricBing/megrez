@@ -7,7 +7,8 @@
 
 ## 常用连接
 
-[docsify文件下载](Web/docsify/项目配置/文件下载/README.md)
+- [docsify文件下载](Web/docsify/项目配置/文件下载/README.md)
+- [局域网文件传输](实践积累/局域网文件传输/README.md)
 
 ## 常用文本图形
 
