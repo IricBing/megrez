@@ -7,8 +7,9 @@ const micro = require('./微服务');
 const base = require('./基础篇');
 const plugin = require('./插件篇');
 const ecology = require('./生态篇');
+const principle = require('./原理探究');
 
 module.exports = {
   title: 'NestJS',
-  children: [config, base, plugin, container, ops, micro, practice, ecology, fillPitManual]
+  children: [config, base, principle, plugin, container, ops, micro, practice, ecology, fillPitManual]
 };
