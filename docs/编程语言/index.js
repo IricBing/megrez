@@ -9,9 +9,10 @@ const rust = require('./Rust');
 const markdown = require('./Markdown');
 const go = require('./Go');
 const bat = require('./bat');
+const java = require('./Java');
 const compile = require('./编译');
 
 module.exports = {
   title: '编程语言',
-  children: [base, c, javascript, typescript, csharp, lua, python, rust, go, markdown, bat, compile]
+  children: [base, c, javascript, typescript, csharp, lua, python, rust, go, markdown, bat, java, compile]
 };
