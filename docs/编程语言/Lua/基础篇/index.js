@@ -14,6 +14,7 @@ const coroutine = require('./协程');
 const bitAndByte = require('./位和字节');
 const moduleAndPackage = require('./模块和包');
 const dateAndTime = require('./日期和时间');
+const garbageCollection = require('./垃圾收集');
 
 module.exports = {
   title: '基础篇',
@@ -45,6 +46,7 @@ module.exports = {
     dataStructure,
     coroutine,
     moduleAndPackage,
-    dateAndTime
+    dateAndTime,
+    garbageCollection
   ]
 };
