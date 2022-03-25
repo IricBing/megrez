@@ -16,6 +16,7 @@ const moduleAndPackage = require('./模块和包');
 const dateAndTime = require('./日期和时间');
 const garbageCollection = require('./垃圾收集');
 const io = require('./输入输出');
+const compile = require('./编译执行和错误');
 
 module.exports = {
   title: '基础篇',
@@ -49,6 +50,7 @@ module.exports = {
     moduleAndPackage,
     dateAndTime,
     garbageCollection,
-    io
+    io,
+    compile
   ]
 };
