@@ -2,6 +2,7 @@
   "editor.detectIndentation": false, // vscode默认启用了根据文件类型自动设置tabsize的选项
   "editor.tabSize": 2, // 重新设定tabsize
   "editor.formatOnSave": false, // #每次保存的时候自动格式化
+  "editor.wrappingColumn": true,
   // 在使用搜索功能时，将这些文件夹/文件排除在外
   "search.exclude": {
     "**/node_modules": true,
