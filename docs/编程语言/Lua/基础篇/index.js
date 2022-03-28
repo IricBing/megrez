@@ -17,6 +17,7 @@ const dateAndTime = require('./日期和时间');
 const garbageCollection = require('./垃圾收集');
 const io = require('./输入输出');
 const compile = require('./编译执行和错误');
+const refection = require('./反射');
 
 module.exports = {
   title: '基础篇',
@@ -51,6 +52,7 @@ module.exports = {
     dateAndTime,
     garbageCollection,
     io,
-    compile
+    compile,
+    refection
   ]
 };

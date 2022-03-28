@@ -23,6 +23,7 @@
     "docsify-cli": "^4.4.3",
     "marked": "^4.0.12",
     "prettier": "^2.4.1",
+    "prismjs": "^1.27.0",
     "workbox-cli": "^6.4.2"
   }
 }
