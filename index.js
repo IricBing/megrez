@@ -19,6 +19,7 @@ const mq = require('./docs/消息中间件');
 const google = require('./docs/Google');
 const webAssembly = require('./docs/WebAssembly');
 const experience = require('./docs/实践积累');
+const computer = require('./docs/计算机组成原理');
 const media = require('./docs/音视频');
 const myPC = require('./docs/个人电脑');
 const blockchain = require('./docs/区块链');
@@ -47,6 +48,7 @@ const sidebar = [
   communicationFramework,
   windows,
   protocol,
+  computer,
   postgraduate,
   openSource,
   tencent,
