@@ -68,7 +68,13 @@
           tocMaxLevel: 5,
           target: 'h2, h3, h4, h5, h6'
         },
-        search: 'auto', // 默认值
+        search: {
+          maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+          placeholder: '关键字搜索',
+          noData: '暂无笔记',
+          depth: 6, // 搜索标题的最大层级, 1 - 6
+          hideOtherSidebarContent: false // 是否隐藏其他侧边栏内容
+        },
         markdown: {
           renderer: {
             code: function (code, lang) {
