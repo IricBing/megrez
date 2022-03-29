@@ -8,8 +8,9 @@ const iconfont = require('./阿里巴巴矢量图库');
 const ocr = require('./图片文字识别');
 const imageEnhance = require('./图片增强');
 const tftpServer = require('./TFTP服务器搭建');
+const cloudDisk = require('./云盘');
 
 module.exports = {
   title: '实践积累',
-  children: [produceTools, email, csv, encryptAndDecrypt, ipRegion, localNetFileTransfer, iconfont, ocr, imageEnhance, tftpServer]
+  children: [produceTools, email, csv, encryptAndDecrypt, ipRegion, localNetFileTransfer, iconfont, ocr, imageEnhance, tftpServer, cloudDisk]
 };
