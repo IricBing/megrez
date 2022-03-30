@@ -29,6 +29,7 @@ const tencent = require('./docs/Tencent');
 const openSource = require('./docs/优质开源项目');
 const cloudServer = require('./docs/云服务');
 const postgraduate = require('./docs/考研');
+const java = require('./docs/Java');
 
 const sidebar = [
   language,
@@ -37,15 +38,16 @@ const sidebar = [
   web,
   webAssembly,
   git,
-  rust,
-  go,
-  ops,
-  spearAndShield,
   container,
   database,
   linux,
   mq,
   communicationFramework,
+  go,
+  rust,
+  java,
+  ops,
+  spearAndShield,
   windows,
   protocol,
   computer,
