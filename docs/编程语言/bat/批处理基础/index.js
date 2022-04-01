@@ -6,8 +6,9 @@ const errorLevel = require('./errorlevel');
 const title = require('./title');
 const color = require('./COLOR');
 const mode = require('./mode配置系统设备');
+const goto = require('./GOTO');
 
 module.exports = {
   title: '批处理基础',
-  children: [command, attentions, echo, pause, errorLevel, title, color, mode]
+  children: [command, attentions, echo, pause, errorLevel, title, color, mode, goto]
 };
