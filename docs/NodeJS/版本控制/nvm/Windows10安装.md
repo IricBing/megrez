@@ -49,7 +49,6 @@ Usage:
 
 ```bash
 $ nvm node_mirror https://npmmirror.com/mirrors/node
-$ nvm npm_mirror https://hub.fastgit.org/npm/cli/archive/
 ```
 
 ## 采坑
