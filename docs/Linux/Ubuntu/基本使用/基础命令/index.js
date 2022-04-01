@@ -10,6 +10,10 @@ module.exports = {
       path: '/Linux/Ubuntu/基本使用/基础命令/tar'
     },
     {
+      title: 'rar',
+      path: '/Linux/Ubuntu/基本使用/基础命令/rar'
+    },
+    {
       title: 'curl',
       path: '/Linux/Ubuntu/基本使用/基础命令/curl'
     },
