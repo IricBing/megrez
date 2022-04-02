@@ -48,7 +48,7 @@ Type [drive:][path]filename | find /c
 echo 111 >test.txt 
 echo 222 >>test.txt 
 find "111" test.txt 
-del test.txt 
+del test.txt
 pause
 ```
 
