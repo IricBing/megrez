@@ -2,6 +2,7 @@ const chocolatey = require('./Chocolatey');
 const terminalOptimize = require('./终端美化');
 const trafficMonitor = require('./TrafficMonitor');
 const clover = require('./Clover文件资源管理器扩展')
+const qttabbar = require('./qttabbar');
 
 module.exports = {
   title: '系统配置',
@@ -13,6 +14,7 @@ module.exports = {
     },
     terminalOptimize,
     trafficMonitor,
-    clover
+    clover,
+    qttabbar
   ]
 };
