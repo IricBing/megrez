@@ -10,10 +10,6 @@ $ curl -L https://github.com/drone-runners/drone-runner-exec/releases/latest/dow
 $ sudo install -t /usr/local/bin drone-runner-exec
 ```
 
-::: tip 提示
-不可采用GitHub复刻版下载
-:::
-
 ## Step2. 配置
 
 > [!warning|label: 注意]

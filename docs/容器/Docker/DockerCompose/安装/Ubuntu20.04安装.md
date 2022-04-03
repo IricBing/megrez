@@ -12,14 +12,10 @@ $ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docke
 > 有可能下载不下来，被墙……
 
 
-如果下载不下来，自己去[GitHub](https://github.com/docker/compose/releases)中自行下载最新版二进制文件，之后复制到 `/usr/local/bin/` 目录下即可。或者使用复刻版下载：
-
-```bash
-$ sudo curl -L "https://hub.fastgit.org/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-```
+如果下载不下来，自己去[GitHub](https://github.com/docker/compose/releases)中自行下载最新版二进制文件，之后复制到 `/usr/local/bin/` 目录下即可。
 
 > [!tip|label:提示]
-> 要注意命令中的**版本号**，复刻版下载也不是那么快，基本上维持在**100K**多一点的网速
+> 要注意命令中的**版本号**
 
 
 ## Step2. 赋予可执行权限

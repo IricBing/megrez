@@ -166,9 +166,6 @@ $ echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
 ```bash
 $ git clone https://github.com/laishulu/Sarasa-Mono-SC-Nerd.git
 
-# 采用复刻版
-$ git clone https://hub.fastgit.org/laishulu/Sarasa-Mono-SC-Nerd.git
-
 $ cd Sarasa-Mono-SC-Nerd
 $ sudo mkdir -p /usr/share/fonts/Sarasa-Mono-SC-Nerd
 $ sudo cp * /usr/share/fonts/Sarasa-Mono-SC-Nerd    #复制字体文件到Linux系统中的/usr/share/fonts/Sarasa-Mono-SC-Nerd文件夹中
