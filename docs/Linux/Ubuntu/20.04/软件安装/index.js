@@ -1,3 +1,5 @@
+const installFmaConfigTool = require('./安装fma-config-tool');
+
 module.exports = {
   title: '软件安装',
   children: [
@@ -16,6 +18,7 @@ module.exports = {
     {
       title: '安装WPS',
       path: '/Linux/Ubuntu/20.04/软件安装/安装wps/'
-    }
+    },
+    installFmaConfigTool
   ]
 };

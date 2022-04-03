@@ -4,7 +4,7 @@
 
 ## Step1. 启动filemanger-actions
 
-该软件的安装笔记参见：[Ubuntu 20.04 安装fma-config-tool](../软件安装/安装fma-config-tool.md)
+该软件的安装笔记参见：[安装fma-config-tool](../../软件安装/安装fma-config-tool/README.md)
 
 ```bash
 $ fma-config-tool
