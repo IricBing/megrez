@@ -10,8 +10,9 @@ const goto = require('./GOTO');
 const find = require('./find');
 const start = require('./start');
 const assocAndFType = require('./assoc和ftype');
+const pushdAndpopd = require('./pushd和popd');
 
 module.exports = {
   title: '批处理基础',
-  children: [command, attentions, echo, pause, errorLevel, title, color, mode, goto, find, start, assocAndFType]
+  children: [command, attentions, echo, pause, errorLevel, title, color, mode, goto, find, start, assocAndFType, pushdAndpopd]
 };
