@@ -14,8 +14,9 @@ const pushdAndpopd = require('./pushd和popd');
 const call = require('./CALL');
 const shift = require('./shift');
 const setlocal = require('./setlocal与变量延迟');
+const attrib = require('./ATTRIB');
 
 module.exports = {
   title: '批处理基础',
-  children: [command, attentions, echo, pause, errorLevel, title, color, mode, goto, find, start, assocAndFType, pushdAndpopd, call, shift, setlocal]
+  children: [command, attentions, echo, pause, errorLevel, title, color, mode, goto, find, start, assocAndFType, pushdAndpopd, call, shift, setlocal, attrib]
 };
