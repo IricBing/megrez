@@ -4,6 +4,7 @@ const userManage = require('./用户管理');
 const fileAndDirectory = require('./文件与文件夹');
 const source = require('./软件源');
 const port = require('./端口');
+const serialport = require('./串口');
 
 module.exports = {
   title: '基本使用',
@@ -14,6 +15,7 @@ module.exports = {
     userManage,
     source,
     port,
+    serialport,
     {
       title: '修改主机名称',
       path: '/Linux/Ubuntu/基本使用/修改主机名称'
@@ -41,10 +43,6 @@ module.exports = {
     {
       title: '查看CPU信息',
       path: '/Linux/Ubuntu/基本使用/查看CPU信息'
-    },
-    {
-      title: '查看串口',
-      path: '/Linux/Ubuntu/基本使用/查看串口'
     },
     {
       title: '查看磁盘',
