@@ -1,5 +1,8 @@
 # flow
 
+> [!attention|label:警告]
+> 这个目前来看还不够友好，**慎用**，需要刷新页面才会出来。
+
 > [!tip|label: 提示]
 > `flowchart.js` 依赖于 `raphael.js`
 
