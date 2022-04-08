@@ -30,6 +30,7 @@ const openSource = require('./docs/优质开源项目');
 const cloudServer = require('./docs/云服务');
 const postgraduate = require('./docs/考研');
 const java = require('./docs/Java');
+const qt = require('./docs/Qt');
 
 const sidebar = [
   language,
@@ -51,6 +52,7 @@ const sidebar = [
   windows,
   protocol,
   computer,
+  qt,
   postgraduate,
   openSource,
   tencent,
