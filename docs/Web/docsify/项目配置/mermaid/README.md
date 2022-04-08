@@ -14,7 +14,7 @@
 
 ```html
 <script>
-    var num = 0;
+    var mermaidNum = 0;
     mermaid.initialize({
         startOnLoad: false
     });
@@ -24,7 +24,7 @@
             renderer: {
                 code: function(code, lang) {
                     if (lang === 'mermaid') {
-                        return '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + '</div>';
+                        return '<div class="mermaid">' + mermaid.render('mermaid-svg-' + mermaidNum++, code) + '</div>';
                     }
                     return this.origin.code.apply(this, arguments);
                 }
