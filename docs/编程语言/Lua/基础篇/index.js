@@ -18,6 +18,7 @@ const garbageCollection = require('./垃圾收集');
 const io = require('./输入输出');
 const compile = require('./编译执行和错误');
 const refection = require('./反射');
+const env = require('./环境');
 
 module.exports = {
   title: '基础篇',
@@ -53,6 +54,7 @@ module.exports = {
     garbageCollection,
     io,
     compile,
-    refection
+    refection,
+    env
   ]
 };
