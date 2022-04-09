@@ -27,7 +27,7 @@ $ INSERT INTO partition_v2 VALUES
 
 ## 查询分区信息
 
-` `ClickHouse`  `内置了许多` system `系统表，用于查询自身的状态信息。其中` parts `系统表专门用于查询数据表的分区信息。例如执行下面的语句，就能够得到数据表` partition_v2`的分区状况：
+` ` ClickHouse `  ` 内置了许多 ` system ` 系统表，用于查询自身的状态信息。其中 ` parts ` 系统表专门用于查询数据表的分区信息。例如执行下面的语句，就能够得到数据表 ` partition_v2` 的分区状况：
 
 ```sql
 $ SELECT partition_id, name, table, database FROM system.parts WHERE table = 'partition_v2';
@@ -214,3 +214,7 @@ $ ALTER TABLE tb_name ATTACH PARTITION partition_expr
 ```sql
 $ ALTER TABLE partition_v2 ATTACH PARTITION 202207;
 ```
+
+## 备份与还原
+
+关于分区数据的备份，可以通过 `FREEZE` 和 `FETCH` 实现。
