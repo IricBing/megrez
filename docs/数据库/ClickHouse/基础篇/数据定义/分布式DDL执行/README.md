@@ -14,4 +14,5 @@ PARTITION BY toYYYYMM(EventTime)
 ORDER BY ID
 ```
 
-这条语句在单机版环境下是不会执行成功的，需要存在一个名为 `ch_cluster` 的集群才行。
+> [!warning|label: 注意]
+> 这条语句在单机版环境下是不会执行成功的，需要存在一个名为 `ch_cluster` 的集群才行。
