@@ -4,11 +4,11 @@ module.exports = {
   children: [
     {
       title: '基于NestJS 7.x',
-      path: '/NodeJS/NestJS/程序设计/配置模块设计/基于NestJS7.x'
+      path: '/NodeJS/NestJS/程序设计/配置模块设计/案例工程代码讲解/基于NestJS7.x'
     },
     {
       title: '基于NestJS 8.x',
-      path: '/NodeJS/NestJS/程序设计/配置模块设计/基于NestJS8.x'
+      path: '/NodeJS/NestJS/程序设计/配置模块设计/案例工程代码讲解/基于NestJS8.x'
     }
   ]
 };
