@@ -7,8 +7,9 @@ const markdownIt = require('./markdown_it');
 const openLayers = require('./OpenLayers');
 const axios = require('./axios');
 const prismjs = require('./PrismJS');
+const zone = require('./Zone');
 
 module.exports = {
   title: '常用库',
-  children: [lodash, moment, dayjs, axios, threejs, openLayers, markdownIt, katex, prismjs]
+  children: [lodash, moment, dayjs, axios, zone, threejs, openLayers, markdownIt, katex, prismjs]
 };
