@@ -8,7 +8,7 @@ $ docker pull drone/drone-runner-docker:1
 
 ## Step2. 运行容器镜像
 
-```bash {3-7}
+```bash
 $ docker run --detach \
   --volume=/var/run/docker.sock:/var/run/docker.sock \
   --env=DRONE_RPC_PROTO=https \
@@ -23,9 +23,8 @@ $ docker run --detach \
 
 ```
 
-::: tip 提示
-[更多配置参数](https://docs.drone.io/runner/docker/configuration/reference/)
-:::
+> [!tip|label:提示]
+> [更多配置参数](https://docs.drone.io/runner/docker/configuration/reference/)
 
 ## Step3. 验证
 

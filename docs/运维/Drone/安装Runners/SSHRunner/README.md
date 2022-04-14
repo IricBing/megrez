@@ -10,7 +10,7 @@ $ docker pull drone/drone-runner-ssh
 
 ## Step2. 运行容器镜像
 
-```bash {2-4}
+```bash
 $ docker run --detach \
   --env=DRONE_RPC_PROTO=https \
   --env=DRONE_RPC_HOST=drone.company.com \
@@ -21,9 +21,8 @@ $ docker run --detach \
   drone/drone-runner-ssh
 ```
 
-::: tip 提示
-默认端口为 `3000` ，记得别冲突了。[更多配置参数](https://docs.drone.io/runner/docker/configuration/reference/)
-:::
+> [!tip|label:提示]
+> 默认端口为 `3000` ，记得别冲突了。[更多配置参数](https://docs.drone.io/runner/docker/configuration/reference/)
 
 ## Step3. 验证
 
