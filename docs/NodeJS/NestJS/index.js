@@ -9,8 +9,9 @@ const plugin = require('./插件篇');
 const ecology = require('./生态篇');
 const principle = require('./原理探究');
 const standard = require('./规范篇');
+const programDesign = require('./程序设计');
 
 module.exports = {
   title: 'NestJS',
-  children: [standard, config, base, principle, plugin, container, ops, micro, practice, ecology, fillPitManual]
+  children: [standard, config, base, programDesign, principle, plugin, container, ops, micro, practice, ecology, fillPitManual]
 };
