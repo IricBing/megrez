@@ -4,7 +4,7 @@
 
 **示例：**
 
-``` Nginx
+```nginx
 server {
   listen 80;
   server_name vue.example.com;
