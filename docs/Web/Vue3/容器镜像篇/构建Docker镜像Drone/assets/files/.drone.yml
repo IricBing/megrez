@@ -1,0 +1,84 @@
+---
+kind: pipeline
+type: docker
+name: staging deploy
+
+steps:
+  - name: auto tag
+    image: alpine:3.15.0
+    commands:
+      - echo VITE_VERSION=staging >> .env.staging
+      - echo VITE_VERSION_TIME=`date '+%Y-%m-%d %H:%M:%S'` >> .env.staging
+
+  - name: build
+    image: docker:dind
+    volumes:
+      - name: dockersock
+        path: /var/run/docker.sock
+    commands:
+      - docker build -f Dockerfile.staging --no-cache -t xxx:staging .
+      - docker tag xxx:staging registry.cn-hangzhou.aliyuncs.com/xxx/xxx:staging
+      - docker push registry.cn-hangzhou.aliyuncs.com/xxx/xxx:staging
+
+volumes:
+  - name: dockersock
+    host:
+      path: /var/run/docker.sock
+
+trigger:
+  event:
+    - push
+  branch:
+    - master
+---
+kind: pipeline
+type: docker
+name: production deploy
+
+steps:
+  - name: build
+    image: docker:dind
+    volumes:
+      - name: dockersock
+        path: /var/run/docker.sock
+    commands:
+      - docker build --no-cache -t xxx:`echo ${DRONE_TAG##v}` .
+      - docker tag xxx:`echo ${DRONE_TAG##v}` registry.cn-hangzhou.aliyuncs.com/xxx/xxx:`echo ${DRONE_TAG##v}`
+      - docker push registry.cn-hangzhou.aliyuncs.com/xxx/xxx:`echo ${DRONE_TAG##v}`
+      - docker tag registry.cn-hangzhou.aliyuncs.com/xxx/xxx:`echo ${DRONE_TAG##v}` registry.cn-hangzhou.aliyuncs.com/xxx/xxx:latest
+      - docker push registry.cn-hangzhou.aliyuncs.com/xxx/xxx:latest
+
+volumes:
+  - name: dockersock
+    host:
+      path: /var/run/docker.sock
+
+trigger:
+  event:
+    - tag
+---
+kind: pipeline
+type: docker
+name: layer build
+
+steps:
+  - name: build
+    image: docker:dind
+    volumes:
+      - name: dockersock
+        path: /var/run/docker.sock
+    commands:
+      - docker build -f Dockerfile.layer --no-cache -t xxx:latest .
+      - docker tag xxx:latest registry.cn-hangzhou.aliyuncs.com/xxx-layer/xxx:latest
+      - docker push registry.cn-hangzhou.aliyuncs.com/xxx-layer/xxx:latest
+
+volumes:
+  - name: dockersock
+    host:
+      path: /var/run/docker.sock
+
+trigger:
+  event:
+    - push
+  branch:
+    - layer

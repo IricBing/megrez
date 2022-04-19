@@ -1,0 +1,18 @@
+# Stage 1
+FROM node:16.14.2-alpine
+
+WORKDIR /app
+
+COPY .npmrc .
+COPY package.json .
+COPY pnpm-lock.yaml .
+COPY tsconfig.json .
+COPY tsconfig.node.json .
+COPY vite.config.ts .
+COPY .eslintignore .
+COPY .eslintrc.js .
+COPY .prettierrc.js .
+COPY .browserslistrc .
+
+RUN npm i pnpm -g --registry=http://registry.npmmirror.com
+RUN pnpm i --frozen-lockfile --ignore-scripts
