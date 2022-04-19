@@ -7,7 +7,7 @@ module.exports = {
     },
     {
       title: '多版本',
-      path: '/编程语言/Lua/基础篇/环境配置/Windows10/多版本'
+      path: '/编程语言/Lua/基础篇/环境配置/Ubuntu2004/多版本'
     }
   ]
 };
