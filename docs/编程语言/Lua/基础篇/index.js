@@ -19,6 +19,7 @@ const io = require('./输入输出');
 const compile = require('./编译执行和错误');
 const refection = require('./反射');
 const env = require('./环境');
+const dataFileAndSerialize = require('./数据文件和序列化');
 
 module.exports = {
   title: '基础篇',
@@ -53,6 +54,7 @@ module.exports = {
     dateAndTime,
     garbageCollection,
     io,
+    dataFileAndSerialize,
     compile,
     refection,
     env
