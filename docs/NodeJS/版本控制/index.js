@@ -1,6 +1,7 @@
-const nvm = require('./nvm')
+const nvm = require('./nvm');
+const fnm = require('./fnm');
 
 module.exports = {
   title: '版本控制',
-  children: [nvm]
+  children: [nvm, fnm]
 };
