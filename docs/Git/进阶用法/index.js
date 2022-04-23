@@ -8,6 +8,10 @@ module.exports = {
     {
       title: '切换远程仓库地址',
       path: '/Git/进阶用法/切换远程仓库地址'
+    },
+    {
+      title: '删除敏感数据',
+      path: '/Git/进阶用法/删除敏感数据'
     }
   ]
 };
