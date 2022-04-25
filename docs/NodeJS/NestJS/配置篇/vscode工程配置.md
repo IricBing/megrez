@@ -204,26 +204,25 @@ $ pnpm add cross-env -D
   "compilerOptions": {
     "plugins": [
       {
-        "name": "@nestjs/swagger",
+        "name": "@iot9x.com/nestjs-swagger",
         "options": {
-          "dtoFileNameSuffix": [
-            ".dto.ts"
-          ],
+          "dtoFileNameSuffix": [".dto.ts"],
           "controllerFileNameSuffix": ".controller.ts",
+          "dtoKeyOfComment": "description",
+          "controllerKeyOfComment": "summary",
           "classValidatorShim": true,
           "introspectComments": true
         }
       }
     ],
-    "assets": [
-      "**/*.proto",
-      "**/*.graphql",
-      "**/*.prisma"
-    ],
+    "assets": ["**/*.proto", "**/*.graphql", "**/*.prisma"],
     "watchAssets": true
   }
 }
 ```
+
+> [!tip|label: 提示]
+> 这里使用了我们自己魔改版本的 `@iot9x.com/nestjs-swagger` 代替了原生的 `@nestjs/swagger`
 
 ### `tsconfig.json` 文件
 
