@@ -19,7 +19,9 @@ services:
       - 9000:9000
     volumes:
       - clickhouse-data:/var/lib/clickhouse
+      - clickhouse-config:/etc/clickhouse-server
 
 volumes:
   clickhouse-data:
+  clickhouse-config:
 ```
