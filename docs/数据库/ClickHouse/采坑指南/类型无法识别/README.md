@@ -18,4 +18,4 @@ Connected to ClickHouse server version 22.2.3 revision 54455.
 
 ## 产生原因
 
-clickhouse-client版本太老，安装最新版即可。
+`clickhouse-client` 版本太老，安装最新版即可。
