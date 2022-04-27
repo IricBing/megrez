@@ -42,7 +42,8 @@ SELECT database, formatReadableSize(bytes) AS format FROM system.columns
 GROUP BY database 
 ORDER BY bytes DESC;
 ┌─database───────────┬─format────┐
-│ system             │ 17.07 GiB │
+│ system             │ 21.75 GiB │
+│ dawen              │ 4.91 GiB  │
 │ default            │ 0.00 B    │
 │ INFORMATION_SCHEMA │ 0.00 B    │
 │ information_schema │ 0.00 B    │
@@ -60,7 +61,8 @@ FROM system.columns
 GROUP BY database
 ORDER BY database_disk_usage DESC;
 ┌─database───────────┬─database_disk_usage─┐
-│ system             │                 100 │
+│ system             │   81.58541185162147 │
+│ dawen              │   18.41458814837853 │
 │ default            │                   0 │
 │ INFORMATION_SCHEMA │                   0 │
 │ information_schema │                   0 │
@@ -83,7 +85,8 @@ FROM (
   ORDER BY database_disk_usage DESC
 );
 ┌─database───────────┬─database_disk_usage─┬─database_disk_usage_v1─┐
-│ system             │                 100 │                    100 │
+│ system             │   81.58541185162147 │                     82 │
+│ dawen              │   18.41458814837853 │                     18 │
 │ default            │                   0 │                      0 │
 │ INFORMATION_SCHEMA │                   0 │                      0 │
 │ information_schema │                   0 │                      0 │
