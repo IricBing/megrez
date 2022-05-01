@@ -6,6 +6,14 @@
 * <a href="数据库/ClickHouse/基础篇/数据字典/外部扩展字典/准备字典数据/assets/files/sales.csv" download="sales.csv">sales.csv</a>
 * <a href="数据库/ClickHouse/基础篇/数据字典/外部扩展字典/准备字典数据/assets/files/asn.csv" download="asn.csv">asn.csv</a>
 
+将下载好后的测试文件拷贝到 `/var/lib/clickhouse/dictionaries_lib` 文件夹下，给出基于 `docker` 运行的服务命令：
+
+```bash
+$ docker cp asn.csv clickhouse:/var/lib/clickhouse/dictionaries_lib
+$ docker cp organization.csv clickhouse:/var/lib/clickhouse/dictionaries_lib
+$ docker cp sales.csv clickhouse:/var/lib/clickhouse/dictionaries_lib
+```
+
 ## organization.csv
 
 `organization.csv` 是一份企业组织数据，它将用于 `flat` 、 `hashed` 、 `cache` 、 `complex_key_hashed` 和 `complex_key_cache` 字典的演示场景。这份数据有 `id` 、 `code` 和 `name` 三个字段，数据格式如下所示：
