@@ -8,8 +8,9 @@ const sqlite = require('./SQLite');
 const clickHouse = require('./ClickHouse');
 const sqlServer = require('./SQLServer');
 const questDB = require('./QuestDB');
+const mysql = require('./MySQL');
 
 module.exports = {
   title: '数据库',
-  children: [docker, sql, postgreSQL, redis, mongodb, clickHouse, tdengine, sqlite, sqlServer, questDB]
+  children: [docker, sql, postgreSQL, redis, mongodb, clickHouse, mysql, tdengine, sqlite, sqlServer, questDB]
 };
