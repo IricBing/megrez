@@ -8,7 +8,7 @@
 
 |名称|存储结构|字典键类型|支持的数据来源|
 |-----|-----|-----|-----|
-| `flat` |数组| `UInt64` |1. **Local file** <br />2. **Executable file** <br />3.** HTTP**<br />4. **DBMS**|
+| `flat` |数组| `UInt64` |1. **Local file** <br />2. **Executable file** <br />3. **HTTP** <br />4. **DBMS**|
 | `hashed` |散列| `UInt64` |1. **Local file** <br />2. **Executable file** <br />3. **HTTP**<br />4. **DBMS**|
 | `range_hashed` |散列并按时间排序| `UInt64` 和**时间**|1. **Local file** <br />2. **Executable file** <br />3. **HTTP**<br />4. **DBMS**|
 | `complex_key_hashed` |散列|复合型 `key` |1. **Local file** <br />2. **Executable file** <br />3. **HTTP**<br />4. **DBMS**|
