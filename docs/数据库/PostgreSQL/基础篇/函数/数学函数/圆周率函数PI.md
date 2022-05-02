@@ -4,11 +4,12 @@
 
 示例：
 
-``` sql
+```sql
 $ SELECT PI();
 ```
 
 执行结果：
+
 |pi(double precision)|
 |-----|
 |3.14159265358979

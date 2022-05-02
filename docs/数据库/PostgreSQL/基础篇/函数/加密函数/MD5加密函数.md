@@ -4,7 +4,7 @@
 
 示例：
 
-``` sql
+```sql
 $ SELECT MD5('123qwe'), MD5(NULL);
 ```
 

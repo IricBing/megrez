@@ -4,7 +4,7 @@
 
 示例：
 
-``` sql
+```sql
 $ SELECT DECODE(ENCODE('123qwe','hex'),'hex');
 ```
 

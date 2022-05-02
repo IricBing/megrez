@@ -4,11 +4,12 @@
 
 示例：
 
-``` sql
+```sql
 $ SELECT ABS(2), ABS(-3.3), ABS(-33);
 ```
 
 执行结果：
+
 |abs(integer)|abs(integer)|abs(integer)|
 |-----|-----|-----|
 |2|3.3|33|

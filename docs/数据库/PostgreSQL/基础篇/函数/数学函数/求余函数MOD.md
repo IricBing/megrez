@@ -4,11 +4,12 @@
 
 示例：
 
-``` sql
+```sql
 $ SELECT MOD(31,8), MOD(234,10), MOD(45.5,6);
 ```
 
 执行结果：
+
 |mod(integer)|mod(integer)|mod(numeric)|
 |-----|-----|-----|
 |7|4|3.5|
