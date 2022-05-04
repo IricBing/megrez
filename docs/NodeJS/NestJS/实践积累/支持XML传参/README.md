@@ -19,7 +19,7 @@ $ pnpm add body-parser body-parser-xml
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
-import * as bodyParser from 'body-parser';
+import bodyParser from 'body-parser';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require('body-parser-xml')(bodyParser);
 
