@@ -6,35 +6,62 @@
 
 ```ts
 import { PipeTransform, Injectable, ArgumentMetadata, BadRequestException } from '@nestjs/common';
-import { validate } from 'class-validator';
+import { validate, ValidationError } from 'class-validator';
 import { plainToClass } from 'class-transformer';
 
 @Injectable()
 export class ValidationPipe implements PipeTransform<any> {
+  /**
+   * 校验和转换实现，class-validator 和 class-transformer
+   * @description 顺序为：先转换，后校验
+   * @param value 原始值
+   * @param param1 参数元数据
+   * @returns 校验和转换后的类
+   */
   async transform(value: any, { metatype }: ArgumentMetadata) {
     if (!metatype || !this.toValidate(metatype)) return value;
 
     const object = plainToClass(metatype, value);
     const errors = await validate(object);
-    if (errors.length > 0) {
-      let errMsg = 'Validation failed';
-      const error = errors[0].constraints;
-      for (const key in error) {
-        if (error.hasOwnProperty(key) && error[key]) {
-          errMsg = error[key];
-          break;
-        }
-      }
-      throw new BadRequestException(errMsg);
-    }
+    if (errors.length > 0) throw new BadRequestException(this.getError(errors[0]));
 
     return object;
   }
 
+  /**
+   * 判断DTO数据是否需要校验和转换
+   * @param metatype 数据类型
+   * @returns 是否验证和转换
+   */
   private toValidate(metatype: Function): boolean {
     const types: Function[] = [String, Boolean, Number, Array, Object];
 
     return !types.find(type => metatype === type);
+  }
+
+  /**
+   * 获取 class-validator 验证错误显示信息
+   * @param error class-validator验证错误
+   * @returns 错误信息
+   */
+  private getError(error: ValidationError): string {
+    if (error.constraints) return this.getConstraintsErrorMessage(error.constraints);
+    if (error.children?.length) return this.getError(error.children[0]);
+
+    return 'Validation failed';
+  }
+
+  /**
+   * 获取 class-validator 错误约束信息可显示内容
+   * @param constraints class-validator 错误约束信息
+   * @returns 错误约束信息可显示内容
+   */
+  private getConstraintsErrorMessage(constraints: ValidationError['constraints']): string {
+    for (const key in constraints) {
+      if (constraints.hasOwnProperty(key) && constraints[key]) {
+        return constraints[key];
+      }
+    }
   }
 }
 ```
