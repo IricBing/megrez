@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   docsify-cli: ^4.4.3
@@ -319,6 +319,8 @@ packages:
     resolution: {integrity: sha512-Sm/S9Or6nN8uiFsQU1yodyDW3MWXQhFeqzMPM+t8MJjM+pLsnFVxFZzkpXKvUXh+Gz9cbMoYYs484+Jw/NTEFQ==, tarball: '@babel/parser/download/@babel/parser-7.16.10.tgz'}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.16.8
     dev: true
 
   /@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression/7.16.7_@babel+core@7.16.10:
@@ -1155,7 +1157,7 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@rollup/plugin-babel/5.3.0_a7c98f99416e54f22fd1359414e2c655:
+  /@rollup/plugin-babel/5.3.0_u7ey7gkbnzkpel6rgwkbjywgku:
     resolution: {integrity: sha1-nLHFFG3daklorZbyCcUMYvkvmHk=, tarball: '@rollup/plugin-babel/download/@rollup/plugin-babel-5.3.0.tgz'}
     engines: {node: '>= 10.0.0'}
     peerDependencies:
@@ -1234,6 +1236,12 @@ packages:
     resolution: {integrity: sha1-4Xfmme4bjCLSMXTKqnQiZEOJUJ8=, tarball: '@types/estree/download/@types/estree-0.0.39.tgz'}
     dev: true
 
+  /@types/keyv/3.1.4:
+    resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
+    dependencies:
+      '@types/node': 17.0.10
+    dev: true
+
   /@types/minimist/1.2.2:
     resolution: {integrity: sha1-7nceK6Sz3Fs3KTXVSf2WF780W4w=, tarball: '@types/minimist/download/@types/minimist-1.2.2.tgz'}
     dev: true
@@ -1252,8 +1260,20 @@ packages:
       '@types/node': 17.0.10
     dev: true
 
+  /@types/responselike/1.0.0:
+    resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
+    dependencies:
+      '@types/node': 17.0.10
+    dev: true
+
   /@types/trusted-types/2.0.2:
     resolution: {integrity: sha1-/CWtmUO8rBHM64Fo208nXg5y51Y=, tarball: '@types/trusted-types/download/@types/trusted-types-2.0.2.tgz'}
+    dev: true
+
+  /acorn/8.7.1:
+    resolution: {integrity: sha512-Xx54uLJQZ19lKygFXOWsscKUbsBZW0CPykPhVQdhIeIwrbPmJzqeASDInc8nKBnp/JT6igTs82qPXz069H8I/A==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
     dev: true
 
   /ajv/8.9.0:
@@ -1654,6 +1674,8 @@ packages:
       finalhandler: 1.1.2
       parseurl: 1.3.3
       utils-merge: 1.0.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /convert-source-map/1.8.0:
@@ -1686,6 +1708,11 @@ packages:
 
   /debug/2.6.9:
     resolution: {integrity: sha1-XRKFFd8TT/Mn6QpMk/Tgd6U2NB8=, tarball: debug/download/debug-2.6.9.tgz}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: 2.0.0
     dev: true
@@ -1999,6 +2026,8 @@ packages:
       parseurl: 1.3.3
       statuses: 1.5.0
       unpipe: 1.0.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /find-up/3.0.0:
@@ -2141,6 +2170,8 @@ packages:
     dependencies:
       '@sindresorhus/is': 0.14.0
       '@szmarczak/http-timer': 1.1.2
+      '@types/keyv': 3.1.4
+      '@types/responselike': 1.0.0
       cacheable-request: 6.1.0
       decompress-response: 3.3.0
       duplexer3: 0.1.4
@@ -3225,8 +3256,6 @@ packages:
       rollup: 2.64.0
       serialize-javascript: 4.0.0
       terser: 5.10.0
-    transitivePeerDependencies:
-      - acorn
     dev: true
 
   /rollup/2.64.0:
@@ -3300,6 +3329,8 @@ packages:
       on-finished: 2.3.0
       range-parser: 1.2.1
       statuses: 1.5.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /serialize-javascript/4.0.0:
@@ -3316,6 +3347,8 @@ packages:
       escape-html: 1.0.3
       parseurl: 1.3.3
       send: 0.17.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /set-blocking/2.0.0:
@@ -3549,12 +3582,11 @@ packages:
     resolution: {integrity: sha512-AMmF99DMfEDiRJfxfY5jj5wNH/bYO09cniSqhfoyxc8sFoYIgkJy86G04UoZU5VjlpnplVu0K6Tx6E9b5+DlHA==, tarball: terser/download/terser-5.10.0.tgz}
     engines: {node: '>=10'}
     hasBin: true
-    peerDependencies:
-      acorn: ^8.5.0
     peerDependenciesMeta:
       acorn:
         optional: true
     dependencies:
+      acorn: 8.7.1
       commander: 2.20.3
       source-map: 0.7.3
       source-map-support: 0.5.21
@@ -3830,7 +3862,7 @@ packages:
       '@babel/core': 7.16.10
       '@babel/preset-env': 7.16.10_@babel+core@7.16.10
       '@babel/runtime': 7.16.7
-      '@rollup/plugin-babel': 5.3.0_a7c98f99416e54f22fd1359414e2c655
+      '@rollup/plugin-babel': 5.3.0_u7ey7gkbnzkpel6rgwkbjywgku
       '@rollup/plugin-node-resolve': 11.2.1_rollup@2.64.0
       '@rollup/plugin-replace': 2.4.2_rollup@2.64.0
       '@surma/rollup-plugin-off-main-thread': 2.2.3
@@ -3866,7 +3898,6 @@ packages:
       workbox-window: 6.4.2
     transitivePeerDependencies:
       - '@types/babel__core'
-      - acorn
       - supports-color
     dev: true
 
@@ -3896,7 +3927,6 @@ packages:
       workbox-build: 6.4.2
     transitivePeerDependencies:
       - '@types/babel__core'
-      - acorn
       - supports-color
     dev: true
 
