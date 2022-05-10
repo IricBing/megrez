@@ -13,6 +13,10 @@ module.exports = {
     {
       title: 'drawio支持',
       path: '/Web/docsify/扩展插件/drawio/'
+    },
+    {
+      title: 'tabs',
+      path: '/Web/docsify/扩展插件/tabs/'
     }
   ]
 };

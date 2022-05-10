@@ -21,6 +21,7 @@
   "homepage": "https://github.com/IricBing/megrez#readme",
   "devDependencies": {
     "docsify-cli": "^4.4.3",
+    "docsify-tabs": "^1.5.2",
     "marked": "^4.0.12",
     "prettier": "^2.4.1",
     "prismjs": "^1.27.0",

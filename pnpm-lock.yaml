@@ -1,7 +1,8 @@
-lockfileVersion: 5.4
+lockfileVersion: 5.3
 
 specifiers:
   docsify-cli: ^4.4.3
+  docsify-tabs: ^1.5.2
   marked: ^4.0.12
   prettier: ^2.4.1
   prismjs: ^1.27.0
@@ -9,6 +10,7 @@ specifiers:
 
 devDependencies:
   docsify-cli: 4.4.3
+  docsify-tabs: 1.5.2
   marked: 4.0.12
   prettier: 2.5.0
   prismjs: 1.27.0
@@ -1153,7 +1155,7 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@rollup/plugin-babel/5.3.0_u7ey7gkbnzkpel6rgwkbjywgku:
+  /@rollup/plugin-babel/5.3.0_a7c98f99416e54f22fd1359414e2c655:
     resolution: {integrity: sha1-nLHFFG3daklorZbyCcUMYvkvmHk=, tarball: '@rollup/plugin-babel/download/@rollup/plugin-babel-5.3.0.tgz'}
     engines: {node: '>= 10.0.0'}
     peerDependencies:
@@ -1793,6 +1795,10 @@ packages:
       resolve-pathname: 3.0.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /docsify-tabs/1.5.2:
+    resolution: {integrity: sha512-ExVJ2XdO7oFrlGcouYnQBaKdHWqV5P4SYqLPCIoMzfi8uk3ku3JzCNDHUVRy1ALLyRpNwmcUSP5YLBl0plaQaA==}
     dev: true
 
   /docsify/4.12.1:
@@ -3824,7 +3830,7 @@ packages:
       '@babel/core': 7.16.10
       '@babel/preset-env': 7.16.10_@babel+core@7.16.10
       '@babel/runtime': 7.16.7
-      '@rollup/plugin-babel': 5.3.0_u7ey7gkbnzkpel6rgwkbjywgku
+      '@rollup/plugin-babel': 5.3.0_a7c98f99416e54f22fd1359414e2c655
       '@rollup/plugin-node-resolve': 11.2.1_rollup@2.64.0
       '@rollup/plugin-replace': 2.4.2_rollup@2.64.0
       '@surma/rollup-plugin-off-main-thread': 2.2.3
