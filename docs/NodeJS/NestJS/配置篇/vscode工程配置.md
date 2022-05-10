@@ -104,57 +104,45 @@ $ pnpm add cross-env -D
       "request": "launch",
       "name": "Jest All",
       "runtimeVersion": "14.17.0", // 这里要按照项目的 .nvmrc文件进行修改！
-      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "args": [
         "--runInBand"
       ],
       "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "disableOptimisticBPs": true,
-      "windows": {
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      }
+      "internalConsoleOptions": "neverOpen"
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Jest Current File",
       "runtimeVersion": "14.17.0", // 这里要按照项目的 .nvmrc文件进行修改！
-      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "args": [
         "/${fileBasenameNoExtension}"
       ],
       "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "disableOptimisticBPs": true,
-      "windows": {
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      }
+      "internalConsoleOptions": "neverOpen"
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Jest e2e test",
       "runtimeVersion": "14.17.0", // 这里要按照项目的 .nvmrc文件进行修改！
-      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "args": [
         "--config",
         "${workspaceFolder}/test/jest-e2e.json",
         "--runInBand"
       ],
       "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "disableOptimisticBPs": true,
-      "windows": {
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      }
+      "internalConsoleOptions": "neverOpen"
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Jest current e2e file",
       "runtimeVersion": "14.17.0", // 这里要按照项目的 .nvmrc文件进行修改！
-      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "args": [
         "/${fileBasenameNoExtension}",
         "--config",
@@ -168,11 +156,7 @@ $ pnpm add cross-env -D
         "SMS_AUTH_IP_THROTTLE": "10000"
       },
       "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "disableOptimisticBPs": true,
-      "windows": {
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      }
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }
