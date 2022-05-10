@@ -36,6 +36,12 @@ module.exports = {
 }
 ```
 
+修改 `.vuepress/styles/index.styl` 样式文件，引入插件主题样式：
+
+```css
+@require '~vuepress-plugin-tabs/dist/themes/default.styl'
+```
+
 ## 用法
 
 参见[官方文档](https://github.com/pskordilakis/vuepress-plugin-tabs#usage)
