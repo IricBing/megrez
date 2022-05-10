@@ -19,6 +19,10 @@ module.exports = {
       title: '账号配置',
       path: '/NodeJS/npm/账号配置/'
     },
+    {
+      title: '淘宝镜像更新不及时',
+      path: '/NodeJS/npm/淘宝镜像更新不及时/'
+    },
     dependencies
   ]
 };
