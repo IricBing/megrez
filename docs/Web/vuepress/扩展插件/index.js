@@ -6,6 +6,10 @@ module.exports = {
       path: '/Web/vuepress/扩展插件/复制弹窗插件'
     },
     {
+      title: 'tabs',
+      path: '/Web/vuepress/扩展插件/tabs'
+    },
+    {
       title: '集成宠物猫',
       path: '/Web/vuepress/扩展插件/宠物猫'
     },
