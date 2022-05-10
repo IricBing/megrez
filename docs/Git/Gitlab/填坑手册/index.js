@@ -16,6 +16,10 @@ module.exports = {
     {
       title: '内存占用过高',
       path: '/Git/Gitlab/填坑手册/内存占用过高/'
+    },
+    {
+      title: '更新 LetsEncrypt 证书',
+      path: '/Git/Gitlab/填坑手册/更新LetsEncrypt证书/'
     }
   ]
 };
