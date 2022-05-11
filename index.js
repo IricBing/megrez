@@ -31,6 +31,7 @@ const cloudServer = require('./docs/云服务');
 const postgraduate = require('./docs/考研');
 const java = require('./docs/Java');
 const qt = require('./docs/Qt');
+const browser = require('./docs/浏览器')
 
 const sidebar = [
   language,
@@ -52,6 +53,7 @@ const sidebar = [
   windows,
   protocol,
   computer,
+  browser,
   qt,
   postgraduate,
   openSource,
