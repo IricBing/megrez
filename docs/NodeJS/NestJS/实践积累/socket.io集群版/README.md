@@ -1,135 +1,76 @@
 # socket.io 集群版
 
-## 写在前面
+## 实现原理
 
-本笔记所记录的方式来源于 `socket.io` 官方文档，但是实际测量下来经过这样后还会有问题，最后迫不得已，将 `websocket` 功能抽出成单独的服务。
-
-[中文文档](https://docs.nestjs.cn/8/websockets?id=%e6%8b%93%e5%b1%95-socketio)
-
-[官方文档](https://docs.nestjs.com/websockets/adapter)
+官方已经给出了解决方案，就是 `Websockets` 的 `Adapters` ，参加[官方文档](https://docs.nestjs.com/websockets/adapter)
 
 > [!warning|label: 注意]
-> 截止到目前（2021年11月17日），中文文档和官方文档中都使用了[socket.io-redis](https://www.npmjs.com/package/socket.io-redis)这个包，但是这个包已经在 `6` 个月前就声明 `deprecated` 了，迁移至新的[@socket.io/redis-adapter](https://www.npmjs.com/package/@socket.io/redis-adapter)地址了。
+> 前端也要针对性的修改，要配置 `transports: ['websocket']` 或者后台在负载层面支持 `cookie` 。
 
-## 实现原理与方式
-
-写不过来了，有空补。
-
-## 使用redis包
-
-> [!warning|label: 注意]
-> 目前 `redis` 包升级到了 `4.x` ，官方文档上的写法已经不可以了，官方文档还没有给出新的写法，如果使用这个方案，暂时先使用 `redis 3.x` 吧（记录于**2022年1月11日**）。
-
-### 安装必要包
+## 安装依赖
 
 ```bash
-$ pnpm add @nestjs/websockets @nestjs/platform-socket.io socket.io @socket.io/redis-adapter redis
-$ pnpm add -D @types/redis
+$ pnpm add redis socket.io @socket.io/redis-adapter @nestjs/platform-socket.io @nestjs/websockets
 ```
 
-### 编写适配器
+## 编写适配器
 
 建立适配器文件 `redis-io.adapter.ts` ，写入如下内容：
 
 ```ts
-import { ConfigType } from '@nestjs/config';
-import { NestExpressApplication } from '@nestjs/platform-express';
 import { IoAdapter } from '@nestjs/platform-socket.io';
-import { createAdapter } from '@socket.io/redis-adapter';
-import { createClient, RedisClient } from 'redis';
 import { ServerOptions } from 'socket.io';
+import { createAdapter } from '@socket.io/redis-adapter';
+import { createClient } from 'redis';
+import { ConfigType } from '@nestjs/config';
 import { RedisConfigRegister } from '../../config/registers/redis.register';
 
 /** socket.io redis 适配器 */
 export class RedisIoAdapter extends IoAdapter {
-  constructor(app: NestExpressApplication, redisConfig: ConfigType<typeof RedisConfigRegister>) {
-    super(app);
-    this.pubClient = createClient({ host: redisConfig.common.host, port: redisConfig.common.port });
-    this.subClient = this.pubClient.duplicate();
+  constructor(private readonly redisConfig: ConfigType<typeof RedisConfigRegister>) {
+    super();
   }
 
-  private pubClient: RedisClient;
-  private subClient: RedisClient;
+  private adapterConstructor: ReturnType<typeof createAdapter>;
+
+  async connectToRedis(): Promise<void> {
+    const pubClient = createClient({ url: `redis://${this.redisConfig.common.host}:${this.redisConfig.common.port}` });
+    const subClient = pubClient.duplicate();
+
+    await Promise.all([pubClient.connect(), subClient.connect()]);
+
+    this.adapterConstructor = createAdapter(pubClient, subClient);
+  }
 
   createIOServer(port: number, options?: ServerOptions): any {
     const server = super.createIOServer(port, options);
-    server.adapter(createAdapter(this.pubClient, this.subClient));
+    server.adapter(this.adapterConstructor);
     return server;
+  }
+
+  bindClientConnect(server: any, callback: Function) {
+    server.on('connection', callback);
+  }
+
+  async close(server: any) {
+    server.close();
   }
 }
 ```
 
 > [!tip|label: 提示]
-> 主要参考 `socket.io` 的官方文档中[redis适配器](https://socket.io/docs/v4/redis-adapter/)部分。
+> 与官方给的示例略有出入，官方给的那个运行不起来。。。
 
-### 使用
-
-在 `main.ts` 文件中配置，具体参考如下：
-
-```ts
-……
-const app = await NestFactory.create<NestExpressApplication>(AppModule); 
-const redisConfig = app.select(AppModule).get<ConfigType<typeof RedisConfigRegister>>(RedisConfigRegister. KEY); 
-
-// 使用Redis socket.io适配器
-app.useWebSocketAdapter(new RedisIoAdapter(app, redisConfig)); 
-……
-```
-
-## 使用ioredis包
-
-### 安装必要包
-
-```bash
-$ pnpm add @nestjs/websockets @nestjs/platform-socket.io socket.io @socket.io/redis-adapter ioredis
-```
-
-### 编写适配器
-
-建立适配器文件 `redis-io.adapter.ts` ，写入如下内容：
-
-```ts
-import { ConfigType } from '@nestjs/config';
-import { NestExpressApplication } from '@nestjs/platform-express';
-import { IoAdapter } from '@nestjs/platform-socket.io';
-import { createAdapter } from '@socket.io/redis-adapter';
-import { Cluster } from 'ioredis';
-import { ServerOptions } from 'socket.io';
-import { RedisConfigRegister } from '../../config/registers/redis.register';
-
-/** socket.io redis 适配器 */
-export class RedisIoAdapter extends IoAdapter {
-  constructor(app: NestExpressApplication, redisConfig: ConfigType<typeof RedisConfigRegister>) {
-    super(app);
-    this.pubClient = new Cluster([{ host: redisConfig.common.host, port: redisConfig.common.port }]);
-    this.subClient = this.pubClient.duplicate();
-  }
-
-  private pubClient: Cluster;
-  private subClient: Cluster;
-
-  createIOServer(port: number, options?: ServerOptions): any {
-    const server = super.createIOServer(port, options);
-    server.adapter(createAdapter(this.pubClient, this.subClient));
-    return server;
-  }
-}
-
-```
-
-> [!tip|label: 提示]
-> 主要参考 `socket.io` 的官方文档中[redis适配器](https://socket.io/docs/v4/redis-adapter/)部分。
-
-### 使用
+## 使用
 
 在 `main.ts` 文件中配置，具体参考如下：
 
 ```ts
-……
-const app = await NestFactory.create<NestExpressApplication>(AppModule); 
-const redisConfig = app.select(AppModule).get<ConfigType<typeof RedisConfigRegister>>(RedisConfigRegister. KEY); 
+const app = await NestFactory.create(AppModule);
 
-// 使用Redis socket.io适配器
-app.useWebSocketAdapter(new RedisIoAdapter(app, redisConfig)); 
-……
+// socket.io redis 适配器
+const redisIoAdapter = new RedisIoAdapter(redisConfig);
+await redisIoAdapter.connectToRedis();
+
+app.useWebSocketAdapter(redisIoAdapter);
 ```
