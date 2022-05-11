@@ -8,8 +8,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "node index.js && workbox generateSW workbox-config.js && docsify serve docs",
-    "build": "node index.js && workbox generateSW workbox-config.js"
+    "start": "node index.js && docsify serve docs",
+    "build": "node index.js"
   },
   "repository": {
     "type": "git",
