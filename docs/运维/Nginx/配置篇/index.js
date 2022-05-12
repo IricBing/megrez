@@ -6,6 +6,10 @@ module.exports = {
       path: '/运维/Nginx/配置篇/http转https'
     },
     {
+      title: 'SSL 配置',
+      path: '/运维/Nginx/配置篇/SSL配置'
+    },
+    {
       title: 'HTTP2',
       path: '/运维/Nginx/配置篇/HTTP2'
     },
