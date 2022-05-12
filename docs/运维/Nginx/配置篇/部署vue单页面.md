@@ -31,6 +31,5 @@ server {
 }
 ```
 
-::: tip 提示
-`vue.example.com` 为示例域名。
-:::
+> [!tip|label:提示]
+> `vue.example.com` 为示例域名。
