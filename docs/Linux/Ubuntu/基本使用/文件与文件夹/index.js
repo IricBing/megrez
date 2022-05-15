@@ -3,6 +3,10 @@ module.exports = {
   path: '/Linux/Ubuntu/基本使用/文件与文件夹/',
   children: [
     {
+      title: '查找',
+      path: '/Linux/Ubuntu/基本使用/文件与文件夹/查找'
+    },
+    {
       title: '查看',
       path: '/Linux/Ubuntu/基本使用/文件与文件夹/查看'
     },
