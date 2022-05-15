@@ -107,7 +107,7 @@ extern "C" {
 
 如果将 `Lua` 作为 `C` 代码编译出来后又要在 `C++` 中使用，那么可以引入 `lua.hpp` 来替代 `lua.h` 。定义如下：
 
-```C
+```c
 extern "C" {
   #include "lua.h"
 }
