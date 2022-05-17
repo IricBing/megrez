@@ -18,17 +18,18 @@ $ pnpm add redis socket.io @socket.io/redis-adapter @nestjs/platform-socket.io @
 建立适配器文件 `redis-io.adapter.ts` ，写入如下内容：
 
 ```ts
+import { NestExpressApplication } from '@nestjs/platform-express';
 import { IoAdapter } from '@nestjs/platform-socket.io';
-import { ServerOptions } from 'socket.io';
-import { createAdapter } from '@socket.io/redis-adapter';
-import { createClient } from 'redis';
 import { ConfigType } from '@nestjs/config';
+import { createAdapter } from '@socket.io/redis-adapter';
+import { ServerOptions } from 'socket.io';
+import { createClient } from 'redis';
 import { RedisConfigRegister } from '../../config/registers/redis.register';
 
 /** socket.io redis 适配器 */
 export class RedisIoAdapter extends IoAdapter {
-  constructor(private readonly redisConfig: ConfigType<typeof RedisConfigRegister>) {
-    super();
+  constructor(private readonly app: NestExpressApplication, private readonly redisConfig: ConfigType<typeof RedisConfigRegister>) {
+    super(app);
   }
 
   private adapterConstructor: ReturnType<typeof createAdapter>;
@@ -47,19 +48,8 @@ export class RedisIoAdapter extends IoAdapter {
     server.adapter(this.adapterConstructor);
     return server;
   }
-
-  bindClientConnect(server: any, callback: Function) {
-    server.on('connection', callback);
-  }
-
-  async close(server: any) {
-    server.close();
-  }
 }
 ```
-
-> [!tip|label: 提示]
-> 与官方给的示例略有出入，官方给的那个运行不起来。。。
 
 ## 使用
 
@@ -69,7 +59,7 @@ export class RedisIoAdapter extends IoAdapter {
 const app = await NestFactory.create(AppModule);
 
 // socket.io redis 适配器
-const redisIoAdapter = new RedisIoAdapter(redisConfig);
+const redisIoAdapter = new RedisIoAdapter(app, redisConfig);
 await redisIoAdapter.connectToRedis();
 
 app.useWebSocketAdapter(redisIoAdapter);
