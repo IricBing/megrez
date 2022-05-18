@@ -3,8 +3,9 @@ const event = require('./事件');
 const controllers = require('./Controllers');
 const providers = require('./Providers');
 const pipes = require('./Pipes');
+const middleware = require('./Middleware');
 
 module.exports = {
   title: '基础篇',
-  children: [controllers, providers, pipes, dynamicModule, event]
+  children: [controllers, middleware, providers, pipes, dynamicModule, event]
 };
