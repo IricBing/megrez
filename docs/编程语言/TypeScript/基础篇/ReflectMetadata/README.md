@@ -22,7 +22,7 @@ const Metadata = new _WeakMap<any, Map<string | symbol | undefined, Map<any, any
 
 上述代码中 `Metadata` 就是作者维护的**全局变量**。（代码中有一些polyfill相关的，影响阅读，专注核心即可）
 
-`Metadata` 是一个 `WeakMap` 类型，使用 `WeakMap` 而不是 `Map` 这个问题请转至笔记[Javascript Map 和 WeakMap](../../../JavaScript/基础语法/新增数据结构/Map.md)。看起来三层 `Map` 会比较绕，我们从元数据的获取角度来看这个结构：
+`Metadata` 是一个 `WeakMap` 类型，使用 `WeakMap` 而不是 `Map` 这个问题请转至笔记[Javascript WeakMap](../../../JavaScript/基础语法/Map/WeakMap.md)。看起来三层 `Map` 会比较绕，我们从元数据的获取角度来看这个结构：
 
 ```typescript
 Metadata.get(target).get(property).get(key)
