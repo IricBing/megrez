@@ -1,4 +1,5 @@
 # Gitlab
+* [官方文档](https://docs.gitlab.com/)
 * [Docker hub](https://hub.docker.com/r/gitlab/gitlab-ce)
 
 `Gitlab` 目前可以称的上是私有 `Git` 仓库的首选了。其功能的强大毋庸置疑，基本上可以媲美 `GitHub` 了。由于是私有部署，开源项目，很多功能甚至超越了 `GitHub` 。
