@@ -6,10 +6,6 @@ module.exports = {
       path: '/Git/Gitlab/填坑手册/遗失密码文件/'
     },
     {
-      title: '重启',
-      path: '/Git/Gitlab/填坑手册/重启'
-    },
-    {
       title: '修改http监听端口',
       path: '/Git/Gitlab/填坑手册/修改http监听端口/'
     },
@@ -20,6 +16,14 @@ module.exports = {
     {
       title: '更新 LetsEncrypt 证书',
       path: '/Git/Gitlab/填坑手册/更新LetsEncrypt证书/'
+    },
+    {
+      title: 'Acme账户问题',
+      path: '/Git/Gitlab/填坑手册/Acme账户问题/'
+    },
+    {
+      title: '数据迁移问题',
+      path: '/Git/Gitlab/填坑手册/数据迁移问题/'
     }
   ]
 };
