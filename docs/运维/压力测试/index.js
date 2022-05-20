@@ -1,9 +1,10 @@
 const ab = require('./ApacheBench');
 const jmeter = require('./Jmeter');
+const wrk = require('./wrk');
 const locust = require('./locust');
 const go_stress_testing = require('./go_stress_testing');
 
 module.exports = {
   title: '压力测试',
-  children: [ab, jmeter, locust, go_stress_testing]
+  children: [ab, jmeter, locust, go_stress_testing, wrk]
 };
