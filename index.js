@@ -32,6 +32,7 @@ const postgraduate = require('./docs/考研');
 const java = require('./docs/Java');
 const qt = require('./docs/Qt');
 const browser = require('./docs/浏览器')
+const play = require('./docs/折腾')
 
 const sidebar = [
   language,
@@ -51,6 +52,7 @@ const sidebar = [
   ops,
   spearAndShield,
   windows,
+  play,
   protocol,
   computer,
   browser,
