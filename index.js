@@ -1,5 +1,6 @@
 const language = require('./docs/编程语言');
 const nodejs = require('./docs/NodeJS');
+const quickjs = require('./docs/QuickJS')
 const container = require('./docs/容器');
 const windows = require('./docs/Windows');
 const ide = require('./docs/IDE');
@@ -38,6 +39,7 @@ const sidebar = [
   language,
   programDesign,
   nodejs,
+  quickjs,
   web,
   webAssembly,
   git,

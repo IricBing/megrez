@@ -31,7 +31,7 @@ int main(void) {
     error = luaL_loadstring(L, buff) || lua_pcall(L, 0, 0, 0);
     if (error) {
       fprintf(stderr, "%s\n", lua_tostring(L, -1));
-      lua_pop(L, 1);  // 从栈中弹出错徐信息
+      lua_pop(L, 1);  // 从栈中弹出错误信息
     }
   }
 
