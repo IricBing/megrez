@@ -1,7 +1,8 @@
+const environment = require('./环境篇');
 const txikijs = require('./txiki.js');
 
 module.exports = {
   title: 'QuickJS',
   path: '/QuickJS/',
-  children: [txikijs]
+  children: [environment, txikijs]
 };
