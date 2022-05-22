@@ -47,3 +47,12 @@ usage: qjs [options] [file [args]]
 -q  --quit         just instantiate the interpreter and quit
 ```
 
+## 附录
+
+### 安装
+
+```bash
+$ sudo make install
+```
+
+安装之后就能全局使用 `qjs` 、 `qjsc` 等命令了。
