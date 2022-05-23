@@ -13,7 +13,7 @@ $ curl -sfL https://get.k3s.io | sh -
 $ curl -sfL http://rancher-mirror.cnrancher.com/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn sh -
 ```
 
-::: details 点击展开安装日志
+安装日志：
 
 ```bash
 $ curl -sfL http://rancher-mirror.cnrancher.com/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn sh -
@@ -34,8 +34,6 @@ $ curl -sfL http://rancher-mirror.cnrancher.com/k3s/k3s-install.sh | INSTALL_K3S
 [INFO]  systemd: Starting k3s
 ```
 
-:::
-
 安装完成验证：
 
 ```bash
@@ -49,3 +47,15 @@ iric-ms-7b89   Ready    control-plane,master   114s   v1.21.5+k3s2
 [官方文档](https://docs.rancher.cn/docs/k3s/installation/install-options/_index#%E4%BB%8E%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E8%A3%85%E7%9A%84%E9%80%89%E9%A1%B9)
 
 ## 卸载
+
+### server 节点
+
+```bash
+$ sudo sh /usr/local/bin/k3s-uninstall.sh
+```
+
+### agent 节点
+
+```bash
+$ sudo sh /usr/local/bin/k3s-agent-uninstall.sh
+```
