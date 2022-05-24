@@ -13,5 +13,6 @@ const programDesign = require('./程序设计');
 
 module.exports = {
   title: 'NestJS',
+  path: '/NodeJS/NestJS/',
   children: [standard, config, base, programDesign, principle, plugin, container, ops, micro, practice, ecology, fillPitManual]
 };
