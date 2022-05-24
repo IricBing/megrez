@@ -117,4 +117,4 @@ const msg = new window.SpeechSynthesisUtterance('hello,world');
 
 :::
 
-[示例网址](https://megrez-file.virtualbing.cn/Web/%E5%AE%9E%E8%B7%B5%E7%A7%AF%E7%B4%AF/%E8%AF%AD%E9%9F%B3%E6%92%AD%E6%8A%A5/SpeechSynthesisAPI/%E8%AF%AD%E9%9F%B3%E6%92%AD%E6%94%BEDemo.html)
+[示例网址](https://megrez-file.virtualbing.fun/Web/%E5%AE%9E%E8%B7%B5%E7%A7%AF%E7%B4%AF/%E8%AF%AD%E9%9F%B3%E6%92%AD%E6%8A%A5/SpeechSynthesisAPI/%E8%AF%AD%E9%9F%B3%E6%92%AD%E6%94%BEDemo.html)

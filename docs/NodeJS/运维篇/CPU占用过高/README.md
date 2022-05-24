@@ -119,9 +119,9 @@ Statistical profiling result from isolate-0x555cb25a7d60-1-v8.log, (61102 ticks,
 
 文件下载：
 
-[process.txt](https://megrez-file.virtualbing.cn/NodeJS/%E8%BF%90%E7%BB%B4%E7%AF%87/CPU%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98/process.txt)
+[process.txt](https://megrez-file.virtualbing.fun/NodeJS/%E8%BF%90%E7%BB%B4%E7%AF%87/CPU%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98/process.txt)
 
-[flamegraph.html](https://megrez-file.virtualbing.cn/NodeJS/%E8%BF%90%E7%BB%B4%E7%AF%87/CPU%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98/flamegraph.html)
+[flamegraph.html](https://megrez-file.virtualbing.fun/NodeJS/%E8%BF%90%E7%BB%B4%E7%AF%87/CPU%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98/flamegraph.html)
 
 我们的后台服务因为有开发规范，文件命名并不是随意的，都会带有标识，比如： `xxx.controller.ts` 、 `xxx.service.ts` 、 `xxx.util.ts`
 
@@ -137,7 +137,7 @@ graph LR;
 
 ![profile问题定位](assets/images/profile问题定位.png)
 
-文件下载：[alarm.crontab.service.js](https://megrez-file.virtualbing.cn/NodeJS/%E8%BF%90%E7%BB%B4%E7%AF%87/CPU%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98/alarm.crontab.service.js)
+文件下载：[alarm.crontab.service.js](https://megrez-file.virtualbing.fun/NodeJS/%E8%BF%90%E7%BB%B4%E7%AF%87/CPU%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98/alarm.crontab.service.js)
 
 可以很明显的看到是 `/app/dist/modules/alarm/services/alarm.crontab.service.js` 文件在 `59` 行 `25` 列这个**匿名方法**占用了大量的 `CPU` 资源。打开这段代码如下：
 
@@ -149,6 +149,6 @@ graph LR;
 
 上述场景确实是我们写的代码导致的，但是有的时候会发现基本上 `CPU` 占用都没有和自己编写的代码相关的信息。下面是一个底层包 `bug` 导致的火焰图文件：
 
-[flamegraph.html](https://megrez-file.virtualbing.cn/NodeJS/%E8%BF%90%E7%BB%B4%E7%AF%87/CPU%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98/flamegraph-%E5%BA%95%E5%B1%82%E5%8C%85bug.html)
+[flamegraph.html](https://megrez-file.virtualbing.fun/NodeJS/%E8%BF%90%E7%BB%B4%E7%AF%87/CPU%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98/flamegraph-%E5%BA%95%E5%B1%82%E5%8C%85bug.html)
 
 经过观察，发现全部是 `mongodb` 连接那里占用的资源，占用了 `94.92%` 的资源。但是以前是没有这个问题的，查看 `npm` 上相应驱动库 `mongoose` 的版本为 `5.11.19` ，以前的版本是 `5.10.x` ，抱着尝试的态度，将版本切换到 `5.10.x` 后居然解决了这个问题。因此得出结论为 `npm` 包的 `bug` 。

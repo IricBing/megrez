@@ -51,4 +51,4 @@
 </html>
 ```
 
-[在线Demo](https://megrez-file.virtualbing.cn/Web/%E5%AE%9E%E8%B7%B5%E7%A7%AF%E7%B4%AF/%E8%AF%AD%E9%9F%B3%E6%92%AD%E6%8A%A5/%E7%99%BE%E5%BA%A6TTS/tts.html)
+[在线Demo](https://megrez-file.virtualbing.fun/Web/%E5%AE%9E%E8%B7%B5%E7%A7%AF%E7%B4%AF/%E8%AF%AD%E9%9F%B3%E6%92%AD%E6%8A%A5/%E7%99%BE%E5%BA%A6TTS/tts.html)

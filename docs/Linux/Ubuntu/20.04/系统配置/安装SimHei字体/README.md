@@ -4,7 +4,7 @@
 
 ## Step1. 下载字体
 
-[SimHei字体](https://megrez-file.virtualbing.cn/Linux/Ubuntu/20.04/%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE/%E5%AE%89%E8%A3%85SimHei%E5%AD%97%E4%BD%93SimHei.ttf)
+[SimHei字体](https://megrez-file.virtualbing.fun/Linux/Ubuntu/20.04/%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE/%E5%AE%89%E8%A3%85SimHei%E5%AD%97%E4%BD%93SimHei.ttf)
 
 来源：[站长字体](https://font.chinaz.com/161017462260.htm)
 

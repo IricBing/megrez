@@ -83,7 +83,7 @@ acl_nomatch = deny ## 默认为allow
 
 编辑文件 `etc/plugins/emqx_auth_http.conf`
 
-详见：[emqx_auth_http.conf](https://megrez-file.virtualbing.cn/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/Emqx/%E5%9F%BA%E7%A1%80%E7%AF%87/%E9%89%B4%E6%9D%83/emqx_auth_http.conf)
+详见：[emqx_auth_http.conf](https://megrez-file.virtualbing.fun/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/Emqx/%E5%9F%BA%E7%A1%80%E7%AF%87/%E9%89%B4%E6%9D%83/emqx_auth_http.conf)
 
 ## 启用认证插件
 
@@ -178,6 +178,6 @@ export class DeviceEmqxController {
 
 ### 附录B 关键配置文件
 
-[emqx.conf](https://megrez-file.virtualbing.cn/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/Emqx/%E5%9F%BA%E7%A1%80%E7%AF%87/%E9%89%B4%E6%9D%83/emqx.conf) 
+[emqx.conf](https://megrez-file.virtualbing.fun/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/Emqx/%E5%9F%BA%E7%A1%80%E7%AF%87/%E9%89%B4%E6%9D%83/emqx.conf) 
 
-[emqx_auth_http.conf](https://megrez-file.virtualbing.cn/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/Emqx/%E5%9F%BA%E7%A1%80%E7%AF%87/%E9%89%B4%E6%9D%83/emqx_auth_http.conf)
+[emqx_auth_http.conf](https://megrez-file.virtualbing.fun/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/Emqx/%E5%9F%BA%E7%A1%80%E7%AF%87/%E9%89%B4%E6%9D%83/emqx_auth_http.conf)
