@@ -1,7 +1,7 @@
 const browserDownloadFile = require('./浏览器下载文件');
 const mobileHttpSlow = require('./手机端接口反应慢');
 const chromeDebugMobileWeb = require('./chrome调试手机端网页');
-const responsiveViewer = require('./Responsive Viewer');
+const responsiveViewer = require('./ResponsiveViewer');
 const tts = require('./语音播报');
 const serialAPI = require('./WebSerialAPI');
 const bigFileUpload = require('./大文件上传');
