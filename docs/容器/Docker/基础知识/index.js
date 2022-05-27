@@ -1,9 +1,7 @@
+const virtualize = require('./虚拟化技术');
+const network = require('./网络');
+
 module.exports = {
   title: '基础知识',
-  children: [
-    {
-      title: '虚拟化技术',
-      path: '/容器/Docker/基础知识/虚拟化技术'
-    }
-  ]
+  children: [virtualize, network]
 };
