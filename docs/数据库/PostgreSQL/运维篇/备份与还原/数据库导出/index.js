@@ -11,7 +11,7 @@ module.exports = {
     },
     {
       title: 'pgAdmin',
-      path: '/数据库/PostgreSQL/运维篇/备份与还原/数据库导出/pgAdmin'
+      path: '/数据库/PostgreSQL/运维篇/备份与还原/数据库导出/pgAdmin/'
     }
   ]
 };
