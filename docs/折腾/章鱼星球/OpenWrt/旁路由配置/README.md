@@ -35,4 +35,4 @@
 3. IPv4子网掩码写`255.255.255.0`
 4. DHCP选项填：`6,本机IP`
 
-! DHCP配置[](assets/images/DHCP配置.png)
+![DHCP配置](assets/images/DHCP配置.png)
