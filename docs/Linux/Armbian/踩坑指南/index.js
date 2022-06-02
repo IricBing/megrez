@@ -1,6 +1,6 @@
-const gpgError = require('./GPGerror');
+const apt = require('./apt');
 
 module.exports = {
   title: '踩坑指南',
-  children: [gpgError]
+  children: [apt]
 };
