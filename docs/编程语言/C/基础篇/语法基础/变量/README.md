@@ -14,8 +14,16 @@
 |-----|-----|
 | `char` |通常是一个 `字节` （**八位**）, 这是一个**整数类型**。|
 | `int` |整型， `4` 个字节，取值范围 `[-2147483648, 2147483647]` 。|
-| `float` |单精度浮点值。单精度是这样的格式， `1` 位**符号**， `8` 位**指数**， `23` 位**小数**。![float变量存储](assets/images/float变量存储.png)|
-| `double` |双精度浮点值。双精度是 `1` 位**符号**， `11` 位**指数**， `52` 位**小数**。![double变量存储](assets/images/double变量存储.png)|
+| `float` |单精度浮点值。单精度是这样的格式， `1` 位**符号**， `8` 位**指数**， `23` 位**小数**。
+
+![float变量存储](assets/images/float变量存储.png)
+
+|
+| `double` |双精度浮点值。双精度是 `1` 位**符号**， `11` 位**指数**， `52` 位**小数**。
+
+![double变量存储](assets/images/double变量存储.png)
+
+|
 | `void` |表示类型的缺失。|
 
 ## 变量定义
@@ -61,5 +69,107 @@ char x = 'x';               // 变量 x 的值为 'x'
 * 一种是需要建立存储空间的。例如：`int a` 在声明的时候就已经建立了存储空间。
 * 另一种是不需要建立存储空间的，通过使用`extern`关键字声明变量名而不定义它。 例如：`extern int a` 其中变量 `a` 可以在别的文件中定义的。
 
-> [!warning|label:注意]
+> [!warning|label: 注意]
 > 除非有 `extern` 关键字，否则都是变量的定义。
+
+```c
+extern int i; //声明，不是定义
+int i; //声明，也是定义
+```
+
+### 示例
+
+在下面的实例中，变量在头部就已经被声明，但是定义与初始化在主函数内：
+
+```c
+#include <stdio.h>
+ 
+// 函数外定义变量 x 和 y
+int x;
+int y;
+int addtwonum()
+{
+  // 函数内声明变量 x 和 y 为外部变量
+  extern int x;
+  extern int y;
+  // 给外部变量（全局变量）x 和 y 赋值
+  x = 1;
+  y = 2;
+  return x+y;
+}
+ 
+int main()
+{
+  int result;
+  // 调用函数 addtwonum
+  result = addtwonum();
+  
+  printf("result 为: %d",result);
+  return 0;
+}
+```
+
+当上面的代码被编译和执行时，它会产生下列结果：
+
+```bash
+result 为: 3
+```
+
+如果需要在一个源文件中引用另外一个源文件中定义的变量，我们只需在引用的文件中将变量加上 `extern` 关键字的声明即可。
+
+`addtwonum.c` 文件内容：
+
+```c
+/*外部变量声明*/
+extern int x ;
+extern int y ;
+int addtwonum()
+{
+  return x+y;
+}
+```
+
+`test.c` 文件内容：
+
+```c
+#include <stdio.h>
+  
+/*定义两个全局变量*/
+int x=1;
+int y=2;
+int addtwonum();
+int main(void)
+{
+  int result;
+  result = addtwonum();
+  printf("result 为: %d\n",result);
+  return 0;
+}
+```
+
+当上面的代码被编译和执行时，它会产生下列结果：
+
+```bash
+$ gcc addtwonum.c test.c -o main
+$ ./main
+result 为: 3
+```
+
+## 左值（Lvalues）和右值（Rvalues）
+
+C 中有两种类型的表达式：
+
+1. **左值**（`lvalue`）：指向**内存位置**的表达式被称为**左值**（`lvalue`）表达式。左值可以出现在赋值号的**左边**或**右边**。
+2. **右值**（`rvalue`）：术语**右值**（`rvalue`）指的是存储在内存中某些**地址**的数值。右值是不能对其进行赋值的表达式，也就是说，右值可以出现在赋值号的**右边**，但不能出现在赋值号的左边。
+
+**变量是左值**，因此可以出现在赋值号的左边。数值型的字面值是右值，因此不能被赋值，不能出现在赋值号的左边。下面是一个有效的语句：
+
+```c
+int g = 20;
+```
+
+但是下面这个就不是一个有效的语句，会生成编译时错误：
+
+```c
+10 = 20;
+```
