@@ -19,6 +19,10 @@ module.exports = {
       title: '安装WPS',
       path: '/Linux/Ubuntu/20.04/软件安装/安装wps/'
     },
-    installFmaConfigTool
+    installFmaConfigTool,
+    {
+      title: '安装阿里云盘',
+      path: '/Linux/Ubuntu/20.04/软件安装/安装阿里云盘/'
+    },
   ]
 };
