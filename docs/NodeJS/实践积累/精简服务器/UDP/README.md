@@ -11,7 +11,7 @@
 
 新建 `server.mjs` 文件，写入以下代码：
 
-```JS
+```js
 import dgram from 'node:dgram';
 
 const server = dgram.createSocket('udp4');
@@ -43,7 +43,7 @@ server.bind(1903);
 
 新建 `client.mjs` 文件，写入如下代码：
 
-```JS
+```js
 import dgram from 'node:dgram';
 
 const PORT = 1903;
