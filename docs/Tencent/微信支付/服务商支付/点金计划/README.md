@@ -7,4 +7,6 @@
 
 [API文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/open/pay/chapter3_5_4.shtml)
 
+[产品文档](https://wx.gtimg.com/pay/download/goldplan/goldplan_product_description_v2.pdf)
+
 ## 功能
