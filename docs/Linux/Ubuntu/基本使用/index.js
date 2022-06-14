@@ -5,6 +5,7 @@ const fileAndDirectory = require('./文件与文件夹');
 const source = require('./软件源');
 const port = require('./端口');
 const serialport = require('./串口');
+const network = require('./网络');
 
 module.exports = {
   title: '基本使用',
@@ -15,6 +16,7 @@ module.exports = {
     userManage,
     source,
     port,
+    network,
     serialport,
     {
       title: '修改主机名称',
