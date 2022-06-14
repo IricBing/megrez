@@ -4,8 +4,9 @@ const sosumi = require('./sosumi');
 const alpine = require('./Alpine');
 const seLinux = require('./SELinux');
 const armbian = require('./Armbian');
+const yocto = require('./Yocto');
 
 module.exports = {
   title: 'Linux',
-  children: [base, ubuntu, alpine, seLinux, sosumi, armbian]
+  children: [base, ubuntu, alpine, seLinux, sosumi, armbian, yocto]
 };
