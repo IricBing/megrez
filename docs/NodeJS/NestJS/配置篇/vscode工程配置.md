@@ -64,7 +64,20 @@ $ pnpm add cross-env -D
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // 显示空格
+    "editor.renderWhitespace": "all",
+    // 快速补全
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    },
+    // snippet 提示优先
+    "editor.snippetSuggestions": "top",
+    "editor.tabCompletion": "on",
+    // 使用enter 接受提示
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.defaultFormatter": "IricBing.iricbing-markdown-formatter"
   },
   "typescript.preferences.importModuleSpecifier": "relative", // 使用相对路径
   "javascript.preferences.importModuleSpecifier": "relative", // 使用相对路径
@@ -168,6 +181,7 @@ $ pnpm add cross-env -D
 {
   "recommendations": [
     "streetsidesoftware.code-spell-checker",
+    "IricBing.iricbing-markdown-formatter",
     "aaron-bond.better-comments",
     "mikestead.dotenv",
     "dbaeumer.vscode-eslint",
