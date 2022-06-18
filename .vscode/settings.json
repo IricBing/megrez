@@ -31,7 +31,7 @@
     "editor.renderWhitespace": "all",
     // 快速补全
     "editor.quickSuggestions": {
-      "other": false,
+      "other": true,
       "comments": true,
       "strings": true
     },
@@ -40,6 +40,6 @@
     "editor.tabCompletion": "on",
     // 使用enter 接受提示
     "editor.acceptSuggestionOnEnter": "on",
-    "editor.defaultFormatter": "mervin.markdown-formatter"
+    "editor.defaultFormatter": "IricBing.iricbing-markdown-formatter"
   }
 }
