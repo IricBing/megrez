@@ -31,7 +31,7 @@ end
 
 ## ping
 
-虽然Windows没有内置Sleep命令，但是利用ping命令的性质。
+虽然`Windows`没有内置`Sleep`命令，但是利用`ping`命令的性质。
 
 ```lua
 function Sleep(n)

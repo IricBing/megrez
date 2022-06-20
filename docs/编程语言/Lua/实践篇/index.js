@@ -4,5 +4,5 @@ const sleep = require('./sleep');
 
 module.exports = {
   title: '实践篇',
-  children: [codingStyle, luaRocks]
+  children: [codingStyle, luaRocks, sleep]
 };
