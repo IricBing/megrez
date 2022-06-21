@@ -34,6 +34,16 @@ $ sudo vim /etc/docker/daemon.json
 }
 ```
 
+可选腾讯云：
+
+```json
+{
+   "registry-mirrors": [
+       "https://mirror.ccs.tencentyun.com"
+  ]
+}
+```
+
 保存，退出。
 
 ### 个人镜像源(推荐，方便以后使用阿里云的容器镜像服务！)
