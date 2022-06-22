@@ -74,3 +74,6 @@ local f = assert(io.open('/tmp/firmware.jx', 'wb')) -- open in "binary" mode
 f:write(body)
 f:close()
 ```
+
+> [!warning|label: 注意]
+> 这样下载有问题，在 `OpenWrt` 环境下下载下来发现最终文件比原文件小。原因是 `Lua` 内存不足了。这个原因有 `90%` 的可能性，但不是 `100%` ，下载大文件的情况请使用 `LuaCURL` ，[笔记地址](../../../LuaCURL/基础用法/下载文件/README.md)
