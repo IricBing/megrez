@@ -28,3 +28,13 @@ $ make
 ```bash
 $ ./build/tjs
 ```
+
+## 采坑
+
+### Could NOT find CURL (missing: CURL_LIBRARY CURL_INCLUDE_DIR)
+
+`make` 编译的时候遇到 `Could NOT find CURL (missing: CURL_LIBRARY CURL_INCLUDE_DIR)` 错误，这是因为没有安装 `curl` 的开发环境，运行如下命令安装环境：
+
+```bash
+$ sudo apt install curl libcurl4-openssl-dev
+```
