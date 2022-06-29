@@ -1,8 +1,9 @@
 const codingStyle = require('./编码规范');
 const luaRocks = require('./LuaRocks');
 const sleep = require('./sleep');
+const stringHandler = require('./字符串处理');
 
 module.exports = {
   title: '实践篇',
-  children: [codingStyle, luaRocks, sleep]
+  children: [codingStyle, stringHandler, luaRocks, sleep]
 };
