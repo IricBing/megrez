@@ -2,14 +2,12 @@ const useDeepinTerminal = require('./使用深度终端');
 const vscodeExtension = require('./右键扩展vscode打开');
 const configZsh = require('./配置zsh');
 const installSimHeiFont = require('./安装SimHei字体');
+const beautify = require('./美化');
 
 module.exports = {
   title: '系统配置',
   children: [
-    {
-      title: '美化',
-      path: '/Linux/Ubuntu/20.04/系统配置/美化'
-    },
+    beautify,
     {
       title: '实时显示网速',
       path: '/Linux/Ubuntu/20.04/系统配置/实时显示网速'
