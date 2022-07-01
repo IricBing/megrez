@@ -3,8 +3,30 @@
 ## 必备插件
 
 * lua（作者是sumneko）
-* vscode-lua-format
 * Lua Debug
+
+## 项目配置
+
+`.vscode/extensions.json` 文件配置：
+
+```json
+{
+  "recommendations": [
+    "sumneko.lua",
+    "actboy168.lua-debug"
+  ]
+}
+```
+
+`.vscode/settings.json` 文件配置：
+
+```json
+{
+    "[lua]": {
+        "editor.defaultFormatter": "sumneko.lua",
+    },
+}
+```
 
 ## 调试配置
 
