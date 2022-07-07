@@ -3,7 +3,7 @@
 ## Step1. 拉取镜像
 
 ```bash
-$ docker pull postgres:13-alpine
+$ docker pull postgres:14-alpine
 ```
 
 ## Step2. 创建本地卷

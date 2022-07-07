@@ -37,13 +37,23 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 123456
-      POSTGRES_DB: smartdtu
+      POSTGRES_DB: demo
       TZ: Asia/Shanghai
       PGTZ: Asia/Shanghai
     ports:
       - 5432:5432
     volumes:
       - pg-data:/var/lib/postgresql/data
+
+  postgres-exporter:
+    image: prometheuscommunity/postgres-exporter
+    container_name: postgres-exporter
+    hostname: postgres-exporter
+    restart: always
+    environment:
+      DATA_SOURCE_NAME: postgresql://postgres:123456@postgresql:5432/postgres?sslmode=disable
+    ports:
+      - 9187:9187
 
   pgadmin:
     image: dpage/pgadmin4:latest
