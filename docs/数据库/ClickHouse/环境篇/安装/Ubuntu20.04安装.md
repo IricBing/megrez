@@ -1,5 +1,7 @@
 # Ubuntu 20.04 安装
 
+## apt 安装
+
 > [!warning|label: 注意]
 > `apt` 中默认包含了 `clickhouse-server` 和 `clickhouse-client` 两个软件源，但是不能直接使用！！！因为他们的**版本太老**了。
 
@@ -13,4 +15,14 @@ $ sudo apt update && sudo apt install -y clickhouse-server clickhouse-client
 $ sudo service clickhouse-server start
 
 $ clickhouse-client   # 启动client客户端
+```
+
+## 源码安装
+
+参考文档：[官方文档](https://clickhouse.com/docs/en/quick-start/)
+
+```bash
+$ curl https://clickhouse.com/ | sh
+$ sudo ./clickhouse install
+$ sudo clickhouse start
 ```
