@@ -3,5 +3,5 @@
 一键运行：
 
 ```bash
-$ docker run -d -p 9000:3000 --name grafana grafana/grafana
+$ docker run -d -p 9090:9090 --name prometheus prom/prometheus:latest
 ```
