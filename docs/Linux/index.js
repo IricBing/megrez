@@ -1,5 +1,6 @@
 const ubuntu = require('./Ubuntu');
 const base = require('./基础篇');
+const incurableDiseases = require('./疑难杂症');
 const sosumi = require('./sosumi');
 const alpine = require('./Alpine');
 const seLinux = require('./SELinux');
@@ -10,5 +11,5 @@ const HIKOS = require('./HikvisionOS');
 
 module.exports = {
   title: 'Linux',
-  children: [base, ubuntu, alpine, debian, HIKOS, seLinux, sosumi, armbian, yocto]
+  children: [base, incurableDiseases, ubuntu, alpine, debian, HIKOS, seLinux, sosumi, armbian, yocto]
 };
