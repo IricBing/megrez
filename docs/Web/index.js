@@ -16,10 +16,12 @@ const electron = require('./Electron');
 const vantUI = require('./VantUI');
 const tauri = require('./Tauri');
 const microWeb = require('./微前端');
+const css = require('./CSS')
 
 module.exports = {
   title: 'Web',
   children: [
+    css,
     base,
     experience,
     libs,
