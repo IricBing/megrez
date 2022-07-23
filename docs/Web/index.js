@@ -16,7 +16,8 @@ const electron = require('./Electron');
 const vantUI = require('./VantUI');
 const tauri = require('./Tauri');
 const microWeb = require('./微前端');
-const css = require('./CSS')
+const css = require('./CSS');
+const svelte = require('./Svelte');
 
 module.exports = {
   title: 'Web',
@@ -35,6 +36,7 @@ module.exports = {
     miniProgram,
     official,
     electron,
+    svelte,
     tauri,
     vuepress,
     docusaurus,
