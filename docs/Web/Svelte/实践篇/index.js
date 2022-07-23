@@ -1,6 +1,6 @@
 const singleHTML = require('./SingleHTML');
 
 module.exports = {
-  title: 'Single HTML',
+  title: '实践篇',
   children: [singleHTML]
 };
