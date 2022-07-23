@@ -1,4 +1,4 @@
-# RNDIS 速度低
+# RNDIS 下行速度低
 
 * [参考文章](https://www.cnblogs.com/sinpo828/p/13411262.html)
 
