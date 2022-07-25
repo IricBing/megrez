@@ -129,6 +129,9 @@ int main() {
 }
 ```
 
+> [!tip|label: 提示]
+> 配合客户端的[最简版本](../../客户端/最简版本/README.md)一起学习使用。
+
 ## 文件下载
 
 <a href="C/实践积累/网络通信/TCP/服务端/最简版本/assets/files/server.c" download="server.c">server.c</a>

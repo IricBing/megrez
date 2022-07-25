@@ -1,6 +1,6 @@
 # 最简版本
 
-与[服务端](../../服务端/最简版本/README.md)相同，TCP客户端的最简版本也只需要一个sys/socket库即可，如下所示：
+与[服务端](../../服务端/最简版本/README.md)相同， `TCP` 客户端的最简版本也只需要一个 `sys/socket` 库即可，如下所示：
 
 ```c
 #include <arpa/inet.h>
@@ -79,4 +79,3 @@ int main() {
 ## 文件下载
 
 <a href="C/实践积累/网络通信/TCP/客户端/最简版本/assets/files/client.c" download="client.c">client.c</a>
-
