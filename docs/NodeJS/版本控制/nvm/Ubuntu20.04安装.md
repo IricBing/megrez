@@ -50,6 +50,14 @@ $ git checkout v0.36.0  # 注意将v0.36.0替换成最新版本
 
 #### Step4. 激活nvm
 
+如果是zsh终端，使用如下命令：
+
+```bash
+$ sh nvm.sh
+```
+
+如果是bash终端，使用如下命令：
+
 ```bash
 $ . nvm.sh
 ```
@@ -73,6 +81,7 @@ export NVM_DIR="$HOME/.nvm"
 export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node
 
 # 支持 .nvmrc 分项目配置node版本功能
+
 autoload -U add-zsh-hook
 load-nvmrc() {
   local node_version="$(nvm version)"
