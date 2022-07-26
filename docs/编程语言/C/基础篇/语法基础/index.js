@@ -1,3 +1,4 @@
+const loop = require('./循环')
 module.exports = {
   title: '语法基础',
   children:[
@@ -24,6 +25,11 @@ module.exports = {
     {
       title: '运算符',
       path: '/编程语言/C/基础篇/语法基础/运算符/',
-    }
+    },
+    {
+      title: '判断',
+      path: '/编程语言/C/基础篇/语法基础/判断/',
+    },
+    loop
   ]
 };
