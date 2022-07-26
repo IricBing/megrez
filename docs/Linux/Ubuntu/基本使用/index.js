@@ -6,6 +6,7 @@ const source = require('./软件源');
 const port = require('./端口');
 const serialport = require('./串口');
 const network = require('./网络');
+const accessControl = require('./远程桌面控制');
 
 module.exports = {
   title: '基本使用',
@@ -86,9 +87,6 @@ module.exports = {
       title: '关闭交换（swap）分区',
       path: '/Linux/Ubuntu/基本使用/关闭交换分区'
     },
-    {
-      title: '远程桌面控制',
-      path: '/Linux/Ubuntu/基本使用/远程桌面控制/'
-    }
+    accessControl
   ]
 };
